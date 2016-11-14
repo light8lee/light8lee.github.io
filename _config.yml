@@ -1,0 +1,113 @@
+# Where things are
+source:       .
+destination:  ./_site
+plugins_dir:      ./_plugins
+layouts_dir:      ./_layouts
+paginate:     8
+
+# Handling Reading
+safe:         false
+include:      [".htaccess"]
+exclude:      []
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+textile_ext:  "textile"
+
+# Filtering Content
+show_drafts:  null
+limit_posts:  0
+future:       true
+unpublished:  false
+
+# Conversion
+markdown:     kramdown
+highlighter:  rouge
+lsi:          false
+excerpt_separator: "\n\n"
+
+# Serving
+detach:       false
+port:         4000
+host:         127.0.0.1
+baseurl:      "" # does not include hostname
+
+# Outputting
+permalink:     date
+paginate_path: /page:num
+timezone:      null
+
+
+#Site config
+title: light8lee
+description: The Blog to record my Learning
+keywords: Learn, light8lee
+url: http://light8lee.pub
+feed: /atom.xml
+favicon: /images/shortcut.jpg
+
+#Nav config
+nav:
+  - text: 首页
+    url: /index.html
+  - text: 分类目录
+    url: /categories.html
+  - text: 文章归档
+    url: /archives.html
+  - text: 关于我
+    url: /about.html
+  - text: 友情链接
+    url: /links.html
+
+#Author config
+author:
+    name: light8lee
+    email: light8lee@foxmail.com
+    imageLink: /images/header.jpg
+    simpleIntro: Follow my heart
+    detailIntro:
+      <p>啦啦啦</p>
+      <p>精通各种程序语言的拼写</p>
+
+#Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
+follow:
+  - class: icon-facebook
+    url: http://facebook.com/
+  - class: icon-github-alt
+    url: https://github.com/light8lee/
+
+#Links
+customLinks:
+  - item:
+    - text: Github
+      url: https://github.com/
+    - text: Jekyll source
+      url: https://github.com/jekyll/jekyll
+    - text: Jekyll (English)
+      url: https://jekyllrb.com/
+    - text: Jekyll（中文）
+      url: http://jekyllcn.com/
+    - text: Jekyll Theme
+      url: http://jekyllthemes.org/
+    - text: zJiaJun
+      url: https://github.com/zJiaJun/zJiaJun.github.io
+    message: Thanks
+  - item:
+    - text: light8lee
+      url: https://github.com/light8lee/
+    message: About me
+
+#baidu tongji
+baiduTongji:
+  config: true
+  id: a287a3efd91be3f2641fb8ccf1e25756
+
+duoshuo:
+  config: true
+  id: light8lee
+
+#baidu share config
+baiduShare:
+  config: true
+
+gems: [jekyll-paginate]
