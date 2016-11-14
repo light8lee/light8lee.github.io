@@ -42,7 +42,7 @@ timezone:      null
 title: light8lee
 description: The Blog to record my Learning
 keywords: Learn, light8lee
-url: http://light8lee.pub
+url: http://blog.light8lee.pub
 feed: /atom.xml
 favicon: /images/shortcut.jpg
 
