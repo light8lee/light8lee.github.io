@@ -87,6 +87,8 @@ customLinks:
       url: https://jekyllrb.com/
     - text: Jekyll（中文）
       url: http://jekyllcn.com/
+    message: Friends
+  - item:
     - text: Jekyll Theme
       url: http://jekyllthemes.org/
     - text: zJiaJun
