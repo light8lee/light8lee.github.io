@@ -30,9 +30,9 @@ static int print_args(lua_State *L)
 static int multi_return(lua_State *L)
 {
     lua_settop(L, 0); /* remove all stack elements */
-    lua_pushnumber(L, 123.0);
-    lua_pushstring(L, "wooo");
-    lua_pushboolean(L, 0);
+    lua_pushnumber(L, 123.0); /* index 1 (or -3)*/
+    lua_pushstring(L, "wooo"); /* index 2 (or -2) */
+    lua_pushboolean(L, 0); /* index 3 (or -1) */
     return 3; /* return 123.0, wooo, false */
 }
 
