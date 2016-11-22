@@ -36,9 +36,47 @@ static int multi_return(lua_State *L)
     return 3; /* return 123.0, wooo, false */
 }
 
+static int return_table(lua_State *L)
+{
+    lua_newtable(L);
+    lua_pushinteger(L, 1); /* key: 1 */
+    lua_pushstring(L, "hello world from C\n"); /* value: "hello world from C\n" */
+    lua_settable(L, -3); /* table is at index: -3 */
+    return 1; /* return the table */
+}
+
+static int get_value(lua_State *L)
+{
+    if (!lua_istable(L, -1)) { /* if there is not a table on the stack */
+        printf("no table\n");
+        return 0;
+    }
+    lua_pushstring(L, "hi"); /* the key is "hi" */
+    lua_gettable(L, -2);
+    return 1; /* return the value */
+}
+
+static int print_elements(lua_State *L)
+{
+    if (!lua_istable(L, 1)) { /* if there is not a table at index 1 */
+        printf("no table\n");
+        return 0;
+    }
+    lua_pushnil(L); /* first key */
+    while (lua_next(L, 1) != 0) {
+        printf("%s - %s\n", lua_typename(L, lua_type(L, -2)),
+                lua_typename(L, lua_type(L, -1)));
+        lua_pop(L, 1); /* removes value; keeps key for next iteration */
+    }
+    return 0;
+}
+
 int luaopen_teststack(lua_State *L)
 {
     lua_register(L, "print_args", print_args);
     lua_register(L, "multi_return", multi_return);
+    lua_register(L, "return_table", return_table);
+    lua_register(L, "get_value", get_value);
+    lua_register(L, "print_elements", print_elements);
     return 0;
 }
