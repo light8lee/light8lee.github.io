@@ -24,7 +24,7 @@ static int print_args(lua_State *L)
         }
     }
     printf("\n");
-    return 0; //discard the element in the stack
+    return top; //just return the origin args
 }
 
 static int multi_return(lua_State *L)
@@ -71,6 +71,16 @@ static int print_elements(lua_State *L)
     return 0;
 }
 
+static int call_func(lua_State *L)
+{
+    lua_pushcfunction(L, print_args);
+    lua_pushboolean(L, 1);
+    lua_pushstring(L, "welcome");
+    lua_pushnumber(L, 12);
+    lua_call(L, 3, 2);
+    return 2;
+}
+
 int luaopen_teststack(lua_State *L)
 {
     lua_register(L, "print_args", print_args);
@@ -78,5 +88,6 @@ int luaopen_teststack(lua_State *L)
     lua_register(L, "return_table", return_table);
     lua_register(L, "get_value", get_value);
     lua_register(L, "print_elements", print_elements);
+    lua_register(L, "call_func", call_func);
     return 0;
 }
