@@ -81,6 +81,48 @@ static int call_func(lua_State *L)
     return 2;
 }
 
+static int my_cclosure(lua_State *L)
+{
+    /*
+    printf("type of upvalue 1: %s\n",
+            lua_typename(L, lua_type(L, lua_upvalueindex(1))));
+    printf("type of upvalue 2: %s\n",
+            lua_typename(L, lua_type(L, lua_upvalueindex(2))));
+    printf("the stack size of my_cclosure is: %d\n", lua_gettop(L));
+    */
+    if (lua_gettop(L) < 1) {
+        printf("too few args\n");
+        return 0;
+    }
+    printf("type of arg 1: %s\n",
+            lua_typename(L, lua_type(L, 1)));
+    lua_Number num = lua_tonumber(L, lua_upvalueindex(2));
+    num += 0.5;
+    lua_pushnumber(L, num);
+    lua_replace(L, lua_upvalueindex(2));
+    lua_getfield(L, lua_upvalueindex(1), "x"); /* get old t["x"] */
+    lua_pushvalue(L, 1); /* make a copy of arg 1 */
+    lua_setfield(L, lua_upvalueindex(1), "x"); /* t["x"] = arg 1 */
+    lua_pushvalue(L, lua_upvalueindex(2)); /* make a copy of upvalue 2 */
+    lua_remove(L, 1); /* remove the arg 1 */
+    return 2;
+}
+
+static int get_closure(lua_State *L)
+{
+    lua_settop(L, 0); /* clean up the stack */
+    lua_createtable(L, 2, 0); /* create a table */
+    lua_pushstring(L, "haha");
+    lua_pushboolean(L, 0);
+    lua_rawseti(L, 1, 1); /* set value: t[1] = false */
+    lua_rawseti(L, 1, 2); /* set value: t[2] = "haha" */
+    lua_pushnumber(L, 3.14); /* push 3.14 */
+    /* printf("before pushcclosure, the size of get_closure is: %d\n", lua_gettop(L)); */
+    lua_pushcclosure(L, my_cclosure, 2); /* 2 upvalues: {[1]=false, [2]="haha"}, 3.14 */
+    /* printf("after pushcclosure, the stack size of get_closure is: %d\n", lua_gettop(L)); */
+    return 1;
+}
+
 int luaopen_teststack(lua_State *L)
 {
     lua_register(L, "print_args", print_args);
@@ -89,5 +131,6 @@ int luaopen_teststack(lua_State *L)
     lua_register(L, "get_value", get_value);
     lua_register(L, "print_elements", print_elements);
     lua_register(L, "call_func", call_func);
+    lua_register(L, "get_closure", get_closure);
     return 0;
 }
