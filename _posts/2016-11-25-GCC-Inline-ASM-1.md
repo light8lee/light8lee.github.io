@@ -28,6 +28,9 @@ category: "Operating-System"
 
 * 访存时，Intel的语法为**section:[base+index×scale+displacement]**，而AT&T语法中对应的形式为**section:displacement(base,index,scale)**。其中base和index是任意的32位基址和变址寄存器，scale可以取值1,2,4,8，如不指定则默认为1.section可以是任意段寄存器作为段前缀，默认的段寄存器根据不同情况而不一样。几个例子：**-4(%ebp)**表示base=%ebp, displacement=-4, section=%ss(default), index=0(default)，**foo(,%eax,4)**表示index=%eax, scale=4, displacement=foo, section=%ds(default)，**%gs:foo**这个表达式引用放置于%gs段中的变量goo的值。
 
+### 结尾
+这次只是简单介绍了AT&T汇编与Intel汇编的几个区别，下次将开始进入正题，讲述GCC内联汇编的使用。
+
 ### 参考
 80386有如下寄存器：
 
