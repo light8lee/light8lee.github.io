@@ -28,7 +28,7 @@ sudo dnf config-manager --set-disabled google-chrome
 ...
 ```
 
-你可以查看**/etc/yum.repos.d/**目录下的文件，确定你要关闭的reop。
+你可以查看**/etc/yum.repos.d/**目录下的文件，确定你要关闭的repo。
 然后我执行的是
 
 ```shell
