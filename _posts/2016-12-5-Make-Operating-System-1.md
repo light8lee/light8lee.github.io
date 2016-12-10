@@ -12,7 +12,7 @@ category: "Operating-System"
 我将使用的汇编是NASM的汇编，NASM汇编的语法类似Intel汇编，不过更加简洁一些，写起来比较方便。再一个是利用**qemu**来模拟 出一台机器供我们使用。
 这里直接上干货。
 
-{% highlight asm %}
+{% highlight nasm %}
 ORG 0x7c00
 start:
 	mov ax, 0
