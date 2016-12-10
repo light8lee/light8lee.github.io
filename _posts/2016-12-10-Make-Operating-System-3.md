@@ -17,7 +17,6 @@ category: "Operating-System"
 BOOTSEG EQU 0x07C0
 INITSEG EQU 0x9000
 SPOINTER EQU 0x0FF00
-BITS 16
 start:
     mov ax, BOOTSEG
     mov ds, ax
