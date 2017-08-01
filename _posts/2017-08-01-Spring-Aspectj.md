@@ -184,7 +184,7 @@ public class BeforeCommitAnnotationAspect {
 ```
 当定义一个Around增强处理方法时，该方法的第一个形参必须是 ProceedingJoinPoint 类型，在增强处理方法体内，调用ProceedingJoinPoint的proceed方法才会执行目标方法------这就是@Around增强处理可以完全控制目标方法执行时机、如何执行的关键；如果程序没有调用ProceedingJoinPoint的proceed方法，则目标方法不会执行。
 ```
-`@Componet`表示该类是一个自动扫描组件
+`@Componet`表示该类是一个自动扫描组件，`@Aspect`注解修饰的bean都将被Spring自动识别并用于配置在Spring AOP。
 
 在`AroundAdvice.xml`中启用Aspectj，以及自动扫描特性：
 
