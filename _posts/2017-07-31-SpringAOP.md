@@ -2,7 +2,7 @@
 layout: post
 title: Spring AOP
 date: 2017-07-31 20:40
-category: "Operating-System"
+category: "Java"
 ---
 
 ### 前言
