@@ -1,39 +1,14 @@
 ---
 layout: default
 title: About
-comment: true
-keywords: Learn, About
 ---
+<section class="page-heading">
+  <h1>About</h1>
+  <p>涛涛涛 writes about Agent RL, systems, engineering practice, and technical visualization.</p>
+</section>
 
-<div class="article">
-    <h3 class="title">{{ page.title }}</h3>
-    <div class="about">
-
-        <div class="about-text">
-            <p>{{ site.author.simpleIntro }}</p>
-            {{ site.author.detailIntro }}
-        </div>
-        <div class="about-image">
-            <img src="{{ site.author.imageLink }}" />
-        </div>
-    </div>
-    <div class="fn-clear"></div>
-    <div class="social">
-        {% for link in site.follow %}
-        <a href="{{ link.url }}" target="_blank"><i class="{{ link.class }}"></i></a>
-        {% endfor %}
-    </div>
-    <div class="fn-clear"></div>
-    <div class="contact">
-        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
-    </div>
-    <div class="comment">
-        {% if site.disqus.config %}
-        <div id="disqus_thread"></div>
-        {% else %}
-            {% if site.duoshuo.config %}
-            <div class="ds-thread" data-thread-key="{{ page.title }}"></div>
-            {% endif %}
-        {% endif %}
-    </div>
-</div>
+<section class="content-section prose-section">
+  <p>I use this site as a durable notebook for research reading, implementation notes, visual explainers, and small static experiments.</p>
+  <p>The current focus is on LLM agents, reinforcement learning for agent behavior, evaluation, and ways to turn dense technical material into clear visual narratives.</p>
+  <p><a class="button-link" href="https://github.com/light8lee">GitHub</a></p>
+</section>

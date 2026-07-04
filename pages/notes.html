@@ -1,0 +1,14 @@
+---
+layout: default
+title: Notes
+---
+<section class="page-heading">
+  <h1>Notes</h1>
+  <p>Shorter technical notes and references.</p>
+</section>
+
+<section class="post-list">
+  {% for post in site.posts %}
+    {% include post-card.html post=post %}
+  {% endfor %}
+</section>

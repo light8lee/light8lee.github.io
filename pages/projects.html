@@ -1,0 +1,16 @@
+---
+layout: default
+title: Projects
+---
+<section class="page-heading">
+  <h1>Projects</h1>
+  <p>Visual essays, research explainers, and small static experiments.</p>
+</section>
+
+<section class="post-list">
+  {% for post in site.posts %}
+    {% if post.tags contains "visual-essay" or post.tags contains "project" %}
+      {% include post-card.html post=post %}
+    {% endif %}
+  {% endfor %}
+</section>

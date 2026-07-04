@@ -1,29 +1,16 @@
 ---
 layout: default
 title: Links
-comment: true
-keywords: Learn, Links
 ---
+<section class="page-heading">
+  <h1>Links</h1>
+  <p>Useful references and source links.</p>
+</section>
 
-<div class="article">
-    <h3 class="title">{{ page.title }}</h3>
-    <div class="links">
-        {% for i in site.customLinks %}
-        <h4 class="links-category fn-clear">{{ i.message }}</h4>
-        <ul class="links-list fn-clear">
-                {% for link in i.item %}
-                <li><a href="{{ link.url }}" target="_blank">{{ link.text }}</a></li>
-                {% endfor %}
-        </ul>
-        {% endfor %}
-    </div>
-    <div class="comment">
-        {% if site.disqus.config %}
-        <div id="disqus_thread"></div>
-        {% else %}
-            {% if site.duoshuo.config %}
-            <div class="ds-thread" data-thread-key="{{ page.title }}"></div>
-            {% endif %}
-        {% endif %}
-    </div>
-</div>
+<section class="content-section link-list">
+  <a href="https://github.com/light8lee">GitHub</a>
+  <a href="https://jekyllrb.com/">Jekyll</a>
+  <a href="https://pages.github.com/">GitHub Pages</a>
+  <a href="https://arxiv.org/abs/2606.25852">SCPO arXiv</a>
+  <a href="https://arxiv.org/html/2606.25852v1">SCPO HTML</a>
+</section>
