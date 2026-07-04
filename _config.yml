@@ -83,7 +83,7 @@ customLinks:
       url: https://github.com/jekyll/jekyll
     - text: Jekyll (English)
       url: https://jekyllrb.com/
-    - text: Jekyll（中文）
+    - text: Jekyll (中文)
       url: http://jekyllcn.com/
     message: Friends
   - item:
