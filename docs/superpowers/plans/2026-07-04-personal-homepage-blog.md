@@ -80,7 +80,7 @@ Expected: FAIL because the old config contains `http://light8lee.pub`, `gems`, a
 Edit `_config.yml` to contain the new site identity:
 
 ```yaml
-title: Li Tao
+title: 涛涛涛
 description: Agent RL, technical writing, visual explainers, and engineering notes.
 keywords: Agent RL, reinforcement learning, LLM agents, technical writing, visualization
 url: https://light8lee.github.io
@@ -89,7 +89,7 @@ feed: /atom.xml
 favicon: /images/shortcut.jpg
 
 author:
-  name: Li Tao
+  name: 涛涛涛
   email: light8lee@foxmail.com
   imageLink: /images/header.jpg
   simpleIntro: Technical notes on agents, RL, systems, and visual explanation.
@@ -221,7 +221,7 @@ Create `_includes/site-header.html`:
 ```html
 <header class="site-header">
   <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
-    <span class="brand-mark">LT</span>
+    <span class="brand-mark">涛</span>
     <span class="brand-text">{{ site.title }}</span>
   </a>
   <nav class="site-nav" aria-label="Primary navigation">
@@ -356,7 +356,7 @@ animation: home-constellation
   <canvas id="home-constellation" aria-hidden="true"></canvas>
   <div class="home-hero-copy">
     <p class="home-kicker">Agent RL · Engineering Notes · Visual Explainers</p>
-    <h1>Li Tao</h1>
+    <h1>涛涛涛</h1>
     <p>Writing about agents, reinforcement learning, systems, and the craft of making technical ideas easier to see.</p>
   </div>
 </section>
@@ -426,7 +426,7 @@ title: Notes
 
 Rewrite the four legacy pages so they use `layout: default`, avoid `site.url`, and keep their original purpose:
 
-`about.html` should introduce Li Tao and link to GitHub.
+`about.html` should introduce 涛涛涛 and link to GitHub.
 
 `archives.html` should list all posts grouped by date.
 
