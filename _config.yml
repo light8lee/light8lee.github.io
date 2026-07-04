@@ -30,7 +30,7 @@ excerpt_separator: "\n\n"
 detach:       false
 port:         4000
 host:         127.0.0.1
-baseurl:      "" # does not include hostname
+baseurl: ""
 
 # Outputting
 permalink:     date
@@ -38,45 +38,43 @@ paginate_path: /page:num
 timezone:      null
 
 
-#Site config
-title: light8lee
-description: The Blog to record my Learning
-keywords: Learn, light8lee
-url: http://light8lee.pub
+# Site config
+title: 涛涛涛
+description: Agent RL, technical writing, visual explainers, and engineering notes.
+keywords: Agent RL, reinforcement learning, LLM agents, technical writing, visualization
+url: https://light8lee.github.io
 feed: /atom.xml
 favicon: /images/shortcut.jpg
 
-#Nav config
+# Nav config
 nav:
-  - text: 首页
-    url: /index.html
-  - text: 分类目录
-    url: /categories.html
-  - text: 文章归档
+  - text: Home
+    url: /
+  - text: Writing
     url: /archives.html
-  - text: 关于我
+  - text: Projects
+    url: /pages/projects.html
+  - text: Notes
+    url: /pages/notes.html
+  - text: About
     url: /about.html
-  - text: 友情链接
-    url: /links.html
 
-#Author config
+# Author config
 author:
-    name: light8lee
+    name: 涛涛涛
     email: light8lee@foxmail.com
     imageLink: /images/header.jpg
-    simpleIntro: Talk is cheap, show me the code.
+    simpleIntro: Technical notes on agents, RL, systems, and visual explanation.
     detailIntro:
       <p>RTFSC</p>
       <p>精通各种程序语言的拼写</p>
 
-#Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
+# Follow links
 follow:
-  - class: icon-facebook
-    url: http://facebook.com/
-  - class: icon-github-alt
+  - text: GitHub
     url: https://github.com/light8lee/
 
-#Links
+# Links
 customLinks:
   - item:
     - text: Github
@@ -99,17 +97,5 @@ customLinks:
       url: https://github.com/light8lee/
     message: About me
 
-#baidu tongji
-baiduTongji:
-  config: true
-  id: a287a3efd91be3f2641fb8ccf1e25756
-
-duoshuo:
-  config: true
-  id: light8lee
-
-#baidu share config
-baiduShare:
-  config: true
-
-gems: [jekyll-paginate]
+plugins:
+  - jekyll-paginate

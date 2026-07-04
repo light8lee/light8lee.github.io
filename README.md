@@ -1,7 +1,17 @@
-#[light8lee.pub](http://light8lee.pub/)
+# light8lee.github.io
 
-本博客是我使用`zJiaJun`在Github上利用[jekyll](https://github.com/jekyll/jekyll)搭建的pages博客修改而来的，在这里感谢他，并附上相关链接：[9leg.com](http://9leg.com/)、[zJiaJun.github.io](https://github.com/zJiaJun/zJiaJun.github.io)。
+Personal homepage and technical blog for `https://light8lee.github.io/`.
 
+This repository is prepared as a GitHub Pages user site. The remote repository should be named `light8lee.github.io` before publishing to the root GitHub Pages URL.
 
+## Local Build
 
+```powershell
+bundle exec jekyll serve
+```
 
+## Content
+
+- Markdown posts live in `_posts/`.
+- Static assets live in `assets/`.
+- Imported SCPO image-series assets live in `assets/posts/scpo/`.
