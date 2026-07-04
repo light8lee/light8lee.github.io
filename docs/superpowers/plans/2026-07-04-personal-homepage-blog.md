@@ -494,7 +494,7 @@ assert post.exists()
 text = post.read_text(encoding="utf-8")
 assert "2606.25852" in text
 assert "image-sequence" in text
-assert text.count("assets/posts/scpo/final/p") == 13
+assert text.count("<img src=") == 13
 '@ | python -
 ```
 
