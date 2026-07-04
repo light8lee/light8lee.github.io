@@ -1,4 +1,4 @@
-﻿---
+---
 layout: note
 title: "SCPO 图文脚本"
 summary: "从初始化素材导入的 SCPO 图文脚本，经过 GitHub Pages 渲染后可直接阅读。"

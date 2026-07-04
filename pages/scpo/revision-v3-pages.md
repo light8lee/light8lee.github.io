@@ -1,4 +1,4 @@
-﻿---
+---
 layout: note
 title: "SCPO v3 页面修订"
 summary: "SCPO 图文页面的 v3 修订记录。"

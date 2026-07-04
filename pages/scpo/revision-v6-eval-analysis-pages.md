@@ -1,4 +1,4 @@
-﻿---
+---
 layout: note
 title: "SCPO v6 评测分析补页"
 summary: "围绕评测、机制分析、适用场景和局限性的 SCPO 补充页面。"

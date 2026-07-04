@@ -1,4 +1,4 @@
-﻿---
+---
 layout: note
 title: "SCPO 修订记录"
 summary: "SCPO 图文内容的第一轮修订说明。"

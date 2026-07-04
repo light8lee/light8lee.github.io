@@ -1,4 +1,4 @@
-﻿---
+---
 layout: note
 title: "SCPO v4 AS/AE 修订"
 summary: "围绕 AS/AE 表达的 SCPO 图文修订记录。"

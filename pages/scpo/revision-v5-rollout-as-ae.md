@@ -1,4 +1,4 @@
-﻿---
+---
 layout: note
 title: "SCPO v5 Rollout 修订"
 summary: "围绕 rollout、AS 和 AE 的 SCPO 图文修订记录。"
