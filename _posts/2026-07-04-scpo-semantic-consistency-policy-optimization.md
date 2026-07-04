@@ -15,8 +15,9 @@ Semantic Consistency Policy Optimization (SCPO) 关注 Agent RL 中一个很真�
 <div class="source-list">
   <a href="https://arxiv.org/abs/2606.25852">arXiv</a>
   <a href="https://arxiv.org/html/2606.25852v1">HTML</a>
-  <a href="{{ '/assets/posts/scpo/notes/script.md' | relative_url }}">script.md</a>
-  <a href="{{ '/assets/posts/scpo/notes/revision-v6-eval-analysis-pages.md' | relative_url }}">revision notes</a>
+  <a href="{{ '/pages/scpo/script.html' | relative_url }}">Rendered script</a>
+  <a href="{{ '/pages/scpo/revision-v6-eval-analysis-pages.html' | relative_url }}">Rendered revision notes</a>
+  <a href="{{ '/assets/posts/scpo/notes/script.md' | relative_url }}">Raw script.md</a>
 </div>
 
 <div class="image-sequence">
