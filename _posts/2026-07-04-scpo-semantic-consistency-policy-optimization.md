@@ -15,7 +15,6 @@ Semantic Consistency Policy Optimization (SCPO) 讨论的是 Agent RL 里一个�
 <div class="source-list">
   <a href="https://arxiv.org/abs/2606.25852">arXiv</a>
   <a href="https://arxiv.org/html/2606.25852v1">HTML</a>
-  <a href="https://chatgpt.com/share/6a490ef5-d26c-83e8-b3b3-2c013b1f9b97">ChatGPT share</a>
 </div>
 
 <section class="visual-note">
