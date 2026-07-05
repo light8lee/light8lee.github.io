@@ -20,6 +20,11 @@ Thumbs.db
 build
 node_modules
 _site
+.jekyll-cache
+.jekyll-metadata
+.jekyll-serve*.log
+.bundle
+vendor/bundle
 sea-modules
 .cache
 *.so

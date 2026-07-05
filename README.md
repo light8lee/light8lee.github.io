@@ -6,7 +6,18 @@ This repository is prepared as a GitHub Pages user site. The remote repository s
 
 ## Local Build
 
+This site uses Jekyll. On Windows, run the helper script:
+
 ```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\serve.ps1
+```
+
+Then open `http://127.0.0.1:4000/`.
+
+Manual commands:
+
+```powershell
+bundle install
 bundle exec jekyll serve
 ```
 
