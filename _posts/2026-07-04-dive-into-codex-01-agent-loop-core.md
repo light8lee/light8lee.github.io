@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: "Dive into Codex 01：Agent Loop 的核心地图"
-date: 2026-07-06 09:00:00 +0800
+date: 2026-07-04 21:38:06 +0800
 summary: "从 Thread、Session、Turn Loop、Context Builder、Responses API 到 ToolRouter，先建立 Codex 本地 coding agent runtime 的核心闭环。"
 tags: [Codex, coding agent, visual-essay, source-notes, agent-loop]
 category: Codex

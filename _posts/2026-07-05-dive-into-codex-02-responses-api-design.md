@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: "Dive into Codex 02：Responses API 事件模型"
-date: 2026-07-06 09:10:00 +0800
+date: 2026-07-05 22:52:10 +0800
 summary: "把 Chat Completions 与 Responses API 的抽象差异拆开看：item、event、tool call、tool output、skills 和 previous_response_id 如何支撑 agent runtime。"
 tags: [Codex, coding agent, visual-essay, source-notes, responses-api]
 category: Codex

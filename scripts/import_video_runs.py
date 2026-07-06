@@ -19,12 +19,22 @@ SKIP_RUNS = {
     # These have hand-edited long-form posts already in the site.
     "run-2026-07-04-codex-ch01",
     "run-2026-07-05-codex-ch02",
-    "run-20260706-codex-ch02",
     # Duplicate backup directory with the same Cherrl material.
     "run-2026-06-21-cherrl - 副本",
     # User requested SCPO material be skipped.
     "run-2026-07-01-scpo",
     "run-2026-07-03-scpo-xhs",
+}
+
+RUN_OVERRIDES = {
+    "run-20260706-codex-ch02": {
+        "slug": "dive-into-codex-03-cache-compaction",
+        "asset_slug": "dive-into-codex-03-cache-compaction",
+        "title": "Dive into Codex 03：Cache 与 Compaction",
+        "summary": "继续看 Codex 长任务里的上下文管理：稳定前缀如何帮助 prompt cache，compaction 如何在窗口压力下保留可继续工作的状态。",
+        "category": "Codex",
+        "tags": ["Codex", "coding agent", "visual-essay", "source-notes", "cache", "compaction"],
+    }
 }
 
 
@@ -301,10 +311,13 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
 
     slug = slugify(run_dir.name)
     asset_slug = run_slugify(run_dir.name)
+    override = RUN_OVERRIDES.get(run_dir.name, {})
+    slug = str(override.get("slug", slug))
+    asset_slug = str(override.get("asset_slug", asset_slug))
     video_time = choose_video_time(run_dir)
     sources = load_sources(run_dir)
-    title = display_title(script, sources, slug)
-    summary = display_summary(run_dir, script, sources, title)
+    title = str(override.get("title") or display_title(script, sources, slug))
+    summary = str(override.get("summary") or display_summary(run_dir, script, sources, title))
 
     image_dir = choose_image_dir(run_dir)
     source_images = sorted(image_dir.glob("*.png"), key=image_sort_key) if image_dir else []
@@ -328,13 +341,14 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
     post_name = f"{video_time:%Y-%m-%d}-{slug}.md"
     post_path = POSTS_DIR / post_name
 
-    category = "Agent" if any(s.get("theme") == "agent" for s in sources) else "AI Notes"
-    tags = ["video-notes", "visual-essay"]
+    category = str(override.get("category") or ("Agent" if any(s.get("theme") == "agent" for s in sources) else "AI Notes"))
+    tags = list(override.get("tags") or ["video-notes", "visual-essay"])
     if any(s.get("theme") == "llm-post-training" for s in sources):
         tags.append("LLM post-training")
         category = "LLM Post-training"
     if "codex" in slug:
-        tags.append("Codex")
+        if "Codex" not in tags:
+            tags.append("Codex")
         category = "Codex"
 
     body = [
