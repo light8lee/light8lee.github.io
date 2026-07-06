@@ -6,6 +6,7 @@ summary: "从 Thread、Session、Turn Loop、Context Builder、Responses API 到
 tags: [Codex, coding agent, visual-essay, source-notes, agent-loop]
 category: Codex
 cover: /assets/posts/dive-into-codex/01-agent-loop-core/images/001-codex-runtime.png
+body_class: dive-into-codex-post
 ---
 
 这一章先建立 Codex 的整体心智模型：Codex 不是“聊天框 + 模型回复”的简单包装，而是一个由 `Thread`、`Session`、`Turn Loop`、`Context Builder`、`Responses API`、`ToolRouter`、`Workspace` 和 `History` 共同组成的本地 coding agent runtime。

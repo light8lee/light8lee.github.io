@@ -6,6 +6,7 @@ summary: "把 Chat Completions 与 Responses API 的抽象差异拆开看：item
 tags: [Codex, coding agent, visual-essay, source-notes, responses-api]
 category: Codex
 cover: /assets/posts/dive-into-codex/02-responses-api-design/images/001-python-api-compare.png
+body_class: dive-into-codex-post
 ---
 
 第 01 章建立了 Codex 的 Agent Loop。本章进入模型交互层：为什么普通 message 模型不够用，以及 Responses API 如何把模型输出拆成可追踪、可恢复、可执行的 item / event。
