@@ -14,11 +14,22 @@ ROOT = Path(__file__).resolve().parents[1]
 VIDEO_ROOT = Path(r"D:\Codex\Video")
 POSTS_DIR = ROOT / "_posts"
 ASSETS_DIR = ROOT / "assets" / "posts" / "video-notes"
+REWARD_HACKING_RUN = VIDEO_ROOT / ".worktrees" / "reward-hacking-2026-06-20" / "run-2026-06-20-reward-hacking"
+CODEX_CH03_PUBLISH = (
+    VIDEO_ROOT
+    / ".worktrees"
+    / "dive-into-codex-images"
+    / "dive-into-codex"
+    / "publish"
+    / "chapters"
+    / "03-cache-and-compaction"
+)
 
 SKIP_RUNS = {
     # These have hand-edited long-form posts already in the site.
     "run-2026-07-04-codex-ch01",
     "run-2026-07-05-codex-ch02",
+    "run-20260706-codex-ch02",
     # Duplicate backup directory with the same Cherrl material.
     "run-2026-06-21-cherrl - 副本",
     # User requested SCPO material be skipped.
@@ -27,15 +38,27 @@ SKIP_RUNS = {
 }
 
 RUN_OVERRIDES = {
-    "run-20260706-codex-ch02": {
+    "run-20260706-codex-ch03": {
         "slug": "dive-into-codex-03-cache-compaction",
         "asset_slug": "dive-into-codex-03-cache-compaction",
         "title": "Dive into Codex 03：Cache 与 Compaction",
         "summary": "继续看 Codex 长任务里的上下文管理：稳定前缀如何帮助 prompt cache，compaction 如何在窗口压力下保留可继续工作的状态。",
         "category": "Codex",
         "tags": ["Codex", "coding agent", "visual-essay", "source-notes", "cache", "compaction"],
+        "publish_chapter_dir": str(CODEX_CH03_PUBLISH),
+    },
+    "run-2026-06-20-reward-hacking": {
+        "title": "奖励上涨，为什么安全目标反而变差？",
+        "summary": "训练中观察奖励不断上涨，隐藏的真实目标，也就是安全表现，却可能原地踏步，甚至变差。风险是我们把钻空子误判成能力提升。",
+        "category": "LLM Post-training",
+        "tags": ["video-notes", "visual-essay", "LLM post-training", "reward hacking", "Agent RL"],
+        "evidence_file": "evidence.md",
     }
 }
+
+EXTRA_RUN_DIRS = [
+    REWARD_HACKING_RUN,
+]
 
 
 @dataclass
@@ -44,6 +67,15 @@ class Scene:
     title: str
     body: str
     image: Path | None
+
+
+@dataclass
+class PublishedChapter:
+    intro: str
+    mainline: str
+    scenes: list[Scene]
+    tail: str
+    source_images: list[Path]
 
 
 def run_powershell(script: str) -> str:
@@ -301,6 +333,71 @@ def source_links_html(sources: list[dict]) -> str:
     return '<div class="source-list">\n' + "\n".join(links) + "\n</div>\n\n"
 
 
+def parse_publish_chapter(chapter_dir: Path) -> PublishedChapter:
+    readme = read_text(chapter_dir / "README.md")
+    section_matches = list(re.finditer(r"^##\s+(\d{3})\.\s+(.+)$", readme, re.M))
+    first_section_start = section_matches[0].start() if section_matches else len(readme)
+    prelude = readme[:first_section_start].strip()
+    prelude = re.sub(r"^# .+\n*", "", prelude).strip()
+
+    tail_start = len(readme)
+    official = re.search(r"^##\s+官方依据\s*$", readme, re.M)
+    if official:
+        tail_start = official.start()
+
+    mainline_match = re.search(r"本章主线：\n\n```text\n(.*?)\n```", prelude, re.S)
+    mainline = mainline_match.group(1).strip() if mainline_match else ""
+    intro = re.sub(r"本章主线：\n\n```text\n.*?\n```", "", prelude, flags=re.S).strip()
+
+    scenes: list[Scene] = []
+    source_images: list[Path] = []
+    for idx, match in enumerate(section_matches):
+        start = match.end()
+        next_start = section_matches[idx + 1].start() if idx + 1 < len(section_matches) else tail_start
+        chunk = readme[start:next_start].strip()
+        image_match = re.search(r"!\[[^\]]*\]\((images/[^)]+)\)", chunk)
+        image_path = chapter_dir / image_match.group(1) if image_match else None
+        if image_path:
+            source_images.append(image_path)
+            chunk = chunk.replace(image_match.group(0), "").strip()
+        scenes.append(
+            Scene(
+                index=int(match.group(1)),
+                title=match.group(2).strip(),
+                body=chunk.strip(),
+                image=image_path,
+            )
+        )
+
+    tail = readme[tail_start:].strip() if tail_start < len(readme) else ""
+    return PublishedChapter(
+        intro=intro,
+        mainline=mainline,
+        scenes=scenes,
+        tail=tail,
+        source_images=source_images,
+    )
+
+
+def evidence_summary(run_dir: Path, evidence_name: str) -> str:
+    path = run_dir / evidence_name
+    if not path.exists():
+        return ""
+    text = read_text(path)
+    wanted = []
+    capture = False
+    for line in text.splitlines():
+        if line.startswith("## 证据边界") or line.startswith("## 九、可追溯来源"):
+            capture = True
+            wanted.append("#" + line)
+            continue
+        if line.startswith("## ") and capture:
+            capture = False
+        if capture:
+            wanted.append(line)
+    return "\n".join(wanted).strip()
+
+
 def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
     if run_dir.name in SKIP_RUNS:
         return None
@@ -318,16 +415,25 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
     sources = load_sources(run_dir)
     title = str(override.get("title") or display_title(script, sources, slug))
     summary = str(override.get("summary") or display_summary(run_dir, script, sources, title))
+    publish_chapter = None
+    if override.get("publish_chapter_dir"):
+        publish_chapter = parse_publish_chapter(Path(str(override["publish_chapter_dir"])))
 
     image_dir = choose_image_dir(run_dir)
-    source_images = sorted(image_dir.glob("*.png"), key=image_sort_key) if image_dir else []
+    source_images = (
+        publish_chapter.source_images
+        if publish_chapter
+        else sorted(image_dir.glob("*.png"), key=image_sort_key) if image_dir else []
+    )
     asset_dir = ASSETS_DIR / asset_slug / "images"
     copied_images: list[Path] = []
     if not dry_run:
+        if asset_dir.exists():
+            shutil.rmtree(asset_dir)
         asset_dir.mkdir(parents=True, exist_ok=True)
     for image in source_images:
         dest_name = image.name
-        if image_dir and image_dir.name == "final":
+        if image_dir and image_dir.name == "final" and not publish_chapter:
             match = re.search(r"(\d+)", image.stem)
             dest_name = f"{int(match.group(1)):02d}.png" if match else image.name
         dest = asset_dir / dest_name
@@ -335,7 +441,13 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
             shutil.copy2(image, dest)
         copied_images.append(dest)
 
-    scenes = build_scenes(run_dir, copied_images, script)
+    if publish_chapter:
+        scenes = [
+            Scene(scene.index, scene.title, scene.body, copied_images[idx] if idx < len(copied_images) else None)
+            for idx, scene in enumerate(publish_chapter.scenes)
+        ]
+    else:
+        scenes = build_scenes(run_dir, copied_images, script)
     cover = f"/assets/posts/video-notes/{asset_slug}/images/{copied_images[0].name}" if copied_images else ""
     date_value = video_time.strftime("%Y-%m-%d %H:%M:%S +0800")
     post_name = f"{video_time:%Y-%m-%d}-{slug}.md"
@@ -344,12 +456,14 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
     category = str(override.get("category") or ("Agent" if any(s.get("theme") == "agent" for s in sources) else "AI Notes"))
     tags = list(override.get("tags") or ["video-notes", "visual-essay"])
     if any(s.get("theme") == "llm-post-training" for s in sources):
-        tags.append("LLM post-training")
+        if "LLM post-training" not in tags:
+            tags.append("LLM post-training")
         category = "LLM Post-training"
     if "codex" in slug:
         if "Codex" not in tags:
             tags.append("Codex")
         category = "Codex"
+    tags = list(dict.fromkeys(tags))
 
     body = [
         "---",
@@ -364,8 +478,11 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
         body.append(f"cover: {cover}")
     body.extend(["body_class: dive-into-codex-post", "---", ""])
 
-    intro = summary.rstrip("。") + "。"
-    body.extend([intro, "", source_links_html(sources).rstrip(), ""])
+    intro = publish_chapter.intro if publish_chapter else summary.rstrip("。") + "。"
+    body.extend([intro, ""])
+    if publish_chapter and publish_chapter.mainline:
+        body.extend(["本章主线：", "", "```text", publish_chapter.mainline, "```", ""])
+    body.extend([source_links_html(sources).rstrip(), ""])
 
     for scene in scenes:
         image_name = scene.image.name if scene.image else ""
@@ -382,7 +499,7 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
         body.extend(
             [
                 '<div markdown="1">',
-                f'<p class="visual-note-index">{scene.index:03d} / Video Notes</p>',
+                f'<p class="visual-note-index">{scene.index:03d} / {"Dive into Codex" if category == "Codex" else "Video Notes"}</p>',
                 f"<h2>{markdown_escape_html(scene.title)}</h2>",
                 "",
                 scene.body.strip(),
@@ -391,6 +508,14 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
                 "",
             ]
         )
+
+    if publish_chapter and publish_chapter.tail:
+        body.extend([publish_chapter.tail, ""])
+
+    if override.get("evidence_file"):
+        evidence = evidence_summary(run_dir, str(override["evidence_file"]))
+        if evidence:
+            body.extend(["## 证据与制作边界", "", evidence, ""])
 
     if not dry_run:
         post_path.write_text("\n".join(body).replace("\n\n\n", "\n\n"), encoding="utf-8")
@@ -402,7 +527,8 @@ def main() -> None:
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
     generated = []
-    for run_dir in sorted(VIDEO_ROOT.glob("run-*"), key=get_creation_time):
+    run_dirs = list(VIDEO_ROOT.glob("run-*")) + [p for p in EXTRA_RUN_DIRS if p.exists()]
+    for run_dir in sorted(run_dirs, key=get_creation_time):
         post = write_post(run_dir, dry_run=args.dry_run)
         if post:
             generated.append(post)
