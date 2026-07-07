@@ -1,4 +1,4 @@
-<article class="post-card">
+<article class="post-card"{% if include.collection %} data-collection="{{ include.collection }}"{% endif %}{% if include.tags %} data-tags="{{ include.tags | join: '|' | escape }}"{% endif %}>
   <a class="post-card-link" href="{{ include.post.url | relative_url }}">
     {% if include.post.cover %}
     <img src="{{ include.post.cover | relative_url }}" alt="" loading="lazy">

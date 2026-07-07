@@ -275,6 +275,75 @@ img {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.video-filters {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  margin: 24px 0;
+  padding: 16px 0;
+}
+
+.collection-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-chip {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 8px 12px;
+}
+
+.filter-chip:hover,
+.filter-chip.is-active {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--surface);
+}
+
+.tag-filter {
+  align-items: center;
+  color: var(--muted);
+  display: inline-flex;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.tag-filter select {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  font: inherit;
+  min-width: 190px;
+  padding: 8px 36px 8px 10px;
+}
+
+.post-card[hidden],
+.empty-filter-message[hidden] {
+  display: none;
+}
+
+.empty-filter-message {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  margin: 18px 0 0;
+  padding: 18px;
+}
+
 .post-card {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -583,6 +652,16 @@ img {
 
   .site-main {
     padding-inline: 18px;
+  }
+
+  .video-filters,
+  .tag-filter {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .tag-filter select {
+    width: 100%;
   }
 
   .home-hero {

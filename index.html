@@ -48,12 +48,87 @@ animation: home-constellation
     <h2>Latest Writing</h2>
     <a href="{{ '/archives.html' | relative_url }}">Archive</a>
   </div>
-  <div class="post-grid">
-    {% for post in site.posts limit:6 %}
-      {% include post-card.html post=post %}
+
+  <div class="video-filters" data-video-filter-root>
+    <div class="collection-filter" aria-label="Video collections">
+      <button class="filter-chip is-active" type="button" data-filter-type="collection" data-filter-value="all" aria-pressed="true">全部</button>
+      <button class="filter-chip" type="button" data-filter-type="collection" data-filter-value="post-training" aria-pressed="false">后训练</button>
+      <button class="filter-chip" type="button" data-filter-type="collection" data-filter-value="agent" aria-pressed="false">agent</button>
+      <button class="filter-chip" type="button" data-filter-type="collection" data-filter-value="dive-into-codex" aria-pressed="false">dive-into-codex</button>
+    </div>
+    <label class="tag-filter">
+      <span>Tag</span>
+      <select data-filter-type="tag" aria-label="Filter videos by tag">
+        <option value="all">全部 tag</option>
+        {% assign sorted_tags = site.tags | sort %}
+        {% for tag in sorted_tags %}
+        <option value="{{ tag[0] | escape }}">{{ tag[0] }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  </div>
+
+  <div class="post-grid" data-filter-results>
+    {% for post in site.posts %}
+      {% assign collection_key = 'agent' %}
+      {% if post.category == 'Codex' %}
+        {% assign collection_key = 'dive-into-codex' %}
+      {% elsif post.category == 'LLM Post-training' or post.category == 'Agent RL' %}
+        {% assign collection_key = 'post-training' %}
+      {% endif %}
+      {% include post-card.html post=post collection=collection_key tags=post.tags %}
     {% endfor %}
   </div>
+  <p class="empty-filter-message" data-empty-filter hidden>没有匹配的视频。</p>
 </section>
+
+<script>
+  (function () {
+    var root = document.querySelector("[data-video-filter-root]");
+    if (!root) return;
+
+    var collectionButtons = Array.prototype.slice.call(root.querySelectorAll('[data-filter-type="collection"]'));
+    var tagSelect = root.querySelector('[data-filter-type="tag"]');
+    var cards = Array.prototype.slice.call(document.querySelectorAll("[data-filter-results] .post-card"));
+    var emptyMessage = document.querySelector("[data-empty-filter]");
+    var activeCollection = "all";
+
+    function applyFilters() {
+      var activeTag = tagSelect ? tagSelect.value : "all";
+      var visibleCount = 0;
+
+      cards.forEach(function (card) {
+        var collectionMatches = activeCollection === "all" || card.dataset.collection === activeCollection;
+        var tags = card.dataset.tags ? card.dataset.tags.split("|") : [];
+        var tagMatches = activeTag === "all" || tags.indexOf(activeTag) !== -1;
+        var visible = collectionMatches && tagMatches;
+
+        card.hidden = !visible;
+        if (visible) visibleCount += 1;
+      });
+
+      if (emptyMessage) {
+        emptyMessage.hidden = visibleCount !== 0;
+      }
+    }
+
+    collectionButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        activeCollection = button.dataset.filterValue || "all";
+        collectionButtons.forEach(function (item) {
+          var isActive = item === button;
+          item.classList.toggle("is-active", isActive);
+          item.setAttribute("aria-pressed", String(isActive));
+        });
+        applyFilters();
+      });
+    });
+
+    if (tagSelect) {
+      tagSelect.addEventListener("change", applyFilters);
+    }
+  })();
+</script>
 
 <section class="content-section split-section">
   <div>
