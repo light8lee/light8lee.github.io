@@ -172,7 +172,33 @@ def normalize_obsidian(text: str, post: SourcePost) -> str:
         "⟨f(q,i), f(k,j)⟩=g(q,k,i−j)⟨f(q,i),f(k,j)⟩=g(q,k,i−j)",
         r"\langle f(q,i), f(k,j) \rangle = g(q,k,i-j)",
     )
+    text = text.replace("KL(π_student || π_teacher)", r"KL(π_student \|\| π_teacher)")
+    text = ensure_table_boundaries(text)
     return text.strip() + "\n"
+
+
+def ensure_table_boundaries(text: str) -> str:
+    lines = text.splitlines()
+    output: list[str] = []
+    in_table = False
+
+    for index, line in enumerate(lines):
+        is_pipe_row = bool(re.match(r"^\s*\|.*\|\s*$", line))
+        next_is_separator = (
+            index + 1 < len(lines)
+            and bool(re.match(r"^\s*\|(?:\s*:?-{2,}:?\s*\|)+\s*$", lines[index + 1]))
+        )
+
+        if in_table and not is_pipe_row:
+            if line.strip():
+                output.append("")
+            in_table = False
+
+        output.append(line)
+        if is_pipe_row and next_is_separator:
+            in_table = True
+
+    return "\n".join(output)
 
 
 def markdown_heading_from_title(title: str) -> str:

@@ -21,6 +21,7 @@ cover: /assets/posts/llm-notes/ppo-dpo-grpo/images/cover.png
 |**PPO**|带剪切目标的策略梯度，RLHF中的优化器|✅|✅|中（需技巧）|在线|RLHF 骨干|
 |**DPO**|直接优化偏好对数概率|❌ 不需要|❌ 不需要|高，类似分类|离线|Llama 2/3 对齐|
 |**GRPO**|组内相对优势，丢弃Critic|✅ 需要（或规则）|❌ 不需要|中高，避免价值拟合|在线|DeepSeek-R1 数学推理|
+
 # 1. RLHF 与 PPO 的深层原理
 
 ### 1.1 RLHF 的数学本质：带 KL 约束的奖励最大化

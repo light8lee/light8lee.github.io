@@ -451,6 +451,28 @@ img {
   overflow-y: hidden;
 }
 
+.post-content table {
+  border-collapse: collapse;
+  display: block;
+  margin: 24px 0;
+  max-width: 100%;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.post-content th,
+.post-content td {
+  border-bottom: 1px solid var(--line);
+  min-width: 112px;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.post-content th {
+  font-weight: 800;
+}
+
 .button-link,
 .source-list a,
 .link-list a {
