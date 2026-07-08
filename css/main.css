@@ -381,6 +381,25 @@ img {
   color: var(--muted);
 }
 
+.source-cover {
+  margin: 0 0 34px;
+}
+
+.source-cover img {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+}
+
+.source-cover figcaption {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
 .button-link,
 .source-list a,
 .link-list a {

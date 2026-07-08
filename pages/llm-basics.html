@@ -1,0 +1,15 @@
+---
+layout: default
+title: 大模型基础知识
+---
+<section class="page-heading collection-heading">
+  <h1>大模型基础知识</h1>
+  <p>Transformer、RoPE、采样、LoRA、RLHF、DPO、GRPO、OPD 与 Agent 等基础笔记合集。</p>
+</section>
+
+<section class="post-list">
+  {% assign llm_basics_posts = site.posts | where: "category", "大模型基础知识" %}
+  {% for post in llm_basics_posts %}
+    {% include post-card.html post=post %}
+  {% endfor %}
+</section>

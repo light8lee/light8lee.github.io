@@ -56,6 +56,8 @@ nav:
     url: /pages/projects.html
   - text: Notes
     url: /pages/notes.html
+  - text: 大模型基础知识
+    url: /pages/llm-basics.html
   - text: About
     url: /about.html
 
