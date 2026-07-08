@@ -5,6 +5,13 @@
     {% endif %}
     <span class="post-card-date">{{ include.post.date | date: "%Y-%m-%d" }}</span>
     <h3>{{ include.post.title }}</h3>
+    {% if include.post.tags %}
+    <div class="post-card-tags" aria-label="Tags">
+      {% for tag in include.post.tags limit: 4 %}
+      <span>{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
     {% if include.post.summary %}
     <p>{{ include.post.summary }}</p>
     {% else %}
