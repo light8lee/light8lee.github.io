@@ -4,7 +4,7 @@ import os
 import re
 import shutil
 from dataclasses import dataclass
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 
 
@@ -84,6 +84,34 @@ POSTS_TO_BUILD = [
 ]
 
 
+QA_IMAGES = {
+    "lora": [
+        (r"^# Q1:", "qa-r-alpha.png", "LoRA Q1: r 和 lora_alpha 的作用"),
+        (r"^# Q2:", "qa-target-layers.png", "LoRA Q2: 常用于哪些层"),
+        (r"^# Q3:", "qa-q-v.png", "LoRA Q3: 为什么 Q 和 V 是首选"),
+    ],
+    "ppo-dpo-grpo": [
+        (r"^# Q1:", "qa-rollout-token-loss.png", "PPO/GRPO Q1: 完整 rollout 后再计算 token loss"),
+        (r"^# Q2:", "qa-reward-value-model.png", "PPO Q2: reward model 和 value model 的关系"),
+        (r"^# Q3:", "qa-why-value-model.png", "PPO Q3: 为什么还需要 value model"),
+    ],
+    "opd": [
+        (r"^# Q1:", "qa-original-kl-loss.png", "OPD Q1: 原始 KL Loss"),
+        (r"^# Q2", "qa-reverse-kl-sign.png", "OPD Q2: 反向 KL Loss 是否需要加负号"),
+        (r"^# Q3", "qa-reverse-kl-effect.png", "OPD Q3: 反向 KL Loss 如何起作用"),
+        (r"^## Q&A", "qa-teacher-prompt-feedback.png", "OPD Q&A: teacher prompt、student output 与 feedback"),
+    ],
+    "grpo-pytorch": [
+        (r"^### 12\.1", "qa-same-group-reward.png", "GRPO 常见问题：同组奖励完全相同"),
+        (r"^### 12\.2", "qa-completion-mask.png", "GRPO 常见问题：忘记 Completion Mask"),
+        (r"^### 12\.3", "qa-current-log-prob-grad.png", "GRPO 常见问题：Current Log Probability 需要梯度"),
+        (r"^### 12\.4", "qa-fixed-old-policy.png", "GRPO 常见问题：固定 Old Policy"),
+        (r"^### 12\.5", "qa-first-step-loss-zero.png", "GRPO 常见问题：第一步 Loss 接近零"),
+        (r"^### 12\.6", "qa-length-normalization.png", "GRPO 常见问题：回答长度归一化"),
+    ],
+}
+
+
 def yaml_string(value: str) -> str:
     return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
 
@@ -97,13 +125,53 @@ def split_frontmatter(text: str) -> tuple[str | None, str]:
     return text[4:end].strip(), text[end + len("\n---") :].lstrip()
 
 
-def normalize_obsidian(text: str) -> str:
+def embedded_asset_name(name: str) -> str:
+    stem = Path(name).stem.strip().lower()
+    suffix = Path(name).suffix.lower() or ".png"
+    stem = re.sub(r"[^a-z0-9]+", "-", stem).strip("-")
+    return f"{stem}{suffix}"
+
+
+def find_embedded_image(name: str) -> Path:
+    candidates = [
+        SOURCE / name,
+        SOURCE / "images" / name,
+        SOURCE.parent / name,
+        SOURCE.parent / "images" / name,
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+
+    matches = list(SOURCE.parent.rglob(name))
+    if matches:
+        return matches[0]
+    raise FileNotFoundError(f"Embedded image not found: {name}")
+
+
+def embedded_image_markdown(post: SourcePost, name: str) -> str:
+    asset_name = embedded_asset_name(name)
+    source_image = find_embedded_image(name)
+    image_dir = ASSETS / post.slug / "images"
+    image_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(source_image, image_dir / asset_name)
+    image_url = f"/assets/posts/llm-notes/{post.slug}/images/{asset_name}"
+    alt = Path(name).stem
+    return f"![{alt}]({{{{ '{image_url}' | relative_url }}}})"
+
+
+def normalize_obsidian(text: str, post: SourcePost) -> str:
     text = text.replace("\r\n", "\n")
-    text = re.sub(r"!\[\[([^\]]+)\]\]", r"\n> 原文图片占位：`\1`\n", text)
+    text = re.sub(r"!\[\[([^\]]+)\]\]", lambda match: embedded_image_markdown(post, match.group(1)), text)
     text = re.sub(r"\[\[([^\]|]+)\|([^\]]+)\]\]", r"\2", text)
     text = re.sub(r"\[\[([^\]]+)\]\]", r"\1", text)
     text = re.sub(r"^> \[!([^\]]+)\][+-]?", r"> **\1**", text, flags=re.MULTILINE)
     text = text.replace("```handdrawn-ink", "```json")
+    text = text.replace("<br/>", "<br>")
+    text = text.replace(
+        "⟨f(q,i), f(k,j)⟩=g(q,k,i−j)⟨f(q,i),f(k,j)⟩=g(q,k,i−j)",
+        r"\langle f(q,i), f(k,j) \rangle = g(q,k,i-j)",
+    )
     return text.strip() + "\n"
 
 
@@ -114,10 +182,10 @@ def markdown_heading_from_title(title: str) -> str:
     return "# " + title.lstrip("#").strip()
 
 
-def read_markdown(path: Path) -> str:
+def read_markdown(post: SourcePost, path: Path) -> str:
     text = path.read_text(encoding="utf-8")
     frontmatter, body = split_frontmatter(text)
-    body = normalize_obsidian(body)
+    body = normalize_obsidian(body, post)
     if frontmatter:
         body = (
             "## 原始笔记元数据\n\n"
@@ -134,7 +202,37 @@ def read_markdown(path: Path) -> str:
 
 
 def source_body(post: SourcePost) -> str:
-    return read_markdown(SOURCE / post.filename)
+    return insert_qa_images(post, read_markdown(post, SOURCE / post.filename))
+
+
+def source_date(post: SourcePost) -> datetime:
+    return datetime.fromtimestamp((SOURCE / post.filename).stat().st_mtime)
+
+
+def qa_image_markdown(post: SourcePost, filename: str, alt: str) -> str:
+    image_url = f"/assets/posts/llm-notes/{post.slug}/images/{filename}"
+    return (
+        f"\n<figure class=\"qa-figure\">\n"
+        f"  <img src=\"{{{{ '{image_url}' | relative_url }}}}\" alt=\"{alt}\" loading=\"lazy\">\n"
+        f"  <figcaption>{alt}</figcaption>\n"
+        f"</figure>\n"
+    )
+
+
+def insert_qa_images(post: SourcePost, body: str) -> str:
+    rules = QA_IMAGES.get(post.slug, [])
+    if not rules:
+        return body
+
+    output: list[str] = []
+    for line in body.splitlines():
+        output.append(line)
+        stripped = line.strip()
+        for pattern, filename, alt in rules:
+            if re.match(pattern, stripped):
+                output.append(qa_image_markdown(post, filename, alt))
+                break
+    return "\n".join(output).strip() + "\n"
 
 
 def post_markdown(post: SourcePost, date: datetime) -> str:
@@ -173,10 +271,13 @@ def main() -> None:
     remove_path(POSTS / "2026-07-08-ppo-source-walkthrough.md")
     remove_path(ASSETS / "ppo-source-walkthrough")
 
-    base_date = datetime(2026, 7, 8, 9, 30)
-    for offset, post in enumerate(POSTS_TO_BUILD):
-        out = POSTS / f"{base_date.date()}-{post.slug}.md"
-        out.write_text(post_markdown(post, base_date + timedelta(minutes=offset)), encoding="utf-8")
+    for post in POSTS_TO_BUILD:
+        date = source_date(post)
+        out = POSTS / f"{date.date()}-{post.slug}.md"
+        for stale in POSTS.glob(f"*-{post.slug}.md"):
+            if stale != out:
+                stale.unlink()
+        out.write_text(post_markdown(post, date), encoding="utf-8")
         print(out)
 
 

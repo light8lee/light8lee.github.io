@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "GRPO PyTorch 伪代码详解：从采样到组内相对优势"
-date: 2026-07-08 09:35:00 +0800
+date: 2026-06-15 09:01:21 +0800
 summary: "结合伪代码完整拆解 GRPO 的 rollout、reward、group advantage、loss 和训练循环。"
 tags: [LLM, GRPO, PyTorch, RL]
 category: "大模型基础知识"
@@ -695,12 +695,12 @@ ratio = torch.exp(log_ratio)
 
 ```mermaid
 flowchart TD
-    A[current_log_probs<br/>保留梯度] --> B[ratio]
+    A[current_log_probs<br>保留梯度] --> B[ratio]
     A --> C[KL penalty]
-    D[old_log_probs<br/>detach] --> B
-    E[advantages<br/>detach] --> F[policy objective]
+    D[old_log_probs<br>detach] --> B
+    E[advantages<br>detach] --> F[policy objective]
     B --> F
-    G[ref_log_probs<br/>detach] --> C
+    G[ref_log_probs<br>detach] --> C
     F --> H[per_token_loss]
     C --> H
     H --> I[mask 与归一化]
@@ -734,6 +734,12 @@ loss -X-> advantage normalization
 
 ### 12.1 同组奖励完全相同
 
+<figure class="qa-figure">
+  <img src="{{ '/assets/posts/llm-notes/grpo-pytorch/images/qa-same-group-reward.png' | relative_url }}" alt="GRPO 常见问题：同组奖励完全相同" loading="lazy">
+  <figcaption>GRPO 常见问题：同组奖励完全相同</figcaption>
+</figure>
+
+
 ```python
 rewards = [1.0, 1.0, 1.0, 1.0]
 advantages = [0.0, 0.0, 0.0, 0.0]
@@ -743,9 +749,21 @@ advantages = [0.0, 0.0, 0.0, 0.0]
 
 ### 12.2 忘记 Completion Mask
 
+<figure class="qa-figure">
+  <img src="{{ '/assets/posts/llm-notes/grpo-pytorch/images/qa-completion-mask.png' | relative_url }}" alt="GRPO 常见问题：忘记 Completion Mask" loading="lazy">
+  <figcaption>GRPO 常见问题：忘记 Completion Mask</figcaption>
+</figure>
+
+
 如果忘记 mask，模型会在 padding token 上计算 loss，产生错误梯度。
 
 ### 12.3 对 Current Log Probability 使用 `no_grad`
+
+<figure class="qa-figure">
+  <img src="{{ '/assets/posts/llm-notes/grpo-pytorch/images/qa-current-log-prob-grad.png' | relative_url }}" alt="GRPO 常见问题：Current Log Probability 需要梯度" loading="lazy">
+  <figcaption>GRPO 常见问题：Current Log Probability 需要梯度</figcaption>
+</figure>
+
 
 这会直接切断策略梯度：
 
@@ -757,15 +775,33 @@ with torch.no_grad():
 
 ### 12.4 没有固定 Old Policy
 
+<figure class="qa-figure">
+  <img src="{{ '/assets/posts/llm-notes/grpo-pytorch/images/qa-fixed-old-policy.png' | relative_url }}" alt="GRPO 常见问题：固定 Old Policy" loading="lazy">
+  <figcaption>GRPO 常见问题：固定 Old Policy</figcaption>
+</figure>
+
+
 如果每次计算 loss 时都使用当前 policy 重新计算 `old_log_probs`，ratio 会始终接近 1，PPO clipping 失效。
 
 ### 12.5 第一步 Loss 接近零
+
+<figure class="qa-figure">
+  <img src="{{ '/assets/posts/llm-notes/grpo-pytorch/images/qa-first-step-loss-zero.png' | relative_url }}" alt="GRPO 常见问题：第一步 Loss 接近零" loading="lazy">
+  <figcaption>GRPO 常见问题：第一步 Loss 接近零</figcaption>
+</figure>
+
 
 组内 advantage 的均值通常接近零，因此第一次更新时 scalar policy loss 可能接近零。
 
 这不代表梯度为零。不同回答具有不同 advantage，它们仍会产生不同方向的参数梯度。
 
 ### 12.6 回答长度归一化
+
+<figure class="qa-figure">
+  <img src="{{ '/assets/posts/llm-notes/grpo-pytorch/images/qa-length-normalization.png' | relative_url }}" alt="GRPO 常见问题：回答长度归一化" loading="lazy">
+  <figcaption>GRPO 常见问题：回答长度归一化</figcaption>
+</figure>
+
 
 经典 GRPO 通常先对每条回答的 token loss 求平均，再对 batch 求平均。
 

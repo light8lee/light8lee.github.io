@@ -400,6 +400,39 @@ img {
   text-align: center;
 }
 
+.qa-figure {
+  margin: 18px 0 28px;
+}
+
+.qa-figure img {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+}
+
+.qa-figure figcaption {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.mermaid {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin: 22px 0;
+  overflow-x: auto;
+  padding: 18px;
+}
+
+.MathJax {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 .button-link,
 .source-list a,
 .link-list a {

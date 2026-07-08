@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Transformer 详解：从 Attention 到 FFN、残差与 LayerNorm"
-date: 2026-07-08 09:30:00 +0800
+date: 2026-05-05 10:27:28 +0800
 summary: "完整整理 Transformer 层的核心组件、PyTorch 实现、FFN 膨胀收缩结构，以及 MoE、GQA 等延伸问题。"
 tags: [LLM, Transformer, Attention, FFN]
 category: "大模型基础知识"
