@@ -10,11 +10,8 @@ cover: /assets/posts/llm-notes/transformer/images/cover.png
 
 <figure class="source-cover">
   <img src="{{ '/assets/posts/llm-notes/transformer/images/cover.png' | relative_url }}" alt="Transformer 详解：从 Attention 到 FFN、残差与 LayerNorm" loading="lazy">
-  <figcaption>Imagen 生成配图，基于原始文件《Transformer详解.md》的主题绘制。</figcaption>
+  <figcaption>Imagen 生成配图，基于本文主题绘制。</figcaption>
 </figure>
-
-> 原始文件：`D:\BaiduSyncdisk\knowledge\大模型\Transformer详解.md`  
-> 说明：下面正文尽量保留原始笔记的完整内容；Obsidian 本地图片引用会以“原文图片占位”形式保留，避免网页出现断图。
 
 # 🧱 Transformer 层的核心组件
 

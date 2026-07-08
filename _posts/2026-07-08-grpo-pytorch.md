@@ -1,20 +1,19 @@
 ---
 layout: post
-title: "GRPO PyTorch 伪代码详解：从组内优势到 masked token loss"
+title: "GRPO PyTorch 伪代码详解：从采样到组内相对优势"
 date: 2026-07-08 09:35:00 +0800
-summary: "完整整理 GRPO 的张量形状、log probability 提取、ratio、clipping、KL penalty、detach 与 mask 细节。"
+summary: "结合伪代码完整拆解 GRPO 的 rollout、reward、group advantage、loss 和训练循环。"
 tags: [LLM, GRPO, PyTorch, RL]
 category: "大模型基础知识"
 cover: /assets/posts/llm-notes/grpo-pytorch/images/cover.png
 ---
 
 <figure class="source-cover">
-  <img src="{{ '/assets/posts/llm-notes/grpo-pytorch/images/cover.png' | relative_url }}" alt="GRPO PyTorch 伪代码详解：从组内优势到 masked token loss" loading="lazy">
-  <figcaption>Imagen 生成配图，基于原始文件《GRPO_PyTorch_伪代码详解.md》的主题绘制。</figcaption>
+  <img src="{{ '/assets/posts/llm-notes/grpo-pytorch/images/cover.png' | relative_url }}" alt="GRPO PyTorch 伪代码详解：从采样到组内相对优势" loading="lazy">
+  <figcaption>Imagen 生成配图，基于本文主题绘制。</figcaption>
 </figure>
 
-> 原始文件：`D:\BaiduSyncdisk\knowledge\大模型\GRPO_PyTorch_伪代码详解.md`  
-> 说明：下面正文尽量保留原始笔记的完整内容；Obsidian 本地图片引用会以“原文图片占位”形式保留，避免网页出现断图。
+# GRPO PyTorch 伪代码详解
 
 ## 原始笔记元数据
 
@@ -152,7 +151,8 @@ L^{\text{policy}}_{i,t}
 \beta D_{KL}
 $$
 
-> **important** > 训练时只对 completion token 计算 loss。Prompt token 和 padding token 必须被 mask 掉。
+> **important**
+> 训练时只对 completion token 计算 loss。Prompt token 和 padding token 必须被 mask 掉。
 
 ## 3. Tensor 形状约定
 
@@ -614,7 +614,8 @@ surrogate = (
 - 需要有效 PPO clipping
 - 需要准确衡量 current policy 与 old policy 的偏移
 
-> **note** > 如果没有单独保存 `old_log_probs`，ratio 的前向值会始终为 1，PPO clipping 基本失去意义。
+> **note**
+> 如果没有单独保存 `old_log_probs`，ratio 的前向值会始终为 1，PPO clipping 基本失去意义。
 
 ## 10. Tensor 数值变化示例
 

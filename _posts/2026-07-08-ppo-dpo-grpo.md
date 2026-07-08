@@ -2,7 +2,7 @@
 layout: post
 title: "PPO、DPO、GRPO 详解：LLM 偏好对齐方法对比"
 date: 2026-07-08 09:34:00 +0800
-summary: "完整整理 RLHF/PPO、DPO、GRPO 的数学目标、训练流程、代码示例和方法差异。"
+summary: "完整整理 PPO、DPO、GRPO 的目标函数、训练流程、优缺点和适用场景。"
 tags: [LLM, RLHF, PPO, DPO, GRPO]
 category: "大模型基础知识"
 cover: /assets/posts/llm-notes/ppo-dpo-grpo/images/cover.png
@@ -10,11 +10,8 @@ cover: /assets/posts/llm-notes/ppo-dpo-grpo/images/cover.png
 
 <figure class="source-cover">
   <img src="{{ '/assets/posts/llm-notes/ppo-dpo-grpo/images/cover.png' | relative_url }}" alt="PPO、DPO、GRPO 详解：LLM 偏好对齐方法对比" loading="lazy">
-  <figcaption>Imagen 生成配图，基于原始文件《PPO、DPO、GRPO详解.md》的主题绘制。</figcaption>
+  <figcaption>Imagen 生成配图，基于本文主题绘制。</figcaption>
 </figure>
-
-> 原始文件：`D:\BaiduSyncdisk\knowledge\大模型\PPO、DPO、GRPO详解.md`  
-> 说明：下面正文尽量保留原始笔记的完整内容；Obsidian 本地图片引用会以“原文图片占位”形式保留，避免网页出现断图。
 
 # 总体对比
 
