@@ -173,8 +173,52 @@ def normalize_obsidian(text: str, post: SourcePost) -> str:
         r"\langle f(q,i), f(k,j) \rangle = g(q,k,i-j)",
     )
     text = text.replace("KL(π_student || π_teacher)", r"KL(π_student \|\| π_teacher)")
+    text = repair_loose_code_blocks(text)
     text = ensure_table_boundaries(text)
     return text.strip() + "\n"
+
+
+def repair_loose_code_blocks(text: str) -> str:
+    rules = (
+        (
+            "text",
+            "状态  $s_t = (x, y_{<t})$",
+            "奖励 $R$   = 仅在序列结束时提供整个序列的奖励模型评分",
+            "text",
+        ),
+        (
+            "text",
+            "对于一批提示词(prompts)：",
+            "     然后回到步骤 1，用更新后的学生继续采样。",
+            "text",
+        ),
+        (
+            "python",
+            "class LoRALinear(nn.Module):",
+            "        return self.linear(x) + self.scaling * (x @ self.lora_A.T @ self.lora_B.T)",
+            "python",
+        ),
+        (
+            "text",
+            "for iteration in range(N):",
+            "    optimizer.step()",
+            "python",
+        ),
+    )
+
+    for marker, start, end, language in rules:
+        pattern = (
+            rf"(?m)^{re.escape(marker)}\s*\n+"
+            rf"(?P<code>{re.escape(start)}.*?^{re.escape(end)})\s*$"
+        )
+        text = re.sub(
+            pattern,
+            lambda match: f"```{language}\n{match.group('code')}\n```",
+            text,
+            flags=re.MULTILINE | re.DOTALL,
+        )
+
+    return text
 
 
 def ensure_table_boundaries(text: str) -> str:

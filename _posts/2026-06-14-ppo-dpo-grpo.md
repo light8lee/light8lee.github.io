@@ -46,11 +46,11 @@ RLHF 要解决如下优化问题：
 
 PPO 在 RLHF 中的工作流程如下：
 
-text
-
+```text
 状态  $s_t = (x, y_{<t})$        # 当前已生成的文本前缀
 动作 $a_t = y_t$                  # 下一个 token
 奖励 $R$   = 仅在序列结束时提供整个序列的奖励模型评分
+```
 
 PPO 需要不断采样新数据（在线），因此必须维护四个模型：
 
@@ -377,8 +377,7 @@ Answer:**是的**
 
 典型的在线 PPO（如 RLHF）循环：
 
-text
-
+```python
 for iteration in range(N):
     # 1. 使用旧策略 rollout 一批完整回答（在线采样）
     responses = old_policy.generate(prompts)  # 完整序列
@@ -393,6 +392,7 @@ for iteration in range(N):
     loss = ppo_loss(responses, old_logprobs, advantages)
     loss.backward()
     optimizer.step()
+```
 
 整个过程是“先生成完整数据，再一次性更新”，而不是每生成一个词就更新参数。
 
