@@ -68,6 +68,10 @@ foreach ($post in Get-ChildItem $PostsPath -File -Filter "*.md") {
         }
     }
 
+    if ($outsideCode -match '\\operatorname\{KL\}\([^$\r\n]*\\\|') {
+        $failures += "$($post.Name): KL separator must use \Vert so Markdown preserves it"
+    }
+
     if ($outsideCode -match $bareMathPattern) {
         $failures += "$($post.Name): bare mathematical Unicode '$($Matches[0])' should be LaTeX"
     }

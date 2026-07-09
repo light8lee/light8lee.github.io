@@ -19,6 +19,9 @@
     {% if page.animation == 'home-constellation' %}
     <script src="{{ '/assets/js/animations/home-constellation.js' | relative_url }}" defer></script>
     {% endif %}
+    {% if page.layout == 'post' %}
+    <script src="{{ '/assets/js/post-navigation.js' | relative_url }}" defer></script>
+    {% endif %}
     <script>
       window.MathJax = {
         tex: {

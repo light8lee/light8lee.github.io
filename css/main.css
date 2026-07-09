@@ -490,6 +490,64 @@ img {
   max-width: 880px;
 }
 
+.post-layout {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: minmax(180px, 200px) minmax(0, 1fr);
+  margin: 0 auto;
+  max-width: var(--max);
+}
+
+.post-layout .post {
+  min-width: 0;
+  width: 100%;
+}
+
+.post-toc {
+  align-self: start;
+  padding-top: 56px;
+}
+
+.post-toc-list {
+  display: grid;
+  gap: 4px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  position: sticky;
+  top: 24px;
+}
+
+.post-toc-link {
+  border-left: 2px solid transparent;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+  padding: 5px 8px;
+  text-decoration: none;
+}
+
+.post-toc-level-2 {
+  padding-left: 18px;
+}
+
+.post-toc-level-3 {
+  padding-left: 30px;
+}
+
+.post-toc-link:hover,
+.post-toc-link.is-active {
+  border-left-color: var(--accent);
+  color: var(--accent);
+}
+
+.post-toc-link.is-active {
+  font-weight: 800;
+}
+
+.post-toc-toggle {
+  display: none;
+}
+
 .post-hero {
   border-bottom: 1px solid var(--line);
   padding: 56px 0 32px;
@@ -522,6 +580,12 @@ img {
   font-size: 30px;
   line-height: 1.2;
   margin-top: 44px;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  scroll-margin-top: 24px;
 }
 
 .markdown-body {
@@ -582,7 +646,40 @@ img {
 }
 
 .post-content pre {
+  background: #111827;
+  border: 1px solid #253047;
+  border-radius: 8px;
+  color: #e5edf8;
+  margin: 22px 0;
+  max-width: 100%;
   overflow-x: auto;
+  padding: 18px;
+}
+
+.post-content pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  white-space: pre;
+}
+
+.algorithm-steps {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  margin: 22px 0;
+  overflow-x: auto;
+  padding: 16px 18px;
+}
+
+.algorithm-steps > :first-child {
+  margin-top: 0;
+}
+
+.algorithm-steps > :last-child {
+  margin-bottom: 0;
 }
 
 .image-sequence {
@@ -744,6 +841,39 @@ img {
 
   .site-main {
     padding-inline: 18px;
+  }
+
+  .post-layout {
+    display: block;
+  }
+
+  .post-toc {
+    padding-top: 24px;
+  }
+
+  .post-toc-toggle {
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--text);
+    display: flex;
+    font: inherit;
+    font-weight: 800;
+    justify-content: space-between;
+    padding: 10px 12px;
+    width: 100%;
+  }
+
+  .post-toc-list {
+    display: none;
+    max-height: 50vh;
+    padding: 8px 0;
+    position: static;
+  }
+
+  .post-toc.is-open .post-toc-list {
+    display: grid;
   }
 
   .video-filters,
