@@ -663,6 +663,25 @@ img {
   white-space: pre;
 }
 
+.algorithm-steps {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  margin: 22px 0;
+  overflow-x: auto;
+  padding: 16px 18px;
+}
+
+.algorithm-steps > :first-child {
+  margin-top: 0;
+}
+
+.algorithm-steps > :last-child {
+  margin-bottom: 0;
+}
+
 .image-sequence {
   display: grid;
   gap: 22px;

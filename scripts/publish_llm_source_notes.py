@@ -263,6 +263,74 @@ def repair_mixed_inline_code(text: str) -> str:
     return text
 
 
+def repair_formula_pseudocode(text: str) -> str:
+    replacements = {
+        """```text
+状态  $s_t = (x, y_{<t})$        # 当前已生成的文本前缀
+动作 $a_t = y_t$                  # 下一个 token
+奖励 $R$   = 仅在序列结束时提供整个序列的奖励模型评分
+```""": """<div class="algorithm-steps" markdown="1">
+
+- **状态：** $s_t = (x, y_{<t})$，表示当前已生成的文本前缀。
+- **动作：** $a_t = y_t$，表示下一个 token。
+- **奖励：** $R$ 仅在序列结束时给出，表示奖励模型对整个序列的评分。
+
+</div>""",
+        """```text
+对于一批提示词(prompts)：
+  1. 采样（Sample）
+     学生模型为每个 prompt 生成 K 条完整回答。
+     此时用的是学生当前策略 $\\pi_{\\mathrm{student}}$，包含随机采样（如 temperature $>0$）。
+  2. 评分（Score）
+     教师模型对这些“学生原创回答”进行评估。
+     形式灵活，可以是：
+     - 给出 token 级的概率分布（软标签，用于计算 KL 散度）
+     - 给出整句的质量分数（如奖励模型打分）
+     - 给出修正后的文本（像老师改作文）
+  3. 构造损失（Loss Construction）
+     根据教师反馈构造损失函数，通常包含两部分：
+     a) 蒸馏损失：让学生分布靠近教师分布
+        - 若有点对点概率：可以用反向 KL 散度 $\\operatorname{KL}(\\pi_{\\mathrm{student}}\\|\\pi_{\\mathrm{teacher}})$
+        - 若只有打分：可以用策略梯度（类似 PPO），最大化教师给出的奖励
+     b) 额外正则：比如熵奖励（鼓励探索）、KL 惩罚（别跑太远）
+  4. 更新学生（Update）
+     用构造好的损失和自生成的 on-policy 数据做一次或几步梯度下降。
+     然后回到步骤 1，用更新后的学生继续采样。
+```""": """<div class="algorithm-steps" markdown="1">
+
+**对于一批提示词（prompts）：**
+
+1. **采样（Sample）**
+   - 学生模型为每个 prompt 生成 $K$ 条完整回答。
+   - 此时使用学生当前策略 $\\pi_{\\mathrm{student}}$，包含随机采样（如 temperature $>0$）。
+2. **评分（Score）**
+   - 教师模型对这些“学生原创回答”进行评估。
+   - 可以给出 token 级概率分布（软标签）、整句质量分数或修正后的文本。
+3. **构造损失（Loss Construction）**
+   - 蒸馏损失：让学生分布靠近教师分布；有逐点概率时可使用反向 KL 散度 $\\operatorname{KL}(\\pi_{\\mathrm{student}}\\Vert\\pi_{\\mathrm{teacher}})$，只有评分时可用策略梯度最大化教师奖励。
+   - 额外正则：加入熵奖励以鼓励探索，或加入 KL 惩罚以限制策略漂移。
+4. **更新学生（Update）**
+   - 使用构造好的损失和自生成的 on-policy 数据做一次或多次梯度下降。
+   - 回到步骤 1，使用更新后的学生继续采样。
+
+</div>""",
+    }
+    ppo_replacement, opd_replacement = replacements.values()
+    text = re.sub(
+        r"```text\s*\n状态\s+\$s_t\s*=\s*\(x,\s*y_\{<t\}\)\$[\s\S]*?\n```",
+        lambda _: ppo_replacement,
+        text,
+    )
+    text = re.sub(
+        r"```text\s*\n对于一批提示词\(prompts\)：[\s\S]*?回到步骤 1，用更新后的学生继续采样。\s*\n```",
+        lambda _: opd_replacement,
+        text,
+    )
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+    return text
+
+
 def normalize_obsidian(text: str, post: SourcePost) -> str:
     text = text.replace("\r\n", "\n")
     text = replace_handdrawn_ink(text, post)
@@ -278,6 +346,7 @@ def normalize_obsidian(text: str, post: SourcePost) -> str:
     )
     text = text.replace("KL(π_student || π_teacher)", r"KL(π_student \|\| π_teacher)")
     text = repair_loose_code_blocks(text)
+    text = repair_formula_pseudocode(text)
     text = repair_mixed_inline_code(text)
     text = normalize_inline_math(text, post.slug)
     text = ensure_table_boundaries(text)
