@@ -7,6 +7,8 @@ from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 
+from llm_math_replacements import formula_image_replacement, normalize_inline_math
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = Path(os.environ.get("LLM_NOTES_SOURCE", ROOT / ".source_llm_notes"))
@@ -150,6 +152,10 @@ def find_embedded_image(name: str) -> Path:
 
 
 def embedded_image_markdown(post: SourcePost, name: str) -> str:
+    formula = formula_image_replacement(name)
+    if formula:
+        return formula
+
     asset_name = embedded_asset_name(name)
     source_image = find_embedded_image(name)
     image_dir = ASSETS / post.slug / "images"
@@ -174,6 +180,7 @@ def normalize_obsidian(text: str, post: SourcePost) -> str:
     )
     text = text.replace("KL(π_student || π_teacher)", r"KL(π_student \|\| π_teacher)")
     text = repair_loose_code_blocks(text)
+    text = normalize_inline_math(text, post.slug)
     text = ensure_table_boundaries(text)
     return text.strip() + "\n"
 

@@ -50,9 +50,21 @@ flowchart TD
 
 1. **多头注意力 (Multi-Head Attention)**
     
-    - **核心机制**：它让序列中的每个Token都能“环顾四周”，根据重要性加权整合所有Token的信息，从而理解上下文。其计算公式为$Attention(Q,K,V) = softmax(QK^T / √d_k) V$ [](https://cloud.tencent.cn/developer/article/2587262?policyId=1003)[](https://developer.baidu.com/article/detail.html?id=6899639)。
+    - **核心机制**：它让序列中的每个Token都能“环顾四周”，根据重要性加权整合所有Token的信息，从而理解上下文。其计算公式为
+
+      $$
+      \operatorname{Attention}(Q,K,V)
+      =
+      \operatorname{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V.
+      $$
         
-    - **多头机制**：通过多个“头”从不同角度并行捕捉语义关联，例如有的头可能专注词性，有的则聚焦语义[](https://developer.baidu.com/article/detail.html?id=6899639)。其公式为 $MultiHead(Q,K,V) = Concat(head_1,..., head_h)W^O$。
+    - **多头机制**：通过多个“头”从不同角度并行捕捉语义关联，例如有的头可能专注词性，有的则聚焦语义[](https://developer.baidu.com/article/detail.html?id=6899639)。其公式为
+
+      $$
+      \operatorname{MultiHead}(Q,K,V)
+      =
+      \operatorname{Concat}(\operatorname{head}_1,\ldots,\operatorname{head}_h)W^O.
+      $$
         
 2. **前馈网络 (FFN)**  
     这是一个独立应用于每个Token的全连接网络，负责对Attention提取到的信息进行非线性变换和“思考”，通常包含两层线性变换和一个激活函数（如ReLU或GELU），且中间层维度通常远大于输入输出维度[](https://developer.aliyun.com/article/1652620)。
@@ -192,8 +204,8 @@ flowchart LR
 
 |组件|定位|核心操作|目的|
 |---|---|---|---|
-|**Linear1 + 激活函数**|特征探测器、模式提取器|升维 (dmodel→dffdmodel​→dff​) + 非线性|在更大的空间中挖掘复杂特征，激活多样化的模式。|
-|**Linear2**|信息融合器、特征选择器|降维 (dff→dmodeldff​→dmodel​)|融合所有探测到的模式，提炼出最精炼的信息供后续层使用。|
+|**Linear1 + 激活函数**|特征探测器、模式提取器|升维 $d_{\mathrm{model}}\to d_{\mathrm{ff}}$ + 非线性|在更大的空间中挖掘复杂特征，激活多样化的模式。|
+|**Linear2**|信息融合器、特征选择器|降维 $d_{\mathrm{ff}}\to d_{\mathrm{model}}$|融合所有探测到的模式，提炼出最精炼的信息供后续层使用。|
 
 所以，两个Linear层缺一不可，它们共同构成了FFN的核心引擎，让每个Token都能在“静默”中完成一次复杂的内在思考。这也是为什么现代大模型在尝试改进FFN时（例如使用MoE、SwiGLU等），也始终保留着这个“膨胀-收缩”骨架的原因。
 
@@ -249,11 +261,19 @@ flowchart TD
 
 ### ⚙️ MoE 的工作流程（以Top-2选专家为例）
 
-1. **计算路由分数**：门控网络为每个专家计算一个分数 `g_i = Softmax(W_g · x)_i`。
+1. **计算路由分数**：门控网络为每个专家计算一个分数
+
+   $$
+   g_i=\operatorname{softmax}(W_gx)_i.
+   $$
     
 2. **筛选 Top-K 专家**：通常只保留 `k` 个分数最高的专家（例如 `k=2`），其余专家的输出权重置为 0。这就是**稀疏激活**的关键。
     
-3. **加权计算输出**：最终输出是这 `k` 个专家输出的加权和：`y = Σᵢ (g_i * Expert_i(x))`。
+3. **加权计算输出**：最终输出是这 $k$ 个专家输出的加权和：
+
+   $$
+   y=\sum_{i\in\operatorname{TopK}}g_i\,\operatorname{Expert}_i(x).
+   $$
     
 
 ### 🚀 MoE 对 FFN 的核心改进
