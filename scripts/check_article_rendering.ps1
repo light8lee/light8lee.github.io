@@ -32,6 +32,10 @@ foreach ($file in Get-ChildItem $SitePath -Recurse -File -Filter "*.html") {
         }
     }
 
+    if ($html -notmatch '/assets/js/post-navigation\.js') {
+        $failures += "$($file.FullName): post navigation script is missing"
+    }
+
     $contentMatch = [regex]::Match(
         $html,
         '<div class="post-content"[^>]*data-post-content[^>]*>(?<content>[\s\S]*?)</div>\s*</article>'
@@ -50,6 +54,24 @@ foreach ($file in Get-ChildItem $SitePath -Recurse -File -Filter "*.html") {
 
 if ($articleCount -eq 0) {
     $failures += "No generated article pages were found."
+}
+
+if (-not (Test-Path $CssPath)) {
+    $failures += "Stylesheet is missing: $CssPath"
+} else {
+    $css = Get-Content $CssPath -Raw -Encoding UTF8
+    $requiredCssMarkers = @(
+        ".post-layout",
+        ".post-toc",
+        ".post-toc-link.is-active",
+        ".post-toc-toggle",
+        ".post-content pre"
+    )
+    foreach ($marker in $requiredCssMarkers) {
+        if ($css -notmatch [regex]::Escape($marker)) {
+            $failures += "$($CssPath): missing CSS marker '$marker'"
+        }
+    }
 }
 
 if ($failures.Count -gt 0) {
