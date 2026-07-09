@@ -64,7 +64,19 @@
       toggle.setAttribute("aria-expanded", String(open));
     });
 
-    list.addEventListener("click", function () {
+    var links = Array.prototype.slice.call(list.querySelectorAll("a"));
+
+    function setActiveLink(activeLink) {
+      links.forEach(function (link) {
+        link.classList.toggle("is-active", link === activeLink);
+      });
+    }
+
+    list.addEventListener("click", function (event) {
+      var activeLink = event.target.closest(".post-toc-link");
+      if (activeLink) {
+        setActiveLink(activeLink);
+      }
       toc.classList.remove("is-open");
       toggle.setAttribute("aria-expanded", "false");
     });
@@ -73,7 +85,6 @@
       return;
     }
 
-    var links = Array.prototype.slice.call(list.querySelectorAll("a"));
     var observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
@@ -81,12 +92,11 @@
             return;
           }
 
-          links.forEach(function (link) {
-            link.classList.toggle(
-              "is-active",
-              link.dataset.tocTarget === entry.target.id
-            );
-          });
+          setActiveLink(
+            links.find(function (link) {
+              return link.dataset.tocTarget === entry.target.id;
+            })
+          );
         });
       },
       { rootMargin: "-15% 0px -70% 0px" }
