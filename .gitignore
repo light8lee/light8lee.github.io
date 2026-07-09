@@ -28,6 +28,7 @@ vendor/bundle
 sea-modules
 .cache
 .superpowers/
+.worktrees/
 *.so
 a.out
 .sass-cache
