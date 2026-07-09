@@ -27,6 +27,7 @@ _site
 vendor/bundle
 sea-modules
 .cache
+.superpowers/
 *.so
 a.out
 .sass-cache
