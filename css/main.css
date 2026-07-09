@@ -505,16 +505,17 @@ img {
 
 .post-toc {
   align-self: start;
+  max-height: calc(100vh - 48px);
   padding-top: 56px;
+  position: sticky;
+  top: 24px;
 }
 
 .post-toc-list {
   display: grid;
   gap: 4px;
-  max-height: calc(100vh - 48px);
+  max-height: calc(100vh - 128px);
   overflow-y: auto;
-  position: sticky;
-  top: 24px;
 }
 
 .post-toc-link {
@@ -848,7 +849,9 @@ img {
   }
 
   .post-toc {
+    max-height: none;
     padding-top: 24px;
+    position: static;
   }
 
   .post-toc-toggle {

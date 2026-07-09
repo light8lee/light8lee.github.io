@@ -60,6 +60,7 @@ if (-not (Test-Path $CssPath)) {
     $failures += "Stylesheet is missing: $CssPath"
 } else {
     $css = Get-Content $CssPath -Raw -Encoding UTF8
+    $normalizedCss = $css -replace '\s+', ' '
     $requiredCssMarkers = @(
         ".post-layout",
         ".post-toc",
@@ -71,6 +72,18 @@ if (-not (Test-Path $CssPath)) {
         if ($css -notmatch [regex]::Escape($marker)) {
             $failures += "$($CssPath): missing CSS marker '$marker'"
         }
+    }
+
+    if ($normalizedCss -notmatch '\.post-toc\s*\{[^}]*position:\s*sticky;[^}]*top:\s*24px;') {
+        $failures += "$($CssPath): .post-toc must be the sticky container"
+    }
+
+    if ($normalizedCss -match '\.post-toc-list\s*\{[^}]*position:\s*sticky;') {
+        $failures += "$($CssPath): .post-toc-list must not own sticky positioning"
+    }
+
+    if ($normalizedCss -notmatch '@media\s*\(max-width:\s*720px\)[\s\S]*?\.post-toc\s*\{[^}]*position:\s*static;') {
+        $failures += "$($CssPath): mobile .post-toc must return to static positioning"
     }
 }
 
