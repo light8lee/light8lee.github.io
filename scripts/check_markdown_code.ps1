@@ -30,6 +30,15 @@ foreach ($post in Get-ChildItem $PostsPath -File -Filter "*.md") {
         if (-not $inFence -and $lines[$index] -match "^\s*($looseLanguages)\s*$") {
             $failures += "$($post.Name):$($index + 1): loose code language marker '$($Matches[1])'"
         }
+
+        if (-not $inFence) {
+            foreach ($inlineCode in [regex]::Matches($lines[$index], '`([^`]+)`')) {
+                $code = $inlineCode.Groups[1].Value
+                if ($code.Length -gt 55 -or $code -match '\b(def|class|return|import|for|while)\b') {
+                    $failures += "$($post.Name):$($index + 1): block code is mixed into prose"
+                }
+            }
+        }
     }
 
     if ($inFence) {

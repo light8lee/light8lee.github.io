@@ -113,6 +113,74 @@ QA_IMAGES = {
     ],
 }
 
+INK_IMAGES = {
+    "Ink/Drawing/2026.5.4 - 22.02pm.drawing": (
+        "ink-2d-rotation-redraw.png",
+        "RoPE 二维向量旋转：所有向量从坐标原点出发",
+        "由原 Ink 手绘图重绘：二维向量绕坐标原点旋转。",
+    ),
+    "Ink/Drawing/2026.5.4 - 22.34pm.drawing": (
+        "ink-rotate-half-redraw.png",
+        "RoPE 按二维配对并应用 rotate_half",
+        "由原 Ink 手绘图重绘：相邻维度配对、rotate_half 与旋转结果。",
+    ),
+}
+
+MIXED_INLINE_CODE_REPLACEMENTS = {
+    "`student 自己生成轨迹 teacher 在 student 的轨迹前缀上给 token-level 监督 student 学 teacher 在这些状态下会怎么继续`": """```text
+student 自己生成轨迹
+→ teacher 在 student 的轨迹前缀上给 token-level 监督
+→ student 学习 teacher 在这些状态下会如何继续
+```""",
+    "`模型生成答案 环境返回反馈，比如 runtime error、judge feedback、测试结果 把原轨迹 + 反馈喂回模型 模型重新判断每个位置更应该怎么生成 把这个反馈条件下的分布蒸馏回原 policy`": """```text
+模型生成答案
+→ 环境返回 runtime error、judge feedback 或测试结果
+→ 将原轨迹与反馈喂回模型
+→ 模型重新判断每个位置更应该如何生成
+→ 将反馈条件下的分布蒸馏回原 policy
+```""",
+    "`原始问题： 写 square(x) 模型刚才的完整回答： def square(x): return x + x 环境反馈： square(3)=6，期望 9，应该用乘法。`": """```text
+原始问题：写 square(x)
+模型刚才的完整回答：def square(x): return x + x
+环境反馈：square(3)=6，期望 9，应该用乘法。
+```""",
+    "`student: P(next_token | 原始问题 + output_prefix) self-teacher: P(next_token | 原始问题 + 完整output + feedback + output_prefix)`": """```text
+student:
+P(next_token | 原始问题 + output_prefix)
+
+self-teacher:
+P(next_token | 原始问题 + 完整 output + feedback + output_prefix)
+```""",
+    "`teacher 输入 = [原始 prompt] + [完整 student output] + [feedback] + [用于打分的 output prefix]`": """```text
+teacher 输入
+= [原始 prompt]
++ [完整 student output]
++ [feedback]
++ [用于打分的 output prefix]
+```""",
+    "`完整 output：让 teacher 看到整次尝试和反馈 output prefix：用于 teacher-forcing 计算每一步 logits`": """```text
+完整 output：让 teacher 看到整次尝试和反馈
+output prefix：用于 teacher-forcing 计算每一步 logits
+```""",
+    "`原始 prompt: 写 square(x) student output: def square(x): return x + x feedback: 测试失败，square(3)=6，期望 9。`": """```text
+原始 prompt：写 square(x)
+student output：def square(x): return x + x
+feedback：测试失败，square(3)=6，期望 9。
+```""",
+    '`输入前缀: 写 square(x) + "def square(x): return x" 预测下一个 token: "+"`': '''```text
+输入前缀：写 square(x) + "def square(x): return x"
+预测下一个 token："+"
+```''',
+    '`反思上下文: 写 square(x) 刚才回答: def square(x): return x + x 反馈: 测试失败，应该用乘法 打分前缀: def square(x): return x 预测下一个 token: teacher 更偏向 "*"`': '''```text
+反思上下文：
+  写 square(x)
+  刚才回答：def square(x): return x + x
+  反馈：测试失败，应该用乘法
+打分前缀：def square(x): return x
+预测下一个 token：teacher 更偏向 "*"
+```''',
+}
+
 
 def yaml_string(value: str) -> str:
     return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
@@ -166,8 +234,38 @@ def embedded_image_markdown(post: SourcePost, name: str) -> str:
     return f"![{alt}]({{{{ '{image_url}' | relative_url }}}})"
 
 
+def replace_handdrawn_ink(text: str, post: SourcePost) -> str:
+    def replace(match: re.Match[str]) -> str:
+        filepath = match.group(1)
+        image = INK_IMAGES.get(filepath)
+        if not image:
+            return match.group(0).replace("```handdrawn-ink", "```json")
+        filename, alt, caption = image
+        image_url = f"/assets/posts/llm-notes/{post.slug}/images/{filename}"
+        return (
+            '<figure class="qa-figure">\n'
+            f'  <img src="{{{{ \'{image_url}\' | relative_url }}}}" alt="{alt}" loading="lazy">\n'
+            f"  <figcaption>{caption}</figcaption>\n"
+            "</figure>"
+        )
+
+    return re.sub(
+        r'```handdrawn-ink\s*\{.*?"filepath"\s*:\s*"([^"]+)".*?\}\s*```',
+        replace,
+        text,
+        flags=re.DOTALL,
+    )
+
+
+def repair_mixed_inline_code(text: str) -> str:
+    for old, new in MIXED_INLINE_CODE_REPLACEMENTS.items():
+        text = text.replace(old, new)
+    return text
+
+
 def normalize_obsidian(text: str, post: SourcePost) -> str:
     text = text.replace("\r\n", "\n")
+    text = replace_handdrawn_ink(text, post)
     text = re.sub(r"!\[\[([^\]]+)\]\]", lambda match: embedded_image_markdown(post, match.group(1)), text)
     text = re.sub(r"\[\[([^\]|]+)\|([^\]]+)\]\]", r"\2", text)
     text = re.sub(r"\[\[([^\]]+)\]\]", r"\1", text)
@@ -180,6 +278,7 @@ def normalize_obsidian(text: str, post: SourcePost) -> str:
     )
     text = text.replace("KL(π_student || π_teacher)", r"KL(π_student \|\| π_teacher)")
     text = repair_loose_code_blocks(text)
+    text = repair_mixed_inline_code(text)
     text = normalize_inline_math(text, post.slug)
     text = ensure_table_boundaries(text)
     return text.strip() + "\n"
