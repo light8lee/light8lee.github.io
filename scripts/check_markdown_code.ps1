@@ -16,15 +16,25 @@ foreach ($post in Get-ChildItem $PostsPath -File -Filter "*.md") {
 
     $lines = $source -split "\r?\n"
     $inFence = $false
+    $fenceLanguage = ""
     $fenceCount = 0
 
     for ($index = 0; $index -lt $lines.Count; $index++) {
-        if ($lines[$index] -match '^\s*```') {
-            $inFence = -not $inFence
-            if ($inFence) {
+        if ($lines[$index] -match '^\s*```([A-Za-z0-9_-]*)') {
+            if (-not $inFence) {
+                $inFence = $true
+                $fenceLanguage = $Matches[1].ToLowerInvariant()
                 $fenceCount++
+            } else {
+                $inFence = $false
+                $fenceLanguage = ""
             }
             continue
+        }
+
+        if ($inFence -and $fenceLanguage -ne "mermaid" -and
+            $lines[$index] -match '(\$\$|\$[^$\r\n]+\$|\\\(|\\\[)') {
+            $failures += "$($post.Name):$($index + 1): math delimiter inside code fence"
         }
 
         if (-not $inFence -and $lines[$index] -match "^\s*($looseLanguages)\s*$") {
