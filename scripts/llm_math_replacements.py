@@ -295,6 +295,8 @@ INLINE_MATH_REPLACEMENTS = {
         ),
     ),
     "sampling": (
+        ("概率 PP", "概率 $P$"),
+        ("阈值 pp（如 0.9）", "阈值 $p$（如 $0.9$）"),
         ("设 VV 为词表，P(v) 为 token vv 的概率", "设 $V$ 为词表，$P(v)$ 为 token $v$ 的概率"),
         ("累计概率 ≥ p", r"累计概率 $\ge p$"),
         ("Temperature (τ)", r"Temperature（$\tau$）"),

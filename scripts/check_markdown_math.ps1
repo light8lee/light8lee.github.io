@@ -52,6 +52,9 @@ foreach ($post in Get-ChildItem $PostsPath -File -Filter "*.md") {
     }
 
     $outsideCode = [regex]::Replace($source, '(?ms)^```.*?^```\s*', '')
+    $plainProse = [regex]::Replace($outsideCode, '(?s)\$\$.*?\$\$', ' ')
+    $plainProse = [regex]::Replace($plainProse, '(?s)\$[^$\r\n]+\$', ' ')
+    $plainProse = [regex]::Replace($plainProse, 'https?://[^\s)]+', ' ')
 
     foreach ($imageId in $formulaOnlyImages) {
         if ($outsideCode -match "pasted-image-$imageId\.png") {
@@ -67,6 +70,17 @@ foreach ($post in Get-ChildItem $PostsPath -File -Filter "*.md") {
 
     if ($outsideCode -match $bareMathPattern) {
         $failures += "$($post.Name): bare mathematical Unicode '$($Matches[0])' should be LaTeX"
+    }
+
+    $proseLines = $plainProse -split "\r?\n"
+    for ($index = 0; $index -lt $proseLines.Count; $index++) {
+        $duplicate = [regex]::Match(
+            $proseLines[$index],
+            '(?<![A-Za-z0-9_])([A-Za-z]{1,8})\1(?![A-Za-z0-9_])'
+        )
+        if ($duplicate.Success) {
+            $failures += "$($post.Name):$($index + 1): duplicated variable '$($duplicate.Value)'"
+        }
     }
 
     $frontMatter = $source -split "---", 3
