@@ -6,7 +6,7 @@
   --line: #ded7ca;
   --accent: #2457a6;
   --accent-2: #b84a3a;
-  --max: 1120px;
+  --max: clamp(1360px, 92vw, 1680px);
 }
 
 * {
@@ -647,10 +647,10 @@ img {
 }
 
 .post-content pre {
-  background: #111827;
-  border: 1px solid #253047;
+  background: #edf3fb;
+  border: 1px solid #c3d3e8;
   border-radius: 8px;
-  color: #e5edf8;
+  color: #26364f;
   margin: 22px 0;
   max-width: 100%;
   overflow-x: auto;
