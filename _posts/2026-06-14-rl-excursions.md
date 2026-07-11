@@ -3,7 +3,7 @@ layout: post
 title: "RL 为什么非要最后才上场？"
 date: 2026-06-14 09:59:26 +0800
 summary: "2026 年 6 月 2 日，哈佛大学的 Rachit Bansal、Clara Mohri、Tian Qin、David Alvarez-Melis 和 Sham Kakade 发布预印本《RL Excursions during Pre-Training》。"
-tags: [video-notes, visual-essay, LLM post-training]
+tags: [预训练, 强化学习]
 category: LLM Post-training
 cover: /assets/posts/video-notes/2026-06-14-rl-excursions/images/01.png
 body_class: dive-into-codex-post

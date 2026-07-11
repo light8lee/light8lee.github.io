@@ -3,7 +3,7 @@ layout: post
 title: "DharmaOCR: Specialized Small Language Models for Structured OCR that outperform Open-Source and Commercial Baselines"
 date: 2026-06-18 09:59:14 +0800
 summary: "这次换一个完全不同的后训练角度。不是再讲 RL 的 trust region，也不是长上下文能力覆盖，而是看一个更贴近生产的例子：DPO 为什么不只属于聊天对齐，也可以用来修一种很具体的结构化输出故障。"
-tags: [video-notes, visual-essay, LLM post-training]
+tags: [后训练, 偏好对齐, 结构化输出]
 category: LLM Post-training
 cover: /assets/posts/video-notes/2026-06-18-dharmaocr-dpo/images/01.png
 body_class: dive-into-codex-post

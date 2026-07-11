@@ -3,7 +3,7 @@ layout: post
 title: "ResearchClawBench: A Benchmark for End-to-End Autonomous Scientific Research"
 date: 2026-06-15 09:08:04 +0800
 summary: "2026 年 5 月 28 日，上海 AI Lab 团队发布预印本《ResearchClawBench》。 它问的不是模型会不会答题，而是科研 Agent 能不能从原始数据、相关文献和任务目标出发，最后写出接近真实论文结论的研究报告。"
-tags: [video-notes, visual-essay]
+tags: [智能体, 基准评测, 科研智能体]
 category: Agent
 cover: /assets/posts/video-notes/2026-06-15-researchclawbench/images/01.png
 body_class: dive-into-codex-post

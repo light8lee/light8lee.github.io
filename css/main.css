@@ -812,6 +812,69 @@ img {
   font-size: 0.9em;
 }
 
+.chapter-navigation {
+  border-top: 1px solid var(--line);
+  margin: 48px auto 0;
+  max-width: 880px;
+  padding-top: 28px;
+}
+
+.chapter-navigation-title {
+  color: var(--accent-2);
+  font-size: 13px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.chapter-navigation-links {
+  display: grid;
+  gap: 10px;
+}
+
+.chapter-navigation-link {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 3px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.chapter-navigation-link span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.chapter-navigation-link strong {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.chapter-navigation-link:hover {
+  border-color: var(--accent);
+}
+
+.chapter-navigation-link:hover strong {
+  color: var(--accent);
+}
+
+.chapter-navigation-index {
+  border-style: dashed;
+}
+
+.post-appendix {
+  border-top: 1px solid var(--line);
+  margin-top: 56px;
+  padding-top: 34px;
+}
+
+.post-appendix > :first-child {
+  margin-top: 0;
+}
+
 .archive-item {
   border-top: 1px solid var(--line);
   display: grid;
@@ -830,6 +893,52 @@ img {
   margin: 0 auto;
   max-width: var(--max);
   padding: 28px 24px 44px;
+}
+
+.back-to-top {
+  align-items: center;
+  background: var(--text);
+  border: 1px solid var(--text);
+  border-radius: 999px;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  color: var(--surface);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  font-size: 24px;
+  height: 44px;
+  justify-content: center;
+  opacity: 0;
+  padding: 0;
+  pointer-events: none;
+  position: fixed;
+  right: max(24px, env(safe-area-inset-right));
+  transform: translateY(10px);
+  transition: opacity 160ms ease, transform 160ms ease, background-color 160ms ease;
+  width: 44px;
+  z-index: 10;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid rgba(36, 87, 166, 0.35);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top {
+    transition: none;
+  }
 }
 
 @media (max-width: 720px) {

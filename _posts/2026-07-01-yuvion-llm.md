@@ -3,7 +3,7 @@ layout: post
 title: "Yuvion LLM：把对抗鲁棒性放进安全模型训练"
 date: 2026-07-01 08:38:43 +0800
 summary: "一个80亿参数的安全模型,在多项安全任务上击败了GPT-5.4和Qwen3-MAX。这不是噱头,而是阿里巴巴安全AGI实验室最新发布的Yuvion LLM。它把对抗鲁棒性和智能体能力作为一等公民目标,重新定义了AI安全模型的训练范式。"
-tags: [video-notes, visual-essay, LLM post-training]
+tags: [后训练, 安全对齐, 对抗鲁棒性]
 category: LLM Post-training
 cover: /assets/posts/video-notes/2026-06-30-yuvion-llm/images/01.png
 body_class: dive-into-codex-post

@@ -3,7 +3,7 @@ layout: post
 title: "PPO、DPO、GRPO 详解：LLM 偏好对齐方法对比"
 date: 2026-06-14 12:15:45 +0800
 summary: "完整整理 PPO、DPO、GRPO 的目标函数、训练流程、优缺点和适用场景。"
-tags: [LLM, RLHF, PPO, DPO, GRPO]
+tags: [后训练, 偏好对齐, 强化学习]
 category: "大模型基础知识"
 cover: /assets/posts/llm-notes/ppo-dpo-grpo/images/cover.png
 ---

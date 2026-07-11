@@ -24,6 +24,15 @@ CODEX_CH03_PUBLISH = (
     / "chapters"
     / "03-cache-and-compaction"
 )
+CODEX_CH08_PUBLISH = (
+    VIDEO_ROOT
+    / ".worktrees"
+    / "dive-into-codex-images"
+    / "dive-into-codex"
+    / "publish"
+    / "chapters"
+    / "08-system-instructions-constraints"
+)
 
 SKIP_RUNS = {
     # These have hand-edited long-form posts already in the site.
@@ -46,6 +55,16 @@ RUN_OVERRIDES = {
         "category": "Codex",
         "tags": ["Codex", "coding agent", "visual-essay", "source-notes", "cache", "compaction"],
         "publish_chapter_dir": str(CODEX_CH03_PUBLISH),
+    },
+    "08-system-instructions-constraints": {
+        "slug": "dive-into-codex-08-system-instructions-constraints",
+        "asset_slug": "dive-into-codex-08-system-instructions-constraints",
+        "title": "Dive into Codex 08：System 指令与运行约束",
+        "summary": "从 Codex 源码中的系统级指令出发，理解它如何以指令层级、工作区保护、工具纪律、权限边界和验证契约，约束一个可协作、可执行的本地 coding agent。",
+        "date": "2026-07-11 14:00:00 +0800",
+        "category": "Codex",
+        "tags": ["Codex", "coding agent", "visual-essay", "source-notes", "system-instructions", "constraints"],
+        "publish_chapter_dir": str(CODEX_CH08_PUBLISH),
     },
     "run-2026-06-20-reward-hacking": {
         "title": "奖励上涨，为什么安全目标反而变差？",
@@ -127,6 +146,21 @@ def markdown_escape_html(value: str) -> str:
         .replace("<", "&lt;")
         .replace(">", "&gt;")
     )
+
+
+def normalize_published_links(value: str) -> str:
+    return (
+        value.replace("[Subagent 架构](../07-subagent-architecture/)", "Subagent 架构（待发布）")
+        .replace("[Dive into Codex](../../README.md)", "Dive into Codex 系列")
+    )
+
+
+def split_chapter_connection(value: str) -> tuple[str, str]:
+    marker = "\n## 章节衔接\n"
+    content, separator, connection = value.partition(marker)
+    if not separator:
+        return value, ""
+    return content.rstrip(), "## 章节衔接\n\n" + connection.strip()
 
 
 def choose_video_time(run_dir: Path) -> datetime:
@@ -403,12 +437,12 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
         return None
     script_path = run_dir / "script.md"
     script = read_text(script_path) if script_path.exists() else ""
-    if not script and not (run_dir / "scene_data.json").exists():
+    override = RUN_OVERRIDES.get(run_dir.name, {})
+    if not script and not (run_dir / "scene_data.json").exists() and not override.get("publish_chapter_dir"):
         return None
 
     slug = slugify(run_dir.name)
     asset_slug = run_slugify(run_dir.name)
-    override = RUN_OVERRIDES.get(run_dir.name, {})
     slug = str(override.get("slug", slug))
     asset_slug = str(override.get("asset_slug", asset_slug))
     video_time = choose_video_time(run_dir)
@@ -449,8 +483,8 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
     else:
         scenes = build_scenes(run_dir, copied_images, script)
     cover = f"/assets/posts/video-notes/{asset_slug}/images/{copied_images[0].name}" if copied_images else ""
-    date_value = video_time.strftime("%Y-%m-%d %H:%M:%S +0800")
-    post_name = f"{video_time:%Y-%m-%d}-{slug}.md"
+    date_value = str(override.get("date") or video_time.strftime("%Y-%m-%d %H:%M:%S +0800"))
+    post_name = f"{date_value[:10]}-{slug}.md"
     post_path = POSTS_DIR / post_name
 
     category = str(override.get("category") or ("Agent" if any(s.get("theme") == "agent" for s in sources) else "AI Notes"))
@@ -485,6 +519,7 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
     body.extend([source_links_html(sources).rstrip(), ""])
 
     for scene in scenes:
+        scene_body, chapter_connection = split_chapter_connection(scene.body.strip())
         image_name = scene.image.name if scene.image else ""
         image_src = f"/assets/posts/video-notes/{asset_slug}/images/{image_name}"
         body.extend(['<section class="visual-note" markdown="1">'])
@@ -502,12 +537,23 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
                 f'<p class="visual-note-index">{scene.index:03d} / {"Dive into Codex" if category == "Codex" else "Video Notes"}</p>',
                 f"<h2>{markdown_escape_html(scene.title)}</h2>",
                 "",
-                scene.body.strip(),
+                normalize_published_links(scene_body),
                 "</div>",
                 "</section>",
                 "",
             ]
         )
+        if chapter_connection:
+            body.extend(
+                [
+                    '<section class="chapter-connection" markdown="1">',
+                    "",
+                    normalize_published_links(chapter_connection),
+                    "",
+                    "</section>",
+                    "",
+                ]
+            )
 
     if publish_chapter and publish_chapter.tail:
         body.extend([publish_chapter.tail, ""])
@@ -528,6 +574,8 @@ def main() -> None:
     args = parser.parse_args()
     generated = []
     run_dirs = list(VIDEO_ROOT.glob("run-*")) + [p for p in EXTRA_RUN_DIRS if p.exists()]
+    if CODEX_CH08_PUBLISH.exists():
+        run_dirs.append(CODEX_CH08_PUBLISH)
     for run_dir in sorted(run_dirs, key=get_creation_time):
         post = write_post(run_dir, dry_run=args.dry_run)
         if post:

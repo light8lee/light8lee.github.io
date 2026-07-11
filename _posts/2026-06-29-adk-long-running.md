@@ -3,7 +3,7 @@ layout: post
 title: "Build long-running AI agents that pause, resume, and never lose context with ADK"
 date: 2026-06-29 10:35:09 +0800
 summary: "### Scene 01 - Hook Agent重启就失忆？大多数Agent教程止步于无状态聊天机器人。真实企业流程跨天跨周，无状态Agent撑不过去。"
-tags: [video-notes, visual-essay]
+tags: [智能体, 长程任务, 记忆系统]
 category: Agent
 cover: /assets/posts/video-notes/2026-06-29-adk-long-running/images/01.png
 body_class: dive-into-codex-post

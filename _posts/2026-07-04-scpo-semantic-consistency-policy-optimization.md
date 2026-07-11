@@ -3,7 +3,7 @@ layout: post
 title: "SCPO: 从失败轨迹里找回正确步骤"
 date: 2026-07-04
 summary: "一组关于 Semantic Consistency Policy Optimization 的图文笔记：Agent RL 失败轨迹里，也可能藏着正确步骤。"
-tags: [Agent RL, SCPO, visual-essay, paper-notes]
+tags: [智能体, 强化学习, 策略优化]
 category: Agent RL
 cover: /assets/posts/scpo/final/p1.png
 ---

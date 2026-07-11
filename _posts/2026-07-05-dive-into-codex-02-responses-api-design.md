@@ -3,10 +3,15 @@ layout: post
 title: "Dive into Codex 02：Responses API 事件模型"
 date: 2026-07-05 22:52:10 +0800
 summary: "把 Chat Completions 与 Responses API 的抽象差异拆开看：item、event、tool call、tool output、skills 和 previous_response_id 如何支撑 agent runtime。"
-tags: [Codex, coding agent, visual-essay, source-notes, responses-api]
+tags: [智能体运行时, 模型接口, 工具调用]
 category: Codex
 cover: /assets/posts/dive-into-codex/02-responses-api-design/images/001-python-api-compare.png
 body_class: dive-into-codex-post
+series: dive-into-codex
+series_previous_title: "Dive into Codex 01：Agent Loop 的核心地图"
+series_previous_url: /codex/2026/07/04/dive-into-codex-01-agent-loop-core.html
+series_next_title: "Dive into Codex 03：Cache 与 Compaction"
+series_next_url: /codex/2026/07/07/dive-into-codex-03-cache-compaction.html
 ---
 
 第 01 章建立了 Codex 的 Agent Loop。本章进入模型交互层：为什么普通 message 模型不够用，以及 Responses API 如何把模型输出拆成可追踪、可恢复、可执行的 item / event。

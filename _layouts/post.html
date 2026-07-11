@@ -34,5 +34,28 @@ layout: default
     <div class="post-content" data-post-content>
       {{ content }}
     </div>
+    {% if page.series == 'dive-into-codex' %}
+    <nav class="chapter-navigation" aria-label="Dive into Codex 系列章节导航">
+      <p class="chapter-navigation-title">Dive into Codex 系列</p>
+      <div class="chapter-navigation-links">
+        {% if page.series_previous_url %}
+        <a class="chapter-navigation-link" href="{{ page.series_previous_url | relative_url }}">
+          <span>上一章</span>
+          <strong>{{ page.series_previous_title }}</strong>
+        </a>
+        {% endif %}
+        {% if page.series_next_url %}
+        <a class="chapter-navigation-link" href="{{ page.series_next_url | relative_url }}">
+          <span>下一章</span>
+          <strong>{{ page.series_next_title }}</strong>
+        </a>
+        {% endif %}
+        <a class="chapter-navigation-link chapter-navigation-index" href="{{ '/?collection=dive-into-codex#latest-writing' | relative_url }}">
+          <span>系列目录</span>
+          <strong>查看 Dive into Codex 全部章节</strong>
+        </a>
+      </div>
+    </nav>
+    {% endif %}
   </article>
 </div>

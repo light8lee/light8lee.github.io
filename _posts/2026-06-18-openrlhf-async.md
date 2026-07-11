@@ -3,7 +3,7 @@ layout: post
 title: "OpenRLHF repository"
 date: 2026-06-18 20:03:25 +0800
 summary: "这次换一个更深的后训练选题，而且来源尽量不用 arXiv。主角不是某个新 loss，而是 OpenRLHF 0.10.2 文档和仓库里正在形成的一种工程现实：大模型 RLHF、RLVR 和 Agent RL 训练，越来越像一个分布式执行系统问题。"
-tags: [video-notes, visual-essay, LLM post-training]
+tags: [后训练, 训练基础设施, 分布式训练]
 category: LLM Post-training
 cover: /assets/posts/video-notes/2026-06-18-openrlhf-async/images/01.png
 body_class: dive-into-codex-post

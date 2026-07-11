@@ -3,7 +3,7 @@ layout: post
 title: "openclaw hermes"
 date: 2026-06-29 15:06:50 +0800
 summary: "一个用TypeScript写的多Agent编排平台，GitHub星标38万。一个用Python写的单Agent自进化系统，由Nous Research开源。OpenClaw和Hermes，两种截然不同的Agent设计哲学，今天我们结合源代码，从顶层架构到核心模块，进行top-down的详细拆解和对比。"
-tags: [video-notes, visual-essay]
+tags: [智能体, 多智能体, 开源框架]
 category: Agent
 cover: /assets/posts/video-notes/2026-06-29-openclaw-hermes/images/01.png
 body_class: dive-into-codex-post

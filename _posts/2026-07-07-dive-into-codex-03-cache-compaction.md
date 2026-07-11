@@ -3,10 +3,15 @@ layout: post
 title: "Dive into Codex 03：Cache 与 Compaction"
 date: 2026-07-07 08:48:21 +0800
 summary: "继续看 Codex 长任务里的上下文管理：稳定前缀如何帮助 prompt cache，compaction 如何在窗口压力下保留可继续工作的状态。"
-tags: [Codex, coding agent, visual-essay, source-notes, cache, compaction]
+tags: [上下文管理, 长上下文, 缓存优化]
 category: Codex
 cover: /assets/posts/video-notes/dive-into-codex-03-cache-compaction/images/001-request-lifecycle-map.png
 body_class: dive-into-codex-post
+series: dive-into-codex
+series_previous_title: "Dive into Codex 02：Responses API 事件模型"
+series_previous_url: /codex/2026/07/05/dive-into-codex-02-responses-api-design.html
+series_next_title: "Dive into Codex 04：Interrupt 与异步事件"
+series_next_url: /codex/2026/07/09/dive-into-codex-04-interrupt-async-events.html
 ---
 
 第 02 章解释了 Responses API 如何把模型输出变成事件日志。本章换一个 top-down 视角：先用一张粗地图看一次长任务请求的生命周期，再逐页拆开 cache、compaction 和不同 memory 的定位。
@@ -488,9 +493,3 @@ workspace / project docs
 - `AGENTS.md`：Codex 会在开始工作前读取全局、项目、当前目录路径上的 instruction files，并按从外到内的顺序合并；更靠近当前目录的规则更晚进入 prompt，也更容易覆盖通用规则。参考：[Custom instructions with AGENTS.md](https://developers.openai.com/codex/guides/agents-md)。
 - `Codex Memories`：Memories 默认关闭；启用后，Codex 可以从符合条件的历史 threads 提取有用上下文，写入 `~/.codex/memories/` 下的本地文件，并在未来 sessions 中作为本地 recall layer 使用。参考：[Memories](https://developers.openai.com/codex/memories)。
 - `Compaction`：本章里的 compacted context、raw tail、old prefix 是用于解释长任务压缩的工程抽象；不要把它和 Codex Memories 写成同一条固定源码链路。
-
-## 章节衔接
-
-- 上一章：[Responses API 事件模型](../02-responses-api-design/)
-- 下一章：[Interrupt 与异步事件](../04-interrupt-and-async-events/)
-- 总目录：[Dive into Codex](../../README.md)

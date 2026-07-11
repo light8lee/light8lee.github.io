@@ -22,7 +22,7 @@ animation: home-constellation
   <div class="social-grid" aria-label="Social QR codes">
     <figure class="social-card xiaohongshu-card">
       <div class="qr-shell">
-        <img src="{{ '/images/social/xiaohongshu-qr.jpg' | relative_url }}" alt="小红书二维码，扫码关注涛涛涛" loading="lazy">
+        <img src="{{ '/images/social/xiaohongshu-qr.png' | relative_url }}" alt="小红书二维码，扫码关注涛涛涛" loading="lazy">
       </div>
       <figcaption>
         <span>小红书</span>
@@ -43,7 +43,7 @@ animation: home-constellation
   </div>
 </section>
 
-<section class="content-section">
+<section id="latest-writing" class="content-section">
   <div class="section-heading">
     <h2>Latest Writing</h2>
     <a href="{{ '/archives.html' | relative_url }}">Archive</a>
@@ -58,12 +58,11 @@ animation: home-constellation
       <button class="filter-chip" type="button" data-filter-type="collection" data-filter-value="dive-into-codex" aria-pressed="false">dive-into-codex</button>
     </div>
     <label class="tag-filter">
-      <span>Tag</span>
-      <select data-filter-type="tag" aria-label="Filter videos by tag">
-        <option value="all">全部 tag</option>
-        {% assign sorted_tags = site.tags | sort %}
-        {% for tag in sorted_tags %}
-        <option value="{{ tag[0] | escape }}">{{ tag[0] }}</option>
+      <span>主题</span>
+      <select data-filter-type="tag" aria-label="按主题筛选文章">
+        <option value="all">全部主题</option>
+        {% for tag in site.home_tag_filters %}
+        <option value="{{ tag | escape }}">{{ tag }}</option>
         {% endfor %}
       </select>
     </label>
@@ -96,6 +95,19 @@ animation: home-constellation
     var emptyMessage = document.querySelector("[data-empty-filter]");
     var activeCollection = "all";
 
+    function setActiveCollection(value) {
+      var selected = collectionButtons.find(function (button) {
+        return button.dataset.filterValue === value;
+      });
+
+      activeCollection = selected ? value : "all";
+      collectionButtons.forEach(function (item) {
+        var isActive = item.dataset.filterValue === activeCollection;
+        item.classList.toggle("is-active", isActive);
+        item.setAttribute("aria-pressed", String(isActive));
+      });
+    }
+
     function applyFilters() {
       var activeTag = tagSelect ? tagSelect.value : "all";
       var visibleCount = 0;
@@ -117,12 +129,7 @@ animation: home-constellation
 
     collectionButtons.forEach(function (button) {
       button.addEventListener("click", function () {
-        activeCollection = button.dataset.filterValue || "all";
-        collectionButtons.forEach(function (item) {
-          var isActive = item === button;
-          item.classList.toggle("is-active", isActive);
-          item.setAttribute("aria-pressed", String(isActive));
-        });
+        setActiveCollection(button.dataset.filterValue || "all");
         applyFilters();
       });
     });
@@ -130,6 +137,12 @@ animation: home-constellation
     if (tagSelect) {
       tagSelect.addEventListener("change", applyFilters);
     }
+
+    var requestedCollection = new URLSearchParams(window.location.search).get("collection");
+    if (requestedCollection) {
+      setActiveCollection(requestedCollection);
+    }
+    applyFilters();
   })();
 </script>
 

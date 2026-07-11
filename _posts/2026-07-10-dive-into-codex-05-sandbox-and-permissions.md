@@ -3,10 +3,15 @@ layout: post
 title: "Dive into Codex 05：Sandbox 与权限边界"
 date: 2026-07-10 10:00:00 +0800
 summary: "继续拆 Codex 的运行时安全边界：模型只能提出动作，真实执行要经过 permission profile、sandbox policy 和 approval flow。"
-tags: [Codex, coding agent, visual-essay, source-notes, sandbox, permissions]
+tags: [智能体运行时, 权限控制, 执行安全]
 category: Codex
 cover: /assets/posts/video-notes/dive-into-codex-05-sandbox-and-permissions/images/001-tool-power-risk.png
 body_class: dive-into-codex-post
+series: dive-into-codex
+series_previous_title: "Dive into Codex 04：Interrupt 与异步事件"
+series_previous_url: /codex/2026/07/09/dive-into-codex-04-interrupt-async-events.html
+series_next_title: "Dive into Codex 06：Tool Execution 与 Workspace"
+series_next_url: /codex/2026/07/11/dive-into-codex-06-tool-execution-workspace.html
 ---
 
 前一章说明了长任务如何被中断和重新驾驶。本章讨论另一个运行时核心问题：当模型可以驱动工具执行时，系统必须把“模型建议”和“真实执行”隔开。模型可以提出动作，但最终执行权在 runtime、policy、sandbox 和用户审批手里。
@@ -265,6 +270,11 @@ Sandbox 定义了边界，但边界内仍要完成真实工作。下一章会拆
 
 关键词：`Tool Execution`、`runtime`、`workspace`
 
+</div>
+</section>
+
+<section class="post-appendix" markdown="1">
+
 ## Appendix：补充材料
 
 ### A. Runtime 的权限判断不是单点开关
@@ -295,10 +305,4 @@ untrusted
 - 第 06 章会拆真实工具执行、输出截断和 workspace mutation。
 - 第 07 章会讨论 subagent 如何继承权限边界，以及子线程 approval 如何回到主线处理。
 
-## 章节衔接
-
-- 上一章：[Interrupt 与异步事件](../04-interrupt-and-async-events/)
-- 下一章：[Tool Execution 与 Workspace](../06-tool-execution-workspace/)
-- 总目录：[Dive into Codex](../../README.md)
-</div>
 </section>

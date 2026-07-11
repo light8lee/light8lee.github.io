@@ -59,6 +59,22 @@ nav:
   - text: About
     url: /about.html
 
+home_tag_filters:
+  - 智能体
+  - 智能体运行时
+  - 强化学习
+  - 后训练
+  - 偏好对齐
+  - 安全对齐
+  - 长上下文
+  - 记忆系统
+  - 工具调用
+  - 多智能体
+  - 基准评测
+  - 大模型
+  - 模型架构
+  - 策略优化
+
 # Author config
 author:
     name: 涛涛涛

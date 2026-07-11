@@ -3,7 +3,7 @@ layout: post
 title: "Agent 会做题，为什么还不会上班？"
 date: 2026-06-13 10:16:45 +0800
 summary: "2026 年 6 月 3 日，UC Berkeley RDI 牵头的三百多位作者发布预印本《Agents' Last Exam》。"
-tags: [video-notes, visual-essay]
+tags: [智能体, 基准评测]
 category: Agent
 cover: /assets/posts/video-notes/2026-06-13-agents-last-exam/images/01.png
 body_class: dive-into-codex-post

@@ -3,7 +3,7 @@ layout: post
 title: "Computer-use agent真正的难点不是会点按钮或会写命令，而是能不能在长链路任务里稳定编排GUI与CLI"
 date: 2026-06-17 09:12:09 +0800
 summary: "2026 年 6 月 8 日，浙江大学、微软亚洲研究院、清华大学的作者团队发布了预印本《WeaveBench》。这篇工作想测的，不是 Agent 会不会点按钮，也不是会不会敲命令，而是它能不能把 GUI 观察、CLI 操作、代码修改和再次验证，稳定地编排成一条完整工作链路。"
-tags: [video-notes, visual-essay]
+tags: [智能体, 计算机使用, 基准评测]
 category: Agent
 cover: /assets/posts/video-notes/2026-06-17-weavebench/images/01.png
 body_class: dive-into-codex-post

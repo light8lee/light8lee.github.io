@@ -3,7 +3,7 @@ layout: post
 title: "GRPO PyTorch 伪代码详解：从采样到组内相对优势"
 date: 2026-06-15 09:01:21 +0800
 summary: "结合伪代码完整拆解 GRPO 的 rollout、reward、group advantage、loss 和训练循环。"
-tags: [LLM, GRPO, PyTorch, RL]
+tags: [后训练, 强化学习, 策略优化]
 category: "大模型基础知识"
 cover: /assets/posts/llm-notes/grpo-pytorch/images/cover.png
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Scaling Laws for Reward Model Overoptimization"
 date: 2026-06-21 22:39:49 +0800
 summary: "主题：`llm-post-training`"
-tags: [video-notes, visual-essay, LLM post-training]
+tags: [后训练, 奖励建模, 强化学习]
 category: LLM Post-training
 cover: /assets/posts/video-notes/2026-06-21-rm-overoptimization/images/scene-01.png
 body_class: dive-into-codex-post

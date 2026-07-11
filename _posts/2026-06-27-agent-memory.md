@@ -3,7 +3,7 @@ layout: post
 title: "Agent 记忆系统大横评：12 个系统，谁才是真正的记忆王者？"
 date: 2026-06-27 22:54:18 +0800
 summary: "这是一篇关于 arXiv:2606.24775 论文《Are We Ready For An Agent-Native Memory System?》的中文技术解读视频。"
-tags: [video-notes, visual-essay]
+tags: [智能体, 记忆系统]
 category: AI Notes
 cover: /assets/posts/video-notes/2026-06-27-agent-memory/images/01.png
 body_class: dive-into-codex-post

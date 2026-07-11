@@ -3,7 +3,7 @@ layout: post
 title: "《Agent SFT 最难的，不是训练》脚本"
 date: 2026-06-19 23:58:42 +0800
 summary: "主题：`llm-post-training` 平台：小红书 目标时长：5–7 分钟 核心来源：OmniAgent（arXiv:2606.19341v1）"
-tags: [video-notes, visual-essay, LLM post-training]
+tags: [智能体, 监督微调, 训练数据]
 category: LLM Post-training
 cover: /assets/posts/video-notes/2026-06-19-omniagent-sft/images/scene-01.png
 body_class: dive-into-codex-post

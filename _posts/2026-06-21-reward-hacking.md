@@ -3,7 +3,7 @@ layout: post
 title: "奖励上涨，为什么安全目标反而变差？"
 date: 2026-06-21 16:22:24 +0800
 summary: "训练中观察奖励不断上涨，隐藏的真实目标，也就是安全表现，却可能原地踏步，甚至变差。风险是我们把钻空子误判成能力提升。"
-tags: [video-notes, visual-essay, LLM post-training, reward hacking, Agent RL]
+tags: [后训练, 安全对齐, 奖励建模]
 category: LLM Post-training
 cover: /assets/posts/video-notes/2026-06-20-reward-hacking/images/scene-01.png
 body_class: dive-into-codex-post
