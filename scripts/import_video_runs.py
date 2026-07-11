@@ -86,6 +86,7 @@ class Scene:
     title: str
     body: str
     image: Path | None
+    source_url: str | None = None
 
 
 @dataclass
@@ -389,6 +390,10 @@ def parse_publish_chapter(chapter_dir: Path) -> PublishedChapter:
         start = match.end()
         next_start = section_matches[idx + 1].start() if idx + 1 < len(section_matches) else tail_start
         chunk = readme[start:next_start].strip()
+        raw_title = match.group(2).strip()
+        title_link = re.fullmatch(r"\[([^\]]+)\]\((https?://[^)]+)\)", raw_title)
+        title = title_link.group(1) if title_link else raw_title
+        source_url = title_link.group(2) if title_link else None
         image_match = re.search(r"!\[[^\]]*\]\((images/[^)]+)\)", chunk)
         image_path = chapter_dir / image_match.group(1) if image_match else None
         if image_path:
@@ -397,9 +402,10 @@ def parse_publish_chapter(chapter_dir: Path) -> PublishedChapter:
         scenes.append(
             Scene(
                 index=int(match.group(1)),
-                title=match.group(2).strip(),
+                title=title,
                 body=chunk.strip(),
                 image=image_path,
+                source_url=source_url,
             )
         )
 
@@ -477,7 +483,13 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
 
     if publish_chapter:
         scenes = [
-            Scene(scene.index, scene.title, scene.body, copied_images[idx] if idx < len(copied_images) else None)
+            Scene(
+                scene.index,
+                scene.title,
+                scene.body,
+                copied_images[idx] if idx < len(copied_images) else None,
+                scene.source_url,
+            )
             for idx, scene in enumerate(publish_chapter.scenes)
         ]
     else:
@@ -522,6 +534,9 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
         scene_body, chapter_connection = split_chapter_connection(scene.body.strip())
         image_name = scene.image.name if scene.image else ""
         image_src = f"/assets/posts/video-notes/{asset_slug}/images/{image_name}"
+        scene_title = markdown_escape_html(scene.title)
+        if scene.source_url:
+            scene_title = f'<a href="{markdown_escape_html(scene.source_url)}">{scene_title}</a>'
         body.extend(['<section class="visual-note" markdown="1">'])
         if image_name:
             body.extend(
@@ -535,7 +550,7 @@ def write_post(run_dir: Path, dry_run: bool = False) -> Path | None:
             [
                 '<div markdown="1">',
                 f'<p class="visual-note-index">{scene.index:03d} / {"Dive into Codex" if category == "Codex" else "Video Notes"}</p>',
-                f"<h2>{markdown_escape_html(scene.title)}</h2>",
+                f"<h2>{scene_title}</h2>",
                 "",
                 normalize_published_links(scene_body),
                 "</div>",
