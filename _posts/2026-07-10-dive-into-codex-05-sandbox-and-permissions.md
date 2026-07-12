@@ -5,7 +5,7 @@ date: 2026-07-10 10:00:00 +0800
 summary: "继续拆 Codex 的运行时安全边界：模型只能提出动作，真实执行要经过 permission profile、sandbox policy 和 approval flow。"
 tags: [智能体运行时, 权限控制, 执行安全]
 category: Codex
-cover: /assets/posts/video-notes/dive-into-codex-05-sandbox-and-permissions/images/001-tool-power-risk.png
+cover: /assets/posts/video-notes/dive-into-codex-05-sandbox-and-permissions/images/cover.png
 body_class: dive-into-codex-post
 series: dive-into-codex
 series_previous_title: "Dive into Codex 04：Interrupt 与异步事件"

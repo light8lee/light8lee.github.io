@@ -5,7 +5,7 @@ date: 2026-07-05 22:52:10 +0800
 summary: "把 Chat Completions 与 Responses API 的抽象差异拆开看：item、event、tool call、tool output、skills 和 previous_response_id 如何支撑 agent runtime。"
 tags: [智能体运行时, 模型接口, 工具调用]
 category: Codex
-cover: /assets/posts/dive-into-codex/02-responses-api-design/images/001-python-api-compare.png
+cover: /assets/posts/dive-into-codex/02-responses-api-design/images/cover.png
 body_class: dive-into-codex-post
 series: dive-into-codex
 series_previous_title: "Dive into Codex 01：Agent Loop 的核心地图"

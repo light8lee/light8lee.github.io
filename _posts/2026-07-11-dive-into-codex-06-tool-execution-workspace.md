@@ -5,7 +5,7 @@ date: 2026-07-11 10:00:00 +0800
 summary: "前一章定义了执行边界。本章进入边界内部：模型提出 tool call 之后，Codex 如何选择工具、执行命令、修改文件、截断输出、验证结果，并把这些真实副作用写回 Session memory。"
 tags: [智能体运行时, 工具调用, 工作区管理]
 category: Codex
-cover: /assets/posts/video-notes/dive-into-codex-06-tool-execution-workspace/images/001-tool-call-is-intent.png
+cover: /assets/posts/video-notes/dive-into-codex-06-tool-execution-workspace/images/cover.png
 body_class: dive-into-codex-post
 series: dive-into-codex
 series_previous_title: "Dive into Codex 05：Sandbox 与权限边界"

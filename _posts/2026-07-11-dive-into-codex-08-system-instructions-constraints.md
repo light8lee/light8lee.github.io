@@ -5,7 +5,7 @@ date: 2026-07-11 14:00:00 +0800
 summary: "从 Codex 源码中的系统级指令出发，理解它如何以指令层级、工作区保护、工具纪律、权限边界和验证契约，约束一个可协作、可执行的本地 coding agent。"
 tags: [智能体运行时, 指令系统, 执行安全]
 category: Codex
-cover: /assets/posts/video-notes/dive-into-codex-08-system-instructions-constraints/images/001-source-checkpoint.png
+cover: /assets/posts/video-notes/dive-into-codex-08-system-instructions-constraints/images/cover.png
 body_class: dive-into-codex-post
 series: dive-into-codex
 series_previous_title: "Dive into Codex 07：Subagent 架构"

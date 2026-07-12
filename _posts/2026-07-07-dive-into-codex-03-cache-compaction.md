@@ -5,7 +5,7 @@ date: 2026-07-07 08:48:21 +0800
 summary: "继续看 Codex 长任务里的上下文管理：稳定前缀如何帮助 prompt cache，compaction 如何在窗口压力下保留可继续工作的状态。"
 tags: [上下文管理, 长上下文, 缓存优化]
 category: Codex
-cover: /assets/posts/video-notes/dive-into-codex-03-cache-compaction/images/001-request-lifecycle-map.png
+cover: /assets/posts/video-notes/dive-into-codex-03-cache-compaction/images/cover.png
 body_class: dive-into-codex-post
 series: dive-into-codex
 series_previous_title: "Dive into Codex 02：Responses API 事件模型"

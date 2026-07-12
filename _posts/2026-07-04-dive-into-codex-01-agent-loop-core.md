@@ -5,7 +5,7 @@ date: 2026-07-04 21:38:06 +0800
 summary: "从 Thread、Session、Turn Loop、Context Builder、Responses API 到 ToolRouter，先建立 Codex 本地 coding agent runtime 的核心闭环。"
 tags: [智能体运行时, 上下文管理, 工具调用]
 category: Codex
-cover: /assets/posts/dive-into-codex/01-agent-loop-core/images/001-codex-runtime.png
+cover: /assets/posts/dive-into-codex/01-agent-loop-core/images/cover.png
 body_class: dive-into-codex-post
 series: dive-into-codex
 series_next_title: "Dive into Codex 02：Responses API 事件模型"

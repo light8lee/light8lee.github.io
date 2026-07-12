@@ -5,7 +5,7 @@ date: 2026-07-09 10:00:00 +0800
 summary: "进入 Codex 运行时控制：用户中断与 steer 如何经过 Session Queue 和 Event Queue，在安全边界停止、续接并处理异步事件。"
 tags: [智能体运行时, 异步控制, 用户中断]
 category: Codex
-cover: /assets/posts/video-notes/dive-into-codex-04-interrupt-async-events/images/001-long-turn-problem.png
+cover: /assets/posts/video-notes/dive-into-codex-04-interrupt-async-events/images/cover.png
 body_class: dive-into-codex-post
 series: dive-into-codex
 series_previous_title: "Dive into Codex 03：Cache 与 Compaction"

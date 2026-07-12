@@ -5,7 +5,7 @@ date: 2026-07-11 12:00:00 +0800
 summary: "从单个 Agent Loop 扩展到多 Agent 协作：如何划定任务边界、打包上下文、汇总结果、控制冲突，并让权限请求回到主交互通道。"
 tags: [多智能体, 任务编排, 权限控制]
 category: Codex
-cover: /assets/posts/video-notes/dive-into-codex-07-subagent-architecture/images/001-why-subagents.png
+cover: /assets/posts/video-notes/dive-into-codex-07-subagent-architecture/images/cover.png
 body_class: dive-into-codex-post
 series: dive-into-codex
 series_previous_title: "Dive into Codex 06：Tool Execution 与 Workspace"
