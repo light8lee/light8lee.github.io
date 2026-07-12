@@ -740,6 +740,55 @@ img {
   max-width: 1040px;
 }
 
+/* MaxRL visual explainer: preserve the source cards on the left and the expanded notes on the right. */
+.maxrl-post .post {
+  max-width: 1040px;
+}
+
+.maxrl-post .post-hero,
+.maxrl-post .post-content > p,
+.maxrl-post .post-content > .language-plaintext,
+.maxrl-post .post-content > .highlight,
+.maxrl-post .post-content > .post-appendix {
+  margin-inline: auto;
+  max-width: 880px;
+}
+
+.maxrl-post .visual-note {
+  gap: 26px;
+  grid-template-columns: minmax(420px, 1.12fr) minmax(330px, 0.88fr);
+  padding: 38px 0;
+}
+
+.maxrl-post .visual-note > * {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.maxrl-post .visual-note h2 {
+  font-size: 25px;
+  line-height: 1.22;
+  margin: 6px 0 14px;
+}
+
+.maxrl-post .visual-note p,
+.maxrl-post .visual-note li {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.maxrl-post .visual-note p {
+  margin: 0 0 14px;
+}
+
+.maxrl-post .visual-note pre {
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 12px 0 14px;
+  max-height: 360px;
+}
+
 .dive-into-codex-post .post-hero,
 .dive-into-codex-post .post-content > p,
 .dive-into-codex-post .post-content > .language-plaintext,
@@ -1010,11 +1059,16 @@ img {
   .post-list,
   .social-section,
   .dive-into-codex-post .visual-note,
+  .maxrl-post .visual-note,
   .visual-note {
     grid-template-columns: 1fr;
   }
 
   .dive-into-codex-post .post {
+    max-width: 880px;
+  }
+
+  .maxrl-post .post {
     max-width: 880px;
   }
 

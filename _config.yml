@@ -60,6 +60,8 @@ nav:
     url: /about.html
 
 home_tag_filters:
+  - MaxRL
+  - GRPO
   - 智能体
   - 智能体运行时
   - 强化学习
