@@ -69,13 +69,17 @@ if required_results_ready(results):
 return retry_or_reassign(results)
 ```
 
-下面是为解释流程而写的**模拟 Trace**（不是终端原样输出）：
+下面是一段**模拟 REPL 会话**（教学用虚构中间过程，不是终端原样输出）：
 
-```text
-[01] Supervisor RECEIVED  ← user.request
-[02] Supervisor DELEGATE  → Research | Content | Schedule | Budget
-[03] BudgetWorker OUTPUT  → Supervisor: {"budget": 7800}
-[04] Supervisor MERGE     → final plan
+```pycon
+>>> supervisor.receive(request)
+{"event": "RECEIVED", "via": "user.request"}
+>>> supervisor.delegate(["Research", "Content", "Schedule", "Budget"])
+{"next_agent": "Research|Content|Schedule|Budget"}
+>>> BudgetWorker.run({"limit": 8000})
+{"budget": 7800, "next_agent": "Supervisor"}
+>>> supervisor.merge(worker_results)
+{"event_name": "沿着建筑读懂城市", "budget": 7800}
 ```
 
 ## 2. GroupChat / 委员会协作
@@ -104,14 +108,20 @@ for _ in range(max_rounds):
     speaker = select_next_role(transcript)
     transcript.append(speaker.respond(transcript))
     if consensus_reached(transcript):
-        return facilitator.summarize(transcript)
+return facilitator.summarize(transcript)
 ```
 
-```text
-[01] ResearchAgent reads transcript (1 message)
-[02] ResearchAgent appends: “年轻受众偏好可互动路线”
-[03] ContentAgent reads transcript (2 messages)
-[04] Facilitator CONSENSUS → final plan
+**模拟 REPL 会话（教学用虚构中间过程）：**
+
+```pycon
+>>> transcript
+["User: 策划周末文化漫游"]
+>>> ResearchAgent.speak(transcript)
+"年轻受众偏好可拍照、可互动的路线"
+>>> len(transcript), transcript[-1]["sender"]
+(2, "ResearchAgent")
+>>> Facilitator.consensus(transcript)
+{"complete": True, "next_agent": None}
 ```
 
 ## 3. Handoff / 接力交接
@@ -143,11 +153,16 @@ while current:
 return state
 ```
 
-```text
-[01] ResearchAgent RECEIVED ← Envelope(from=User, hop=1)
-[02] ResearchAgent HANDOFF  → ContentAgent; patch={venue, event_name}
-[03] ContentAgent RECEIVED  ← Envelope(from=ResearchAgent, hop=2)
-[04] BudgetAgent HANDOFF    → END; patch={budget: 7800}
+**模拟 REPL 会话（教学用虚构中间过程）：**
+
+```pycon
+>>> envelope = {"from": "User", "to": "ResearchAgent", "hop": 1}
+>>> ResearchAgent.handle(envelope)
+({"venue": "城市美术馆与历史街区"}, "ContentAgent")
+>>> envelope["from"], envelope["to"], envelope["hop"]
+("ResearchAgent", "ContentAgent", 2)
+>>> BudgetAgent.handle(envelope)
+({"budget": 7800}, None)
 ```
 
 ## 4. State Machine / DAG
@@ -179,11 +194,16 @@ while node != "END":
 return state
 ```
 
-```text
-[01] ResearchNode loads State(v0)
-[02] ResearchNode commits {venue} → State(v1); route=ContentNode
-[03] BudgetNode commits {budget: 7800} → route=PublishNode
-[04] PublishNode commits {deliverables} → END
+**模拟 REPL 会话（教学用虚构中间过程）：**
+
+```pycon
+>>> state["checkpoint_version"], node
+(0, "ResearchNode")
+>>> patch, route = ResearchNode.run(state)
+>>> reducer.commit(state, patch)
+{"checkpoint_version": 1, "venue": "城市美术馆与历史街区"}
+>>> BudgetNode.route({"budget": 7800, "budget_limit": 8000})
+"PublishNode"
 ```
 
 ## 5. Event Bus + Scheduler
@@ -215,11 +235,17 @@ if completion_checker.ready(state):
     bus.publish(Event("plan.completed", state))
 ```
 
-```text
-[01] UserGateway PUBLISHED topic:event.created
-[02] EventBus DELIVERED → ResearchAgent | ContentAgent | ScheduleAgent | BudgetAgent
-[03] BudgetAgent STATE_UPDATED → {budget: 7800, within_limit: true}
-[04] CompletionChecker CHECK → plan.completed
+**模拟 REPL 会话（教学用虚构中间过程）：**
+
+```pycon
+>>> bus.publish("event.created", {"budget_limit": 8000})
+{"subscribers": ["ResearchAgent", "ContentAgent", "ScheduleAgent", "BudgetAgent"]}
+>>> BudgetAgent.on_event({"budget_limit": 8000})
+{"patch": {"budget": 7800, "within_limit": True}}
+>>> CompletionChecker.ready(state)
+True
+>>> bus.last_event.topic
+"plan.completed"
 ```
 
 ## 如何读懂这五个可运行示例
@@ -305,7 +331,7 @@ python 05_event_bus.py
 
 ### 模拟 Trace 如何阅读
 
-正文中的 `text` 代码块是为讲解而压缩、虚构的中间过程：字段名与实际脚本一致，但会省去无关载荷。读者只需要沿着 `via → output → next_agent` 看输入如何传播。例如 Handoff 的一条完整形态如下：
+正文中的 `pycon` 代码块是为讲解而压缩、虚构的 REPL 中间过程：字段名与实际脚本一致，但会省去无关载荷。读者只需要沿着 `via → output → next_agent` 看输入如何传播。例如 Handoff 的一条完整形态如下：
 
 ```json
 {
