@@ -745,6 +745,50 @@ img {
   max-width: 1040px;
 }
 
+/* Multi-agent explainer: pair each architecture diagram with its reading note. */
+.multi-agent-post .post {
+  max-width: 1040px;
+}
+
+.multi-agent-post .post-hero,
+.multi-agent-post .post-content > p,
+.multi-agent-post .post-content > .language-plaintext,
+.multi-agent-post .post-content > .highlight,
+.multi-agent-post .post-content > table {
+  margin-inline: auto;
+  max-width: 880px;
+}
+
+.multi-agent-post .visual-note {
+  gap: 26px;
+  grid-template-columns: minmax(420px, 1.12fr) minmax(330px, 0.88fr);
+  padding: 38px 0;
+}
+
+.multi-agent-post .visual-note > * {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.multi-agent-post .visual-note h2 {
+  font-size: 25px;
+  line-height: 1.22;
+  margin: 6px 0 14px;
+}
+
+.multi-agent-post .visual-note p {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.72;
+  margin: 0 0 14px;
+}
+
+.multi-agent-post .visual-note-index {
+  color: var(--accent-2);
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
 .maxrl-post .post-hero,
 .maxrl-post .post-content > p,
 .maxrl-post .post-content > .language-plaintext,
@@ -1058,6 +1102,7 @@ img {
   .post-grid,
   .post-list,
   .social-section,
+  .multi-agent-post .visual-note,
   .dive-into-codex-post .visual-note,
   .maxrl-post .visual-note,
   .visual-note {
