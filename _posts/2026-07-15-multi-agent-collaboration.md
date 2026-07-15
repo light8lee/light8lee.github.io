@@ -95,6 +95,8 @@ return supervisor.merge(results)
 {"event_name": "沿着建筑读懂城市", "budget": 7800}
 ```
 
+完整可运行脚本：[01_supervisor.py]({{ '/assets/posts/multi-agent/code/01_supervisor.py' | relative_url }})。
+
 ## 2. GroupChat / 委员会协作
 
 <section class="visual-note" markdown="1">
@@ -149,6 +151,8 @@ for round_no in range(max_rounds):
 {"complete": True, "next_agent": None}
 ```
 
+完整可运行脚本：[02_group_chat.py]({{ '/assets/posts/multi-agent/code/02_group_chat.py' | relative_url }})。
+
 ## 3. Handoff / 接力交接
 
 <section class="visual-note" markdown="1">
@@ -197,6 +201,8 @@ return state
 ({"budget": 7800}, None)
 ```
 
+完整可运行脚本：[03_handoff.py]({{ '/assets/posts/multi-agent/code/03_handoff.py' | relative_url }})。
+
 ## 4. State Machine / DAG
 
 <section class="visual-note" markdown="1">
@@ -244,6 +250,8 @@ return state
 >>> BudgetNode.route({"budget": 7800, "budget_limit": 8000})  # Round 2 修订后通过
 "PublishNode"
 ```
+
+完整可运行脚本：[04_state_machine.py]({{ '/assets/posts/multi-agent/code/04_state_machine.py' | relative_url }})。
 
 ## 5. Event Bus + Scheduler
 
@@ -295,6 +303,8 @@ True
 >>> bus.last_event.topic
 "plan.completed"
 ```
+
+完整可运行脚本：[05_event_bus.py]({{ '/assets/posts/multi-agent/code/05_event_bus.py' | relative_url }})。
 
 ## 如何读懂这五个可运行示例
 
