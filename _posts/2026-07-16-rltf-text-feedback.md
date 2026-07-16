@@ -10,24 +10,9 @@ cover: /assets/posts/video-notes/2026-07-16-rltf-text-feedback/images/01.png
 
 # RLTF：把文本批评内化成首答能力
 
-> 论文解读：*Expanding the Capabilities of Reinforcement Learning via Text Feedback*  
-> Yuda Song, Lili Chen, Fahim Tajwar, Rémi Munos, Deepak Pathak, J. Andrew Bagnell, Aarti Singh, Andrea Zanette（ICML 2026）  
+> 论文解读：*Expanding the Capabilities of Reinforcement Learning via Text Feedback*<br>
+> Yuda Song, Lili Chen, Fahim Tajwar, Rémi Munos, Deepak Pathak, J. Andrew Bagnell, Aarti Singh, Andrea Zanette（ICML 2026）<br>
 > [论文](https://arxiv.org/abs/2602.02482) · [项目主页](https://rl-textfeedback.github.io/) · [代码](https://github.com/lili-chen/rltf)
-
-<section class="visual-note" markdown="1">
-<figure><video controls preload="metadata" poster="{{ '/assets/posts/video-notes/2026-07-16-rltf-text-feedback/images/01.png' | relative_url }}" aria-label="RLTF 论文讲解视频"><source src="{{ '/assets/posts/video-notes/2026-07-16-rltf-text-feedback/rltf-text-feedback.mp4' | relative_url }}" type="video/mp4">你的浏览器不支持 HTML5 视频。</video></figure>
-<div markdown="1">
-<p class="visual-note-index">Video / 04:26</p>
-
-## 从“会改”到“第一次就答好”
-
-标量奖励只能告诉模型结果好不好，完整示范又往往昂贵。文本批评处在两者之间：它不必重写答案，却能指出错误位置、原因和修改方向。
-
-这支视频沿着 13 个场景解释 RLTF 的两条路线：**RLTF-SD** 蒸馏反馈后的修正行为，**RLTF-FM** 学习预测老师会给出的批评。二者都以无反馈的第一轮表现为最终评价。
-</div>
-</section>
-
----
 
 <section class="visual-note" markdown="1">
 <figure><img src="{{ '/assets/posts/video-notes/2026-07-16-rltf-text-feedback/images/01.png' | relative_url }}" alt="RLTF 将文本批评内化为首答能力" loading="lazy"></figure>
@@ -81,13 +66,13 @@ RLTF 更进一步：它不满足于模型在看到批评后会修正，而是希
 
 ## 一条反馈轨迹包含五个对象
 
-模型先基于原问题 \(x_0\) 生成首答 \(y_0\)，环境计算奖励，外部反馈者给出批评 \(c_0\)。三者组成扩展上下文 \(x_1=f(x_0,y_0,c_0)\)，模型再生成修正答案 \(y_1\)：
+模型先基于原问题 $x_0$ 生成首答 $y_0$，环境计算奖励，外部反馈者给出批评 $c_0$。三者组成扩展上下文 $x_1=f(x_0,y_0,c_0)$，模型再生成修正答案 $y_1$：
 
-\[
+$$
 x_0 \rightarrow y_0 \rightarrow c_0 \rightarrow x_1 \rightarrow y_1
-\]
+$$
 
-训练时可以借助完整轨迹；测试指标仍是只给 \(x_0\) 时的首答表现。这个约束决定了方法不能只优化第二轮。
+训练时可以借助完整轨迹；测试指标仍是只给 $x_0$ 时的首答表现。这个约束决定了方法不能只优化第二轮。
 </div>
 </section>
 
@@ -117,9 +102,9 @@ x_0 \rightarrow y_0 \rightarrow c_0 \rightarrow x_1 \rightarrow y_1
 
 第二轮答案不一定正确，因此不能无条件模仿。RLTF-SD 用修正答案的奖励减去第一轮组平均奖励，判断这条轨迹是否值得学习：
 
-\[
+$$
 A_i^{(0)}=R(x_0,y_{1,i})-\frac{1}{N}\sum_jR(x_0,y_{0,j})
-\]
+$$
 
 关键是 baseline 来自**第一轮**。如果八个第二轮答案都因反馈而答对，用第二轮均值会得到全零 advantage；改用第一轮均值后，只要首答仍不够好，成功的修正轨迹就持续提供正信号。
 </div>
@@ -134,7 +119,7 @@ A_i^{(0)}=R(x_0,y_{1,i})-\frac{1}{N}\sum_jR(x_0,y_{0,j})
 
 ## RLTF-SD 蒸馏的是完整修正轨迹
 
-RLTF-SD 真正生成第二次完整答案，再用任务奖励验证它，并以 advantage 加权提高 \(\log\pi(y_1\mid x_0)\)。因此它更像 **trajectory-level hindsight imitation + RL advantage**。
+RLTF-SD 真正生成第二次完整答案，再用任务奖励验证它，并以 advantage 加权提高 $\log\pi(y_1\mid x_0)$。因此它更像 **trajectory-level hindsight imitation + RL advantage**。
 
 相近的 SDPO 不采样完整二答，而是在原回答的相同 token 前缀上，比较有反馈与无反馈时的预测分布。前者相信最终奖励验证过的修正结果，后者相信反馈条件自教师在每个 token 位置给出的局部判断。更细的差异放在文末 appendix。
 </div>
@@ -151,9 +136,9 @@ RLTF-SD 真正生成第二次完整答案，再用任务奖励验证它，并以
 
 Feedback Modeling 不模仿二答，而是根据问题与当前答案预测老师的批评：
 
-\[
+$$
 L_{\text{FM}}=-\mathbb{E}[\log p_\theta(c\mid x,y)]
-\]
+$$
 
 若要预测“你漏掉了从 `(0,1)` 到 `(1,1)` 的合法移动”，模型内部必须表示坐标、障碍、合法动作以及回答遗漏的搜索边。论文把这种作用称为 **representation preconditioner**：结构化反馈补充了稀疏奖励难以覆盖的表示方向。
 </div>
@@ -200,9 +185,9 @@ L_{\text{FM}}=-\mathbb{E}[\log p_\theta(c\mid x,y)]
 
 形式上可以将任务 RL、自蒸馏与反馈预测合在一起：
 
-\[
+$$
 L=L_{\text{RL}}+\lambda_{\text{SD}}L_{\text{SD}}+\lambda_{\text{FM}}L_{\text{FM}}
-\]
+$$
 
 不过论文把 RLTF-SD 与 RLTF-FM 作为两种独立方案实验，并未证明“先找错、再修改、再蒸馏”能形成持续自我提升。这个闭环仍依赖外部反馈提供新信息，也依赖任务奖励判断修改是否真的更好。
 </div>
@@ -244,11 +229,11 @@ RLTF 最重要的贡献不是让模型“反思两遍”，而是明确区分依
 
 ### A. 为什么完整重要性采样很难稳定
 
-修正答案来自反馈条件策略 \(\pi(y\mid x_1)\)，训练的却是无反馈策略 \(\pi(y\mid x_0)\)。理论上可用 \(\pi(y\mid x_0)/\pi(y\mid x_1)\) 修正分布偏移，但 LLM 序列概率比是大量 token 概率比的乘积，容易产生极端长尾。论文在 AIME24 上报告平均序列级 log importance ratio 为 142.16，因此采用类似 Advantage-Weighted Regression 的低方差、有偏目标。
+修正答案来自反馈条件策略 $\pi(y\mid x_1)$，训练的却是无反馈策略 $\pi(y\mid x_0)$。理论上可用 $\pi(y\mid x_0)/\pi(y\mid x_1)$ 修正分布偏移，但 LLM 序列概率比是大量 token 概率比的乘积，容易产生极端长尾。论文在 AIME24 上报告平均序列级 log importance ratio 为 142.16，因此采用类似 Advantage-Weighted Regression 的低方差、有偏目标。
 
 ### B. RLTF-SD 与普通 On-policy Self-Distillation
 
-普通 on-policy self-distillation 通常让学生与教师处理相同上下文，教师优势来自更大模型、EMA、旧策略或更多计算。RLTF-SD 中教师额外看到首答和外部批评，学生却只看原问题；它蒸馏的是带 privileged information 的跨上下文修正轨迹。第一轮 rollout 是 on-policy 的，但学习目标 \(y_1\) 并非从学生的单轮条件分布中采样。
+普通 on-policy self-distillation 通常让学生与教师处理相同上下文，教师优势来自更大模型、EMA、旧策略或更多计算。RLTF-SD 中教师额外看到首答和外部批评，学生却只看原问题；它蒸馏的是带 privileged information 的跨上下文修正轨迹。第一轮 rollout 是 on-policy 的，但学习目标 $y_1$ 并非从学生的单轮条件分布中采样。
 
 ### C. RLTF-SD 与 SDPO
 
