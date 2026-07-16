@@ -15,6 +15,9 @@ $requiredSnippets = @(
   'data-video-filter-root',
   'data-filter-type="collection"',
   'data-filter-type="tag"',
+  'data-search-input',
+  'data-search-status',
+  '/search.json',
   'data-collection="post-training"',
   'data-collection="agent"',
   'data-collection="dive-into-codex"',
@@ -29,4 +32,14 @@ foreach ($snippet in $requiredSnippets) {
   }
 }
 
-Write-Host "Homepage filter markup verified."
+$searchIndexPath = Join-Path $SiteDir "search.json"
+if (-not (Test-Path $searchIndexPath)) {
+  throw "Missing generated client search index at $searchIndexPath"
+}
+
+$searchIndex = Get-Content -LiteralPath $searchIndexPath -Raw -Encoding UTF8 | ConvertFrom-Json
+if (-not $searchIndex -or -not $searchIndex[0].title -or -not $searchIndex[0].url) {
+  throw "Generated client search index is empty or malformed."
+}
+
+Write-Host "Homepage filters and client search index verified."

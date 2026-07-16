@@ -50,6 +50,15 @@ animation: home-constellation
   </div>
 
   <div class="video-filters" data-video-filter-root>
+    <div class="writing-search" role="search">
+      <svg class="writing-search-icon" aria-hidden="true" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="6.5"></circle>
+        <path d="m16 16 4 4"></path>
+      </svg>
+      <input id="writing-search-input" type="search" inputmode="search" autocomplete="off" placeholder="搜索标题、摘要、正文或标签…" data-search-input aria-label="搜索文章" aria-describedby="search-status">
+      <kbd aria-hidden="true">/</kbd>
+    </div>
+    <p class="search-status" id="search-status" data-search-status aria-live="polite"></p>
     <div class="collection-filter" aria-label="Video collections">
       <button class="filter-chip is-active" type="button" data-filter-type="collection" data-filter-value="all" aria-pressed="true">全部</button>
       <button class="filter-chip" type="button" data-filter-type="collection" data-filter-value="llm-basics" aria-pressed="false">大模型基础知识</button>
@@ -81,7 +90,7 @@ animation: home-constellation
       {% include post-card.html post=post collection=collection_key tags=post.tags %}
     {% endfor %}
   </div>
-  <p class="empty-filter-message" data-empty-filter hidden>没有匹配的视频。</p>
+  <p class="empty-filter-message" data-empty-filter hidden>没有匹配的文章，试试更短的关键词或清除筛选条件。</p>
 </section>
 
 <script>
@@ -91,9 +100,46 @@ animation: home-constellation
 
     var collectionButtons = Array.prototype.slice.call(root.querySelectorAll('[data-filter-type="collection"]'));
     var tagSelect = root.querySelector('[data-filter-type="tag"]');
+    var searchInput = root.querySelector("[data-search-input]");
+    var searchStatus = root.querySelector("[data-search-status]");
     var cards = Array.prototype.slice.call(document.querySelectorAll("[data-filter-results] .post-card"));
     var emptyMessage = document.querySelector("[data-empty-filter]");
     var activeCollection = "all";
+    var searchIndex = null;
+    var searchIndexPromise = null;
+
+    function normalize(value) {
+      return (value || "").toLocaleLowerCase().replace(/\s+/g, " ").trim();
+    }
+
+    function loadSearchIndex() {
+      if (searchIndexPromise) return searchIndexPromise;
+
+      searchIndexPromise = fetch("{{ '/search.json' | relative_url }}")
+        .then(function (response) {
+          if (!response.ok) throw new Error("Search index unavailable");
+          return response.json();
+        })
+        .then(function (items) {
+          searchIndex = {};
+          items.forEach(function (item) {
+            searchIndex[item.url] = normalize([
+              item.title,
+              item.summary,
+              item.category,
+              (item.tags || []).join(" "),
+              item.content
+            ].join(" "));
+          });
+          return searchIndex;
+        })
+        .catch(function () {
+          searchIndex = {};
+          return searchIndex;
+        });
+
+      return searchIndexPromise;
+    }
 
     function setActiveCollection(value) {
       var selected = collectionButtons.find(function (button) {
@@ -110,18 +156,29 @@ animation: home-constellation
 
     function applyFilters() {
       var activeTag = tagSelect ? tagSelect.value : "all";
+      var query = normalize(searchInput ? searchInput.value : "");
+      var terms = query ? query.split(" ") : [];
       var visibleCount = 0;
 
       cards.forEach(function (card) {
         var collectionMatches = activeCollection === "all" || card.dataset.collection === activeCollection;
         var tags = card.dataset.tags ? card.dataset.tags.split("|") : [];
         var tagMatches = activeTag === "all" || tags.indexOf(activeTag) !== -1;
-        var visible = collectionMatches && tagMatches;
+        var link = card.querySelector(".post-card-link");
+        var url = link ? link.getAttribute("href") : "";
+        var searchableText = searchIndex && searchIndex[url] ? searchIndex[url] : normalize(card.textContent);
+        var searchMatches = terms.every(function (term) {
+          return searchableText.indexOf(term) !== -1;
+        });
+        var visible = collectionMatches && tagMatches && searchMatches;
 
         card.hidden = !visible;
         if (visible) visibleCount += 1;
       });
 
+      if (searchStatus) {
+        searchStatus.textContent = query ? "找到 " + visibleCount + " 篇匹配文章" : "";
+      }
       if (emptyMessage) {
         emptyMessage.hidden = visibleCount !== 0;
       }
@@ -137,6 +194,28 @@ animation: home-constellation
     if (tagSelect) {
       tagSelect.addEventListener("change", applyFilters);
     }
+
+    if (searchInput) {
+      searchInput.addEventListener("focus", loadSearchIndex);
+      searchInput.addEventListener("input", function () {
+        applyFilters();
+        if (searchInput.value.trim()) {
+          loadSearchIndex().then(applyFilters);
+        }
+      });
+    }
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "/" && !event.ctrlKey && !event.metaKey && !event.altKey &&
+          !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) {
+        event.preventDefault();
+        if (searchInput) searchInput.focus();
+      }
+      if (event.key === "Escape" && document.activeElement === searchInput && searchInput.value) {
+        searchInput.value = "";
+        applyFilters();
+      }
+    });
 
     var requestedCollection = new URLSearchParams(window.location.search).get("collection");
     if (requestedCollection) {
