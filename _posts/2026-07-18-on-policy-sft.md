@@ -98,11 +98,16 @@ $$
 
 DDT 负责识别，IDFT 则将 $\varphi_t$ 放入 token 级损失中，连续调节梯度：极度负的 token 被抑制，接近 0 的 token 正常学习，模型已高度认可的正值 token 得到更强巩固。它不是在数据入口粗暴删除样本。
 
-| token 状态 | DDT 判断 | IDFT 行为 |
-|---|---:|---|
-| 明显偏离当前分布 | $\varphi_t$ 很负 | 抑制更新 |
-| 接近当前分布 | $\varphi_t$ 接近 0 | 正常学习 |
-| 模型高度认可 | $\varphi_t$ 为正 | 更强地巩固稳定模式 |
+<table>
+  <thead>
+    <tr><th>token 状态</th><th>DDT 判断</th><th>IDFT 行为</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>明显偏离当前分布</td><td>$\varphi_t$ 很负</td><td>抑制更新</td></tr>
+    <tr><td>接近当前分布</td><td>$\varphi_t$ 接近 0</td><td>正常学习</td></tr>
+    <tr><td>模型高度认可</td><td>$\varphi_t$ 为正</td><td>更强地巩固稳定模式</td></tr>
+  </tbody>
+</table>
 </div>
 </section>
 
