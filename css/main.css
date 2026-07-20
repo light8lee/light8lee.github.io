@@ -808,6 +808,92 @@ img {
   max-width: 1040px;
 }
 
+/* HSCodeComp: a rulebook-like long read with the evidence card held beside its explanation. */
+.hscodecomp-post .post {
+  max-width: 1180px;
+}
+
+.hscodecomp-post .post-hero,
+.hscodecomp-post .post-content > blockquote,
+.hscodecomp-post .post-content > hr,
+.hscodecomp-post .post-content > .hscodecomp-appendix {
+  margin-inline: auto;
+  max-width: 920px;
+}
+
+.hscodecomp-post .hscodecomp-note {
+  gap: clamp(28px, 4vw, 56px);
+  grid-template-columns: minmax(360px, 0.94fr) minmax(0, 1.06fr);
+  padding: 54px 0 64px;
+}
+
+.hscodecomp-note > * {
+  min-width: 0;
+}
+
+.hscodecomp-note figure {
+  position: sticky;
+  top: 28px;
+}
+
+.hscodecomp-note figcaption {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+  margin-top: 12px;
+  padding-left: 2px;
+}
+
+.hscodecomp-note h2 {
+  font-size: clamp(25px, 2.5vw, 32px);
+  letter-spacing: -0.025em;
+  line-height: 1.16;
+  margin: 8px 0 22px;
+}
+
+.hscodecomp-note h3 {
+  font-size: 20px;
+  line-height: 1.35;
+  margin-top: 32px;
+}
+
+.hscodecomp-note h4 {
+  color: var(--accent-2);
+  font-size: 16px;
+  margin-top: 26px;
+}
+
+.hscodecomp-note p,
+.hscodecomp-note li {
+  font-size: 16px;
+  line-height: 1.78;
+}
+
+.hscodecomp-note table {
+  display: block;
+  font-size: 13px;
+  margin: 22px 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.hscodecomp-note th,
+.hscodecomp-note td {
+  min-width: 112px;
+  padding: 9px 10px;
+}
+
+.hscodecomp-note pre {
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.hscodecomp-appendix {
+  margin-top: 72px;
+}
+
 /* Multi-agent explainer: pair each architecture diagram with its reading note. */
 .multi-agent-post .post {
   max-width: 1040px;
@@ -1168,8 +1254,17 @@ img {
   .multi-agent-post .visual-note,
   .dive-into-codex-post .visual-note,
   .maxrl-post .visual-note,
+  .hscodecomp-post .visual-note,
   .visual-note {
     grid-template-columns: 1fr;
+  }
+
+  .hscodecomp-note figure {
+    position: static;
+  }
+
+  .hscodecomp-post .post {
+    max-width: 880px;
   }
 
   .dive-into-codex-post .post {
