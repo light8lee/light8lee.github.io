@@ -7,6 +7,22 @@ title: Notes
   <p>Shorter technical notes and references.</p>
 </section>
 
+<section class="post-list" aria-label="专题长文">
+  <article class="post-card">
+    <a class="post-card-link" href="{{ '/pages/cure.html' | relative_url }}">
+      <img src="{{ '/assets/pages/cure/images/01.png' | relative_url }}" alt="" loading="lazy">
+      <span class="post-card-date">专题长文</span>
+      <h3>CURE：把反思训练成可检验的下一步搜索</h3>
+      <div class="post-card-tags" aria-label="Tags">
+        <span>CURE</span>
+        <span>强化学习</span>
+        <span>自我改进</span>
+      </div>
+      <p>从闭环机制、两类 advantage、经验回放到多轮实验与 Agent 边界的完整论文拆解。</p>
+    </a>
+  </article>
+</section>
+
 <section class="post-list">
   {% for post in site.posts %}
     {% include post-card.html post=post %}
