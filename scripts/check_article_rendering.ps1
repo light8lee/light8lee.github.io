@@ -82,8 +82,16 @@ if (-not (Test-Path $CssPath)) {
         $failures += "$($CssPath): .post-toc-list must not own sticky positioning"
     }
 
+    if ($normalizedCss -notmatch '\.visual-note\s+figure\s*\{[^}]*position:\s*sticky;[^}]*top:\s*28px;') {
+        $failures += "$($CssPath): visual-note figures must use the shared sticky behavior"
+    }
+
     if ($normalizedCss -notmatch '@media\s*\(max-width:\s*720px\)[\s\S]*?\.post-toc\s*\{[^}]*position:\s*static;') {
         $failures += "$($CssPath): mobile .post-toc must return to static positioning"
+    }
+
+    if ($normalizedCss -notmatch '@media\s*\(max-width:\s*720px\)[\s\S]*?\.visual-note\s+figure\s*\{[^}]*position:\s*static;') {
+        $failures += "$($CssPath): mobile visual-note figures must return to static positioning"
     }
 }
 

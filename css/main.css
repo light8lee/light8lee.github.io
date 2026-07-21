@@ -769,6 +769,8 @@ img {
 
 .visual-note figure {
   margin: 0;
+  position: sticky;
+  top: 28px;
 }
 
 .visual-note img,
@@ -829,11 +831,6 @@ img {
 
 .hscodecomp-note > * {
   min-width: 0;
-}
-
-.hscodecomp-note figure {
-  position: sticky;
-  top: 28px;
 }
 
 .hscodecomp-note figcaption {
@@ -1259,7 +1256,7 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .hscodecomp-note figure {
+  .visual-note figure {
     position: static;
   }
 
