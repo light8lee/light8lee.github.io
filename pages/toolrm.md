@@ -10,6 +10,7 @@ permalink: /pages/toolrm.html
 ---
 
 > **作者**：Renhao Li、Jianhong Tu、Yang Su、Yantao Liu、Fei Huang、Hamid Alinejad-Rokny、Derek F. Wong、Junyang Lin、Min Yang  
+> **Qwen 团队**：Jianhong Tu、Yang Su、Yantao Liu、Fei Huang、Junyang Lin 来自 **Qwen Team, Alibaba Inc.**；Renhao Li 的本项工作完成于 Qwen Team 实习期间  
 > **发表会议**：Findings of the Association for Computational Linguistics: ACL 2026
 
 ToolRM 要解决的不是“Agent 能不能输出 function call”，而是更基础的评价问题：当工具、参数、调用数量和执行路径都可能出错时，怎样训练一个成本足够低、又真正理解工具语义的领域裁判？
@@ -473,7 +474,74 @@ TRBench-BFCL 含 2,983 个偏好对、1,397 个独立任务、9 类 split 和 20
 - ToolRM-Gen 自我纠错：74.8%，提升 11.4 个百分点；
 - critique 平均输出从 3,211 token 降到 1,111 token，减少超过 66%。
 
-这说明 GenRM 学到的东西不完全局限于二选一格式，它生成的反馈能够帮助另一个模型修正工具调用。
+这四个数字来自两条不同的测试管线。实验使用 ACEBench Normal 子集的 823 个样本，负责生成工具调用的策略模型都是 Qwen3-4B-Instruct-2507；RM 不看标准答案，也不执行工具，最终准确率由 ACEBench 的真实评测器计算。
+
+#### BoN-16 + ToolRM-Gen：把生成式 RM 当作多选裁判
+
+对每个任务，策略模型以 temperature=1.0 独立采样 16 个候选回答。ToolRM-Gen-Qwen3-4B-Thinking-2507 一次读入对话历史、工具定义和全部候选，比较工具选择、参数、冗余调用与编造问题，最后输出一个候选编号：
+
+```text
+上下文 + 工具定义
+        ↓
+策略模型采样 y1, y2, …, y16
+        ↓
+ToolRM-Gen 同时比较 16 个回答
+        ↓
+输出 <choice>k</choice>
+        ↓
+ACEBench 检查第 k 个回答
+```
+
+GenRM 在这里不生成新的工具调用，也不修改候选，只负责挑选。最终准确率为 66.6%，相对单次生成的 63.4% 提升 3.2 个百分点。
+
+#### BoN-16 + ToolRM-Disc：分别打分后取最大值
+
+候选生成方式不变，但 ToolRM-Disc-Qwen3-4B-Instruct-2507 不把 16 个回答放在同一个比较提示中。它分别计算每个候选的标量奖励：
+
+$$
+r_i=r_\theta(x,y_i),
+\qquad
+y_{\mathrm{best}}=\arg\max_{i\in\{1,\ldots,16\}}r_i.
+$$
+
+可以把过程理解为：
+
+```text
+y1 → ToolRM-Disc → r1
+y2 → ToolRM-Disc → r2
+…
+y16 → ToolRM-Disc → r16
+                 ↓
+             选择最高分
+```
+
+被选回答的准确率为 67.2%，相对单次生成提升 3.8 个百分点，也比 GenRM 选择高 0.6 个百分点。这个结果符合训练目标：DiscRM 直接接受 Bradley–Terry 排序训练，适合稳定打分和 Best-of-N；GenRM 的优势则是能够输出可读反馈。
+
+#### ToolRM-Gen 自我纠错：先批评，再让策略模型重写
+
+自我纠错不是从 16 个答案里选择，而是从一个初始回答开始。策略模型先生成工具调用，ToolRM-Gen 再以 pointwise critic 的形式只检查这一个回答，输出简短、具体的修改意见；随后 Qwen3-4B-Instruct-2507 作为 editor，读取原回答和 critique，生成修订版：
+
+```text
+策略模型生成初始回答 y
+        ↓
+ToolRM-Gen(x, y) 输出 critique
+        ↓
+策略模型读取 x + y + critique
+        ↓
+生成修订回答 y′
+        ↓
+ACEBench 评测 y′
+```
+
+无 Critic 时直接使用初始回答，准确率为 63.4%；使用未经 ToolPref 训练的 Qwen3-4B-Thinking-2507 作为 Baseline Critic，准确率约为 72.8%；换成 ToolRM-Gen 后达到 74.8%。因此论文报告相对无 Critic 提升 11.4 个百分点，相对 Baseline Critic 再提升约 2.0 个百分点。
+
+需要注意，74.8% 不是 ToolRM-Gen 自己调用工具的准确率。ToolRM-Gen 只负责指出问题，真正生成修订工具调用的仍然是策略模型。
+
+#### 3,211 → 1,111 token：衡量的是 critique 成本
+
+这两个数字比较的是两种 Critic 生成的批评文本长度，不是整个自我纠错流程的总 token，也不是 BoN-16 的推理成本。普通 Qwen3-4B-Thinking-2507 Critic 平均输出 3,211 token；训练后的 ToolRM-Gen 平均输出 1,111 token。后者能更直接地定位工具名、参数或调用流程问题，在反馈更短的同时获得更高的修订准确率。
+
+因此，BoN 测的是 RM 能不能**挑出已经存在的好答案**；自我纠错测的是 GenRM 能不能**告诉策略模型怎样把当前答案改好**。这也说明 GenRM 学到的能力不完全局限于训练时的二选一格式。
 
 ### 3. 可以作为下游 Agent RL 的奖励
 
@@ -787,3 +855,196 @@ ToolRM 最有价值的地方，不是证明了“小模型已经完全会评价 
 3. **未来完整的 Agent 奖励系统应该是规则验证器、执行环境、判别式 RM、生成式 Critic 与人工反馈的组合，而不是依赖单一裁判。**
 </div>
 </section>
+
+<section class="post-appendix" markdown="1">
+
+## 附录：我的延伸思考——为什么是 Reward Model，而不是 Value Model？
+
+> **说明：以下讨论是我在阅读 ToolRM 后提出的延伸思考，不是论文作者明确给出的论断。**我关心的问题是：ToolRM-Disc 同样输出一个标量，为什么论文将它定义为 Reward Model，而不是 Value Model？关键不在输出形式，而在这个标量接受什么监督、表达什么语义。
+
+### 1. ToolRM 学的是当前回答的相对质量
+
+ToolRM-Disc 的输入是上下文与一个候选回答：
+
+$$
+(x,y) \longrightarrow r_\theta(x,y).
+$$
+
+其中，$x$ 包含对话历史、用户请求和工具定义，$y$ 是当前候选工具调用。训练时使用 Bradley–Terry 排序目标，只要求：
+
+$$
+r_\theta(x,y^+)>r_\theta(x,y^-).
+$$
+
+因此，这个标量回答的是“在当前上下文中，这个回答相对另一个回答好不好”。它来自偏好对和规则排序，不直接预测后续工具执行、错误恢复或最终任务结果。
+
+### 2. Value Model 学的是未来累计回报
+
+强化学习中的状态价值通常定义为：
+
+$$
+V^\pi(s)=\mathbb E_\pi\left[\sum_{t=0}^{\infty}\gamma^t r_t\mid s_0=s\right].
+$$
+
+如果同时输入状态与动作，则是：
+
+$$
+Q^\pi(s,a)=\mathbb E_\pi\left[\sum_{t=0}^{\infty}\gamma^t r_t\mid s_0=s,a_0=a\right].
+$$
+
+它们回答的不是“这一步看起来是否合理”，而是“从这里继续执行策略，最终预计获得多少累计回报”。这要求模型考虑后续动作、工具返回、状态变化、任务成败、成本、安全与错误恢复。
+
+### 3. 输出标量不等于 Value Model
+
+Reward Model 与 Value Model 都可以输出实数，但标量的训练语义不同：
+
+| 模型 | 输入 | 标量表达什么 | 主要监督来源 |
+| --- | --- | --- | --- |
+| ToolRM / Reward Model | 上下文与候选回答 | 当前行为的相对质量 | 偏好对、规则、验证器 |
+| Value Model | 当前状态 | 按策略继续行动的预期累计回报 | rollout return、TD target |
+| Q Model | 当前状态与动作 | 执行动作后的预期累计回报 | rollout return、Bellman target |
+
+ToolRM 没有用
+
+$$
+r_t+\gamma V(s_{t+1})
+$$
+
+这样的 TD 或 Bellman 目标，也没有根据完整 rollout 的未来回报拟合标量。因此，即使 ToolRM-Disc 最终输出一个 scalar reward，它仍然是偏好意义上的 Reward Model，而不是强化学习意义上的 Value Model。
+
+### 4. 一个工具调用例子
+
+假设 Agent 需要订机票，但当前还没有搜索航班：
+
+```text
+A：search_flights(origin="Shanghai", destination="Beijing")
+B：book_flight(flight_id="CA123")
+```
+
+ToolRM 可以判断 A 比 B 更符合当前上下文，例如：
+
+$$
+r(x,A)=2.3,\qquad r(x,B)=-0.7.
+$$
+
+这些数字只表示相对排序，不能解释为成功概率。Value 或 Q Model 则需要估计选择 A 后继续搜索、比较、确认日期、征求用户同意并完成预订的预期累计收益，例如 $Q(s,A)=0.65$。后者评价的是未来整条轨迹，而不是当前调用本身。
+
+### 5. ToolRM 当前更像单步动作审查器
+
+论文把完整轨迹切成“历史上下文 → 下一步 assistant response”，训练模型比较当前这一步的候选。因此，我认为 ToolRM 更准确的定位是：
+
+- 单步工具调用 Reward Model；
+- action-level preference model；
+- 当前动作审查器；
+- learned verifier。
+
+这也解释了它的边界：局部看起来正确的调用可能让完整任务走进死路，局部不完美的动作也可能在后续得到恢复。ToolRM 尚未显式建模这种长程影响。
+
+### 6. 怎样扩展成 Tool-Use Value Model
+
+如果未来训练数据进一步包含当前状态、候选动作、后续完整 rollout、最终任务结果，以及成本、延迟和安全信号，再用实际未来回报或 Bellman 目标训练：
+
+$$
+Q_\phi(s,a)\approx r(s,a)+\gamma V_\phi(s'),
+$$
+
+模型才会更接近 Tool-Use Value Model 或 Q Model。我的理解可以压缩成一句话：
+
+> **ToolRM 评估“这一步看起来好不好”；Value Model 预测“从这里继续走，最终能有多好”。前者的标量来自当前回答的偏好排序，后者的标量来自未来累计回报。**
+
+### 7. 换成 Value Model，能否解决前面 Reward Model 的问题？
+
+这是我沿着前面区别继续推演出的第二个问题。我的判断是：**Value Model 能补上 ToolRM 最明显的长程缺口，但不能替代 Reward Model，也不会自动消除奖励系统的其他问题。**
+
+Value 或 Q Model 的主要增益，是把评价对象从“当前动作是否像正确答案”扩展为“当前动作会把未来带向哪里”。如果训练 rollout 覆盖充分，它可以改善以下问题：
+
+| ToolRM 当前的局限 | Value/Q Model 能提供的帮助 | 成立条件 |
+| --- | --- | --- |
+| 只评价轨迹中的单步动作 | 估计动作对最终任务成功的长期影响 | 具有完整后续 rollout 和终局奖励 |
+| 局部正确但最终走入死路 | 给导致坏结局的早期动作较低价值 | 训练数据覆盖这类失败路径 |
+| 当前动作失败但后续可以恢复 | 学习“可恢复错误”和“不可逆错误”的差异 | 状态中保留错误、恢复与工具返回 |
+| 不考虑调用成本和延迟 | 把 token、工具费用、等待时间纳入累计回报 | 奖励函数显式定义这些成本 |
+| 无法判断规划顺序 | 比较不同动作对后续可达状态的影响 | 使用 action-conditioned 的 $Q(s,a)$ |
+
+例如，一个工具调用当前看起来并不完美，但它能低成本获得关键状态、减少后续不确定性。单步 ToolRM 可能因为它偏离参考答案而给低分；Q Model 则可能因为这一步提高了最终成功率而给出较高价值。反过来，一个 schema 完全合法的调用若会产生不可逆副作用，Value/Q Model 也有机会通过坏结局把负面信用传回早期动作。
+
+但这并不意味着“把 ToolRM 换成 Value Model”就能解决全部问题。
+
+#### Value Model 仍然依赖奖励定义
+
+Value Model 学的是既有奖励的未来累计值。如果终局奖励只检查“API 是否调用成功”，却没有惩罚隐私泄露、重复扣费或错误收件人，那么 Value Model 只会更准确地优化这个不完整目标。它不会自行发现遗漏的价值维度。
+
+换句话说：
+
+$
+\text{Value 的质量上限}
+\leq
+\text{奖励定义}
++
+\text{rollout 覆盖}
++
+\text{状态可观测性}.
+$
+
+Reward misspecification 和 reward hacking 不会因为引入 Value Model 自动消失，错误奖励甚至可能通过长期优化被进一步放大。
+
+#### 语义等价调用不一定自然解决
+
+如果环境能够实际执行候选并验证最终状态，Value Model 可以不再拘泥于字符串级标准答案，从而缓解“城市名与机场代码”“不同 API 路径但结果等价”这类误罚。但若训练仍然使用原来的规则分数作为终局奖励，Value Model 只会继承原有偏差。
+
+因此，真正解决语义等价问题的关键首先是执行验证和状态验证，而不只是把模型名称从 RM 改成 VM。
+
+#### Value 估计具有策略依赖和分布外风险
+
+$V^\pi(s)$ 与 $Q^\pi(s,a)$ 都依赖后续策略 $\pi$。策略更新后，旧 Value Model 的估计可能失效；对于训练期间很少出现的新工具、新状态和异常恢复路径，Value Model 还可能产生严重的分布外高估。相比单步偏好训练，它需要更多真实或模拟交互，训练成本和方差也更高。
+
+#### Value Model 不提供可靠 critique
+
+Value Model 可以告诉系统某个状态或动作“长期价值低”，但通常不能解释究竟是工具选错、参数错误、调用顺序不对，还是存在安全风险。ToolRM-Gen 的自然语言 critique、规则验证器的精确错误定位，仍然是修正动作所需要的接口。
+
+### 8. 我认为更合理的是混合奖励系统
+
+因此，我不倾向于用 Value Model 直接替换 ToolRM，而是让两者承担不同层次的职责：
+
+<pre><code>规则验证器
+  └─ 检查 schema、函数名、参数和可执行约束
+
+ToolRM / Reward Model
+  └─ 判断当前动作质量，提供排序或具体 critique
+
+执行环境与终局奖励
+  └─ 验证真实状态、任务结果、成本与安全
+
+Value / Q Model
+  └─ 估计动作对未来累计结果的影响</code></pre>
+
+可以将训练信号组合为：
+
+$
+r_t^{\text{total}}
+=
+\alpha r_t^{\text{verifier}}
++
+\beta r_t^{\text{ToolRM}}
+-
+\lambda c_t^{\text{cost}}
++
+\mathbb 1[t=T]R_{\text{outcome}},
+$
+
+再让 Value/Q Model 学习这组奖励的未来累计值：
+
+$
+Q_\phi(s_t,a_t)
+\approx
+r_t^{\text{total}}
++
+\gamma V_\phi(s_{t+1}).
+$
+
+在这个组合中，ToolRM 负责“当前动作是否合理、错在哪里”，Value Model 负责“这个动作长期是否值得”。前者提供密集、可解释的局部信号，后者补充稀疏、延迟的长程信用。
+
+> **我的最终判断是：Value Model 能缓解 ToolRM 的单步视角、长程信用分配、错误恢复和成本权衡问题；但它不能自动修复错误的奖励定义、语义等价判断、critique 忠实性或 reward hacking。真正完整的 Agent 评价系统应当把 verifier、ToolRM、执行结果与 Value/Q Model 组合起来，而不是在 Reward Model 与 Value Model 之间二选一。**
+
+</section>
+
