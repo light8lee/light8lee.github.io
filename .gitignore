@@ -32,3 +32,4 @@ sea-modules
 *.so
 a.out
 .sass-cache
+.codex

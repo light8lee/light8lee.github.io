@@ -1,29 +1,15 @@
 ---
 layout: default
-title: Notes
+title: Daydreams
 ---
 <section class="page-heading">
-  <h1>Notes</h1>
-  <p>Shorter technical notes and references.</p>
+  <h1>Daydreams</h1>
+  <p>Ideas, fragments, and things still taking shape.</p>
 </section>
 
+{% assign daydreams = site.pages | where: "daydream", true | sort: "date" | reverse %}
 <section class="post-list">
-  <article class="post-card">
-    <a class="post-card-link" href="{{ '/pages/cure.html' | relative_url }}">
-      <img src="{{ '/assets/pages/cure/images/01.png' | relative_url }}" alt="" loading="lazy">
-      <h3>CURE：把反思训练成可检验的下一步搜索</h3>
-      <div class="post-card-tags" aria-label="Tags">
-        <span>CURE</span>
-        <span>强化学习</span>
-        <span>自我改进</span>
-      </div>
-      <p>从闭环机制、两类 advantage、经验回放到多轮实验与 Agent 边界的完整论文拆解。</p>
-    </a>
-  </article>
-</section>
-
-<section class="post-list">
-  {% for post in site.posts %}
+  {% for post in daydreams %}
     {% include post-card.html post=post %}
   {% endfor %}
 </section>

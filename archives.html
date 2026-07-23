@@ -1,14 +1,16 @@
 ---
 layout: default
-title: Archive
+title: Writing
 ---
 <section class="page-heading">
-  <h1>Archive</h1>
-  <p>All posts, newest first.</p>
+  <h1>Writing</h1>
+  <p>All articles, newest first.</p>
 </section>
 
 <section class="archive-list">
-  {% for post in site.posts %}
+  {% assign standalone_articles = site.pages | where: "layout", "post" %}
+  {% assign writing = site.posts | concat: standalone_articles | sort: "date" | reverse %}
+  {% for post in writing %}
   <article class="archive-item">
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>

@@ -6,18 +6,3 @@ title: Projects
   <h1>Projects</h1>
   <p>Visual essays, research explainers, and small static experiments.</p>
 </section>
-
-<section class="post-list">
-  <article class="archive-item">
-    <time datetime="2026-07-20">2026-07-20</time>
-    <div>
-      <h2><a href="{{ '/pages/hscodecomp.html' | relative_url }}">HSCodeComp：专业 Agent 如何在规则树里做出可审计判断</a></h2>
-      <p>13 张图与完整详细解读并排呈现，包含真实数据示例、逐系统对比、失败案例、工程启发和论文疑点。</p>
-    </div>
-  </article>
-  {% for post in site.posts %}
-    {% if post.tags contains "visual-essay" or post.tags contains "project" %}
-      {% include post-card.html post=post %}
-    {% endif %}
-  {% endfor %}
-</section>
