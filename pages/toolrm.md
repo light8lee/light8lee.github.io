@@ -9,6 +9,9 @@ body_class: maxrl-post
 permalink: /pages/toolrm.html
 ---
 
+> **作者**：Renhao Li、Jianhong Tu、Yang Su、Yantao Liu、Fei Huang、Hamid Alinejad-Rokny、Derek F. Wong、Junyang Lin、Min Yang  
+> **发表会议**：Findings of the Association for Computational Linguistics: ACL 2026
+
 ToolRM 要解决的不是“Agent 能不能输出 function call”，而是更基础的评价问题：当工具、参数、调用数量和执行路径都可能出错时，怎样训练一个成本足够低、又真正理解工具语义的领域裁判？
 
 页面按数据生产、规则评分、偏好构造、两类 Reward Model、下游 Agent 应用和方法边界逐章展开。每张静态信息卡与对应的详细解读放在一起，不包含视频或音频。
@@ -784,4 +787,3 @@ ToolRM 最有价值的地方，不是证明了“小模型已经完全会评价 
 3. **未来完整的 Agent 奖励系统应该是规则验证器、执行环境、判别式 RM、生成式 Critic 与人工反馈的组合，而不是依赖单一裁判。**
 </div>
 </section>
-
