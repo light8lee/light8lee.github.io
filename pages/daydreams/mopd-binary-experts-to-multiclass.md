@@ -11,7 +11,7 @@ cover: /assets/daydreams/mopd-binary-experts-to-multiclass/images/02-reasoning-c
 body_class: daydream-post
 ---
 
-设想一个“先思考、后结论”的 LLM 多分类任务。学生需要读取输入，生成一段 reasoning，最后只输出标签 `C1` 到 `CK` 中的一个。与此同时，我们已经有 K 个专家 LLM：第 k 个专家只擅长分析“这个输入是不是 Ck”，最后回答 YES 或 NO。
+设想一个“先思考、后结论”的 LLM 多分类任务。学生需要读取输入，生成一段 reasoning，最后只输出标签 $C_1$ 到 $C_K$ 中的一个。与此同时，我们已经有 $K$ 个专家 LLM：第 $k$ 个专家只擅长分析“这个输入是不是 $C_k$”，最后回答 YES 或 NO。
 
 能否像 MOPD 集成数学、代码等能力那样，把这些二分类专家蒸馏进一个多分类 reasoning LLM？
 
@@ -26,7 +26,7 @@ body_class: daydream-post
 
 原版 MOPD 的每个领域教师和学生共享生成任务的输出空间。学生先生成 rollout，对应领域教师再对同一序列逐 token 给出 log-prob，从而提供稠密的 on-policy 信号。
 
-这里的输出空间并不天然对齐：二分类专家在回答“是不是 Ck”，学生却在比较全部类别并生成唯一结论。即使最终标签正确，C1 专家偏好的推理措辞也可能只强调支持 C1 的证据，而不讨论 C2 与 C3。把这些 token 分布直接平均，混合的是不同问题，不是共同知识。
+这里的输出空间并不天然对齐：二分类专家在回答“是不是 $C_k$”，学生却在比较全部类别并生成唯一结论。即使最终标签正确，$C_1$ 专家偏好的推理措辞也可能只强调支持 $C_1$ 的证据，而不讨论 $C_2$ 与 $C_3$。把这些 token 分布直接平均，混合的是不同问题，不是共同知识。
 
 因此需要把训练拆成两层：**标签意见可以耦合，推理过程需要复核。**
 
@@ -51,27 +51,43 @@ body_class: daydream-post
 
 从每位专家取得一个可校准的 log-odds：
 
-```text
-s_k = log P_Ek(YES | x, r, Ck) - log P_Ek(NO | x, r, Ck)
-```
+$$
+s_k(x,r)
+=
+\log P_{E_k}(\mathrm{YES}\mid x,r,C_k)
+-
+\log P_{E_k}(\mathrm{NO}\mid x,r,C_k).
+$$
 
 再用共享校准集学习耦合层，把彼此不可直接比较的分数变成多分类分布：
 
-```text
-q(label | x, r) = softmax(Ws + b)
-```
+$$
+q(k\mid x,r)=\operatorname{softmax}(Ws+b)_k.
+$$
 
 最终标签可用 reverse KL 蒸馏，因为教师评价的是学生自己生成的轨迹：
 
-```text
-L_label = KL(p_student(label | x, r) || q(label | x, r))
-```
+$$
+\mathcal{L}_{\mathrm{label}}
+=
+D_{\mathrm{KL}}\!\left(
+p_\theta(y\mid x,r)
+\,\Vert\,
+q(y\mid x,r)
+\right).
+$$
 
 reasoning 部分则有两种强度：如果专家采用完全相同的推理协议，并能可靠地为学生前缀评分，可以尝试 token-level on-policy distillation；更现实的做法是把专家的逐步批评转成过程奖励、原稿—修订稿偏好对，或 rejection sampling 信号。再保留一项真实标签监督作为锚点：
 
-```text
-L = λ_label L_label + λ_reason L_reason + λ_gold CE(y_gold, p_student)
-```
+$$
+\mathcal{L}
+=
+\lambda_{\mathrm{label}}\mathcal{L}_{\mathrm{label}}
++
+\lambda_{\mathrm{reason}}\mathcal{L}_{\mathrm{reason}}
++
+\lambda_{\mathrm{gold}}\operatorname{CE}\!\left(y_{\mathrm{gold}},p_\theta\right).
+$$
 
 ## 路由是最容易出错的地方
 
