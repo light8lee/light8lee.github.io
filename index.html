@@ -65,6 +65,7 @@ animation: home-constellation
       <button class="filter-chip" type="button" data-filter-type="collection" data-filter-value="post-training" aria-pressed="false">后训练</button>
       <button class="filter-chip" type="button" data-filter-type="collection" data-filter-value="agent" aria-pressed="false">agent</button>
       <button class="filter-chip" type="button" data-filter-type="collection" data-filter-value="dive-into-codex" aria-pressed="false">dive-into-codex</button>
+      <button class="filter-chip" type="button" data-filter-type="collection" data-filter-value="feedback-optimization" aria-pressed="false">反馈优化</button>
     </div>
     <label class="tag-filter">
       <span>主题</span>
@@ -128,7 +129,9 @@ animation: home-constellation
     </article>
     {% for post in site.posts %}
       {% assign collection_key = 'agent' %}
-      {% if post.category == 'Codex' %}
+      {% if post.series == 'feedback-optimization' %}
+        {% assign collection_key = 'feedback-optimization' %}
+      {% elsif post.category == 'Codex' %}
         {% assign collection_key = 'dive-into-codex' %}
       {% elsif post.category == '大模型基础知识' %}
         {% assign collection_key = 'llm-basics' %}

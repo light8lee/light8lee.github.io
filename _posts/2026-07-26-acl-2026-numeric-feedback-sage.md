@@ -7,6 +7,7 @@ tags: [ACL 2026, Agent, Numeric Feedback, Reinforcement Learning, GRPO, Skill Li
 category: LLM Post-training
 cover: /assets/posts/acl-2026-numeric-feedback-sage/images/01.png
 body_class: video-notes-post
+series: feedback-optimization
 ---
 
 # 一个 Agent 做对了任务，不等于它留下了能力

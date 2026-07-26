@@ -7,6 +7,7 @@ tags: [ACL 2026, Agent, Text Feedback, Prompt Optimization, Multi-Agent, MARS, P
 category: LLM Post-training
 cover: /assets/posts/acl-2026-text-feedback/images/01.png
 body_class: video-notes-post
+series: feedback-optimization
 ---
 
 # 文字反馈不是一种方法，而是三种完全不同的更新

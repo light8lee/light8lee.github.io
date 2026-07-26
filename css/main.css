@@ -268,6 +268,86 @@ img {
   font-size: 14px;
 }
 
+.project-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  margin: 32px 0 64px;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(20, 24, 32, 0.08);
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  overflow: hidden;
+  padding: 32px;
+  position: relative;
+}
+
+.project-card--agent-town::before {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(135deg, #141b2d, #293f54 65%, #b75736);
+  background-size: 18px 18px, 18px 18px, auto;
+  content: "";
+  height: 92px;
+  margin: -32px -32px 28px;
+}
+
+.project-card__eyebrow {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-card h2 {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  margin: 8px 0 12px;
+}
+
+.project-card p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.project-card__tags span {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  padding: 5px 10px;
+}
+
+.project-card__link {
+  align-items: center;
+  color: var(--text);
+  display: inline-flex;
+  font-weight: 800;
+  gap: 8px;
+  margin-top: auto;
+  text-decoration: none;
+}
+
+.project-card__link:hover {
+  color: var(--accent);
+}
+
 .post-grid,
 .post-list {
   display: grid;
