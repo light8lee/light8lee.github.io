@@ -16,9 +16,9 @@
       {{ content }}
     </main>
     {% include site-footer.html %}
-    {% if page.body_class == 'home' %}
+    {% if page.body_class == 'home' or page.layout == 'post' %}
     <button class="back-to-top" type="button" aria-label="回到页面顶部" title="回到顶部" data-back-to-top>
-      <span aria-hidden="true">↑</span>
+      <img src="{{ '/assets/images/tao-back-to-top.png' | relative_url }}" alt="" aria-hidden="true">
     </button>
     <script>
       (function () {
