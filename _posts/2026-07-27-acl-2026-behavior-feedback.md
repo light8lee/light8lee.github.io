@@ -327,7 +327,23 @@ $$
 
 ### 原文在“类别冲突检测”上没有写完的细节
 
-论文统一写了 $C_t^{(d)}=|SW_t^{(d)}-EMA_t^{(d)}|$，并说当 $C_t^{(d)}>\delta$ 时优先短期 SW。对连续维度这是一个标量；对类别维度，两者都是向量，原文没有进一步说明应使用逐元素阈值、最大差值、$L_1$ 距离还是 $L_2$ 距离将其化为标量。因此可以确定的是“冲突时优先 SW”，但不能从论文中确定类别向量的具体 divergence reduction。本文不替论文补造这一实现细节。
+论文对各维度统一写为：
+
+$$
+C_t^{(d)}=\left\lvert SW_t^{(d)}-EMA_t^{(d)}\right\rvert,
+$$
+
+并规定当
+
+$$
+C_t^{(d)}>\delta
+$$
+
+时优先采用短期统计 SW。对连续维度，$SW_t^{(d)}$ 与 $EMA_t^{(d)}$ 都是标量，因此 $C_t^{(d)}$ 也是标量，可以直接与阈值 $\delta$ 比较。
+
+但对类别维度，$SW_t^{(d)}$ 与 $EMA_t^{(d)}$ 都是类别概率向量。此时上式按逐元素绝对值理解会得到一个向量，不能直接与标量阈值 $\delta$ 比较。原文没有进一步说明究竟采用以下哪一种标量化方式：逐元素分别判断、取最大分量差、计算 $\ell_1$ 距离，或计算 $\ell_2$ 距离。
+
+因此，从论文中能够确定的是：**检测到短期与长期偏好冲突时，优先采用 SW**；不能确定的是：**类别概率向量具体如何归约成一个 divergence 标量**。本文不替论文补造这一实现细节。
 
 这种方案优点是可读、模型无关；代价是最终只保留最大类别，融合向量中次高类别与置信程度不会出现在示例 prompt 中，连续值离散化也会损失粒度，效果还依赖基础模型的指令遵循能力。
 </div>
@@ -356,7 +372,77 @@ $$
 H_{t-1}=\{(R_j,O_j)\}_{j=1}^{t-1}
 $$
 
-预测正常情况下第 $t$ 步应落在什么表示位置 $\hat x_t$，再与真实当前步表示 $x_t$ 比较。这个目标迫使检测器学习角色之间的因果执行顺序，而不只是句子的表面流畅度。第一步没有历史时，输入只包含投影后的问题表示，因此尤其需要后面的 prototype（原型）提供稳定参照。
+原始文本先经过预训练编码器 `Embed`：
+
+$$
+q=Embed(Q),\qquad r_i=Embed(R_i),
+$$
+
+$$
+h_j=r_j\mathbin{\Vert}Embed(O_j).
+$$
+
+$q$ 表示“整道任务要求什么”，$r_i$ 表示“第 $i$ 个 Agent 扮演什么角色”，$h_j$ 则把第 $j$ 步的**角色表示与实际回答表示拼接**起来。保留角色很重要：同一句话由核验者说出和由草稿生成者说出，在正常协作链中的含义并不相同。
+
+维度不能在这一步被省略。若预训练 `Embed` 的输出维度为 $d_e$，那么
+
+$$
+q,r_j,Embed(O_j)\in\mathbb R^{d_e},
+\qquad
+h_j\in\mathbb R^{2d_e}.
+$$
+
+也就是说，两个 $d_e$ 维向量做 concatenation（拼接）后是 $2d_e$ 维；拼接不会把它们平均，也不会让结果仍是 $d_e$ 维。
+
+随后用两个不同的可训练线性层把任务与历史映射到统一的任务适配空间：
+
+$$
+\tilde q=f_q(q),\qquad \tilde h_j=f_h(h_j).
+$$
+
+若统一 hidden dimension 记为 $D$，则两个投影的输入形状不同：
+
+$$
+f_q:\mathbb R^{d_e}\rightarrow\mathbb R^D,
+\qquad
+f_h:\mathbb R^{2d_e}\rightarrow\mathbb R^D.
+$$
+
+因此 $\tilde q$ 与 $\tilde h_j$ 才在投影后具有相同的 $D$ 维，可以共同组成冻结 LLM 的输入序列。论文随后明确说明，$f_\theta$ 会把 LLM hidden representation **映射回 raw history embedding $h_j$ 的维度**：
+
+$$
+\hat x_t,x_t,p\in\mathbb R^{2d_e},
+\qquad x_t:=h_t.
+$$
+
+这才保证 $\hat x_t-x_t$、$\cos(\hat x_t,p)$ 和 prototype attention 都是维度合法的运算。统一的是投影后的 LLM 输入维度与最终异常比较空间，不是说所有原始向量从一开始就同维。
+
+冻结 LLM 读取序列 $(\tilde q,\tilde h_1,\ldots,\tilde h_{t-1})$，预测正常情况下第 $t$ 步应落在什么表示位置 $\hat x_t$；当前 Agent 真正生成的第 $t$ 步则被编码为 $x_t:=h_t$。两者回答不同问题：
+
+- $\hat x_t$：只看问题与过去，**预期下一步应该是什么样**；
+- $x_t$：当前一步事实上说了什么、由哪个角色说出；
+- $\hat x_t-x_t$：预期执行与实际执行之间的偏离。
+
+论文把 $x_t$ 称为 ground truth，指的是训练时正常轨迹中“实际发生的当前步表示”，不是任务的标准答案标签。这个预测目标迫使检测器学习角色之间的因果执行顺序，而不只是句子的表面流畅度。第一步没有历史时，预测器只读取 $\tilde q$，因此尤其需要后面的 prototype（原型）提供稳定参照。
+
+### 为什么必须同时存在 $x_t$ 与 $\hat x_t$
+
+这两个向量不是重复表示，而是构造了一组“**预期—观测**”对：
+
+| 向量 | 生成时能看到什么 | 扮演的角色 |
+|---|---|---|
+| $\hat x_t$ | 只能看到原问题和第 $t$ 步之前的历史 | 正常执行的条件预测，即 baseline |
+| $x_t$ | 编码当前 Agent 已经生成的真实回答及其角色 | 当前实际观测，即 observation |
+
+同时保留二者有三个目的：
+
+1. **训练时提供无错误标签的监督。** 正常轨迹里的 $x_t$ 充当预测目标，使 $f_q,f_h,f_\theta$ 学会从历史预测下一步；无需人工标注每一种错误。
+2. **推理时形成上下文相关的异常残差。** $\lVert\hat x_t-x_t\rVert_2^2$ 衡量实际输出是否兑现了由当前问题和历史产生的正常预期。
+3. **避免只凭文本外观判断错误。** 一个回答可能语法流畅、单独看也很常见，但在当前上下文里仍然是错的；条件预测 $\hat x_t$ 给出了本题、本角色、本步骤专属的参照。
+
+如果只有 $x_t$，系统只知道“实际说了什么”，却不知道在这个上下文里本来应该说什么，最多只能与全局 prototype 比较；如果只有 $\hat x_t$，系统只有预期，却无法观察当前 Agent 是否真的偏离。只有把两者放在同一表示空间比较，才能把“看起来不像一般文本”升级为“违反当前执行链”。
+
+例如历史要求“至少三份凭证”：$\hat x_t$ 根据问题与前序步骤预测出围绕“检查是否达到至少三份”的正常表示；Agent 实际说成“不能超过三份”，这段文字连同当前角色被编码为 $x_t$。错误文本本身可以很流畅，但 $x_t$ 与当前上下文期望的 $\hat x_t$ 距离会增大。
 </div>
 </section>
 
@@ -369,18 +455,46 @@ $$
 
 ## 检测器只用正常轨迹训练
 
+先把几个容易混淆的向量放在一张表里：
+
+| 符号 | 从哪里来 | 维度 | 表示什么 | 主要目的 | 自身是否是参数 |
+|---|---|---:|---|---|---|
+| $q$ | `Embed(Q)` | $d_e$ | 原始任务语义 | 给所有步骤提供任务条件 | 否，每个任务重新编码 |
+| $r_i$ | `Embed(R_i)` | $d_e$ | Agent 角色语义 | 区分不同角色的正常行为 | 否，每个角色重新编码或复用编码 |
+| $h_j$ | $r_j\mathbin{\Vert}Embed(O_j)$ | $2d_e$ | 第 $j$ 步实际角色—回答 | 构成历史，也是当前步目标 $x_j$ | 否，由实际文本决定 |
+| $\tilde q$ | $f_q(q)$ | $D$ | 任务适配后的 query | 进入冻结 LLM | 否，但生成它的 $f_q$ 可训练 |
+| $\tilde h_j$ | $f_h(h_j)$ | $D$ | 任务适配后的历史步骤 | 进入冻结 LLM 的上下文序列 | 否，但生成它的 $f_h$ 可训练 |
+| $x_t$ | $h_t$ | $2d_e$ | 当前实际步骤表示 | 作为重建目标和推理时对照 | 否，编码器冻结时是固定目标 |
+| $\hat x_t$ | $f_\theta(LLM(\cdot))$ | $2d_e$ | 根据过去预测的正常当前步 | 与 $x_t$ 比较因果一致性 | 否，但由可训练预测头产生 |
+| $p$ | 正常预测表示的 attention 聚合 | $2d_e$ | 正常步骤的中心/锚点 | 历史稀少时提供稳定参照 | **是，可学习参数** |
+
 问题、角色与历史输出先经编码器得到稠密表示；问题和历史分别通过可训练线性投影，进入冻结的预训练 LLM。可训练预测头 $f_\theta$ 输出下一步表示：
 
 $$
 \hat x_t=f_\theta\!\left(LLM(\tilde q,\tilde h_1,\ldots,\tilde h_{t-1})\right).
 $$
 
-同时学习正常步骤原型 $p$。论文用单头 attention，以原型为 query、当前正常轨迹的预测表示为 key/value 更新它；这比静态 KMeans 中心更能利用上下文依赖。
+### Prototype 不是所有 embedding 的简单平均
+
+对一条长度为 $T$ 的正常轨迹，预测器先得到
+
+$$
+\hat X=[\hat x_1,\ldots,\hat x_T]^\top.
+$$
+
+论文用单头 attention 更新正常原型 $p$：以当前 $p$ 为 query，以整条轨迹的预测表示 $\hat X$ 为 key/value：
+
+$$
+p\leftarrow Attn(pW_q,\hat XW_k,\hat XW_v)
+=Softmax\!\left(\frac{(pW_q)(\hat XW_k)^\top}{\sqrt d}\right)(\hat XW_v).
+$$
+
+因此，不同步骤对 prototype 的贡献由 attention 权重决定，并非一律等权平均。$p$ 可从高斯分布初始化，也可用 LLM 生成的 pseudo-normal embeddings 均值初始化；$W_q,W_k,W_v$、$p$ 本身以及三个投影/预测层都在训练中学习。
 
 训练目标由两项组成：
 
 $$
-L_{recon}=\frac{1}{T}\sum_{t=1}^{T}\|\hat x_t-x_t\|_2^2,
+L_{recon}=\frac{1}{T}\sum_{t=1}^{T}\lVert\hat x_t-x_t\rVert_2^2,
 $$
 
 $$
@@ -391,7 +505,17 @@ $$
 L=L_{recon}+\lambda L_{proto}.
 $$
 
-训练数据不需要步骤级错误标签；冻结 LLM 后，主要训练投影层、预测头与 prototype 模块。
+### 一次训练更新到底改了什么
+
+Algorithm 1 对每条正常轨迹依次执行：
+
+1. 用冻结的 `Embed` 重新计算 $q,r_i,h_j$；它们是当前样本的表示，不是要保存的模型参数。
+2. 用当前 $f_q,f_h$ 得到 $\tilde q,\tilde h_j$，冻结 LLM 后由 $f_\theta$ 产生 $\hat x_t$。
+3. 取正常轨迹实际第 $t$ 步 $x_t=h_t$，累加 $\lVert\hat x_t-x_t\rVert_2^2$。
+4. 用式（8）的 attention 从 $\hat X$ 细化 $p$，再累加 $1-\cos(\hat x_t,p)$。
+5. 对总损失反向传播，用 Adam 更新 **$f_q,f_h,f_\theta$、attention 的投影参数和 prototype $p$**；预训练文本编码器与 backbone LLM 保持冻结。
+
+训练数据不需要步骤级错误标签，但需要论文所说的**正常轨迹**。模型学习的不是“某类错误长什么样”，而是“给定任务、角色与历史，正常下一步应该落在哪里”。
 </div>
 </section>
 
@@ -404,15 +528,19 @@ $$
 
 ## 推理时两种偏离合成步骤级分数
 
-当前输出产生后，检测器根据前序上下文预测 $\hat x_t$，再计算：
+当前输出产生后会同时走两条表示路径：历史侧只用 $Q$ 与 $H_{t-1}$ 预测 $\hat x_t$；实际侧把当前角色 $R_t$ 与当前输出 $O_t$ 编成 $x_t=h_t$。然后计算：
 
 $$
-s(t)=\alpha\|\hat x_t-x_t\|_2^2+\beta\left(1-\cos(\hat x_t,p)\right).
+s(t)=\alpha\lVert\hat x_t-x_t\rVert_2^2+\beta\left(1-\cos(\hat x_t,p)\right).
 $$
 
-第一项是**预测残差**：历史充分时，它强调当前输出是否符合问题与前序步骤的因果关系。第二项是**原型偏离**：开局历史很短或上下文噪声较多时，它提供正常步骤的稳定中心。
+第一项是**预测残差**：$\lVert\hat x_t-x_t\rVert_2^2$ 衡量“按历史预测的下一步”和“真正发生的当前步”相差多远，强调上下文因果一致性。第二项是**原型偏离**：$1-\cos(\hat x_t,p)$ 衡量预测出来的下一步方向是否仍靠近正常步骤中心，在开局历史很短或上下文噪声较多时提供稳定参照。
 
-训练损失中的 $\lambda$ 与推理打分中的 $\alpha,\beta$ 不是同一参数。最终还需要阈值 $\delta$ 把连续异常分数变成“保留/纠正”的二元决策。论文的敏感性分析显示不同数据的最佳 $\lambda$ 不同，也意味着异常门槛不能不经校准直接迁移。
+这里 prototype 项比较的是 $\hat x_t$ 与 $p$，不是直接比较 $x_t$ 与 $p$。也就是说，论文先问“上下文预测的下一步是否处在正常区域”，再用 reconstruction residual 问“真实输出是否兑现了这个预测”。两项分别覆盖预测本身异常和实际输出偏离。
+
+训练损失中的 $\lambda$ 与推理打分中的 $\alpha,\beta$ 不是同一参数。论文在 Who&When 设置中使用的 $\alpha$ 为 1.0 或 0.8，$\beta$ 为 0.1 或 0.2，具体取决于 handcrafted / automated 子集。最终还需要阈值 $\delta$ 把连续异常分数变成“保留/纠正”的二元决策。
+
+推理阶段的 Algorithm 2 **不再用当前样本更新 $f_q,f_h,f_\theta$ 或 $p$**；它只重新计算各向量与异常分数。若触发纠错，变化的是文本输出 $O_t\rightarrow\widetilde O_t$ 和后续共享历史 $H_t$。下一步会基于修正后的文本重新编码新的 $h_t$，但这属于运行时状态更新，不是检测器继续训练。
 </div>
 </section>
 
@@ -437,6 +565,18 @@ $$
 
 低于阈值时，原输出直接进入历史；高于阈值时，系统调用独立的 correction agent，把前序历史、被标记输出和纠正指令 $P_{corr}$ 一起交给它重写。
 
+### Correction Agent 是怎样构建出来的
+
+它不是 MASC 训练阶段额外学到的一组网络参数，也没有单独的 loss、训练集或 checkpoint。论文主方法把它抽象为专用策略 $\pi_{corr}$；附录的 Recovery Prompt 则说明，运行时通过一次带固定模板的 LLM 调用构造它：
+
+1. **定位责任步骤。** 异常分数指出第 $t$ 步需要复核，系统取得该步的 Agent 角色 $R_t$ 与原回答 $O_t$。
+2. **恢复原角色。** Prompt 以 `You are an AI agent playing the role of "{agent.role}"` 开头，让纠错调用以出错 Agent 的职责重新审查，而不是用一个无角色的通用改写器。
+3. **填入自然语言证据。** 模板提供原始问题 `question`、先前回答 `mas.history`，以及前序步骤 `agent.spatialinfo()`；主公式对应为 $H_{t-1},O_t,P_{corr}$。
+4. **要求反思而非强制改写。** 模型必须先判断原回答是否真的错误：正确则返回 `No` 并复述原文，错误才返回 `Yes` 和修订文本。
+5. **解析并写回。** 系统读取 JSON 的 `final_response`，得到 $\widetilde O_t$，替换原消息后再交给下游 Agent。
+
+论文实验说明多 Agent 框架中的 Agent 统一使用 GPT-4o-mini，但没有为 Correction Agent 报告另一套模型或独立训练过程。因此，“dedicated”更准确地表示**一次专门的纠错调用与 Prompt/输出契约**，不等于另训练了一个纠错模型。主文称它为 dedicated Correction Agent，附录又说 responsible agent 被要求重新检查；结合 Prompt 中恢复 `{agent.role}` 的设计，可以理解为：纠错调用独立执行，但以原 Agent 角色工作。
+
 ### Embedding 不会被直接“翻译”回自然语言
 
 这里存在一条很容易误读的边界：$\hat x_t$、$x_t$ 与 prototype $p$ **只用于计算异常分数**。论文没有定义从 $\hat x_t$ 到文字的 decoder，也没有把向量作为 correction agent 的自然语言输入。
@@ -460,6 +600,184 @@ $$
 若无需纠正，`correction_needed` 改为 `No`，并在 `final_response` 中复述原回答。
 
 系统读取 `final_response` 作为 $\widetilde O_t$。关键不只是生成了修订文本，而是 $\widetilde O_t$ **替换** $O_t$ 写入共享历史 $H_t$。下游 Agent 只会看到修正后的消息，因此错误在源头被截断。MASC 不更新原任务 policy；其额外成本来自每步检测和触发时的语言模型纠错调用。
+</div>
+</section>
+
+---
+
+<section class="visual-note" markdown="1">
+<figure><img src="{{ '/assets/posts/acl-2026-behavior-feedback/images/21-vector-dimensions.svg' | relative_url }}" alt="MASC 各向量在编码、拼接、投影和比较过程中的维度变化" loading="lazy"></figure>
+<div markdown="1">
+<p class="visual-note-index">16A / Toy Embeddings</p>
+
+## 用一组 Mock Embedding 走完表示构造
+
+下面所有数字都是为了看懂计算而设计的**低维教学玩具**，不是论文实验值。真实 `Embed` 往往输出数百或数千维向量，单个坐标通常也不能直接命名为“数量”或“凭证”；这里故意让每个原始 embedding 只有两维，并让正负方向具有直观含义。
+
+先锁定维度。令冻结编码器输出维度 $d_e=2$，教学示例的统一 hidden dimension 也取 $D=4$：
+
+$$
+q,r_t,o_t\in\mathbb R^2,
+\qquad
+h_t=r_t\mathbin{\Vert}o_t\in\mathbb R^4.
+$$
+
+两个二向量拼接后是四维，不会仍然是二维。随后 $f_q:\mathbb R^2\rightarrow\mathbb R^4$ 把 query 升到统一 hidden dimension；$f_h:\mathbb R^4\rightarrow\mathbb R^4$ 则对已经拼接好的历史表示做任务适配。最后 $f_\theta$ 把 LLM hidden state 映射回 raw history embedding 的四维空间，因此 $\hat x_t,x_t,p\in\mathbb R^4$ 才能彼此比较。
+
+假设问题 $Q$ 是“核验报销申请是否满足**至少三份凭证**”，前一步 Agent 已报告“当前共有三份凭证”。为了演示，先 Mock 出：
+
+| 原始文本 | 冻结编码器输出 | 玩具直觉 |
+|---|---|---|
+| 问题 $Q$ | $q=Embed(Q)=[0.90,0.70]$ | 强调数量下界与凭证核验 |
+| 第 1 步角色 $R_1$ | $r_1=Embed(R_1)=[0.80,0.20]$ | 证据收集角色 |
+| 第 1 步输出 $O_1$ | $o_1=Embed(O_1)=[0.90,0.80]$ | “三份凭证已找到” |
+
+角色与这一步的回答拼接成历史表示：
+
+$$
+h_1=r_1\mathbin{\Vert}o_1=[0.80,0.20,0.90,0.80]\in\mathbb R^4.
+$$
+
+两个可训练投影层把不同来源的向量送入同一任务空间。假设当前参数给出：
+
+$$
+\tilde q=f_q(q)=[0.86,0.68,0.20,0.10],
+$$
+
+$$
+\tilde h_1=f_h(h_1)=[0.78,0.18,0.86,0.76].
+$$
+
+在第 2 步生成之前，冻结 LLM 只能看到 $(\tilde q,\tilde h_1)$；预测头 $f_\theta$ 据此给出正常下一步的期望表示：
+
+$$
+\hat x_2=[0.75,0.28,0.80,0.70].
+$$
+
+与此同时，第 2 个核验 Agent 的角色编码固定为 $r_2=[0.72,0.30]$。如果它正常回答“满足至少三份凭证”，Mock 输出编码为 $[0.76,0.69]$；如果它错误回答“不得超过三份凭证”，Mock 输出编码变成 $[-0.70,0.80]$。于是当前实际表示分别为：
+
+$$
+x_2^{normal}=h_2^{normal}=[0.72,0.30,0.76,0.69],
+$$
+
+$$
+x_2^{wrong}=h_2^{wrong}=[0.72,0.30,-0.70,0.80].
+$$
+
+这里角色分量仍然接近，因为说话者没有变；变化最大的是回答语义分量。也正因为 $x_2$ 同时包含角色和回答，检测器能够区分“谁在当前步骤说了什么”。
+</div>
+</section>
+
+---
+
+<section class="visual-note" markdown="1">
+<figure><img src="{{ '/assets/posts/acl-2026-behavior-feedback/images/22.png' | relative_url }}" alt="MASC 四维玩具向量投影到三维后的 prototype、预测向量、正常输出与错误输出距离示意" loading="lazy"></figure>
+<div markdown="1">
+<p class="visual-note-index">16B / Toy Score</p>
+
+## 同一组向量怎样训练，又怎样检出错误
+
+左图只是把四维比较空间投影到 $(z_1,z_2,z_3)$ 的视觉示意；实际公式仍使用下列四个坐标完整计算距离，不会为了画图而丢掉一维。
+
+先看**正常轨迹训练**。训练样本提供 $x_2^{normal}$ 作为当前步实际目标，因此 reconstruction loss 为：
+
+$$
+\begin{aligned}
+L_{recon}
+&=\left\lVert\hat x_2-x_2^{normal}\right\rVert_2^2\\
+&=(0.75-0.72)^2+(0.28-0.30)^2\\
+&\quad +(0.80-0.76)^2+(0.70-0.69)^2\\
+&=0.0030.
+\end{aligned}
+$$
+
+再 Mock 一个正常 prototype：
+
+$$
+p=[0.70,0.25,0.74,0.68].
+$$
+
+它与预测向量的余弦偏离约为：
+
+$$
+1-\cos(\hat x_2,p)\approx0.000264.
+$$
+
+若教学示例取 $\lambda=0.1$，则这一条正常训练样本产生：
+
+$$
+L=0.0030+0.1\times0.000264\approx0.003026.
+$$
+
+反向传播会推动 $f_q,f_h,f_\theta$、attention 参数和 $p$ 让正常预测更靠近实际正常步骤与正常区域；`Embed` 和 backbone LLM 仍冻结。这里更新的是模型参数，不是把这几个玩具向量永久存进模型。
+
+再看**异常推理**。问题与前序历史完全相同，所以在读取当前回答之前，预测器仍得到同一个 $\hat x_2$。错误回答产生 $x_2^{wrong}$ 后，残差突然变为：
+
+$$
+\begin{aligned}
+\left\lVert\hat x_2-x_2^{wrong}\right\rVert_2^2
+&=(0.75-0.72)^2+(0.28-0.30)^2\\
+&\quad +(0.80+0.70)^2+(0.70-0.80)^2\\
+&=2.2613.
+\end{aligned}
+$$
+
+为便于演示，取 $\alpha=1$、$\beta=0.1$、阈值 $\delta=0.5$：
+
+$$
+s(2)=2.2613+0.1\times0.000264\approx2.261326>0.5.
+$$
+
+因此系统触发纠错。真正拉开正常与错误输出的是 reconstruction residual：正常时只有 $0.0030$，错误时达到 $2.2613$。prototype 项在这个例子里很小，因为根据正常历史预测出的 $\hat x_2$ 仍位于正常区域。$\alpha$、$\beta$ 和 $\delta$ 在这里同样只是教学设定，不代表论文所有数据集的取值。
+</div>
+</section>
+
+---
+
+<section class="visual-note" markdown="1">
+<figure><img src="{{ '/assets/posts/acl-2026-behavior-feedback/images/23.png' | relative_url }}" alt="MASC 异常分数超过阈值后调用 Correction Agent 并将修正文本写回历史" loading="lazy"></figure>
+<div markdown="1">
+<p class="visual-note-index">16C / Toy Write-back</p>
+
+## 向量到这里停止，纠错重新回到自然语言
+
+异常门控只把 $s(2)>\delta$ 解释为“第 2 步需要复核”。它不会把 $\hat x_2$ 解码成句子，也不会要求 Correction Agent 猜测三个坐标的含义。纠错 Prompt 重新装入可读文本：
+
+| Prompt 字段 | 本例内容 |
+|---|---|
+| `question` | 核验是否满足至少三份凭证 |
+| `role` | 报销规则核验 Agent |
+| `history` | 第 1 步确认已有三份凭证 |
+| 原输出 $O_2$ | 不得超过三份凭证 |
+| 纠错指令 $P_{corr}$ | 复核原回答；需要时修订，并按固定 JSON 返回 |
+
+Correction Agent 对照原问题和历史，返回自然语言：
+
+```json
+{
+  "correction_needed": "Yes",
+  "final_response": "当前已有三份凭证，满足至少三份凭证的要求。"
+}
+```
+
+系统随后执行文本级替换：
+
+$$
+O_2^{wrong}\longrightarrow\widetilde O_2,
+$$
+
+$$
+H_2=H_1\cup\{(R_2,\widetilde O_2)\}.
+$$
+
+下游 Agent 只读取修正后的 $H_2$。等到第 3 步检测时，系统才会把 $\widetilde O_2$ 再次编码进新的历史向量 $h_2$。因此完整闭环是：
+
+$$
+\text{文本}\rightarrow\text{embedding 检测}\rightarrow\text{阈值门控}
+\rightarrow\text{自然语言纠错}\rightarrow\text{历史写回}\rightarrow\text{下一步重新编码}.
+$$
+
+这也解释了为什么 MASC 不需要 embedding decoder：向量负责回答“是否偏离”，原始文本与角色 Prompt 负责回答“应该改成什么”。
 </div>
 </section>
 
