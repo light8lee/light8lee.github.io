@@ -1,5 +1,5 @@
 export type ScenarioKey = "storm" | "blackout" | "festival";
-export type SceneKey = "meeting" | "command" | "warehouse" | "facility";
+export type SceneKey = "meeting" | "command" | "warehouse" | "facility" | "hospital";
 export type EventKind = "system" | "meeting" | "delegate" | "message" | "incident" | "action" | "success";
 
 export interface Agent {
@@ -62,6 +62,7 @@ export const sceneLabels: Record<SceneKey, string> = {
   command: "应急指挥中心",
   warehouse: "物资仓储中心",
   facility: "能源站 SOP",
+  hospital: "医院急救中心",
 };
 
 export const sceneProtocols: Record<SceneKey, string> = {
@@ -69,6 +70,7 @@ export const sceneProtocols: Record<SceneKey, string> = {
   command: "SUPERVISOR",
   warehouse: "EVENT BUS",
   facility: "DAG SOP",
+  hospital: "HANDOFF",
 };
 
 export const sceneAgentIds: Record<SceneKey, string[]> = {
@@ -76,6 +78,7 @@ export const sceneAgentIds: Record<SceneKey, string[]> = {
   command: ["lin", "miao", "lu", "qiao"],
   warehouse: ["bo", "wu", "qi"],
   facility: ["lu", "han", "su"],
+  hospital: ["ning", "an", "shen"],
 };
 
 export const scenarioLabels: Record<ScenarioKey, string> = {
@@ -175,6 +178,9 @@ function makeAgents(random: () => number): Agent[] {
     ["qi", "齐运", "Dispatch Worker", "出库运输", "#efa45e", "#754326", "warehouse"],
     ["han", "韩医", "Medical Operator", "关键负载确认", "#ec7994", "#76364d", "power"],
     ["su", "苏控", "Control Operator", "回路控制", "#62bacb", "#28596b", "power"],
+    ["ning", "宁护", "Triage Nurse", "急救分诊与生命体征", "#7fcbd4", "#285d69", "hospital"],
+    ["an", "安医", "Emergency Doctor", "创伤初步处置", "#f08a91", "#78313f", "hospital"],
+    ["shen", "沈主任", "Senior Surgeon", "高风险急诊手术", "#d7a0e6", "#62356f", "hospital"],
   ].map(([id, name, role, specialty, color, accent, station], index) => ({
     id, name, role, specialty, color, accent, station,
     trait: traits[(index + Math.floor(random() * traits.length)) % traits.length],
@@ -233,8 +239,16 @@ export function createRun(seed: string, requested: ScenarioKey | "random" = "ran
   if (facilityPatch) add({ kind: "action", icon: "⚒", stage: "修复节点", scene: "facility", protocol: "DAG SOP", eventName: "dag.patch.completed", actor: "lu", location: "power", title: "完成负载校准并重新验收", detail: "修复节点通过，原有汇合节点重新进入可执行状态。", summary: "patch.calibrate 完成，DAG 回到主路径。", payload: "patch=calibrate; status=completed", visibility: "room", status: "修复完成" }, 5);
   add({ kind: "success", icon: "✓", stage: "结果汇合", scene: "facility", protocol: "DAG SOP", eventName: "power.ready", actor: "lu", target: "lin", location: "power", title: "能源站 SOP 全部节点通过", detail: "关键设施恢复稳定运行，power.ready 被发布到城市共享状态。", summary: "DAG 输出 power.ready，指挥中心收到终止条件。", payload: "status=ready; critical_load=stable", visibility: "city", status: "SOP 完成" }, 5);
 
+  // Scene 5: responsibility and structured context move from nurse to doctor to senior surgeon.
+  add({ kind: "incident", icon: "✚", stage: "急救升级", scene: "hospital", protocol: "HANDOFF", eventName: "patient.escalated", actor: "ning", target: "an", location: "hospital", title: "宁护发现伤者出现进行性失血", detail: "复测生命体征后发现血压持续下降，常规处置不足以稳定患者。", summary: "护士识别异常并准备将分诊上下文与处置责任交给急诊医生。", payload: "vitals=unstable; bleeding=progressive; priority=P1", visibility: "room", status: "请求升级" }, 3);
+  add({ kind: "message", icon: "⇥", stage: "一级交接", scene: "hospital", protocol: "HANDOFF", eventName: "handoff.requested", actor: "ning", target: "an", location: "hospital", title: "宁护将分诊上下文交给安医", detail: "交接包包含患者身份、生命体征趋势、已完成处置、当前风险和建议下一步。", summary: "安医接收完整 SBAR 交接包，护士继续监护但不再负责诊疗决策。", payload: "SBAR=identity+vitals+interventions+risk+next-step", visibility: "private", status: "已交给医生" }, 2);
+  add({ kind: "action", icon: "◆", stage: "医生评估", scene: "hospital", protocol: "HANDOFF", eventName: "case.assessed", actor: "an", target: "shen", location: "hospital", title: "安医完成初步处置并确认需要手术", detail: "快速超声提示腹腔活动性出血，输液和止血处置只能暂时维持循环。", summary: "急诊医生判断任务超出当前能力边界，开始准备专家级交接。", payload: "finding=active-bleeding; intervention=temporary-stabilization", visibility: "room", status: "请求专家" }, 4);
+  add({ kind: "message", icon: "⇥", stage: "专家交接", scene: "hospital", protocol: "HANDOFF", eventName: "handoff.requested", actor: "an", target: "shen", location: "hospital", title: "安医请求沈主任接管高风险手术", detail: "病例上下文、影像发现、药物剂量、处置反应与未解决风险被一次性交给资深医生。", summary: "这不是普通通知：安医明确请求沈主任接管后续手术的任务所有权。", payload: "ownership=requested; case=trauma-laparotomy; risk=high", visibility: "private", status: "等待接管" }, 2);
+  add({ kind: "message", icon: "✓", stage: "责任确认", scene: "hospital", protocol: "HANDOFF", eventName: "handoff.accepted", actor: "shen", target: "an", location: "hospital", title: "沈主任确认接管手术责任", detail: "沈主任复述关键风险与手术计划，确认接管患者并要求宁护完成术前准备。", summary: "交接形成闭环：接收者确认理解，并成为新的任务所有者。", payload: "ownership=accepted; owner=shen; next=emergency-surgery", visibility: "room", status: "专家已接管" }, 2);
+  add({ kind: "success", icon: "✓", stage: "手术完成", scene: "hospital", protocol: "HANDOFF", eventName: "surgery.completed", actor: "shen", target: "lin", location: "hospital", title: "沈主任完成紧急止血手术", detail: "出血点已经控制，患者生命体征趋于稳定，术后监护计划已交回急救团队。", summary: "医院输出 surgery.completed，指挥中心收到最后一项终止条件。", payload: "outcome=stable; ownership=post-op-team", visibility: "city", status: "手术完成" }, 8);
+
   const score = 78 + Math.floor(random() * 19);
-  add({ kind: "success", icon: "✓", stage: "全局收束", scene: "command", protocol: "SUPERVISOR", eventName: "incident.resolved", actor: "lin", location: "hq", title: "指挥中心解除城市风险", detail: `预案、物资和设施三条结果已经汇总，本局协作评分 ${score}/100。`, summary: "Supervisor 检查终止条件并关闭本次事件。", payload: `resolved=true; score=${score}`, visibility: "city", status: "已完成" }, 5);
+  add({ kind: "success", icon: "✓", stage: "全局收束", scene: "command", protocol: "SUPERVISOR", eventName: "incident.resolved", actor: "lin", location: "hq", title: "指挥中心解除城市风险", detail: `预案、物资、设施和医院处置四条结果已经汇总，本局协作评分 ${score}/100。`, summary: "Supervisor 检查 power.ready 与 surgery.completed 两项终止条件并关闭本次事件。", payload: `resolved=true; score=${score}`, visibility: "city", status: "已完成" }, 5);
 
   return { seed, version: "v0.2.0", day: 100 + Math.floor(random() * 899), caseNumber: String(1000 + Math.floor(random() * 8999)), score, scenario, agents, events };
 }

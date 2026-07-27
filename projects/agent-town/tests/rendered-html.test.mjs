@@ -23,7 +23,7 @@ test("server-renders the Agent Town shell", async () => {
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/);
 });
 
-test("connects four city scenes through a deterministic event trajectory", async () => {
+test("connects five city scenes through a deterministic event trajectory", async () => {
   const [simulation, page, contextPanel, collaborationStage, anchoredArrows, sceneAudio, packageJson] = await Promise.all([
     readFile(new URL("../app/lib/simulation.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
@@ -39,10 +39,14 @@ test("connects four city scenes through a deterministic event trajectory", async
   assert.match(simulation, /command/);
   assert.match(simulation, /warehouse/);
   assert.match(simulation, /facility/);
+  assert.match(simulation, /hospital/);
   assert.match(simulation, /emergency-plan\.ready/);
   assert.match(simulation, /supply\.request/);
   assert.match(simulation, /supplies\.ready/);
   assert.match(simulation, /power\.ready/);
+  assert.match(simulation, /handoff\.requested/);
+  assert.match(simulation, /handoff\.accepted/);
+  assert.match(simulation, /surgery\.completed/);
   assert.match(simulation, /incident\.resolved/);
   assert.match(simulation, /target: "lu"/);
   assert.match(simulation, /target: "qiao"/);
@@ -61,12 +65,15 @@ test("connects four city scenes through a deterministic event trajectory", async
   assert.match(collaborationStage, /warehouse-event-ticker/);
   assert.match(collaborationStage, /inventory\.mismatch/);
   assert.match(collaborationStage, /facility-canvas/);
+  assert.match(collaborationStage, /hospital-stage/);
+  assert.match(collaborationStage, /STRUCTURED HANDOFF/);
   assert.match(collaborationStage, /data-arrow-node/);
   assert.match(anchoredArrows, /ResizeObserver/);
   assert.match(anchoredArrows, /edgePoint/);
   assert.match(sceneAudio, /AudioContext/);
   assert.match(sceneAudio, /!enabled \|\| !active/);
   assert.match(sceneAudio, /context\.close/);
+  assert.match(sceneAudio, /scene === "hospital"/);
   assert.doesNotMatch(sceneAudio, /\bhum\s*\(/);
   assert.match(sceneAudio, /继电器|tone\(1040/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);

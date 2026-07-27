@@ -84,8 +84,8 @@ export default function Home() {
     setSelectedAgent(null);
   };
   const progress = ((cursor + 1) / run.events.length) * 100;
-  const currentAct = currentEvent.eventName === "incident.resolved" ? 5 : ({ meeting: 1, command: 2, warehouse: 3, facility: 4 } as const)[currentEvent.scene];
-  const actGoals = ["形成预案", "拆解与派单", "分拣并出库", "执行应急 SOP", "汇总并解除风险"];
+  const currentAct = currentEvent.eventName === "incident.resolved" ? 6 : ({ meeting: 1, command: 2, warehouse: 3, facility: 4, hospital: 5 } as const)[currentEvent.scene];
+  const actGoals = ["形成预案", "拆解与派单", "分拣并出库", "执行应急 SOP", "升级专家并完成手术", "汇总并解除风险"];
   const sceneAgents = sceneAgentIds[focusScene].map((id) => run.agents.find((agent) => agent.id === id)).filter(Boolean);
   const shownEvent = sceneLens === "auto" ? currentEvent : [...visibleEvents].reverse().find((event) => event.scene === focusScene) ?? currentEvent;
 
@@ -115,11 +115,11 @@ export default function Home() {
       <section className="workspace">
         <div className="world-panel">
           <div className="story-compass">
-            <div className="act-badge"><span>当前主线</span><b>第 {currentAct} 幕 / 5</b></div>
+            <div className="act-badge"><span>当前主线</span><b>第 {currentAct} 幕 / 6</b></div>
             <div className="story-location"><p>你现在位于</p><h3>{sceneLabels[focusScene]}</h3><span>{sceneLens === "auto" ? actGoals[currentAct - 1] : "已定位到本场景起点"}</span></div>
             <div className="story-output"><span>{sceneLens === "auto" ? "正在处理" : "本场景起始事件"}</span><b>{shownEvent.eventName}</b><small>{shownEvent.title}</small></div>
             <button className={`sound-toggle ${sceneSound.audible ? "active" : ""} ${sceneSound.enabled && !playing ? "suspended" : ""}`} onClick={sceneSound.toggle} aria-label={sceneSound.enabled ? "关闭场景声音" : "开启场景声音"}>
-              <i>{sceneSound.audible ? "◖))" : "◖×"}</i><span>{sceneSound.audible ? "场景声已开启" : sceneSound.enabled ? "播放暂停，声音已停止" : "开启场景声"}</span><small>{focusScene === "meeting" ? "钟点与纸张声" : focusScene === "command" ? "雨幕、无线电与警报" : focusScene === "warehouse" ? "机械节拍与倒车提示" : "继电器与状态提示音"}</small>
+              <i>{sceneSound.audible ? "◖))" : "◖×"}</i><span>{sceneSound.audible ? "场景声已开启" : sceneSound.enabled ? "播放暂停，声音已停止" : "开启场景声"}</span><small>{focusScene === "meeting" ? "钟点与纸张声" : focusScene === "command" ? "雨幕、无线电与警报" : focusScene === "warehouse" ? "机械节拍与倒车提示" : focusScene === "facility" ? "继电器与状态提示音" : "监护提示与器械声"}</small>
             </button>
           </div>
 
@@ -176,7 +176,7 @@ export default function Home() {
                 })}
               </div>
               <div className="trajectory-key">
-                <span><i className="key-supervisor" />委派</span><span><i className="key-meeting" />会议</span><span><i className="key-bus" />事件</span><span><i className="key-dag" />执行</span>
+                <span><i className="key-supervisor" />委派</span><span><i className="key-meeting" />会议</span><span><i className="key-bus" />事件</span><span><i className="key-dag" />执行</span><span><i className="key-handoff" />交接</span>
               </div>
             </>
           )}

@@ -91,6 +91,11 @@ export function useSceneAudio(scene: SceneKey, scenario: ScenarioKey, active: bo
       repeat(() => { tone(480, 0.025, 0.22, "square"); tone(320, 0.035, 0.12, "square", 0.08); }, 2600);
       repeat(() => { tone(1040, 0.06, 0.2, "sine"); tone(1320, 0.09, 0.18, "sine", 0.16); }, 5100);
     }
+    if (scene === "hospital") {
+      noise(0.012, 2200, "highpass");
+      repeat(() => { tone(980, 0.055, 0.15, "sine"); tone(980, 0.055, 0.12, "sine", 0.7); }, 2800);
+      repeat(() => { tone(520, 0.025, 0.16, "square"); tone(680, 0.03, 0.12, "square", 0.09); }, 5600);
+    }
 
     return () => {
       timers.forEach((timer) => window.clearInterval(timer));

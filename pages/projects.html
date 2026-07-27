@@ -11,14 +11,29 @@ title: Projects
   <article class="project-card project-card--agent-town">
     <div class="project-card__eyebrow">Interactive simulation</div>
     <h2>Agent Town / 小城应急局</h2>
-    <p>Observe, reproduce, and replay a deterministic multi-agent collaboration process in a pixel city.</p>
+    <p class="project-card__intro">一个用像素城市直观展示 Multi-agent 协作机制的交互模拟器。它把抽象的编排方式放进同一条可观察、可复现、可回放的应急处置轨迹中，让你看到消息如何流动、任务如何拆解，以及不同 Agent 如何汇合结果。</p>
+    <div class="project-card__modes" aria-label="Collaboration modes shown in the simulation">
+      <strong>五种协作形式</strong>
+      <ul>
+        <li><b>Group Chat</b><span>多角色轮流讨论，共享上下文并形成共识。</span></li>
+        <li><b>Supervisor</b><span>中心节点拆解目标、委派子任务并统一收束。</span></li>
+        <li><b>Event Bus</b><span>Agent 通过事件发布与订阅实现松耦合协作。</span></li>
+        <li><b>DAG</b><span>按依赖关系并行执行任务，在关键节点汇合结果。</span></li>
+        <li><b>Handoff</b><span>把结构化上下文与任务所有权一起移交，并由接收方确认接管。</span></li>
+      </ul>
+    </div>
     <div class="project-card__tags" aria-label="Technologies">
       <span>Multi-agent</span>
       <span>Simulation</span>
       <span>React</span>
     </div>
-    <a class="project-card__link" href="{{ '/projects/agent-town/' | relative_url }}">
-      Launch simulation <span aria-hidden="true">→</span>
-    </a>
+    <div class="project-card__actions">
+      <a class="project-card__link" href="{{ '/projects/agent-town/' | relative_url }}">
+        Launch simulation <span aria-hidden="true">→</span>
+      </a>
+      <a class="project-card__related" href="{{ '/agents/2026/07/15/multi-agent-collaboration.html' | relative_url }}">
+        Related Writing：多 Agent 协作：五种模式、完成条件与选型 <span aria-hidden="true">↗</span>
+      </a>
+    </div>
   </article>
 </section>

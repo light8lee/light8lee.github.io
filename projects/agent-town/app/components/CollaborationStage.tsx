@@ -4,12 +4,13 @@ import { AnchoredArrows, ArrowSpec } from "./AnchoredArrows";
 
 export type SceneLens = "auto" | SceneKey;
 
-const sceneOrder: SceneKey[] = ["meeting", "command", "warehouse", "facility"];
+const sceneOrder: SceneKey[] = ["meeting", "command", "warehouse", "facility", "hospital"];
 const modeIdentity: Record<SceneKey, { icon: string; title: string; rule: string }> = {
   meeting: { icon: "◉", title: "主持轮转与共享记忆", rule: "主持人决定发言顺序；每位 Agent 的观点写入同一份房间上下文。" },
   command: { icon: "⇄", title: "主管委派与结果回传", rule: "Supervisor 拆解全局目标；执行 Agent 只领取子任务并把结果回传。" },
   warehouse: { icon: "≋", title: "事件发布与订阅消费", rule: "发布者只发送事件；匹配主题的工作站自行消费、处理或再次发布。" },
   facility: { icon: "◇", title: "依赖解锁与并行执行", rule: "节点按 DAG 依赖关系解锁；并行分支完成后在汇合节点继续运行。" },
+  hospital: { icon: "⇥", title: "上下文打包与任务所有权转移", rule: "护士交给医生，医生在能力边界处升级给资深医生；接收方必须明确确认接管。" },
 };
 
 function MiniAgent({ agent, active = false, nodeId }: { agent: Agent; active?: boolean; nodeId?: string }) {
@@ -40,8 +41,12 @@ export function CollaborationStage({ run, event, visibleEvents, lens, onLensChan
   const isManual = lens !== "auto";
   const facilityEvents = visibleEvents.filter((item) => item.scene === "facility");
   const warehouseEvents = visibleEvents.filter((item) => item.scene === "warehouse");
+  const hospitalEvents = visibleEvents.filter((item) => item.scene === "hospital");
   const hasPatch = facilityEvents.some((item) => item.eventName === "dag.node.failed");
   const sopDone = facilityEvents.some((item) => item.eventName === "power.ready");
+  const nurseDone = hospitalEvents.some((item) => item.actor === "ning" && item.eventName === "handoff.requested");
+  const doctorDone = hospitalEvents.some((item) => item.actor === "an" && item.eventName === "handoff.requested");
+  const seniorAccepted = hospitalEvents.some((item) => item.eventName === "handoff.accepted" || item.eventName === "surgery.completed");
   const commandWorkers = sceneAgentIds.command.slice(1);
   const warehouseActiveIds = new Set<string>();
   if (sceneEvent.eventName === "supply.request") cast.forEach((item) => warehouseActiveIds.add(item.id));
@@ -162,6 +167,54 @@ export function CollaborationStage({ run, event, visibleEvents, lens, onLensChan
           ]} />
           <div className="sop-team">{cast.map((agent) => <MiniAgent key={agent.id} agent={agent} active={actor.id === agent.id || target?.id === agent.id} />)}</div>
           <div className="protocol-explain"><b>输出：power.ready</b><span>固定 SOP 按依赖解锁；节点失败时只进入预定义修复分支。</span></div>
+        </div>
+      )}
+
+      {activeScene === "hospital" && (
+        <div className="hospital-stage protocol-canvas">
+          <div className="hospital-sign"><b>EMERGENCY / OR</b><span>急救升级通道</span></div>
+          <div className="handoff-team">
+            {cast.map((agent) => {
+              const state = agent.id === "ning"
+                ? nurseDone ? "done" : "current"
+                : agent.id === "an"
+                  ? doctorDone ? "done" : nurseDone ? "current" : "waiting"
+                  : seniorAccepted ? "current" : doctorDone ? "ready" : "waiting";
+              return (
+                <div key={agent.id} className={`handoff-owner ${state}`}>
+                  <MiniAgent agent={agent} nodeId={`hospital-${agent.id}`} active={actor.id === agent.id || target?.id === agent.id} />
+                  <span>{agent.id === "ning" ? "① 分诊持有" : agent.id === "an" ? "② 医生接手" : "③ 专家接管"}</span>
+                </div>
+              );
+            })}
+          </div>
+          <AnchoredArrows arrows={[
+            {
+              from: "hospital-ning",
+              to: "hospital-an",
+              label: sceneEvent.actor === "ning" ? sceneEvent.eventName : "SBAR 交接包",
+              active: sceneEvent.actor === "ning" || nurseDone,
+              tone: sceneEvent.actor === "ning" ? "coral" : "blue",
+            },
+            {
+              from: "hospital-an",
+              to: "hospital-shen",
+              label: sceneEvent.actor === "an" ? sceneEvent.eventName : "升级并移交责任",
+              active: sceneEvent.actor === "an" || doctorDone,
+              tone: sceneEvent.actor === "an" ? "coral" : "blue",
+            },
+          ]} />
+          <div className="handoff-packet">
+            <span>STRUCTURED HANDOFF / SBAR</span>
+            <b>{sceneEvent.title}</b>
+            <div><i>患者</i><i>关键发现</i><i>已处置</i><i>未解决风险</i><i>下一步责任</i></div>
+            <small>{sceneEvent.payload}</small>
+          </div>
+          <div className={`ownership-stamp ${seniorAccepted ? "accepted" : ""}`}>
+            <span>当前任务所有者</span>
+            <b>{seniorAccepted ? "沈主任" : doctorDone ? "等待沈主任确认" : nurseDone ? "安医" : "宁护"}</b>
+          </div>
+          <div className="protocol-explain"><b>输出：surgery.completed</b><span>HANDOFF 同时转移完整上下文和任务所有权，并由接收者明确确认接管。</span></div>
         </div>
       )}
     </section>
