@@ -16,7 +16,7 @@ series: feedback-optimization
 
 ACL 2026 论文 [*Reinforcement Learning for Self-Improving Agent with Skill Library*](https://aclanthology.org/2026.acl-long.69/) 提出的 SAGE（Skill-Augmented GRPO for self-Evolution，面向自我演化的技能增强 GRPO）给出了一种端到端方案：把两个相似任务放进同一条 Sequential Rollout（顺序轨迹），让后一个任务真实调用前一个任务生成的 Skill，再把复用成败变成前后两个任务的训练信号。
 
-它的核心不是“奖励写函数”这么简单，而是把奖励的时间跨度从**当前答案**延伸到**未来复用**。全文依次拆开 Agent 如何写、用、修、存 Skill；两任务链怎样采样；两类奖励怎样分别形成 Advantage（优势）；以及实验究竟证明了什么。口播未容纳的公式、训练计数、检索与消融实验全部收在附录。
+它的核心不是“奖励写函数”这么简单，而是把奖励的时间跨度从**当前答案**延伸到**未来复用**。全文依次拆开 Agent 如何写、用、修、存 Skill；两任务链怎样采样；两类奖励怎样分别形成 Advantage（优势）；以及实验究竟证明了什么。补充公式、训练计数、检索与消融实验全部收在附录。
 
 <section class="visual-note" markdown="1">
 <figure><img src="{{ '/assets/posts/acl-2026-numeric-feedback-sage/images/01.png' | relative_url }}" alt="数值反馈同时奖励当前任务成功和后续技能复用，并写回模型参数" loading="lazy"></figure>
