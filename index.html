@@ -79,6 +79,23 @@ animation: home-constellation
   </div>
 
   <div class="post-grid" data-filter-results>
+    {% assign manual_card_cutoff = '2026-07-21 00:00:00 +0800' | date: '%s' %}
+    {% for post in site.posts %}
+      {% assign post_timestamp = post.date | date: '%s' %}
+      {% if post_timestamp > manual_card_cutoff %}
+        {% assign collection_key = 'agent' %}
+        {% if post.series == 'feedback-optimization' %}
+          {% assign collection_key = 'feedback-optimization' %}
+        {% elsif post.category == 'Codex' %}
+          {% assign collection_key = 'dive-into-codex' %}
+        {% elsif post.category == '大模型基础知识' %}
+          {% assign collection_key = 'llm-basics' %}
+        {% elsif post.category == 'LLM Post-training' or post.category == 'Agent RL' %}
+          {% assign collection_key = 'post-training' %}
+        {% endif %}
+        {% include post-card.html post=post collection=collection_key tags=post.tags %}
+      {% endif %}
+    {% endfor %}
     <article class="post-card"
              data-collection="agent"
              data-tags="ToolRM|Reward Model|工具调用|Agent|GRPO|Best-of-N">
@@ -128,17 +145,20 @@ animation: home-constellation
       </a>
     </article>
     {% for post in site.posts %}
-      {% assign collection_key = 'agent' %}
-      {% if post.series == 'feedback-optimization' %}
-        {% assign collection_key = 'feedback-optimization' %}
-      {% elsif post.category == 'Codex' %}
-        {% assign collection_key = 'dive-into-codex' %}
-      {% elsif post.category == '大模型基础知识' %}
-        {% assign collection_key = 'llm-basics' %}
-      {% elsif post.category == 'LLM Post-training' or post.category == 'Agent RL' %}
-        {% assign collection_key = 'post-training' %}
+      {% assign post_timestamp = post.date | date: '%s' %}
+      {% if post_timestamp <= manual_card_cutoff %}
+        {% assign collection_key = 'agent' %}
+        {% if post.series == 'feedback-optimization' %}
+          {% assign collection_key = 'feedback-optimization' %}
+        {% elsif post.category == 'Codex' %}
+          {% assign collection_key = 'dive-into-codex' %}
+        {% elsif post.category == '大模型基础知识' %}
+          {% assign collection_key = 'llm-basics' %}
+        {% elsif post.category == 'LLM Post-training' or post.category == 'Agent RL' %}
+          {% assign collection_key = 'post-training' %}
+        {% endif %}
+        {% include post-card.html post=post collection=collection_key tags=post.tags %}
       {% endif %}
-      {% include post-card.html post=post collection=collection_key tags=post.tags %}
     {% endfor %}
   </div>
   <p class="empty-filter-message" data-empty-filter hidden>没有匹配的文章，试试更短的关键词或清除筛选条件。</p>
