@@ -44,6 +44,8 @@ SKIP_RUNS = {
     # User requested SCPO material be skipped.
     "run-2026-07-01-scpo",
     "run-2026-07-03-scpo-xhs",
+    # Curated into a hand-edited long-form post with expanded source notes.
+    "run-2026-07-28-icml-s1e1",
 }
 
 RUN_OVERRIDES = {
