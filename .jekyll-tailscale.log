@@ -1,0 +1,17 @@
+Configuration file: D:/Codex/github.io/_config.yml
+            Source: D:/Codex/github.io
+       Destination: D:/Codex/github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 2.643 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+[2026-07-31 10:11:51] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:6 
+	C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
+[2026-07-31 10:16:12] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:7 
+	C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `eof?'
+	C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in `run'
+	C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in `block in start_thread'
