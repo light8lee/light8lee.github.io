@@ -1,0 +1,375 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - link "涛涛涛 home" [ref=f1e3] [cursor=pointer]:
+      - /url: /
+      - generic [ref=f1e4]: 涛
+      - generic [ref=f1e5]: 涛涛涛
+    - navigation "Primary navigation" [ref=f1e6]:
+      - link "Home" [ref=f1e7] [cursor=pointer]:
+        - /url: /
+      - link "Writing" [ref=f1e8] [cursor=pointer]:
+        - /url: /archives.html
+      - link "Projects" [ref=f1e9] [cursor=pointer]:
+        - /url: /pages/projects.html
+      - link "Daydreams" [ref=f1e10] [cursor=pointer]:
+        - /url: /pages/notes.html
+      - link "About" [ref=f1e11] [cursor=pointer]:
+        - /url: /about.html
+  - main [ref=f1e12]:
+    - generic [ref=f1e13]:
+      - complementary [ref=f1e14]:
+        - navigation "本文目录" [ref=f1e15]:
+          - link "低概率 Token，为什么不该无限主导 SFT 更新？" [ref=f1e16] [cursor=pointer]:
+            - /url: "#%E4%BD%8E%E6%A6%82%E7%8E%87-token%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%AF%A5%E6%97%A0%E9%99%90%E4%B8%BB%E5%AF%BC-sft-%E6%9B%B4%E6%96%B0"
+          - link "10 张场景卡：从逐字拟合到有边界的局部更新" [ref=f1e17] [cursor=pointer]:
+            - /url: "#10-%E5%BC%A0%E5%9C%BA%E6%99%AF%E5%8D%A1%E4%BB%8E%E9%80%90%E5%AD%97%E6%8B%9F%E5%90%88%E5%88%B0%E6%9C%89%E8%BE%B9%E7%95%8C%E7%9A%84%E5%B1%80%E9%83%A8%E6%9B%B4%E6%96%B0"
+          - link "低概率，不等于低价值；更不等于必须无限用力拟合" [ref=f1e18] [cursor=pointer]:
+            - /url: "#section"
+          - link "BLL-Loss 改的是局部优化几何，不是训练范式" [ref=f1e19] [cursor=pointer]:
+            - /url: "#bll-loss-"
+          - link "两段都正确，为什么一段会获得更重的逐字监督？" [ref=f1e20] [cursor=pointer]:
+            - /url: "#section-1"
+          - link "标准 SFT 的目标只知道“参考答案选了它”" [ref=f1e21] [cursor=pointer]:
+            - /url: "#sft-"
+          - link "BLL 限制的是梯度牵引，不是样本资格或损失值的硬截断" [ref=f1e22] [cursor=pointer]:
+            - /url: "#bll-"
+          - link "它发生在训练时：保留前向计算，调节反向贡献" [ref=f1e23] [cursor=pointer]:
+            - /url: "#section-2"
+          - link "数据筛选、轨迹降权与 BLL 解决的不是同一层问题" [ref=f1e24] [cursor=pointer]:
+            - /url: "#bll--1"
+          - link "论文报告的是总体泛化改善，不是“低概率 token 都没用”" [ref=f1e25] [cursor=pointer]:
+            - /url: "#token-"
+          - link "上界不是越紧越好：陌生也可能是真正的新知识" [ref=f1e26] [cursor=pointer]:
+            - /url: "#section-3"
+          - link "低概率不等于低价值；关键是不让它自动拥有无限话语权" [ref=f1e27] [cursor=pointer]:
+            - /url: "#section-4"
+          - link "附录与延伸讨论" [ref=f1e28] [cursor=pointer]:
+            - /url: "#section-5"
+          - link "若要评估这类损失，应额外拆开哪些变量？" [ref=f1e29] [cursor=pointer]:
+            - /url: "#section-6"
+          - link "与 LALP 的关系" [ref=f1e30] [cursor=pointer]:
+            - /url: "#lalp-"
+          - link "资料与制作边界" [ref=f1e31] [cursor=pointer]:
+            - /url: "#section-7"
+      - article [ref=f1e32]:
+        - generic [ref=f1e33]:
+          - paragraph [ref=f1e34]: 2026-08-06
+          - heading "BLL-Loss：低概率 Token，为什么不该无限主导 SFT 更新？" [level=1] [ref=f1e35]
+          - paragraph [ref=f1e36]: 整理 BLL-Loss 对低概率 token 施加有界梯度的动机、训练位置与适用边界；严格区分官方摘要已支持的结论和文末的工程讨论。
+          - generic [ref=f1e37]:
+            - generic [ref=f1e38]: ICML 2026
+            - generic [ref=f1e39]: LLM Post-training
+            - generic [ref=f1e40]: SFT
+            - generic [ref=f1e41]: Reasoning
+            - generic [ref=f1e42]: Optimization
+            - generic [ref=f1e43]: BLL-Loss
+        - generic [ref=f1e44]:
+          - heading "低概率 Token，为什么不该无限主导 SFT 更新？" [level=1] [ref=f1e45]
+          - paragraph [ref=f1e46]: 标准 SFT 会逐 token 地提高专家答案的概率。若某个参考 token 对模型非常陌生，负对数似然会给它很强的拟合压力；可是在推理与代码任务中，低概率有时只意味着罕见措辞、变量命名或等价实现路线，而不一定意味着模型缺少决定任务成败的知识。
+          - paragraph [ref=f1e47]:
+            - text: ICML 2026 Spotlight 论文
+            - 'link "Don’t Force the Fit: Bounded Log-Likelihood Loss for Enhanced Reasoning in Large Language Models" [ref=f1e48] [cursor=pointer]':
+              - /url: https://openreview.net/forum?id=mTMA9yvsnx
+            - text: 提出 BLL-Loss。它保留训练样本，也不按整条回答简单降权；它在低概率 token 区域限制单个 token 对更新的梯度贡献，同时使常规概率区域保持接近最大似然训练的行为。
+          - generic [ref=f1e49]:
+            - link "OpenReview" [ref=f1e50] [cursor=pointer]:
+              - /url: https://openreview.net/forum?id=mTMA9yvsnx
+            - link "ICML 2026" [ref=f1e51] [cursor=pointer]:
+              - /url: https://icml.cc/virtual/2026/poster/61840
+          - blockquote [ref=f1e52]:
+            - paragraph [ref=f1e53]:
+              - strong [ref=f1e54]: 证据说明：
+              - text: 本文能直接核验的是论文 ICML / OpenReview 官方摘要级材料。正文因此只写已确认的问题、机制性质、无额外可学习参数和总体实验结论；精确损失函数、阈值与逐项数值未在此写作中补造。
+          - heading "10 张场景卡：从逐字拟合到有边界的局部更新" [level=2] [ref=f1e55]
+          - generic [ref=f1e56]:
+            - figure [ref=f1e57]:
+              - img "低概率 token 不等于应更用力学习的封面卡片" [ref=f1e58]
+            - generic [ref=f1e59]:
+              - paragraph [ref=f1e60]: 01 / The hidden assumption
+              - heading "低概率，不等于低价值；更不等于必须无限用力拟合" [level=3] [ref=f1e61]
+              - paragraph [ref=f1e62]:
+                - text: “模型不会，所以更该教”对于新事实或关键逻辑通常正确；但它默认所有低概率 token 都代表同一种能力缺口。想象参考代码使用
+                - code [ref=f1e63]: accumulator_state_v2
+                - text: ，学生更倾向等价的
+                - code [ref=f1e64]: state
+                - text: ：控制流、返回值和测试结果不变，罕见命名本身却可能带来更强的逐字拟合压力。
+              - paragraph [ref=f1e65]:
+                - text: 论文针对的不是错误示范或 label noise，而是更细的
+                - strong [ref=f1e66]: optimization misalignment
+                - text: ：专家轨迹可以完全正确，但任务允许不止一种正确实现；训练目标仍会把其中一个实现的每个 token 当作唯一参考。问题是优化力度是否因此过度落在偶发的表面形式上。
+          - generic [ref=f1e67]:
+            - figure [ref=f1e68]:
+              - img "BLL-Loss 论文信息与核心主张的卡片" [ref=f1e69]
+            - generic [ref=f1e70]:
+              - paragraph [ref=f1e71]: 02 / Paper claim
+              - heading "BLL-Loss 改的是局部优化几何，不是训练范式" [level=3] [ref=f1e72]
+              - paragraph [ref=f1e73]: 论文题目中的 “Don’t Force the Fit” 指向一个窄问题：正确示范是否意味着每一个 token 都应以无界力度被复刻？BLL-Loss 保留监督学习、保留原训练样本，也不需要额外可学习参数；它只在低概率区域改变单个 token 对更新的最大牵引力。
+              - paragraph [ref=f1e74]: 这使它与“先筛掉困难数据”或“重写输出答案”不同。它是一种 SFT 内部的 loss 设计，目标是在保持专家示范信息的同时，为多种等价的推理、代码和表达路径留下更大的空间。
+          - generic [ref=f1e75]:
+            - figure [ref=f1e76]:
+              - img "两段等价代码为何获得不同 SFT 压力的卡片" [ref=f1e77]
+            - generic [ref=f1e78]:
+              - paragraph [ref=f1e79]: 03 / Equivalent outputs
+              - heading "两段都正确，为什么一段会获得更重的逐字监督？" [level=3] [ref=f1e80]
+              - paragraph [ref=f1e81]: 在代码中，变量命名、代码重排和若干等价控制表达可以不同而测试同样通过；在数学证明中，同一结论也可能由不同引理顺序或语言表述得到。任务验证器关心的是语义、执行或最终答案，参考字符串匹配则关心其中一种实现。
+              - paragraph [ref=f1e82]: 这张卡不是论文实验复现，而是解释“等价实现”这一动机。它强调低概率的两种来源必须区分：可能是模型没学会关键知识，也可能只是参考答案选了模型不常用的风格。BLL 的立场不是预先判定哪一种，而是避免后一种在极端概率区无限放大。
+          - generic [ref=f1e83]:
+            - figure [ref=f1e84]:
+              - img "标准 SFT 的 token 级最大似然解释卡片" [ref=f1e85]
+            - generic [ref=f1e86]:
+              - paragraph [ref=f1e87]: 04 / Why standard SFT pulls harder
+              - heading "标准 SFT 的目标只知道“参考答案选了它”" [level=3] [ref=f1e88]
+              - paragraph [ref=f1e89]: 标准 SFT 通常最小化参考序列的负对数似然：
+              - generic [ref=f1e90]:
+                - generic [ref=f1e91]:
+                  - generic [ref=f1e92]:
+                    - generic [ref=f1e93]: L
+                    - generic [ref=f1e97]:
+                      - generic [ref=f1e98]: S
+                      - generic [ref=f1e100]: F
+                      - generic [ref=f1e102]: T
+                  - generic [ref=f1e104]: =
+                  - generic [ref=f1e106]: −
+                  - generic [ref=f1e108]:
+                    - generic [ref=f1e109]: ∑
+                    - generic [ref=f1e113]: t
+                  - generic [ref=f1e117]:
+                    - generic [ref=f1e118]: l
+                    - generic [ref=f1e119]: o
+                    - generic [ref=f1e120]: g
+                  - generic [ref=f1e121]:
+                    - generic [ref=f1e122]: p
+                    - generic [ref=f1e124]: θ
+                  - generic [ref=f1e127]: (
+                  - generic [ref=f1e129]:
+                    - generic [ref=f1e130]: "y"
+                    - generic [ref=f1e132]: t
+                  - generic [ref=f1e135]: ∣
+                  - generic [ref=f1e137]: x
+                  - generic [ref=f1e139]: ","
+                  - generic [ref=f1e141]:
+                    - generic [ref=f1e142]: "y"
+                    - generic [ref=f1e145]:
+                      - generic [ref=f1e146]: <
+                      - generic [ref=f1e148]: t
+                  - generic [ref=f1e150]: )
+                  - generic [ref=f1e152]: .
+                - math [ref=f1e155]:
+                  - generic [ref=f1e156]:
+                    - generic [ref=f1e157]: L
+                    - generic [ref=f1e159]:
+                      - generic [ref=f1e160]: S
+                      - generic [ref=f1e161]: F
+                      - generic [ref=f1e162]: T
+                  - generic [ref=f1e163]: =
+                  - generic [ref=f1e164]: −
+                  - generic [ref=f1e165]:
+                    - generic [ref=f1e166]: ∑
+                    - generic [ref=f1e167]: t
+                  - generic [ref=f1e168]: log
+                  - generic: ⁡
+                  - generic [ref=f1e169]:
+                    - generic [ref=f1e170]: p
+                    - generic [ref=f1e171]: θ
+                  - generic [ref=f1e172]: (
+                  - generic [ref=f1e173]:
+                    - generic [ref=f1e174]: "y"
+                    - generic [ref=f1e175]: t
+                  - generic [ref=f1e176]: ∣
+                  - generic [ref=f1e177]: x
+                  - generic [ref=f1e178]: ","
+                  - generic [ref=f1e179]:
+                    - generic [ref=f1e180]: "y"
+                    - generic [ref=f1e181]:
+                      - generic [ref=f1e182]: <
+                      - generic [ref=f1e183]: t
+                  - generic [ref=f1e184]: )
+                  - generic [ref=f1e185]: .
+              - paragraph [ref=f1e186]:
+                - text: 当参考 token 的
+                - generic [ref=f1e187]:
+                  - generic [ref=f1e189]:
+                    - generic [ref=f1e190]: p
+                    - generic [ref=f1e192]: θ
+                  - math [ref=f1e196]:
+                    - generic [ref=f1e197]:
+                      - generic [ref=f1e198]: p
+                      - generic [ref=f1e199]: θ
+                - text: 很低，
+                - generic [ref=f1e200]:
+                  - generic [ref=f1e201]:
+                    - generic [ref=f1e202]: −
+                    - generic [ref=f1e204]:
+                      - generic [ref=f1e205]: l
+                      - generic [ref=f1e206]: o
+                      - generic [ref=f1e207]: g
+                    - generic [ref=f1e208]:
+                      - generic [ref=f1e209]: p
+                      - generic [ref=f1e211]: θ
+                  - math [ref=f1e215]:
+                    - generic [ref=f1e216]: −
+                    - generic [ref=f1e217]: log
+                    - generic: ⁡
+                    - generic [ref=f1e218]:
+                      - generic [ref=f1e219]: p
+                      - generic [ref=f1e220]: θ
+                - text: 很大，训练便更强地推动模型提高该 token 的概率。这是最大似然的自然结果，并不构成缺陷；它的盲点在于损失不会自行识别“罕见 token 是关键知识”还是“它只是正确答案的一种写法”。
+          - generic [ref=f1e221]:
+            - figure [ref=f1e222]:
+              - img "BLL 限制低概率 token 梯度贡献的卡片" [ref=f1e223]
+            - generic [ref=f1e224]:
+              - paragraph [ref=f1e225]: 05 / Bounded contribution
+              - heading "BLL 限制的是梯度牵引，不是样本资格或损失值的硬截断" [level=3] [ref=f1e226]
+              - paragraph [ref=f1e227]: 当前可核验材料支持的机制性质是：低概率区域内，单个 token 的 log-likelihood 梯度贡献有上界；在常规概率区域，行为仍接近最大似然。可用下面的不等式表达该性质：
+              - generic [ref=f1e228]:
+                - generic [ref=f1e229]:
+                  - generic [ref=f1e230]:
+                    - generic [ref=f1e231]: ∥
+                    - generic [ref=f1e235]:
+                      - generic [ref=f1e237]:
+                        - generic [ref=f1e238]: ∂
+                        - generic [ref=f1e240]:
+                          - generic [ref=f1e241]: L
+                          - generic [ref=f1e245]:
+                            - generic [ref=f1e246]: B
+                            - generic [ref=f1e248]: L
+                            - generic [ref=f1e250]: L
+                      - generic [ref=f1e257]:
+                        - generic [ref=f1e258]: ∂
+                        - generic [ref=f1e260]:
+                          - generic [ref=f1e261]: z
+                          - generic [ref=f1e263]: t
+                    - generic [ref=f1e266]: ∥
+                  - generic [ref=f1e269]: ≤
+                  - generic [ref=f1e271]: C
+                  - generic [ref=f1e273]: .
+                - math [ref=f1e276]:
+                  - generic [ref=f1e277]:
+                    - generic [ref=f1e278]: ‖
+                    - generic [ref=f1e279]:
+                      - generic [ref=f1e280]:
+                        - generic [ref=f1e281]: ∂
+                        - generic [ref=f1e282]:
+                          - generic [ref=f1e283]: L
+                          - generic [ref=f1e285]:
+                            - generic [ref=f1e286]: B
+                            - generic [ref=f1e287]: L
+                            - generic [ref=f1e288]: L
+                      - generic [ref=f1e289]:
+                        - generic [ref=f1e290]: ∂
+                        - generic [ref=f1e291]:
+                          - generic [ref=f1e292]: z
+                          - generic [ref=f1e293]: t
+                    - generic [ref=f1e294]: ‖
+                  - generic [ref=f1e295]: ≤
+                  - generic [ref=f1e296]: C
+                  - generic [ref=f1e297]: .
+              - paragraph [ref=f1e298]:
+                - generic [ref=f1e299]:
+                  - generic [ref=f1e301]:
+                    - generic [ref=f1e302]: z
+                    - generic [ref=f1e304]: t
+                  - math [ref=f1e308]:
+                    - generic [ref=f1e309]:
+                      - generic [ref=f1e310]: z
+                      - generic [ref=f1e311]: t
+                - text: 是 token 对应的 logit，
+                - generic [ref=f1e312]:
+                  - generic [ref=f1e313]: C
+                  - math [ref=f1e317]:
+                    - generic [ref=f1e318]: C
+                - text: 是上界。它说明这个 token 最多能把参数朝参考写法拉动多大力度；样本仍在，罕见写法也仍可以学。这里的式子是
+                - strong [ref=f1e319]: 性质级表达
+                - text: ，并非作者完整损失原式：同版本全文未在当前资料中可读，因此不能补写分段函数、阈值或梯度推导。
+          - generic [ref=f1e320]:
+            - figure [ref=f1e321]:
+              - img "BLL 在反向传播前限制梯度贡献的流程卡片" [ref=f1e322]
+            - generic [ref=f1e323]:
+              - paragraph [ref=f1e324]: 06 / Where it acts
+              - heading "它发生在训练时：保留前向计算，调节反向贡献" [level=3] [ref=f1e325]
+              - paragraph [ref=f1e326]: 可以把 BLL 的位置读成三步：先像普通 SFT 一样，对所有参考 token 计算条件概率；再对落入低概率区域的 token 限制其梯度牵引；最后将处理后的贡献与其余 token 一起反传到同一组参数。变化不在数据收集时，也不在模型生成答案以后。
+              - paragraph [ref=f1e327]: 这个位置解释了它的适用边界：它不能替代数据验证、去重或样本质量控制，也不是推理时的输出修复器。它处理的是“已经决定保留的监督，内部怎样分配优化力度”。
+          - generic [ref=f1e328]:
+            - figure [ref=f1e329]:
+              - img "BLL 与数据过滤和整条回答降权的区别卡片" [ref=f1e330]
+            - generic [ref=f1e331]:
+              - paragraph [ref=f1e332]: 07 / Three different levers
+              - heading "数据筛选、轨迹降权与 BLL 解决的不是同一层问题" [level=3] [ref=f1e333]
+              - table [ref=f1e334]:
+                - rowgroup [ref=f1e335]:
+                  - row [ref=f1e336]:
+                    - columnheader "操作" [ref=f1e337]
+                    - columnheader "调节单位" [ref=f1e338]
+                    - columnheader "它回答的问题" [ref=f1e339]
+                - rowgroup [ref=f1e340]:
+                  - row [ref=f1e341]:
+                    - cell "数据过滤" [ref=f1e342]
+                    - cell "一条样本" [ref=f1e343]
+                    - cell "这条监督要不要进入训练？" [ref=f1e344]
+                  - row [ref=f1e345]:
+                    - cell "轨迹降权" [ref=f1e346]
+                    - cell "整段回答" [ref=f1e347]
+                    - cell "这条监督整体占多大权重？" [ref=f1e348]
+                  - row [ref=f1e349]:
+                    - cell [ref=f1e350]:
+                      - strong [ref=f1e351]: BLL-Loss
+                    - cell "单个低概率 token" [ref=f1e352]
+                    - cell "留下后，哪一个 token 不应过度牵引更新？" [ref=f1e353]
+              - paragraph [ref=f1e354]: 三者可以组合，但不应该互相冒充。即使样本经过严格验证，仍可能含有可替换的低概率表面形式；反过来，即使某个 token 的贡献被限制，样本整体仍可能是事实错误或不安全的。这是把 BLL 放进实际后训练管线时最需要保持的层次感。
+          - generic [ref=f1e355]:
+            - figure [ref=f1e356]:
+              - img "BLL 支持多种正确实现而非逐字复刻的卡片" [ref=f1e357]
+            - generic [ref=f1e358]:
+              - paragraph [ref=f1e359]: 08 / Reported value
+              - heading "论文报告的是总体泛化改善，不是“低概率 token 都没用”" [level=3] [ref=f1e360]
+              - paragraph [ref=f1e361]: ICML / OpenReview 官方摘要报告：BLL-Loss 不引入额外可学习参数，并在多个模型、多个 reasoning benchmark 上改善泛化。这个总体结论和研究动机一致——模型可以学习专家演示的逻辑关系，而不必由某种罕见写法支配整次更新。
+              - paragraph [ref=f1e362]: 但这里必须保留证据边界：当前可直接读取的材料是摘要级，未提供可核验的同版本实验表、阈值、完整损失形态或逐项消融。因此本页不虚构精确增幅，也不把“稳定改善”外推为对所有任务与模型必然有效。
+          - generic [ref=f1e363]:
+            - figure [ref=f1e364]:
+              - img "梯度上界过松过紧的任务边界卡片" [ref=f1e365]
+            - generic [ref=f1e366]:
+              - paragraph [ref=f1e367]: 09 / Trade-off
+              - heading "上界不是越紧越好：陌生也可能是真正的新知识" [level=3] [ref=f1e368]
+              - paragraph [ref=f1e369]: 若上界太松，方法会接近标准 SFT；若上界太紧，真正尚未学会的知识也可能因低概率而被压低。代码中的一个标点、结构化输出的字段名、工具调用的参数或数学中的关键符号，都可能表面稀有却决定执行与答案正确性。
+              - paragraph [ref=f1e370]: 因此 BLL 不是“给低概率 token 打低价值标签”。它提出的是一个优化权衡：当参考答案存在多种正确实现时，如何防止可替换细节极端地垄断更新，同时不牺牲不可替代的任务信号。具体边界必须通过任务级实验验证。
+          - generic [ref=f1e371]:
+            - figure [ref=f1e372]:
+              - img "低概率不等于低价值的结尾卡片" [ref=f1e373]
+            - generic [ref=f1e374]:
+              - paragraph [ref=f1e375]: 10 / Reading takeaway
+              - heading "低概率不等于低价值；关键是不让它自动拥有无限话语权" [level=3] [ref=f1e376]
+              - paragraph [ref=f1e377]: BLL-Loss 对 SFT 的追问并不大而化之：专家答案正确，为什么还要怀疑每个 token？答案是任务评价与逐字模仿的粒度不同。只要答案允许等价实现，低概率就既可能是能力缺口，也可能是风格差异。
+              - paragraph [ref=f1e378]: 该方法选择的折中是对低概率 token 的单点牵引设置边界，而不是把难样本或罕见写法从训练中删除。它把“多种正确实现”的问题留在模型可学习的空间里，同时要求我们更认真地验证哪里才是不可替代的任务信号。
+          - generic [ref=f1e379]:
+            - heading "附录与延伸讨论" [level=2] [ref=f1e380]
+            - paragraph [ref=f1e381]: 以下为基于论文动机整理的待验证问题和工程检查项，不是论文已经给出的完整实现或结论。
+            - heading "若要评估这类损失，应额外拆开哪些变量？" [level=3] [ref=f1e382]
+            - list [ref=f1e383]:
+              - listitem [ref=f1e384]:
+                - strong [ref=f1e385]: 按 token 功能分组。
+                - text: 将可替换的命名/措辞、知识实体、格式字符、结构化字段、代码控制字符等分开统计，避免只用整体低概率分布解释效果。
+              - listitem [ref=f1e386]:
+                - strong [ref=f1e387]: 并列任务正确性与表面匹配。
+                - text: 对代码可记录测试通过与参考字符串相似度；对推理可分开评估最终答案、过程一致性和表达多样性，检验“宽容”是否真正保住正确实现。
+              - listitem [ref=f1e388]:
+                - strong [ref=f1e389]: 做上界敏感性分析。
+                - text: 观察不同边界下的梯度分布、训练稳定性与下游表现，特别查验低概率但关键的 token 是否被系统性压制。
+              - listitem [ref=f1e390]:
+                - strong [ref=f1e391]: 使用等算力对照。
+                - text: 与 label smoothing、focal loss、token reweighting 和数据过滤比较时，保持模型、数据、训练 token 数与调参预算可比，避免把预算差异误读为损失函数收益。
+            - heading "与 LALP 的关系" [level=3] [ref=f1e392]
+            - paragraph [ref=f1e393]: LALP 处理“多个正确长轨迹中该选哪一条”，通过局部步骤分数减少后文复读对数据选择的影响；BLL 处理“已选定轨迹中的每个 token 应该施加多大更新”，通过有界梯度限制极低概率 token 的过度牵引。两者的共同问题是监督信号的粒度，但一个位于训练前、一个位于训练中，不能互相替代。
+            - heading "资料与制作边界" [level=3] [ref=f1e394]
+            - list [ref=f1e395]:
+              - listitem [ref=f1e396]: 本页只迁入 10 张静态 PNG 场景卡；不包含视频、音频、字幕、HTML 卡片、脚本或其他制作产物。
+              - listitem [ref=f1e397]: 正文中关于 BLL 的问题定义、机制性质、parameter-free 特征和跨模型/推理基准的总体结果，均限定在 ICML / OpenReview 官方摘要可支持的范围内。
+              - listitem [ref=f1e398]: 精确损失形式、阈值、分段函数、消融细节和数值结果留待可核验的同版本全文；附录建议也与论文事实主张明确分开。
+  - contentinfo [ref=f1e399]:
+    - paragraph [ref=f1e400]: Writing, experiments, and visual notes by 涛涛涛.
+    - paragraph [ref=f1e401]:
+      - link "GitHub" [ref=f1e402] [cursor=pointer]:
+        - /url: https://github.com/light8lee
+      - text: ·
+      - link "RSS" [ref=f1e403] [cursor=pointer]:
+        - /url: /atom.xml
+  - button "回到页面顶部"

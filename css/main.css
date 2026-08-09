@@ -563,10 +563,12 @@ img {
 }
 
 .post-card img {
-  aspect-ratio: 4 / 3;
+  /* Home covers are portrait-oriented; keep their upper copy readable. */
+  aspect-ratio: 1;
   border-radius: 6px;
   margin: -4px 0 16px;
   object-fit: cover;
+  object-position: center top;
   width: 100%;
 }
 
@@ -1211,6 +1213,92 @@ img {
   font-size: 0.9em;
 }
 
+/* ICML paper notes: each source card stays beside its evidence-backed long read. */
+.dpo-unchained-post .paper-card-note {
+  align-items: start;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: clamp(28px, 4vw, 52px);
+  grid-template-columns: minmax(360px, 0.92fr) minmax(0, 1.08fr);
+  padding: 52px 0 60px;
+}
+
+.dpo-unchained-post .paper-card-note > * {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.dpo-unchained-post .paper-card-note figure {
+  margin: 0;
+  position: sticky;
+  top: 28px;
+}
+
+.dpo-unchained-post .paper-card-note img {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 18px 48px rgba(29, 29, 31, 0.08);
+  display: block;
+  width: 100%;
+}
+
+.dpo-unchained-post .paper-card-copy h3 {
+  font-size: clamp(25px, 2.5vw, 32px);
+  letter-spacing: -0.025em;
+  line-height: 1.16;
+  margin: 6px 0 20px;
+}
+
+.dpo-unchained-post .paper-card-copy h4 {
+  color: var(--accent-2);
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 28px 0 10px;
+}
+
+.dpo-unchained-post .paper-card-copy p,
+.dpo-unchained-post .paper-card-copy li {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.78;
+}
+
+.dpo-unchained-post .paper-card-copy p {
+  margin: 0 0 15px;
+}
+
+.dpo-unchained-post .paper-card-copy table {
+  display: block;
+  font-size: 13px;
+  margin: 22px 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.dpo-unchained-post .paper-card-copy th,
+.dpo-unchained-post .paper-card-copy td {
+  min-width: 104px;
+  padding: 9px 10px;
+}
+
+.dpo-unchained-post .paper-card-copy .visual-note-index {
+  color: var(--accent-2);
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.dpo-unchained-post .paper-appendix {
+  border-top: 2px solid var(--line);
+  margin: 72px 0 0;
+  max-width: none;
+  padding-top: 42px;
+}
+
+.dpo-unchained-post .paper-appendix > :first-child {
+  margin-top: 0;
+}
+
 .chapter-navigation {
   border-top: 1px solid var(--line);
   margin: 48px auto 0;
@@ -1424,6 +1512,7 @@ img {
   .multi-agent-post .visual-note,
   .dive-into-codex-post .visual-note,
   .dpo-unchained-post .visual-note,
+  .dpo-unchained-post .paper-card-note,
   .maxrl-post .visual-note,
   .hscodecomp-post .visual-note,
   .visual-note {
@@ -1431,6 +1520,10 @@ img {
   }
 
   .visual-note figure {
+    position: static;
+  }
+
+  .dpo-unchained-post .paper-card-note figure {
     position: static;
   }
 

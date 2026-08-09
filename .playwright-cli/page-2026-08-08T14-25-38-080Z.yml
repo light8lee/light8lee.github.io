@@ -1,0 +1,655 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - link "涛涛涛 home" [ref=f2e3] [cursor=pointer]:
+      - /url: /
+      - generic [ref=f2e4]: 涛
+      - generic [ref=f2e5]: 涛涛涛
+    - navigation "Primary navigation" [ref=f2e6]:
+      - link "Home" [ref=f2e7] [cursor=pointer]:
+        - /url: /
+      - link "Writing" [ref=f2e8] [cursor=pointer]:
+        - /url: /archives.html
+      - link "Projects" [ref=f2e9] [cursor=pointer]:
+        - /url: /pages/projects.html
+      - link "Daydreams" [ref=f2e10] [cursor=pointer]:
+        - /url: /pages/notes.html
+      - link "About" [ref=f2e11] [cursor=pointer]:
+        - /url: /about.html
+  - main [ref=f2e12]:
+    - generic [ref=f2e13]:
+      - complementary [ref=f2e14]:
+        - navigation "本文目录" [ref=f2e15]:
+          - link "99.99% 的复读，为什么可能筛出更差的推理数据？" [ref=f2e16] [cursor=pointer]:
+            - /url: "#9999-%E7%9A%84%E5%A4%8D%E8%AF%BB%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%AF%E8%83%BD%E7%AD%9B%E5%87%BA%E6%9B%B4%E5%B7%AE%E7%9A%84%E6%8E%A8%E7%90%86%E6%95%B0%E6%8D%AE"
+          - link "11 张场景卡：从全局流畅度回到局部推理步骤" [ref=f2e17] [cursor=pointer]:
+            - /url: "#11-%E5%BC%A0%E5%9C%BA%E6%99%AF%E5%8D%A1%E4%BB%8E%E5%85%A8%E5%B1%80%E6%B5%81%E7%95%85%E5%BA%A6%E5%9B%9E%E5%88%B0%E5%B1%80%E9%83%A8%E6%8E%A8%E7%90%86%E6%AD%A5%E9%AA%A4"
+          - link "一个很高的概率，可能只是在复制刚写出的答案" [ref=f2e18] [cursor=pointer]:
+            - /url: "#section"
+          - link "LALP 要挑的不是“读起来最顺”的答案" [ref=f2e19] [cursor=pointer]:
+            - /url: "#lalp-"
+          - link "全局平均把不同性质的 token 混进一个票箱" [ref=f2e20] [cursor=pointer]:
+            - /url: "#token-"
+          - link "正确性与“对学生好不好教”是两道不同的门" [ref=f2e21] [cursor=pointer]:
+            - /url: "#section-1"
+          - link "第一项改动：每一步只看题目与最近前提" [ref=f2e22] [cursor=pointer]:
+            - /url: "#section-2"
+          - link "第二项改动：让步骤等权，而不是让长度决定话语权" [ref=f2e23] [cursor=pointer]:
+            - /url: "#section-3"
+          - link "为什么同一对候选会被两种聚合方式排出不同顺序？" [ref=f2e24] [cursor=pointer]:
+            - /url: "#section-4"
+          - link "新题不一定像旧题，但局部动作可以重组" [ref=f2e25] [cursor=pointer]:
+            - /url: "#section-5"
+          - link "具体改进：GALP 不只输给 LALP，甚至低于随机选择" [ref=f2e26] [cursor=pointer]:
+            - /url: "#galp--lalp"
+          - link "改进并非只出现在数学，但也不是放之四海皆准" [ref=f2e27] [cursor=pointer]:
+            - /url: "#section-6"
+          - link "筛数据，别只问“整篇顺不顺”" [ref=f2e28] [cursor=pointer]:
+            - /url: "#section-7"
+          - link "附录与延伸讨论" [ref=f2e29] [cursor=pointer]:
+            - /url: "#section-8"
+          - link "将 LALP 放入数据管线时，可额外记录什么？" [ref=f2e30] [cursor=pointer]:
+            - /url: "#lalp--1"
+          - link "与 BLL-Loss 的位置差异" [ref=f2e31] [cursor=pointer]:
+            - /url: "#bll-loss-"
+          - link "资料与制作边界" [ref=f2e32] [cursor=pointer]:
+            - /url: "#section-9"
+      - article [ref=f2e33]:
+        - generic [ref=f2e34]:
+          - paragraph [ref=f2e35]: 2026-08-05
+          - heading "LALP：99.99% 的复读，为什么可能筛出更差的推理数据？" [level=1] [ref=f2e36]
+          - paragraph [ref=f2e37]: 详细整理 LALP 如何用局部窗口和步骤等权，避免长推理中的 self-conditioning 让复读抬高全局似然；正文对应论文证据，工程筛选建议与开放问题集中放在文末。
+          - generic [ref=f2e38]:
+            - generic [ref=f2e39]: ICML 2026
+            - generic [ref=f2e40]: LLM Post-training
+            - generic [ref=f2e41]: SFT
+            - generic [ref=f2e42]: Data Selection
+            - generic [ref=f2e43]: Reasoning
+            - generic [ref=f2e44]: LALP
+        - generic [ref=f2e45]:
+          - heading "99.99% 的复读，为什么可能筛出更差的推理数据？" [level=1] [ref=f2e46]
+          - paragraph [ref=f2e47]: 多位教师都给出正确的长推理时，最自然的一条未必最适合拿来训练学生模型。问题不在答案真假，而在评分时把整条轨迹压成一个 token 平均分：前面真正困难的推导只出现一次，后面反复引用其结论却会变得极高概率，最终反而由“容易复读”的部分主导排序。
+          - paragraph [ref=f2e48]:
+            - text: ICML 2026 Spotlight 论文
+            - 'link "The Signal is in the Steps: Local Scoring for Reasoning Data Selection" [ref=f2e49] [cursor=pointer]':
+              - /url: https://openreview.net/forum?id=GcB3a6IonG
+            - text: 提出 LALP（Local Average Log Probability）。它不替代答案正确性验证；在候选已经通过验证的前提下，它用学生模型在局部上下文中完成每一步的自然度，来挑选更适合蒸馏的推理轨迹。
+          - generic [ref=f2e50]:
+            - link "OpenReview" [ref=f2e51] [cursor=pointer]:
+              - /url: https://openreview.net/forum?id=GcB3a6IonG
+            - link "arXiv" [ref=f2e52] [cursor=pointer]:
+              - /url: https://arxiv.org/abs/2510.03988
+            - link "ICML 2026" [ref=f2e53] [cursor=pointer]:
+              - /url: https://icml.cc/virtual/2026/poster/65123
+          - blockquote [ref=f2e54]:
+            - paragraph [ref=f2e55]:
+              - strong [ref=f2e56]: 本文主线：
+              - text: 对长推理做数据选择时，应该区分“模型看过自己的结论后会不会顺着复读”和“模型能不能首次完成关键推理转移”。LALP 的两项操作正是局部化上下文、再按步骤而非 token 数量聚合。
+          - heading "11 张场景卡：从全局流畅度回到局部推理步骤" [level=2] [ref=f2e57]
+          - generic [ref=f2e58]:
+            - figure [ref=f2e59]:
+              - img "99.99% 是个陷阱的封面卡片" [ref=f2e60]
+            - generic [ref=f2e61]:
+              - paragraph [ref=f2e62]: 01 / Self-conditioning
+              - heading "一个很高的概率，可能只是在复制刚写出的答案" [level=3] [ref=f2e63]
+              - paragraph [ref=f2e64]:
+                - text: 论文的
+                - code [ref=f2e65]: "1228"
+                - text: 例子把问题量化得很直观：模型第一次算出
+                - generic [ref=f2e66]:
+                  - generic [ref=f2e67]:
+                    - generic [ref=f2e68]: (
+                    - generic [ref=f2e70]:
+                      - generic [ref=f2e71]: "2"
+                      - generic [ref=f2e72]: "4"
+                      - generic [ref=f2e73]: "5"
+                      - generic [ref=f2e74]: "7"
+                    - generic [ref=f2e75]: −
+                    - generic [ref=f2e77]: "1"
+                    - generic [ref=f2e79]: )
+                    - generic [ref=f2e81]: /
+                    - generic [ref=f2e84]: "2"
+                    - generic [ref=f2e86]: =
+                    - generic [ref=f2e88]:
+                      - generic [ref=f2e89]: "1"
+                      - generic [ref=f2e90]: "2"
+                      - generic [ref=f2e91]: "2"
+                      - generic [ref=f2e92]: "8"
+                  - math [ref=f2e94]:
+                    - generic [ref=f2e95]: (
+                    - generic [ref=f2e96]: "2457"
+                    - generic [ref=f2e97]: −
+                    - generic [ref=f2e98]: "1"
+                    - generic [ref=f2e99]: )
+                    - generic [ref=f2e100]: /
+                    - generic [ref=f2e102]: "2"
+                    - generic [ref=f2e103]: =
+                    - generic [ref=f2e104]: "1228"
+                - text: 时，正确数字的概率约为
+                - strong [ref=f2e105]: 71%
+                - text: ；后文引用
+                - code [ref=f2e106]: "1228"
+                - text: 时升至
+                - strong [ref=f2e107]: 99.99%
+                - text: ，再用于后续算式时仍约
+                - strong [ref=f2e108]: 99.4%
+                - text: 。三次出现的表面字符串相同，认知负担却不同：第一次要求计算，之后只需读取并复制已在上下文中的结果。
+              - paragraph [ref=f2e109]:
+                - text: 这就是
+                - strong [ref=f2e110]: self-conditioning artifact
+                - text: ：模型已生成的上下文让后续 token 容易，并不代表首个推理转移容易。LALP 不是惩罚重复，而是阻止长答案把“之后会复读”误算成“起初更值得教”。
+          - generic [ref=f2e111]:
+            - figure [ref=f2e112]:
+              - img "LALP 论文与核心问题卡片" [ref=f2e113]
+            - generic [ref=f2e114]:
+              - paragraph [ref=f2e115]: 02 / Problem setting
+              - heading "LALP 要挑的不是“读起来最顺”的答案" [level=3] [ref=f2e116]
+              - paragraph [ref=f2e117]:
+                - text: 研究场景是多教师蒸馏：同一道题有多条
+                - strong [ref=f2e118]: 已经通过正确性过滤
+                - text: 的长推理，学生该学哪一条？LALP 的
+                - emphasis [ref=f2e119]: learnability
+                - text: 不等于正确性，也不等于教师写得漂亮；它指该学生是否更可能从局部前提出发，吸收并在新题中复用这条推理转移。
+              - paragraph [ref=f2e120]: 论文同时研究两种粒度：先为每位教师整体排序，再在同一 prompt 的混合教师候选池中逐题选出一条轨迹。后者尤其接近真实蒸馏管线：它不用承诺“哪位教师永远最好”，而是利用不同教师在不同步骤上的互补性。
+          - generic [ref=f2e121]:
+            - figure [ref=f2e122]:
+              - img "复读让全局评分升高的解释卡片" [ref=f2e123]
+            - generic [ref=f2e124]:
+              - paragraph [ref=f2e125]: 03 / Why GlobalLP drifts
+              - heading "全局平均把不同性质的 token 混进一个票箱" [level=3] [ref=f2e126]
+              - paragraph [ref=f2e127]: 全局平均 log probability（GALP）对整条回答的所有 token 做同权平均：
+              - generic [ref=f2e128]:
+                - generic [ref=f2e129]:
+                  - generic [ref=f2e130]:
+                    - generic [ref=f2e131]: G
+                    - generic [ref=f2e132]: A
+                    - generic [ref=f2e133]: L
+                    - generic [ref=f2e134]: P
+                  - generic [ref=f2e135]: (
+                  - generic [ref=f2e137]: "y"
+                  - generic [ref=f2e139]: )
+                  - generic [ref=f2e141]: =
+                  - generic [ref=f2e144]:
+                    - generic [ref=f2e145]: "1"
+                    - generic [ref=f2e153]:
+                      - generic [ref=f2e154]: "|"
+                      - generic [ref=f2e156]: "y"
+                      - generic [ref=f2e158]: "|"
+                  - generic [ref=f2e160]:
+                    - generic [ref=f2e162]:
+                      - generic [ref=f2e163]: "|"
+                      - generic [ref=f2e165]: "y"
+                      - generic [ref=f2e167]: "|"
+                    - generic [ref=f2e170]:
+                      - generic [ref=f2e171]: ∑
+                      - generic [ref=f2e177]:
+                        - generic [ref=f2e178]: t
+                        - generic [ref=f2e180]: =
+                        - generic [ref=f2e182]: "1"
+                  - generic [ref=f2e184]:
+                    - generic [ref=f2e185]: l
+                    - generic [ref=f2e186]: o
+                    - generic [ref=f2e187]: g
+                  - generic [ref=f2e188]:
+                    - generic [ref=f2e189]: p
+                    - generic [ref=f2e191]: θ
+                  - generic [ref=f2e194]: (
+                  - generic [ref=f2e196]:
+                    - generic [ref=f2e197]: "y"
+                    - generic [ref=f2e199]: t
+                  - generic [ref=f2e202]: ∣
+                  - generic [ref=f2e204]: x
+                  - generic [ref=f2e206]: ","
+                  - generic [ref=f2e208]:
+                    - generic [ref=f2e209]: "y"
+                    - generic [ref=f2e212]:
+                      - generic [ref=f2e213]: <
+                      - generic [ref=f2e215]: t
+                  - generic [ref=f2e217]: )
+                  - generic [ref=f2e219]: .
+                - math [ref=f2e222]:
+                  - generic [ref=f2e223]: GALP
+                  - generic [ref=f2e224]: (
+                  - generic [ref=f2e225]: "y"
+                  - generic [ref=f2e226]: )
+                  - generic [ref=f2e227]: =
+                  - generic [ref=f2e228]:
+                    - generic [ref=f2e229]: "1"
+                    - generic [ref=f2e230]:
+                      - generic [ref=f2e231]: "|"
+                      - generic [ref=f2e232]: "y"
+                      - generic [ref=f2e233]: "|"
+                  - generic [ref=f2e234]:
+                    - generic [ref=f2e235]: ∑
+                    - generic [ref=f2e236]:
+                      - generic [ref=f2e237]: t
+                      - generic [ref=f2e238]: =
+                      - generic [ref=f2e239]: "1"
+                    - generic [ref=f2e240]:
+                      - generic [ref=f2e241]: "|"
+                      - generic [ref=f2e242]: "y"
+                      - generic [ref=f2e243]: "|"
+                  - generic [ref=f2e244]: log
+                  - generic: ⁡
+                  - generic [ref=f2e245]:
+                    - generic [ref=f2e246]: p
+                    - generic [ref=f2e247]: θ
+                  - generic [ref=f2e248]: (
+                  - generic [ref=f2e249]:
+                    - generic [ref=f2e250]: "y"
+                    - generic [ref=f2e251]: t
+                  - generic [ref=f2e252]: ∣
+                  - generic [ref=f2e253]: x
+                  - generic [ref=f2e254]: ","
+                  - generic [ref=f2e255]:
+                    - generic [ref=f2e256]: "y"
+                    - generic [ref=f2e257]:
+                      - generic [ref=f2e258]: <
+                      - generic [ref=f2e259]: t
+                  - generic [ref=f2e260]: )
+                  - generic [ref=f2e261]: .
+              - paragraph [ref=f2e262]:
+                - text: 后文不会回头改写早期难步骤的分数；影响发生在候选
+                - strong [ref=f2e263]: 排序
+                - text: 上。重复、套话或结论复述会不断向总平均加入高概率 token，早期真正决定解题成败的低概率转移因而被稀释。论文进一步观察到，global 与 local 的分数差会随回答位置扩大，正是上下文累积带来的 self-conditioning 信号。
+          - generic [ref=f2e264]:
+            - figure [ref=f2e265]:
+              - img "正确候选之间仍需选择监督质量的卡片" [ref=f2e266]
+            - generic [ref=f2e267]:
+              - paragraph [ref=f2e268]: 04 / What LALP does not do
+              - heading "正确性与“对学生好不好教”是两道不同的门" [level=3] [ref=f2e269]
+              - paragraph [ref=f2e270]: LALP 不承担 verifier 的职责。答案是否正确、事实是否成立、代码是否通过测试，应先由外部验证器、答案比对或其他质量门槛处理；LALP 只在通过该门槛的候选间排序监督质量。
+              - paragraph [ref=f2e271]: 这一区分避免一个常见误用：把学生模型当前的自然度当作真值。低 LALP 可以意味着这条正确轨迹不适合当前学生，也可能意味着需要更大窗口或更好的步骤切分；它本身不能证明教师答案错误。
+          - generic [ref=f2e272]:
+            - figure [ref=f2e273]:
+              - img "LALP 使用题目与最近步骤窗口的卡片" [ref=f2e274]
+            - generic [ref=f2e275]:
+              - paragraph [ref=f2e276]: 05 / Local window
+              - heading "第一项改动：每一步只看题目与最近前提" [level=3] [ref=f2e277]
+              - paragraph [ref=f2e278]:
+                - text: 将回答切为
+                - generic [ref=f2e279]:
+                  - generic [ref=f2e280]: p
+                  - math [ref=f2e284]:
+                    - generic [ref=f2e285]: p
+                - text: 个步骤
+                - generic [ref=f2e286]:
+                  - generic [ref=f2e287]:
+                    - generic [ref=f2e288]:
+                      - generic [ref=f2e289]: s
+                      - generic [ref=f2e291]: "1"
+                    - generic [ref=f2e294]: ","
+                    - generic [ref=f2e296]: …
+                    - generic [ref=f2e298]: ","
+                    - generic [ref=f2e300]:
+                      - generic [ref=f2e301]: s
+                      - generic [ref=f2e303]: p
+                  - math [ref=f2e307]:
+                    - generic [ref=f2e308]:
+                      - generic [ref=f2e309]: s
+                      - generic [ref=f2e310]: "1"
+                    - generic [ref=f2e311]: ","
+                    - generic [ref=f2e312]: …
+                    - generic [ref=f2e313]: ","
+                    - generic [ref=f2e314]:
+                      - generic [ref=f2e315]: s
+                      - generic [ref=f2e316]: p
+                - text: 。第
+                - generic [ref=f2e317]:
+                  - generic [ref=f2e318]: i
+                  - math [ref=f2e322]:
+                    - generic [ref=f2e323]: i
+                - text: 步只看到问题
+                - generic [ref=f2e324]:
+                  - generic [ref=f2e325]: x
+                  - math [ref=f2e329]:
+                    - generic [ref=f2e330]: x
+                - text: 、最近
+                - generic [ref=f2e331]:
+                  - generic [ref=f2e332]: k
+                  - math [ref=f2e336]:
+                    - generic [ref=f2e337]: k
+                - text: 个前置步骤和该步骤内部 token：
+              - generic [ref=f2e338]:
+                - generic [ref=f2e339]:
+                  - generic [ref=f2e340]:
+                    - generic [ref=f2e341]: L
+                    - generic [ref=f2e342]: o
+                    - generic [ref=f2e343]: c
+                    - generic [ref=f2e344]: a
+                    - generic [ref=f2e345]: l
+                    - generic [ref=f2e346]: L
+                    - generic [ref=f2e347]: P
+                  - generic [ref=f2e348]: (
+                  - generic [ref=f2e350]:
+                    - generic [ref=f2e351]: s
+                    - generic [ref=f2e353]: i
+                  - generic [ref=f2e356]: )
+                  - generic [ref=f2e358]: =
+                  - generic [ref=f2e361]:
+                    - generic [ref=f2e362]: "1"
+                    - generic [ref=f2e370]:
+                      - generic [ref=f2e371]: "|"
+                      - generic [ref=f2e373]:
+                        - generic [ref=f2e374]: s
+                        - generic [ref=f2e376]: i
+                      - generic [ref=f2e379]: "|"
+                  - generic [ref=f2e381]:
+                    - generic [ref=f2e383]:
+                      - generic [ref=f2e384]: "|"
+                      - generic [ref=f2e386]:
+                        - generic [ref=f2e387]: s
+                        - generic [ref=f2e389]: i
+                      - generic [ref=f2e392]: "|"
+                    - generic [ref=f2e395]:
+                      - generic [ref=f2e396]: ∑
+                      - generic [ref=f2e402]:
+                        - generic [ref=f2e403]: t
+                        - generic [ref=f2e405]: =
+                        - generic [ref=f2e407]: "1"
+                  - generic [ref=f2e409]:
+                    - generic [ref=f2e410]: l
+                    - generic [ref=f2e411]: o
+                    - generic [ref=f2e412]: g
+                  - generic [ref=f2e413]:
+                    - generic [ref=f2e414]: p
+                    - generic [ref=f2e416]: θ
+                  - generic [ref=f2e419]:
+                    - generic [ref=f2e420]: (
+                    - generic [ref=f2e422]:
+                      - generic [ref=f2e423]: s
+                      - generic [ref=f2e426]:
+                        - generic [ref=f2e427]: i
+                        - generic [ref=f2e429]: ","
+                        - generic [ref=f2e431]: t
+                    - generic [ref=f2e433]: ∣
+                    - generic [ref=f2e435]: x
+                    - generic [ref=f2e437]: ","
+                    - generic [ref=f2e439]:
+                      - generic [ref=f2e440]: s
+                      - generic [ref=f2e443]:
+                        - generic [ref=f2e444]: i
+                        - generic [ref=f2e446]: −
+                        - generic [ref=f2e448]: k
+                        - generic [ref=f2e450]: ":"
+                        - generic [ref=f2e452]: i
+                        - generic [ref=f2e454]: −
+                        - generic [ref=f2e456]: "1"
+                    - generic [ref=f2e458]: ","
+                    - generic [ref=f2e460]:
+                      - generic [ref=f2e461]: s
+                      - generic [ref=f2e464]:
+                        - generic [ref=f2e465]: i
+                        - generic [ref=f2e467]: ","
+                        - generic [ref=f2e469]: <
+                        - generic [ref=f2e471]: t
+                    - generic [ref=f2e473]: )
+                  - generic [ref=f2e475]: .
+                - math [ref=f2e478]:
+                  - generic [ref=f2e479]: LocalLP
+                  - generic [ref=f2e480]: (
+                  - generic [ref=f2e481]:
+                    - generic [ref=f2e482]: s
+                    - generic [ref=f2e483]: i
+                  - generic [ref=f2e484]: )
+                  - generic [ref=f2e485]: =
+                  - generic [ref=f2e486]:
+                    - generic [ref=f2e487]: "1"
+                    - generic [ref=f2e488]:
+                      - generic [ref=f2e489]: "|"
+                      - generic [ref=f2e490]:
+                        - generic [ref=f2e491]: s
+                        - generic [ref=f2e492]: i
+                      - generic [ref=f2e493]: "|"
+                  - generic [ref=f2e494]:
+                    - generic [ref=f2e495]: ∑
+                    - generic [ref=f2e496]:
+                      - generic [ref=f2e497]: t
+                      - generic [ref=f2e498]: =
+                      - generic [ref=f2e499]: "1"
+                    - generic [ref=f2e500]:
+                      - generic [ref=f2e501]: "|"
+                      - generic [ref=f2e502]:
+                        - generic [ref=f2e503]: s
+                        - generic [ref=f2e504]: i
+                      - generic [ref=f2e505]: "|"
+                  - generic [ref=f2e506]: log
+                  - generic: ⁡
+                  - generic [ref=f2e507]:
+                    - generic [ref=f2e508]: p
+                    - generic [ref=f2e509]: θ
+                  - generic [ref=f2e510]:
+                    - generic [ref=f2e511]: (
+                    - generic [ref=f2e512]:
+                      - generic [ref=f2e513]: s
+                      - generic [ref=f2e514]:
+                        - generic [ref=f2e515]: i
+                        - generic [ref=f2e516]: ","
+                        - generic [ref=f2e517]: t
+                    - generic [ref=f2e518]: ∣
+                    - generic [ref=f2e519]: x
+                    - generic [ref=f2e520]: ","
+                    - generic [ref=f2e521]:
+                      - generic [ref=f2e522]: s
+                      - generic [ref=f2e523]:
+                        - generic [ref=f2e524]: i
+                        - generic [ref=f2e525]: −
+                        - generic [ref=f2e526]: k
+                        - generic [ref=f2e527]: ":"
+                        - generic [ref=f2e528]: i
+                        - generic [ref=f2e529]: −
+                        - generic [ref=f2e530]: "1"
+                    - generic [ref=f2e531]: ","
+                    - generic [ref=f2e532]:
+                      - generic [ref=f2e533]: s
+                      - generic [ref=f2e534]:
+                        - generic [ref=f2e535]: i
+                        - generic [ref=f2e536]: ","
+                        - generic [ref=f2e537]: <
+                        - generic [ref=f2e538]: t
+                    - generic [ref=f2e539]: )
+                  - generic [ref=f2e540]: .
+              - paragraph [ref=f2e541]:
+                - text: 小窗口保留近处推导的必要条件，又减少遥远上文已经泄露答案的影响。论文的窗口消融以可用前缀步骤的比例衡量：
+                - strong [ref=f2e542]: 5%–25%
+                - text: 的小窗口得到稳定、且与下游表现一致的教师排序；窗口增至
+                - strong [ref=f2e543]: 50%–75%
+                - text: 时，排序逐渐向 GALP 靠拢。这说明“局部”是方法有效性的核心条件，而非格式装饰。
+          - generic [ref=f2e544]:
+            - figure [ref=f2e545]:
+              - img "LALP 按步骤等权平均的公式卡片" [ref=f2e546]
+            - generic [ref=f2e547]:
+              - paragraph [ref=f2e548]: 06 / Step-level aggregation
+              - heading "第二项改动：让步骤等权，而不是让长度决定话语权" [level=3] [ref=f2e549]
+              - paragraph [ref=f2e550]: LALP 再对步骤分数平均：
+              - generic [ref=f2e551]:
+                - generic [ref=f2e552]:
+                  - generic [ref=f2e553]:
+                    - generic [ref=f2e554]: L
+                    - generic [ref=f2e555]: A
+                    - generic [ref=f2e556]: L
+                    - generic [ref=f2e557]: P
+                  - generic [ref=f2e558]: (
+                  - generic [ref=f2e560]: "y"
+                  - generic [ref=f2e562]: )
+                  - generic [ref=f2e564]: =
+                  - generic [ref=f2e567]:
+                    - generic [ref=f2e568]: "1"
+                    - generic [ref=f2e571]: p
+                  - generic [ref=f2e578]:
+                    - generic [ref=f2e579]: p
+                    - generic [ref=f2e584]:
+                      - generic [ref=f2e585]: ∑
+                      - generic [ref=f2e591]:
+                        - generic [ref=f2e592]: i
+                        - generic [ref=f2e594]: =
+                        - generic [ref=f2e596]: "1"
+                  - generic [ref=f2e598]:
+                    - generic [ref=f2e599]: L
+                    - generic [ref=f2e600]: o
+                    - generic [ref=f2e601]: c
+                    - generic [ref=f2e602]: a
+                    - generic [ref=f2e603]: l
+                    - generic [ref=f2e604]: L
+                    - generic [ref=f2e605]: P
+                  - generic [ref=f2e606]: (
+                  - generic [ref=f2e608]:
+                    - generic [ref=f2e609]: s
+                    - generic [ref=f2e611]: i
+                  - generic [ref=f2e614]: )
+                  - generic [ref=f2e616]: .
+                - math [ref=f2e619]:
+                  - generic [ref=f2e620]: LALP
+                  - generic [ref=f2e621]: (
+                  - generic [ref=f2e622]: "y"
+                  - generic [ref=f2e623]: )
+                  - generic [ref=f2e624]: =
+                  - generic [ref=f2e625]:
+                    - generic [ref=f2e626]: "1"
+                    - generic [ref=f2e627]: p
+                  - generic [ref=f2e628]:
+                    - generic [ref=f2e629]: ∑
+                    - generic [ref=f2e630]:
+                      - generic [ref=f2e631]: i
+                      - generic [ref=f2e632]: =
+                      - generic [ref=f2e633]: "1"
+                    - generic [ref=f2e634]: p
+                  - generic [ref=f2e636]: LocalLP
+                  - generic [ref=f2e637]: (
+                  - generic [ref=f2e638]:
+                    - generic [ref=f2e639]: s
+                    - generic [ref=f2e640]: i
+                  - generic [ref=f2e641]: )
+                  - generic [ref=f2e642]: .
+              - paragraph [ref=f2e643]:
+                - text: 步骤内部仍是 token 平均；变化出现在步骤之间。一段 100-token 的展开和一段 10-token 的关键代入，各自都只得到一个步骤的权重。论文的 token 归因分析也显示，这种改动会把注意力从可预测的 discourse/filler 移开：GALP 的归因质量中 filler 占
+                - strong [ref=f2e644]: 42.3%
+                - text: ，LALP 为
+                - strong [ref=f2e645]: 18.7%
+                - text: ；数学符号从
+                - strong [ref=f2e646]: 31.2%
+                - text: 提升到
+                - strong [ref=f2e647]: 48.6%
+                - text: ，推理连接词从
+                - strong [ref=f2e648]: 12.8%
+                - text: 提升到
+                - strong [ref=f2e649]: 22.4%
+                - text: 。
+          - generic [ref=f2e650]:
+            - figure [ref=f2e651]:
+              - img "全局评分与 LALP 在两个候选间选择翻转的示例卡片" [ref=f2e652]
+            - generic [ref=f2e653]:
+              - paragraph [ref=f2e654]: 07 / Worked example
+              - heading "为什么同一对候选会被两种聚合方式排出不同顺序？" [level=3] [ref=f2e655]
+              - paragraph [ref=f2e656]: 卡片中的 A/B 是说明性例子，不是论文实验数据。A 在第一个短步骤上很难，却在后面 90 个 token 中反复复读；B 的两个步骤都较稳定。按 token 聚合，A 的大量容易 token 把平均值推高；按步骤聚合，A 的难步骤不能被长度淹没，B 因每一步都更可预测而被选中。
+              - paragraph [ref=f2e657]: 这个例子同时拆开 LALP 的两个作用：局部窗口降低“见过后再说”的虚高概率，步骤等权降低“写得更长所以更有票数”的影响。只使用其中一个改动，仍可能留下另一种粒度错位。
+          - generic [ref=f2e658]:
+            - figure [ref=f2e659]:
+              - img "完整轨迹稀疏而局部推理步骤可重组的卡片" [ref=f2e660]
+            - generic [ref=f2e661]:
+              - paragraph [ref=f2e662]: 08 / Transferability hypothesis
+              - heading "新题不一定像旧题，但局部动作可以重组" [level=3] [ref=f2e663]
+              - paragraph [ref=f2e664]: 论文的泛化解释是覆盖密度差异：完整测试轨迹在训练集中通常近邻稀疏，而代入、定义设置、定理应用等局部步骤更容易找到相似支持。因此新题求解更像重组小动作，而不是检索一整条旧答案。
+              - paragraph [ref=f2e665]:
+                - text: 这不是把步骤当作完全独立的 token 块。LALP 仍让当前步骤读取最近
+                - generic [ref=f2e666]:
+                  - generic [ref=f2e667]: k
+                  - math [ref=f2e671]:
+                    - generic [ref=f2e672]: k
+                - text: 步，承认局部前提链；它反对的是让极长的远程上下文无限制参与评分。这个假设也解释了为什么训练 loss 更低不必然带来更高泛化：最容易被整体拟合的轨迹，可能恰好包含最多“可复制但不可迁移”的部分。
+          - generic [ref=f2e673]:
+            - figure [ref=f2e674]:
+              - img "LALP 在混合教师数学选择中从 0.632 到 0.726 的结果卡片" [ref=f2e675]
+            - generic [ref=f2e676]:
+              - paragraph [ref=f2e677]: 09 / Mixed-teacher result
+              - heading "具体改进：GALP 不只输给 LALP，甚至低于随机选择" [level=3] [ref=f2e678]
+              - paragraph [ref=f2e679]:
+                - text: 在混合教师池中，论文为每个 prompt 从正确轨迹里选一条，形成
+                - strong [ref=f2e680]: "817"
+                - text: 个样本的 curated dataset。对 Qwen2.5-32B-Instruct，七项数学评测的平均结果如下：
+              - table [ref=f2e681]:
+                - rowgroup [ref=f2e682]:
+                  - row [ref=f2e683]:
+                    - columnheader "选择规则" [ref=f2e684]
+                    - columnheader "平均分" [ref=f2e685]
+                - rowgroup [ref=f2e686]:
+                  - row [ref=f2e687]:
+                    - cell "Random" [ref=f2e688]
+                    - cell "0.651" [ref=f2e689]
+                  - row [ref=f2e690]:
+                    - cell "GALP（全局最高）" [ref=f2e691]
+                    - cell "0.632" [ref=f2e692]
+                  - row [ref=f2e693]:
+                    - cell "Local Lowest" [ref=f2e694]
+                    - cell "0.623" [ref=f2e695]
+                  - row [ref=f2e696]:
+                    - cell [ref=f2e697]:
+                      - strong [ref=f2e698]: LALP（局部最高）
+                    - cell [ref=f2e699]:
+                      - strong [ref=f2e700]: "0.726"
+              - paragraph [ref=f2e701]:
+                - text: LALP 比 GALP 高
+                - strong [ref=f2e702]: 9.4 个百分点
+                - text: ，也超过随机的 0.651；论文还报告它高于最强单一教师 QwQ-32B 的 0.719。这使结论更具体：在这个长轨迹、混合教师设置里，GALP 不只是噪声更大，而是可能系统性地排错了候选。
+          - generic [ref=f2e703]:
+            - figure [ref=f2e704]:
+              - img "LALP 适用边界与远距离依赖的卡片" [ref=f2e705]
+            - generic [ref=f2e706]:
+              - paragraph [ref=f2e707]: 10 / Scope and transfer
+              - heading "改进并非只出现在数学，但也不是放之四海皆准" [level=3] [ref=f2e708]
+              - paragraph [ref=f2e709]:
+                - text: 用 LIMO 选择的数学数据训练后，论文还在 GPQA-Diamond 与 LiveCodeBench v2 评测迁移：GPQA-Diamond 从 GALP 的
+                - strong [ref=f2e710]: "0.611"
+                - text: 到 LALP 的
+                - strong [ref=f2e711]: "0.702"
+                - text: （+9.1 点）；LiveCodeBench-Hard 从
+                - strong [ref=f2e712]: "0.232"
+                - text: 到
+                - strong [ref=f2e713]: "0.261"
+                - text: （+2.9 点）。这些数字支持局部选择的收益并不限于数学平均分。
+              - paragraph [ref=f2e714]: 另一方面，论文复现了单一教师、短回答中 GALP 有效的既有现象。LALP 的优势针对的是长推理与多教师混合下的粒度错位；若任务需要真正的远距离依赖，窗口过短反而会遗漏关键信息。步骤切分质量、窗口大小和任务结构必须一起验证。
+          - generic [ref=f2e715]:
+            - figure [ref=f2e716]:
+              - img "筛选数据不要只看整篇流畅度的结尾卡片" [ref=f2e717]
+            - generic [ref=f2e718]:
+              - paragraph [ref=f2e719]: 11 / Reading takeaway
+              - heading "筛数据，别只问“整篇顺不顺”" [level=3] [ref=f2e720]
+              - paragraph [ref=f2e721]: LALP 的核心不是宣布“低概率步骤都更好”，也不是以局部评分替代正确性检查。它提出一个更窄、可检验的问题：若学生最终需要把局部推理动作重组到新题上，候选数据的排序是否也该主要审视这些动作的局部可支持性？
+              - paragraph [ref=f2e722]: 对长轨迹蒸馏而言，这个问题会暴露那些看似无害的 easy token：结论复读、模板化过渡和长篇解释能让全局平均很漂亮，却不一定提升首次推导的能力。
+          - generic [ref=f2e723]:
+            - heading "附录与延伸讨论" [level=2] [ref=f2e724]
+            - paragraph [ref=f2e725]: 以下内容是根据论文边界整理出的工程讨论，不是论文已经验证的通用训练配方。
+            - heading "将 LALP 放入数据管线时，可额外记录什么？" [level=3] [ref=f2e726]
+            - list [ref=f2e727]:
+              - listitem [ref=f2e728]:
+                - strong [ref=f2e729]: 把正确性与可学习性分开保存。
+                - text: 先保留 verifier、事实检查或答案比对的结果，再记录 LALP 作为正确候选之间的选择依据，避免评分器被误用为正确性判定器。
+              - listitem [ref=f2e730]:
+                - strong [ref=f2e731]: 同时审计 GALP 与 LALP。
+                - text: 若二者分歧很大，可检查候选是否存在长重复、模板性结尾，或单个关键步骤被长解释掩盖；分歧本身不是自动删样本的理由。
+              - listitem [ref=f2e732]:
+                - strong [ref=f2e733]: 对窗口和切分做敏感性分析。
+                - text: 在数学证明、代码轨迹、工具调用等任务上分别测试
+                - generic [ref=f2e734]:
+                  - generic [ref=f2e735]: k
+                  - math [ref=f2e739]:
+                    - generic [ref=f2e740]: k
+                - text: 与步骤切分规则，观察排名是否稳定，尤其检查远程依赖是否被误伤。
+              - listitem [ref=f2e741]:
+                - strong [ref=f2e742]: 让选择成本进入评估。
+                - text: LALP 需要步骤切分和多次局部打分；在比较训练收益时，应并列报告筛选成本、候选数、训练预算与下游泛化，而不只保留最终准确率。
+            - heading "与 BLL-Loss 的位置差异" [level=3] [ref=f2e743]
+            - paragraph [ref=f2e744]: LALP 和下一集的 BLL-Loss 都在追问“token 概率该怎样影响学习”，但操作位置不同：LALP 在训练前的候选轨迹层做选择，减少复读对整条数据分数的掩盖；BLL-Loss 在训练时的 token 层限制极低概率目标对更新的过度牵引。一个调整进入训练的轨迹，另一个调整已进入训练的局部优化力度。
+            - heading "资料与制作边界" [level=3] [ref=f2e745]
+            - list [ref=f2e746]:
+              - listitem [ref=f2e747]: 本页只迁入 11 张静态 PNG 场景卡；未包含视频、音频、字幕、HTML 卡片、脚本或其他制作产物。
+              - listitem [ref=f2e748]: LALP 的定义、self-conditioning 案例、实验设置与结果来自论文及其公开页面。
+              - listitem [ref=f2e749]: 附录的审计建议、管线建议和与 BLL 的工程性比较均为延伸讨论，与论文实验事实分开呈现。
+  - contentinfo [ref=f2e750]:
+    - paragraph [ref=f2e751]: Writing, experiments, and visual notes by 涛涛涛.
+    - paragraph [ref=f2e752]:
+      - link "GitHub" [ref=f2e753] [cursor=pointer]:
+        - /url: https://github.com/light8lee
+      - text: ·
+      - link "RSS" [ref=f2e754] [cursor=pointer]:
+        - /url: /atom.xml
+  - button "回到页面顶部" [ref=f2e755] [cursor=pointer]

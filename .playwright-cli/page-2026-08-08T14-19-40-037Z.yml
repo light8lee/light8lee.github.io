@@ -1,0 +1,654 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - link "涛涛涛 home" [ref=f1e3] [cursor=pointer]:
+      - /url: /
+      - generic [ref=f1e4]: 涛
+      - generic [ref=f1e5]: 涛涛涛
+    - navigation "Primary navigation" [ref=f1e6]:
+      - link "Home" [ref=f1e7] [cursor=pointer]:
+        - /url: /
+      - link "Writing" [ref=f1e8] [cursor=pointer]:
+        - /url: /archives.html
+      - link "Projects" [ref=f1e9] [cursor=pointer]:
+        - /url: /pages/projects.html
+      - link "Daydreams" [ref=f1e10] [cursor=pointer]:
+        - /url: /pages/notes.html
+      - link "About" [ref=f1e11] [cursor=pointer]:
+        - /url: /about.html
+  - main [ref=f1e12]:
+    - generic [ref=f1e15]:
+      - paragraph [ref=f1e16]: Agent RL · Engineering Notes · Visual Explainers
+      - heading "涛涛涛" [level=1] [ref=f1e17]
+      - paragraph [ref=f1e18]: Writing about agents, reinforcement learning, systems, and the craft of making technical ideas easier to see.
+    - region [ref=f1e19]:
+      - generic [ref=f1e20]:
+        - paragraph [ref=f1e21]: Follow Along
+        - heading "在小红书和抖音找到我" [level=2] [ref=f1e22]
+        - paragraph [ref=f1e23]: 玄学调参师，随缘捉虫子。扫码关注，后续的技术笔记、图解和短视频会同步更新。
+      - generic "Social QR codes" [ref=f1e24]:
+        - figure "小红书 涛涛涛 小红书号：2698745864" [ref=f1e25]:
+          - img "小红书二维码，扫码关注涛涛涛" [ref=f1e27]
+          - generic [ref=f1e28]:
+            - generic [ref=f1e29]: 小红书
+            - strong [ref=f1e30]: 涛涛涛
+            - generic [ref=f1e31]: 小红书号：2698745864
+        - figure "抖音 涛涛涛 抖音号：taotaotao12053" [ref=f1e32]:
+          - img "抖音二维码，扫码关注涛涛涛" [ref=f1e34]
+          - generic [ref=f1e35]:
+            - generic [ref=f1e36]: 抖音
+            - strong [ref=f1e37]: 涛涛涛
+            - generic [ref=f1e38]: 抖音号：taotaotao12053
+    - generic [ref=f1e39]:
+      - generic [ref=f1e40]:
+        - heading "Latest Writing" [level=2] [ref=f1e41]
+        - link "Archive" [ref=f1e42] [cursor=pointer]:
+          - /url: /archives.html
+      - generic [ref=f1e43]:
+        - search [ref=f1e44]:
+          - searchbox "搜索文章" [ref=f1e48]
+          - generic [ref=f1e49]: /
+        - paragraph [ref=f1e50]
+        - generic "Video collections" [ref=f1e51]:
+          - button "全部" [pressed] [ref=f1e52] [cursor=pointer]
+          - button "大模型基础知识" [ref=f1e53] [cursor=pointer]
+          - button "后训练" [ref=f1e54] [cursor=pointer]
+          - button "agent" [ref=f1e55] [cursor=pointer]
+          - button "dive-into-codex" [ref=f1e56] [cursor=pointer]
+          - button "反馈优化" [ref=f1e57] [cursor=pointer]
+        - generic [ref=f1e58]:
+          - generic [ref=f1e59]: 主题
+          - combobox "按主题筛选文章" [ref=f1e60]:
+            - option "全部主题" [selected]
+            - option "MaxRL"
+            - option "GRPO"
+            - option "智能体"
+            - option "智能体运行时"
+            - option "强化学习"
+            - option "后训练"
+            - option "偏好对齐"
+            - option "安全对齐"
+            - option "长上下文"
+            - option "记忆系统"
+            - option "工具调用"
+            - option "多智能体"
+            - option "基准评测"
+            - option "大模型"
+            - option "模型架构"
+            - option "策略优化"
+      - generic [ref=f1e61]:
+        - article [ref=f1e62]:
+          - link [ref=f1e63] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/08/06/icml-2026-bll-loss.html
+            - text: 2026-08-06
+            - heading "BLL-Loss：低概率 Token，为什么不该无限主导 SFT 更新？" [level=3] [ref=f1e64]
+            - generic "Tags" [ref=f1e65]:
+              - generic [ref=f1e66]: ICML 2026
+              - generic [ref=f1e67]: LLM Post-training
+              - generic [ref=f1e68]: SFT
+              - generic [ref=f1e69]: Reasoning
+            - paragraph [ref=f1e70]: 整理 BLL-Loss 对低概率 token 施加有界梯度的动机、训练位置与适用边界；严格区分官方摘要已支持的结论和文末的工程讨论。
+        - article [ref=f1e71]:
+          - link [ref=f1e72] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/08/05/icml-2026-lalp.html
+            - text: 2026-08-05
+            - heading "LALP：99.99% 的复读，为什么可能筛出更差的推理数据？" [level=3] [ref=f1e73]
+            - generic "Tags" [ref=f1e74]:
+              - generic [ref=f1e75]: ICML 2026
+              - generic [ref=f1e76]: LLM Post-training
+              - generic [ref=f1e77]: SFT
+              - generic [ref=f1e78]: Data Selection
+            - paragraph [ref=f1e79]: 详细整理 LALP 如何用局部窗口和步骤等权，避免长推理中的 self-conditioning 让复读抬高全局似然；正文对应论文证据，工程筛选建议与开放问题集中放在文末。
+        - article [ref=f1e80]:
+          - link [ref=f1e81] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/08/04/icml-2026-pipe.html
+            - text: 2026-08-04
+            - heading "PIPE：工具改名后，Agent 为什么可能不会用了？" [level=3] [ref=f1e82]
+            - generic "Tags" [ref=f1e83]:
+              - generic [ref=f1e84]: ICML 2026
+              - generic [ref=f1e85]: Agent
+              - generic [ref=f1e86]: Trajectory SFT
+              - generic [ref=f1e87]: Tool Use
+            - paragraph [ref=f1e88]: 用 PIPE 的最小接口改写、counterbalanced aliases 和 IR 指标，拆开轨迹 SFT 的工具语义学习与接口记忆；将训练建议和真实 API 迁移的边界放在文末。
+        - article [ref=f1e89]:
+          - link [ref=f1e90] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/08/03/icml-2026-menvagent.html
+            - text: 2026-08-03
+            - heading "MEnvAgent：修 Bug 前，环境先崩了" [level=3] [ref=f1e91]
+            - generic "Tags" [ref=f1e92]:
+              - generic [ref=f1e93]: ICML 2026
+              - generic [ref=f1e94]: Software Engineering
+              - generic [ref=f1e95]: Environment Construction
+              - generic [ref=f1e96]: Docker
+            - paragraph [ref=f1e97]: 详细梳理 MEnvAgent 怎样用 Planning–Execution–Verification 和环境增量复用，构造可验证的软件工程环境；把 F2P、效率结果与语义漂移边界分层呈现。
+        - article [ref=f1e98]:
+          - link [ref=f1e99] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/08/02/dpo-unchained.html
+            - text: 2026-08-02
+            - heading "DPO Unchained：从偏好标签到可审计的选择建模" [level=3] [ref=f1e100]
+            - generic "Tags" [ref=f1e101]:
+              - generic [ref=f1e102]: ICML 2026
+              - generic [ref=f1e103]: LLM Post-training
+              - generic [ref=f1e104]: DPO
+              - generic [ref=f1e105]: Preference Optimization
+            - paragraph [ref=f1e106]: 把 S1E3 的五句话口播拆成一篇论文深读：标准 DPO 绑定了哪些假设，properness 为什么是规范底线，以及如何从长度、位置与弃权开始设计一套可审计的偏好训练。
+        - article [ref=f1e107]:
+          - link [ref=f1e108] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/08/01/icml-2026-terminaltraj.html
+            - text: 2026-08-01
+            - heading "TerminalTraj：命令成功，为什么奖励仍然是 0？" [level=3] [ref=f1e109]
+            - generic "Tags" [ref=f1e110]:
+              - generic [ref=f1e111]: ICML 2026
+              - generic [ref=f1e112]: Terminal Agent
+              - generic [ref=f1e113]: Agentic Data
+              - generic [ref=f1e114]: Docker
+            - paragraph [ref=f1e115]: 从 Docker 环境、任务生成到任务专属 verifier，梳理 TerminalTraj 如何构造可执行、可复查的终端 Agent 轨迹；工程推论与尚未解决的问题收在文末。
+        - article [ref=f1e116]:
+          - link [ref=f1e117] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/08/01/icml-2026-davinci-dev.html
+            - text: 2026-08-01
+            - heading "ICML 2026：代码 Agent 变强，不一定靠更狠的 RL" [level=3] [ref=f1e118]
+            - generic "Tags" [ref=f1e119]:
+              - generic [ref=f1e120]: ICML 2026
+              - generic [ref=f1e121]: Code Agent
+              - generic [ref=f1e122]: Agentic Mid-training
+              - generic [ref=f1e123]: Software Engineering
+            - paragraph [ref=f1e124]: 解读 daVinci-Dev 如何用 contextually-native 与 environmentally-native 数据，把定位、阅读、编辑和测试的工作流前移到 mid-training；正文逐卡对应论文，工程推论集中在文末。
+        - article [ref=f1e125]:
+          - link [ref=f1e126] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/07/29/icml-2026-base-model-barrier.html
+            - text: 2026-07-29
+            - heading "ICML 2026：RL 为什么会撞上 Base Model Barrier？" [level=3] [ref=f1e127]
+            - generic "Tags" [ref=f1e128]:
+              - generic [ref=f1e129]: ICML 2026
+              - generic [ref=f1e130]: LLM Post-training
+              - generic [ref=f1e131]: Reinforcement Learning
+              - generic [ref=f1e132]: Policy Gradient
+            - paragraph [ref=f1e133]: 从基础策略覆盖、Likelihood Quantile 和过程奖励出发，解释为什么长任务的强化学习可能先卡在采样而不是优化，以及如何用 token 级反馈缓解序列长度灾难。
+        - article [ref=f1e134]:
+          - link [ref=f1e135] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/07/28/icml-2026-pre-mid-rl.html
+            - text: 2026-07-28
+            - heading "ICML 2026：Pre-Training、Mid-Training 与 RL 如何划定推理能力边缘" [level=3] [ref=f1e136]
+            - generic "Tags" [ref=f1e137]:
+              - generic [ref=f1e138]: ICML 2026
+              - generic [ref=f1e139]: LLM Post-training
+              - generic [ref=f1e140]: Reinforcement Learning
+              - generic [ref=f1e141]: Mid-training
+            - paragraph [ref=f1e142]: 详解一套可控的合成推理实验：何时 RL 只是把偶尔成功变成经常成功，何时会扩展可达解；以及 pre-training、mid-training、过程奖励与动态课程各自承担什么工作。
+        - article [ref=f1e143]:
+          - link [ref=f1e144] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/07/27/acl-2026-behavior-feedback.html
+            - text: 2026-07-27
+            - heading "ACL 2026 反馈优化（三）：用户行为到底在教 Agent 什么？" [level=3] [ref=f1e145]
+            - generic "Tags" [ref=f1e146]:
+              - generic [ref=f1e147]: ACL 2026
+              - generic [ref=f1e148]: Agent
+              - generic [ref=f1e149]: Behavior Feedback
+              - generic [ref=f1e150]: Human Feedback
+            - paragraph [ref=f1e151]: 详解 Copilot Feedback、PAMU 与 MASC：拒绝标签怎样训练自动化门控，短期与长期偏好怎样更新记忆，以及多 Agent 系统怎样在错误扩散前完成步骤级纠错。
+        - article [ref=f1e152]:
+          - link [ref=f1e153] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/07/26/acl-2026-numeric-feedback-sage.html
+            - text: 2026-07-26
+            - heading "ACL 2026 反馈优化（二）：奖励如何教 Agent 留下可复用技能？" [level=3] [ref=f1e154]
+            - generic "Tags" [ref=f1e155]:
+              - generic [ref=f1e156]: ACL 2026
+              - generic [ref=f1e157]: Agent
+              - generic [ref=f1e158]: Numeric Feedback
+              - generic [ref=f1e159]: Reinforcement Learning
+            - paragraph [ref=f1e160]: 详解 SAGE：把相似任务串成 Sequential Rollout，用任务结果与技能复用奖励共同训练 Qwen2.5-32B Agent，并完整拆解采样、奖励、GRPO 更新、实验与边界。
+        - article [ref=f1e161]:
+          - link [ref=f1e162] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/07/25/acl-2026-text-feedback.html
+            - text: 2026-07-25
+            - heading "ACL 2026 反馈优化（一）：文字反馈究竟写回哪里？" [level=3] [ref=f1e163]
+            - generic "Tags" [ref=f1e164]:
+              - generic [ref=f1e165]: ACL 2026
+              - generic [ref=f1e166]: Agent
+              - generic [ref=f1e167]: Text Feedback
+              - generic [ref=f1e168]: Prompt Optimization
+            - paragraph [ref=f1e169]: 详解 MARS、Prompt-Level Distillation 与 ANN：三种方法都不更新基础模型权重，却分别把反馈写成经验指令、System Prompt 规则库与多 Agent 工作流。
+        - article [ref=f1e170]:
+          - link [ref=f1e171] [cursor=pointer]:
+            - /url: /pages/toolrm.html
+            - text: 2026-07-21
+            - heading "ToolRM：把工具调用错误变成领域裁判的训练数据" [level=3] [ref=f1e172]
+            - generic "Tags" [ref=f1e173]:
+              - generic [ref=f1e174]: ToolRM
+              - generic [ref=f1e175]: Reward Model
+              - generic [ref=f1e176]: 工具调用
+              - generic [ref=f1e177]: Agent
+            - paragraph [ref=f1e178]: 详细拆解偏好数据生产、规则评分、BMDS 采样、两类奖励模型、下游 Agent 应用与方法边界。
+        - article [ref=f1e179]:
+          - link [ref=f1e180] [cursor=pointer]:
+            - /url: /pages/hscodecomp.html
+            - text: 2026-07-20
+            - heading "HSCodeComp：专业 Agent 如何穿过十位规则树" [level=3] [ref=f1e181]
+            - generic "Tags" [ref=f1e182]:
+              - generic [ref=f1e183]: HSCodeComp
+              - generic [ref=f1e184]: Agent
+              - generic [ref=f1e185]: Benchmark
+              - generic [ref=f1e186]: 层级规则
+            - paragraph [ref=f1e187]: 结合 13 张图，完整拆解数据、系统对比、消融、失败案例、工程蓝图与论文疑点。
+        - article [ref=f1e188]:
+          - link [ref=f1e189] [cursor=pointer]:
+            - /url: /pages/cure.html
+            - text: 2026-07-20
+            - heading "CURE：把反思训练成可检验的下一步搜索" [level=3] [ref=f1e190]
+            - generic "Tags" [ref=f1e191]:
+              - generic [ref=f1e192]: CURE
+              - generic [ref=f1e193]: 强化学习
+              - generic [ref=f1e194]: 自我改进
+              - generic [ref=f1e195]: GRPO
+            - paragraph [ref=f1e196]: 从闭环机制、两类 advantage、经验回放到多轮实验与 Agent 边界的完整论文拆解。
+        - article [ref=f1e197]:
+          - link [ref=f1e198] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/07/18/on-policy-sft.html
+            - text: 2026-07-18
+            - heading "On-Policy SFT：让正确答案更像模型自己会写的答案" [level=3] [ref=f1e199]
+            - generic "Tags" [ref=f1e200]:
+              - generic [ref=f1e201]: LLM
+              - generic [ref=f1e202]: 后训练
+              - generic [ref=f1e203]: SFT
+              - generic [ref=f1e204]: On-Policy
+            - paragraph [ref=f1e205]: 从 DDT 的分布兼容分、IDFT 的 token 级软调节，到 Hinted Decoding 的双流改写，理解一条更接近 on-policy 的监督微调路线。
+        - article [ref=f1e206]:
+          - link [ref=f1e207] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/07/16/rltf-text-feedback.html
+            - text: 2026-07-16
+            - heading "RLTF：把文本批评内化成首答能力" [level=3] [ref=f1e208]
+            - generic "Tags" [ref=f1e209]:
+              - generic [ref=f1e210]: LLM
+              - generic [ref=f1e211]: RLTF
+              - generic [ref=f1e212]: 强化学习
+              - generic [ref=f1e213]: 文本反馈
+            - paragraph [ref=f1e214]: RLTF 不只让模型看完批评后改对答案，而是用自蒸馏与反馈建模，把训练阶段的外部批评变成测试时无需反馈的首答能力。
+        - article [ref=f1e215]:
+          - link [ref=f1e216] [cursor=pointer]:
+            - /url: /agents/2026/07/15/multi-agent-collaboration.html
+            - text: 2026-07-15
+            - heading "多 Agent 协作：五种模式、完成条件与选型" [level=3] [ref=f1e217]
+            - generic "Tags" [ref=f1e218]:
+              - generic [ref=f1e219]: 智能体
+              - generic [ref=f1e220]: 多智能体
+              - generic [ref=f1e221]: Agent Runtime
+              - generic [ref=f1e222]: 系统设计
+            - paragraph [ref=f1e223]: 用同一场城市文化漫游活动，对照 Supervisor、GroupChat、Handoff、State Machine 与 Event Bus 的消息流、完成条件和适用边界。
+        - article [ref=f1e224]:
+          - link [ref=f1e225] [cursor=pointer]:
+            - /url: /agent%20training/2026/07/14/oec.html
+            - text: 2026-07-14
+            - heading "OEC：让专家从 Agent 的残局中接手" [level=3] [ref=f1e226]
+            - generic "Tags" [ref=f1e227]:
+              - generic [ref=f1e228]: Agent
+              - generic [ref=f1e229]: 智能体
+              - generic [ref=f1e230]: 多轮智能体
+              - generic [ref=f1e231]: On-policy
+            - paragraph [ref=f1e232]: On-policy Expert Corrections 先让学生模型在真实环境中行动，再由专家接手；训练时仅学习专家后缀，从而教会多轮 Agent 在走偏后恢复。
+        - article [ref=f1e233]:
+          - link [ref=f1e234] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/07/13/retaining-by-doing.html
+            - text: 2026-07-13
+            - heading "Retaining by Doing：on-policy 数据为何能减轻遗忘" [level=3] [ref=f1e235]
+            - generic "Tags" [ref=f1e236]:
+              - generic [ref=f1e237]: 强化学习
+              - generic [ref=f1e238]: 后训练
+              - generic [ref=f1e239]: On-policy
+              - generic [ref=f1e240]: 灾难性遗忘
+            - paragraph [ref=f1e241]: 论文精读：RL 比 SFT 更抗遗忘的关键并非 advantage 或显式 KL，而是每轮使用当前模型产生的 on-policy 数据。
+        - article [ref=f1e242]:
+          - link [ref=f1e243] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/07/12/maxrl.html
+            - text: 2026-07-12
+            - heading "MaxRL：一行 GRPO 改造，把难题重新放回训练信号" [level=3] [ref=f1e244]
+            - generic "Tags" [ref=f1e245]:
+              - generic [ref=f1e246]: 强化学习
+              - generic [ref=f1e247]: 后训练
+              - generic [ref=f1e248]: GRPO
+              - generic [ref=f1e249]: MaxRL
+            - paragraph [ref=f1e250]: 从 MaxRL 的最大似然目标出发，推导它为何偏向低成功率题目，并给出在 GRPO 中替换 advantage 的可落地实现与边界。
+        - article [ref=f1e251]:
+          - link [ref=f1e252] [cursor=pointer]:
+            - /url: /codex/2026/07/11/dive-into-codex-08-system-instructions-constraints.html
+            - text: 2026-07-11
+            - heading "Dive into Codex 08：System 指令与运行约束" [level=3] [ref=f1e253]
+            - generic "Tags" [ref=f1e254]:
+              - generic [ref=f1e255]: 智能体运行时
+              - generic [ref=f1e256]: 指令系统
+              - generic [ref=f1e257]: 执行安全
+            - paragraph [ref=f1e258]: 从 Codex 源码中的系统级指令出发，理解它如何以指令层级、工作区保护、工具纪律、权限边界和验证契约，约束一个可协作、可执行的本地 coding agent。
+        - article [ref=f1e259]:
+          - link [ref=f1e260] [cursor=pointer]:
+            - /url: /codex/2026/07/11/dive-into-codex-07-subagent-architecture.html
+            - text: 2026-07-11
+            - heading "Dive into Codex 07：Subagent 架构" [level=3] [ref=f1e261]
+            - generic "Tags" [ref=f1e262]:
+              - generic [ref=f1e263]: 多智能体
+              - generic [ref=f1e264]: 任务编排
+              - generic [ref=f1e265]: 权限控制
+            - paragraph [ref=f1e266]: 从单个 Agent Loop 扩展到多 Agent 协作：如何划定任务边界、打包上下文、汇总结果、控制冲突，并让权限请求回到主交互通道。
+        - article [ref=f1e267]:
+          - link [ref=f1e268] [cursor=pointer]:
+            - /url: /codex/2026/07/11/dive-into-codex-06-tool-execution-workspace.html
+            - text: 2026-07-11
+            - heading "Dive into Codex 06：Tool Execution 与 Workspace" [level=3] [ref=f1e269]
+            - generic "Tags" [ref=f1e270]:
+              - generic [ref=f1e271]: 智能体运行时
+              - generic [ref=f1e272]: 工具调用
+              - generic [ref=f1e273]: 工作区管理
+            - paragraph [ref=f1e274]: 前一章定义了执行边界。本章进入边界内部：模型提出 tool call 之后，Codex 如何选择工具、执行命令、修改文件、截断输出、验证结果，并把这些真实副作用写回 Session memory。
+        - article [ref=f1e275]:
+          - link [ref=f1e276] [cursor=pointer]:
+            - /url: /codex/2026/07/10/dive-into-codex-05-sandbox-and-permissions.html
+            - text: 2026-07-10
+            - heading "Dive into Codex 05：Sandbox 与权限边界" [level=3] [ref=f1e277]
+            - generic "Tags" [ref=f1e278]:
+              - generic [ref=f1e279]: 智能体运行时
+              - generic [ref=f1e280]: 权限控制
+              - generic [ref=f1e281]: 执行安全
+            - paragraph [ref=f1e282]: 继续拆 Codex 的运行时安全边界：模型只能提出动作，真实执行要经过 permission profile、sandbox policy 和 approval flow。
+        - article [ref=f1e283]:
+          - link [ref=f1e284] [cursor=pointer]:
+            - /url: /codex/2026/07/09/dive-into-codex-04-interrupt-async-events.html
+            - text: 2026-07-09
+            - heading "Dive into Codex 04：Interrupt 与异步事件" [level=3] [ref=f1e285]
+            - generic "Tags" [ref=f1e286]:
+              - generic [ref=f1e287]: 智能体运行时
+              - generic [ref=f1e288]: 异步控制
+              - generic [ref=f1e289]: 用户中断
+            - paragraph [ref=f1e290]: 进入 Codex 运行时控制：用户中断与 steer 如何经过 Session Queue 和 Event Queue，在安全边界停止、续接并处理异步事件。
+        - article [ref=f1e291]:
+          - link [ref=f1e292] [cursor=pointer]:
+            - /url: /codex/2026/07/07/dive-into-codex-03-cache-compaction.html
+            - text: 2026-07-07
+            - heading "Dive into Codex 03：Cache 与 Compaction" [level=3] [ref=f1e293]
+            - generic "Tags" [ref=f1e294]:
+              - generic [ref=f1e295]: 上下文管理
+              - generic [ref=f1e296]: 长上下文
+              - generic [ref=f1e297]: 缓存优化
+            - paragraph [ref=f1e298]: 继续看 Codex 长任务里的上下文管理：稳定前缀如何帮助 prompt cache，compaction 如何在窗口压力下保留可继续工作的状态。
+        - article [ref=f1e299]:
+          - link [ref=f1e300] [cursor=pointer]:
+            - /url: /codex/2026/07/05/dive-into-codex-02-responses-api-design.html
+            - text: 2026-07-05
+            - heading "Dive into Codex 02：Responses API 事件模型" [level=3] [ref=f1e301]
+            - generic "Tags" [ref=f1e302]:
+              - generic [ref=f1e303]: 智能体运行时
+              - generic [ref=f1e304]: 模型接口
+              - generic [ref=f1e305]: 工具调用
+            - paragraph [ref=f1e306]: 把 Chat Completions 与 Responses API 的抽象差异拆开看：item、event、tool call、tool output、skills 和 previous_response_id 如何支撑 agent runtime。
+        - article [ref=f1e307]:
+          - link [ref=f1e308] [cursor=pointer]:
+            - /url: /codex/2026/07/04/dive-into-codex-01-agent-loop-core.html
+            - text: 2026-07-04
+            - heading "Dive into Codex 01：Agent Loop 的核心地图" [level=3] [ref=f1e309]
+            - generic "Tags" [ref=f1e310]:
+              - generic [ref=f1e311]: 智能体运行时
+              - generic [ref=f1e312]: 上下文管理
+              - generic [ref=f1e313]: 工具调用
+            - paragraph [ref=f1e314]: 从 Thread、Session、Turn Loop、Context Builder、Responses API 到 ToolRouter，先建立 Codex 本地 coding agent runtime 的核心闭环。
+        - article [ref=f1e315]:
+          - link [ref=f1e316] [cursor=pointer]:
+            - /url: /agent%20rl/2026/07/04/scpo-semantic-consistency-policy-optimization.html
+            - text: 2026-07-04
+            - 'heading "SCPO: 从失败轨迹里找回正确步骤" [level=3] [ref=f1e317]'
+            - generic "Tags" [ref=f1e318]:
+              - generic [ref=f1e319]: 智能体
+              - generic [ref=f1e320]: 强化学习
+              - generic [ref=f1e321]: 策略优化
+            - paragraph [ref=f1e322]: 一组关于 Semantic Consistency Policy Optimization 的图文笔记：Agent RL 失败轨迹里，也可能藏着正确步骤。
+        - article [ref=f1e323]:
+          - link [ref=f1e324] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/07/01/yuvion-llm.html
+            - text: 2026-07-01
+            - heading "Yuvion LLM：把对抗鲁棒性放进安全模型训练" [level=3] [ref=f1e325]
+            - generic "Tags" [ref=f1e326]:
+              - generic [ref=f1e327]: 后训练
+              - generic [ref=f1e328]: 安全对齐
+              - generic [ref=f1e329]: 对抗鲁棒性
+            - paragraph [ref=f1e330]: 一个80亿参数的安全模型,在多项安全任务上击败了GPT-5.4和Qwen3-MAX。这不是噱头,而是阿里巴巴安全AGI实验室最新发布的Yuvion LLM。它把对抗鲁棒性和智能体能力作为一等公民目标,重新定义了AI安全模型的训练范式。
+        - article [ref=f1e331]:
+          - link [ref=f1e332] [cursor=pointer]:
+            - /url: /agent/2026/06/29/openclaw-hermes.html
+            - text: 2026-06-29
+            - heading "openclaw hermes" [level=3] [ref=f1e333]
+            - generic "Tags" [ref=f1e334]:
+              - generic [ref=f1e335]: 智能体
+              - generic [ref=f1e336]: 多智能体
+              - generic [ref=f1e337]: 开源框架
+            - paragraph [ref=f1e338]: 一个用TypeScript写的多Agent编排平台，GitHub星标38万。一个用Python写的单Agent自进化系统，由Nous Research开源。OpenClaw和Hermes，两种截然不同的Agent设计哲学，今天我们结合源代码，从顶层架构到核心模块，进行top-down的详细拆解和对比。
+        - article [ref=f1e339]:
+          - link [ref=f1e340] [cursor=pointer]:
+            - /url: /agent/2026/06/28/opid.html
+            - text: 2026-06-28
+            - 'heading "OPID: 从 Agent 自己的轨迹中提炼技能，让强化学习不再\"盲人摸象\"" [level=3] [ref=f1e341]'
+            - generic "Tags" [ref=f1e342]:
+              - generic [ref=f1e343]: 智能体
+              - generic [ref=f1e344]: 强化学习
+              - generic [ref=f1e345]: 技能学习
+            - paragraph [ref=f1e346]: "### Scene 1: Hero (Hook) 「Agent 做完一个任务，奖励只告诉你成没成功，却不说哪一步做对了、哪一步搞砸了。这篇论文给了一个答案：让 Agent 从自己的轨迹里提炼技能，再反过来教自己。」"
+        - article [ref=f1e347]:
+          - link [ref=f1e348] [cursor=pointer]:
+            - /url: /ai%20notes/2026/06/27/agent-memory.html
+            - text: 2026-06-27
+            - heading "Agent 记忆系统大横评：12 个系统，谁才是真正的记忆王者？" [level=3] [ref=f1e349]
+            - generic "Tags" [ref=f1e350]:
+              - generic [ref=f1e351]: 智能体
+              - generic [ref=f1e352]: 记忆系统
+            - paragraph [ref=f1e353]: 这是一篇关于 arXiv:2606.24775 论文《Are We Ready For An Agent-Native Memory System?》的中文技术解读视频。
+        - article [ref=f1e354]:
+          - link [ref=f1e355] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/06/27/ads.html
+            - text: 2026-06-27
+            - 'heading "Learning at the Right Pace: Adaptive Data Scheduling Improves LLM Reinforcement Learning" [level=3] [ref=f1e356]'
+            - generic "Tags" [ref=f1e357]:
+              - generic [ref=f1e358]: 后训练
+              - generic [ref=f1e359]: 强化学习
+              - generic [ref=f1e360]: 训练数据
+            - paragraph [ref=f1e361]: "2026 年 6 月 21 日，来自 Johns Hopkins University、Rice University 等机构的研究者发布了论文《Learning at the Right Pace: Adaptive Data Scheduling Improves LLM Reinforcement Learning》。论文的第一作者是 Zicheng"
+        - article [ref=f1e362]:
+          - link [ref=f1e363] [cursor=pointer]:
+            - /url: /agent/2026/06/25/erl.html
+            - text: 2026-06-25
+            - heading "Experiential Reflective Learning for Self-Improving LLM Agents" [level=3] [ref=f1e364]
+            - generic "Tags" [ref=f1e365]:
+              - generic [ref=f1e366]: 智能体
+              - generic [ref=f1e367]: 自我改进
+              - generic [ref=f1e368]: 记忆系统
+            - paragraph [ref=f1e369]: 2026 年 3 月 31 日，法国 Illuin Technology 的作者团队发布了预印本《Experiential Reflective Learning for Self-Improving LLM Agents》，简称 ERL。这篇工作想解决的，不是 Agent 有没有更多工具可用，而是它能不能像人一样，从一次尝试里记住教训，下次遇到类似任务时主
+        - article [ref=f1e370]:
+          - link [ref=f1e371] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/06/21/cherrl.html
+            - text: 2026-06-21
+            - heading "CHERRL：让 Rubric-based RL 的 Reward Hacking 可复现、可分析、可检测" [level=3] [ref=f1e372]
+            - generic "Tags" [ref=f1e373]:
+              - generic [ref=f1e374]: 后训练
+              - generic [ref=f1e375]: 强化学习
+              - generic [ref=f1e376]: 奖励建模
+            - paragraph [ref=f1e377]: 本文按“问题 → 论文背景 → Dual-Judge → bias 类型 → onset 定义 → discoverability → exploitability → 能力损害 → benchmark 盲区 → RHDA → 边界 → 工程启发”展开。
+        - article [ref=f1e378]:
+          - link [ref=f1e379] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/06/21/rm-overoptimization.html
+            - text: 2026-06-21
+            - heading "Scaling Laws for Reward Model Overoptimization" [level=3] [ref=f1e380]
+            - generic "Tags" [ref=f1e381]:
+              - generic [ref=f1e382]: 后训练
+              - generic [ref=f1e383]: 奖励建模
+              - generic [ref=f1e384]: 强化学习
+            - paragraph [ref=f1e385]: "主题：`llm-post-training`"
+        - article [ref=f1e386]:
+          - link [ref=f1e387] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/06/21/reward-hacking.html
+            - text: 2026-06-21
+            - heading "奖励上涨，为什么安全目标反而变差？" [level=3] [ref=f1e388]
+            - generic "Tags" [ref=f1e389]:
+              - generic [ref=f1e390]: 后训练
+              - generic [ref=f1e391]: 安全对齐
+              - generic [ref=f1e392]: 奖励建模
+            - paragraph [ref=f1e393]: 训练中观察奖励不断上涨，隐藏的真实目标，也就是安全表现，却可能原地踏步，甚至变差。风险是我们把钻空子误判成能力提升。
+        - article [ref=f1e394]:
+          - link [ref=f1e395] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/06/19/omniagent-sft.html
+            - text: 2026-06-19
+            - heading "《Agent SFT 最难的，不是训练》脚本" [level=3] [ref=f1e396]
+            - generic "Tags" [ref=f1e397]:
+              - generic [ref=f1e398]: 智能体
+              - generic [ref=f1e399]: 监督微调
+              - generic [ref=f1e400]: 训练数据
+            - paragraph [ref=f1e401]: "主题：`llm-post-training` 平台：小红书 目标时长：5–7 分钟 核心来源：OmniAgent（arXiv:2606.19341v1）"
+        - article [ref=f1e402]:
+          - link [ref=f1e403] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/06/18/gd2po.html
+            - text: 2026-06-18
+            - 'heading "GD^2PO: Mitigating Multi-Reward Conflicts via Group-Dynamic reward-Decoupled Policy Optimization" [level=3] [ref=f1e404]'
+            - generic "Tags" [ref=f1e405]:
+              - generic [ref=f1e406]: 后训练
+              - generic [ref=f1e407]: 强化学习
+              - generic [ref=f1e408]: 多目标优化
+            - paragraph [ref=f1e409]: 先把来源交代清楚。GD2PO 的论文标题是：Mitigating Multi Reward Conflicts via Group Dynamic Reward Decoupled Policy Optimization。arXiv 版本在 2026 年 6 月 15 日提交，作者包括 Haotian Liu、Yihao Liu、Jingwei Ni 等 1
+        - article [ref=f1e410]:
+          - link [ref=f1e411] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/06/18/dharmaocr-dpo.html
+            - text: 2026-06-18
+            - 'heading "DharmaOCR: Specialized Small Language Models for Structured OCR that outperform Open-Source and Commercial Baselines" [level=3] [ref=f1e412]'
+            - generic "Tags" [ref=f1e413]:
+              - generic [ref=f1e414]: 后训练
+              - generic [ref=f1e415]: 偏好对齐
+              - generic [ref=f1e416]: 结构化输出
+            - paragraph [ref=f1e417]: 这次换一个完全不同的后训练角度。不是再讲 RL 的 trust region，也不是长上下文能力覆盖，而是看一个更贴近生产的例子：DPO 为什么不只属于聊天对齐，也可以用来修一种很具体的结构化输出故障。
+        - article [ref=f1e418]:
+          - link [ref=f1e419] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/06/18/drpo.html
+            - text: 2026-06-18
+            - heading "Rethinking the Divergence Regularization in LLM RL" [level=3] [ref=f1e420]
+            - generic "Tags" [ref=f1e421]:
+              - generic [ref=f1e422]: 后训练
+              - generic [ref=f1e423]: 强化学习
+              - generic [ref=f1e424]: 策略优化
+            - paragraph [ref=f1e425]: 2026 年 6 月 8 日，腾讯混元、UIUC 和 NUS 放出一篇后训练预印本，名字叫《Rethinking the Divergence Regularization in LLM RL》。它讨论的不是“要不要做 RL 后训练”，而是一个更底层的问题：我们平时在 PPO、GRPO 里用的 ratio clipping，到底是不是 LLM 里合适的 tr
+        - article [ref=f1e426]:
+          - link [ref=f1e427] [cursor=pointer]:
+            - /url: /agent/2026/06/17/weavebench.html
+            - text: 2026-06-17
+            - heading "Computer-use agent真正的难点不是会点按钮或会写命令，而是能不能在长链路任务里稳定编排GUI与CLI" [level=3] [ref=f1e428]
+            - generic "Tags" [ref=f1e429]:
+              - generic [ref=f1e430]: 智能体
+              - generic [ref=f1e431]: 计算机使用
+              - generic [ref=f1e432]: 基准评测
+            - paragraph [ref=f1e433]: 2026 年 6 月 8 日，浙江大学、微软亚洲研究院、清华大学的作者团队发布了预印本《WeaveBench》。这篇工作想测的，不是 Agent 会不会点按钮，也不是会不会敲命令，而是它能不能把 GUI 观察、CLI 操作、代码修改和再次验证，稳定地编排成一条完整工作链路。
+        - article [ref=f1e434]:
+          - link [ref=f1e435] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/06/16/golongrl.html
+            - text: 2026-06-16
+            - 'heading "GoLongRL: Capability-Oriented Long Context Reinforcement Learning with Multitask Alignment" [level=3] [ref=f1e436]'
+            - generic "Tags" [ref=f1e437]:
+              - generic [ref=f1e438]: 后训练
+              - generic [ref=f1e439]: 长上下文
+              - generic [ref=f1e440]: 强化学习
+            - paragraph [ref=f1e441]: 2026 年 5 月 19 日，快手和中科院团队把一篇后训练预印本放上 arXiv，名字叫《GoLongRL》。它盯住的不是通用聊天，不是数学短题，而是一个更具体的问题：长上下文能力，能不能靠更像“能力地图”的后训练真正拉起来？
+        - article [ref=f1e442]:
+          - link [ref=f1e443] [cursor=pointer]:
+            - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/06/15/grpo-pytorch.html
+            - text: 2026-06-15
+            - heading "GRPO PyTorch 伪代码详解：从采样到组内相对优势" [level=3] [ref=f1e444]
+            - generic "Tags" [ref=f1e445]:
+              - generic [ref=f1e446]: 后训练
+              - generic [ref=f1e447]: 强化学习
+              - generic [ref=f1e448]: 策略优化
+            - paragraph [ref=f1e449]: 结合伪代码完整拆解 GRPO 的 rollout、reward、group advantage、loss 和训练循环。
+        - article [ref=f1e450]:
+          - link [ref=f1e451] [cursor=pointer]:
+            - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/06/14/ppo-dpo-grpo.html
+            - text: 2026-06-14
+            - heading "PPO、DPO、GRPO 详解：LLM 偏好对齐方法对比" [level=3] [ref=f1e452]
+            - generic "Tags" [ref=f1e453]:
+              - generic [ref=f1e454]: 后训练
+              - generic [ref=f1e455]: 偏好对齐
+              - generic [ref=f1e456]: 强化学习
+            - paragraph [ref=f1e457]: 完整整理 PPO、DPO、GRPO 的目标函数、训练流程、优缺点和适用场景。
+        - article [ref=f1e458]:
+          - link [ref=f1e459] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/06/14/rl-excursions.html
+            - text: 2026-06-14
+            - heading "RL 为什么非要最后才上场？" [level=3] [ref=f1e460]
+            - generic "Tags" [ref=f1e461]:
+              - generic [ref=f1e462]: 预训练
+              - generic [ref=f1e463]: 强化学习
+            - paragraph [ref=f1e464]: 2026 年 6 月 2 日，哈佛大学的 Rachit Bansal、Clara Mohri、Tian Qin、David Alvarez-Melis 和 Sham Kakade 发布预印本《RL Excursions during Pre-Training》。
+        - article [ref=f1e465]:
+          - link [ref=f1e466] [cursor=pointer]:
+            - /url: /llm%20post-training/2026/06/11/drpo.html
+            - text: 2026-06-11
+            - heading "DRPO 技术详解：LLM 强化学习可能一直管错了东西" [level=3] [ref=f1e467]
+            - generic "Tags" [ref=f1e468]:
+              - generic [ref=f1e469]: 后训练
+              - generic [ref=f1e470]: 强化学习
+              - generic [ref=f1e471]: 策略优化
+            - paragraph [ref=f1e472]: 大模型强化学习通常是离策略训练：生成答案的 rollout 引擎和训练引擎存在数值差异，采样策略 μ 与正在更新的策略 π 并不完全相同。更新走得太远，训练就可能崩掉。
+        - article [ref=f1e473]:
+          - link [ref=f1e474] [cursor=pointer]:
+            - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/06/10/agent.html
+            - text: 2026-06-10
+            - heading "AI Agent 详解：感知、规划、记忆与行动的系统架构" [level=3] [ref=f1e475]
+            - generic "Tags" [ref=f1e476]:
+              - generic [ref=f1e477]: 智能体
+              - generic [ref=f1e478]: 任务规划
+              - generic [ref=f1e479]: 记忆系统
+              - generic [ref=f1e480]: 工具调用
+            - paragraph [ref=f1e481]: 完整整理 AI Agent 的四模块架构、感知、规划推理、记忆、行动工具以及关键论文资源。
+        - article [ref=f1e482]:
+          - link [ref=f1e483] [cursor=pointer]:
+            - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/18/opd.html
+            - text: 2026-05-18
+            - heading "On-Policy Distillation：让学生在自己的分布上学习" [level=3] [ref=f1e484]
+            - generic "Tags" [ref=f1e485]:
+              - generic [ref=f1e486]: 后训练
+              - generic [ref=f1e487]: 知识蒸馏
+            - paragraph [ref=f1e488]: 完整整理 OPD 的定义、LLM 需要它的原因、算法流程、和 RLHF/DPO/SDPO 的关系及优缺点。
+        - article [ref=f1e489]:
+          - link [ref=f1e490] [cursor=pointer]:
+            - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/06/sampling.html
+            - text: 2026-05-06
+            - heading "top_p、top_k 和 temperature：大模型采样参数详解" [level=3] [ref=f1e491]
+            - generic "Tags" [ref=f1e492]:
+              - generic [ref=f1e493]: 大模型
+              - generic [ref=f1e494]: 推理采样
+            - paragraph [ref=f1e495]: 系统整理 temperature、top-k、top-p 的数学含义、直觉差异、组合方式和典型场景。
+        - article [ref=f1e496]:
+          - link [ref=f1e497] [cursor=pointer]:
+            - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/05/lora.html
+            - text: 2026-05-05
+            - heading "LoRA 详解：低秩适配如何高效微调大模型" [level=3] [ref=f1e498]
+            - generic "Tags" [ref=f1e499]:
+              - generic [ref=f1e500]: 大模型
+              - generic [ref=f1e501]: 参数高效微调
+            - paragraph [ref=f1e502]: 完整整理 LoRA 的直觉、低秩分解公式、训练与推理合并、PyTorch 实现、Rank 选择和工程要点。
+        - article [ref=f1e503]:
+          - link [ref=f1e504] [cursor=pointer]:
+            - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/05/transformer.html
+            - text: 2026-05-05
+            - heading "Transformer 详解：从 Attention 到 FFN、残差与 LayerNorm" [level=3] [ref=f1e505]
+            - generic "Tags" [ref=f1e506]:
+              - generic [ref=f1e507]: 大模型
+              - generic [ref=f1e508]: 模型架构
+              - generic [ref=f1e509]: 注意力机制
+            - paragraph [ref=f1e510]: 完整整理 Transformer 层的核心组件、PyTorch 实现、FFN 膨胀收缩结构，以及 MoE、GQA 等延伸问题。
+        - article [ref=f1e511]:
+          - link [ref=f1e512] [cursor=pointer]:
+            - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/05/rope.html
+            - text: 2026-05-05
+            - heading "RoPE 详解：旋转位置编码如何把相对距离写进注意力" [level=3] [ref=f1e513]
+            - generic "Tags" [ref=f1e514]:
+              - generic [ref=f1e515]: 大模型
+              - generic [ref=f1e516]: 模型架构
+              - generic [ref=f1e517]: 位置编码
+            - paragraph [ref=f1e518]: 完整整理 RoPE 的目标、二维旋转推导、高维推广、PyTorch 实现和频率设计直觉。
+  - contentinfo [ref=f1e519]:
+    - paragraph [ref=f1e520]: Writing, experiments, and visual notes by 涛涛涛.
+    - paragraph [ref=f1e521]:
+      - link "GitHub" [ref=f1e522] [cursor=pointer]:
+        - /url: https://github.com/light8lee
+      - text: ·
+      - link "RSS" [ref=f1e523] [cursor=pointer]:
+        - /url: /atom.xml
+  - button "回到页面顶部" [ref=f1e524] [cursor=pointer]
