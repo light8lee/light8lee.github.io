@@ -1,0 +1,581 @@
+[
+  {
+    "id": "01",
+    "kind": "cover",
+    "chapter": "封面",
+    "title": "模型没换，结果变了",
+    "narration": "模型没换，结果却变了。因为工作流变了。",
+    "takeaway": "真正被搜索的是工作流",
+    "quick_skip": true,
+    "layout": {
+      "content_bbox": [
+        72,
+        240,
+        930,
+        1440
+      ],
+      "actor_zone": "none",
+      "protected_rects": [
+        [
+          72,
+          240,
+          930,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "cover-copy",
+      "cover-hero"
+    ],
+    "start": 0,
+    "duration": 4.464,
+    "end": 4.464
+  },
+  {
+    "id": "02",
+    "kind": "season_map",
+    "chapter": "Weng RSI 主线",
+    "title": "S2：从看什么，走到按什么顺序做",
+    "question": "为什么 Context 之后必须讲 Workflow？",
+    "narration": "沿 Lilian Weng 的主线，上一集优化看什么；这一集直接优化怎么做：先检索还是先写，何时验证，失败往哪走。我们改控制流，不改模型权重。",
+    "takeaway": "Context → Workflow → Harness Code",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "runtime",
+      "context",
+      "workflow",
+      "harness-code",
+      "episode-focus"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "指向 Weng 主线中从 Context 到 Workflow 的对象扩张"
+    },
+    "start": 4.464,
+    "duration": 11.592,
+    "end": 16.056
+  },
+  {
+    "id": "03",
+    "kind": "problem",
+    "chapter": "问题与表示",
+    "title": "流程写死时，模型只能在错误顺序里努力",
+    "question": "为什么更长的 Prompt 修不好错误控制流？",
+    "narration": "假设一个数据分析 Agent 先写结论，最后才运行代码。即使 Prompt 再长，它仍可能先编出数字，再用执行结果补洞。真正的问题不是它缺一句提醒，而是验证节点放错了位置。Workflow 决定调用谁、先做什么、何时循环、何时停止。控制流错了，模型只能在错误顺序里更努力。",
+    "takeaway": "Prompt 约束一次调用；Workflow 组织一串行动",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "bad-order",
+      "invent-number",
+      "late-run",
+      "prompt-limit",
+      "workflow-boundary",
+      "conclusion"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__event_loop",
+      "reason": "沿错误的执行顺序指出验证节点为何必须前移"
+    },
+    "start": 16.056,
+    "duration": 23.04,
+    "end": 39.096
+  },
+  {
+    "id": "04",
+    "kind": "method",
+    "chapter": "问题与表示",
+    "title": "把 Workflow 写成可执行、可打分的程序",
+    "question": "Workflow 怎样进入搜索空间？",
+    "narration": "要搜索 Workflow，第一步是把它显式表示成程序。节点可以是模型调用、检索、工具执行或验证；边表示路由、循环和停止条件。候选流程必须真的运行，记录结果和成本，再由独立任务给分。因为它是 Code，我们能版本化每张图，也能只把 Write 前插入 Verify，而不是重写整套 Agent。",
+    "takeaway": "表示 → 运行 → 评价 → 最小改动",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "nodes",
+      "edges",
+      "loop",
+      "stop",
+      "run",
+      "score",
+      "version",
+      "minimal-edit"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "指向节点、边、循环、停止条件与评估结果组成的可执行图"
+    },
+    "start": 39.096,
+    "duration": 24.36,
+    "end": 63.456
+  },
+  {
+    "id": "05",
+    "kind": "method",
+    "chapter": "ADAS · 编程候选",
+    "title": "ADAS：让 Meta-Agent 直接编写新 Agent",
+    "question": "谁来提出新的 Workflow？",
+    "narration": "ADAS 解决的是候选从哪里来。它让 Meta-Agent 读取已有 Agent、任务反馈与设计经验，直接输出一段新的 Agent 代码。代码定义角色、提示、工具与控制流；候选随后在任务上运行并被评价，表现好的设计进入后续迭代。它把 Agent Design 从人工模板变成可编程搜索对象。边界也很清楚：提出者可以写候选，但不能靠改评分器宣布自己变好。",
+    "takeaway": "经验 + 反馈 → Meta-Agent 编程 → 运行评价",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "archive",
+      "feedback",
+      "meta-agent",
+      "code",
+      "candidate",
+      "run",
+      "evaluate",
+      "boundary"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__tool_invocation_and_observation",
+      "reason": "把设计经验交给 Meta-Agent，并展示其写出可执行候选代码"
+    },
+    "start": 63.456,
+    "duration": 28.464,
+    "end": 91.92
+  },
+  {
+    "id": "06",
+    "kind": "method",
+    "chapter": "AFlow · 搜索树",
+    "title": "AFlow：把 Workflow 放进 MCTS 搜索树",
+    "question": "候选太多时，怎样决定下一步搜哪里？",
+    "narration": "AFlow 解决的是搜索怎样推进。它把 Code 表示的 Workflow 放进蒙特卡洛树搜索。每个节点是一版流程；执行结果给出奖励，搜索据此选择更值得扩展的分支，再由优化器修改一条边、一个节点或一段提示，生成子节点。多轮运行后，验证表现更好的流程被保留。它优化的是控制流及节点配置，不是基础模型参数。",
+    "takeaway": "选择 → 修改 → 运行 → 回传分数 → 再扩展",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "root",
+      "branches",
+      "select",
+      "edit",
+      "run",
+      "reward",
+      "backprop",
+      "winner"
+    ],
+    "avatar_action": {
+      "atom": "advanced_agent__tree_search",
+      "reason": "沿 Workflow 搜索树选择、扩展并回传评估分数"
+    },
+    "start": 91.92,
+    "duration": 26.424,
+    "end": 118.344
+  },
+  {
+    "id": "07",
+    "kind": "comparison",
+    "chapter": "两种搜索视角",
+    "title": "ADAS 与 AFlow：一个负责发明，一个负责导航",
+    "question": "两篇工作到底差在哪里？",
+    "narration": "把两篇工作并排看。ADAS 强调 Meta-Agent 通过编程发明新的 Agent 设计，重点是扩大候选表达；AFlow 强调在 Workflow 树里选择、扩展和回传分数，重点是用搜索策略分配试验预算。它们共享同一闭环：候选必须可执行，结果必须可评价，改动必须留痕。可以把它们记成一句话：ADAS 负责发明候选，AFlow 负责导航搜索。",
+    "takeaway": "ADAS 扩大设计空间；AFlow 分配搜索预算",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "adas",
+      "aflow",
+      "expression",
+      "navigation",
+      "shared-loop",
+      "memory-line"
+    ],
+    "avatar_action": {
+      "atom": "post_training_agent__preference_comparison",
+      "reason": "比较 ADAS 与 AFlow 在候选生成和搜索导航上的职责"
+    },
+    "start": 118.344,
+    "duration": 27.84,
+    "end": 146.184
+  },
+  {
+    "id": "08",
+    "kind": "example",
+    "chapter": "控制流案例",
+    "title": "只插入一个 Verify，失败就更可定位",
+    "question": "Workflow 优化怎样改变真实任务？",
+    "narration": "回到数据分析。流程 A 先写最终报告，再补运行；一旦数字错了，很难判断是代码、数据还是表述出错。流程 B 先检查数据，再执行分析，保存图表，由另一个节点核对关键数字，最后才写报告。候选改动其实很窄：只是在 Write 前插入 Verify，并把失败路由回计算节点。模型没换，但可验证事实先于写作，错误也有了明确回路。",
+    "takeaway": "先验证事实，再生成叙述",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "flow-a",
+      "failure",
+      "flow-b",
+      "inspect",
+      "run",
+      "verify",
+      "write",
+      "retry-edge",
+      "conclusion"
+    ],
+    "avatar_action": {
+      "atom": "advanced_agent__verification",
+      "reason": "在写报告前核对数字，并把失败路由回计算节点"
+    },
+    "start": 146.184,
+    "duration": 29.496,
+    "end": 175.68
+  },
+  {
+    "id": "09",
+    "kind": "evidence",
+    "chapter": "证据与含义",
+    "title": "5.7% 说明搜索有效，不说明越复杂越好",
+    "question": "AFlow 的结果真正支持什么？",
+    "narration": "AFlow 报告，在六个数据集上，相对强基线平均提升 5.7%。这条证据支持的是：在论文的任务、初始模板、评估函数和搜索预算下，自动搜索选到了更好的 Workflow。它不支持两个夸张结论：不是任何任务都该无限搜索，也不是图越复杂就越强。真正有价值的是，改动后的流程能在独立任务上复现收益。",
+    "takeaway": "六个数据集 · 平均 +5.7% · 只在论文设定内成立",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "six-datasets",
+      "baseline",
+      "metric",
+      "circle-5.7",
+      "conditions",
+      "not-infinite",
+      "validation"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "指向 5.7% 结果及其任务、模板、评估与预算边界"
+    },
+    "start": 175.68,
+    "duration": 25.32,
+    "end": 201.0
+  },
+  {
+    "id": "10",
+    "kind": "boundary",
+    "chapter": "搜索边界",
+    "title": "搜索器也会过拟合：三道门必须留在环外",
+    "question": "怎样避免 Workflow 搜索只会刷榜？",
+    "narration": "Workflow 搜索有三类约束。第一，留出任务：不能只在生成候选的 Benchmark 上选赢家。第二，成本预算：更高分可能只是多调用了十倍模型。第三，独立评估：候选不能修改测试、权限或验收标准。还要保存版本和运行轨迹，才能知道收益来自哪条边。搜索器可以编辑 Workflow，但裁判、预算和权限必须留在环外。",
+    "takeaway": "留出任务 · 成本预算 · 独立评估",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "overfit",
+      "holdout",
+      "cost",
+      "verifier",
+      "trace",
+      "protected-boundary"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__permission_guard",
+      "reason": "把评估器、预算和权限锁在 Workflow 搜索环外"
+    },
+    "start": 201.0,
+    "duration": 28.128,
+    "end": 229.128
+  },
+  {
+    "id": "11",
+    "kind": "next",
+    "chapter": "合拢与下一集",
+    "title": "Workflow 已能搜索，下一步要划清可编辑代码",
+    "question": "这一集在 Weng 主线里推进了什么？",
+    "narration": "现在把主线合起来。Context 决定每次调用看什么；Workflow 决定这些调用和工具按什么控制流协作。ADAS 展示 Meta-Agent 可以编程发明候选，AFlow 展示候选可以在搜索树中运行、评价和扩展。于是 Harness 不只是背景，它的控制流已经成为可搜索对象。但 Workflow 仍只是 Code 的一个表现。下一集继续追问：Prompt、Tool、Memory、Middleware 与 Sub-Agent 配置，哪些可以改，为什么必须用窄 Diff 表达？",
+    "takeaway": "看什么 → 怎么做 → 哪些 Harness Code 可以改",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "context",
+      "workflow",
+      "adas",
+      "aflow",
+      "searchable-harness",
+      "code-surface",
+      "next"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "合拢 Context 与 Workflow，并指向下一集的 Harness Code 可编辑表面"
+    },
+    "start": 229.128,
+    "duration": 33.336,
+    "end": 262.464
+  }
+]

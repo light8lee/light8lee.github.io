@@ -1,0 +1,411 @@
+[
+  {
+    "id": "01",
+    "kind": "cover",
+    "chapter": "封面",
+    "title": "删掉检查，分数反而涨了",
+    "narration": "Agent 删掉自己的超时检查，分数反而涨了。是变强，还是作弊？答案，藏在裁判席上。",
+    "takeaway": "变强，还是作弊？答案在裁判席",
+    "quick_skip": true,
+    "layout": {
+      "content_bbox": [
+        72,
+        240,
+        1008,
+        1440
+      ],
+      "actor_zone": "none",
+      "protected_rects": [
+        [
+          72,
+          240,
+          1008,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "bad-edit",
+      "score-up",
+      "question",
+      "cover-hero"
+    ],
+    "start": 0.0,
+    "duration": 8.64,
+    "end": 8.64
+  },
+  {
+    "id": "02",
+    "kind": "season_map",
+    "chapter": "3 秒后定位",
+    "title": "第三季：改进器终于进入闭环",
+    "question": "这一集只解决哪个门槛？",
+    "narration": "先别急着鼓掌——分数怎么涨的，比涨了多少更重要。沿 Lilian Weng 的主线，第一季让 Agent 能运行，第二季让 Harness 可优化，第三季才让改进器进入闭环。本集只回答：谁能改，谁必须留在环外。",
+    "takeaway": "本集：锁定可编辑面与环外裁判",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        740,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          740,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "season-1",
+      "season-2",
+      "season-3",
+      "episode-focus"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "用最短季节地图定位本集的可编辑面与环外裁判"
+    },
+    "start": 8.64,
+    "duration": 16.2,
+    "end": 24.84
+  },
+  {
+    "id": "03",
+    "kind": "problem",
+    "chapter": "核心冲突",
+    "title": "同一个 Agent，不能既参赛又改裁判",
+    "question": "分数为什么会虚高？",
+    "narration": "问题的根子是：如果连 verifier.py 都能改，Agent 删掉超时检查，通过率立刻上升。分数涨了，能力没涨，只是裁判变松。所以规则只有一条：workspace 里的 Skill 和工具路由可编辑；verifier、权限、预算、回滚，全部只读。",
+    "takeaway": "参赛者可改 Harness；裁判与控制层只读",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        740,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          740,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "bad-edit",
+      "score-up",
+      "verdict",
+      "editable-zone",
+      "read-only-zone",
+      "why"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__permission_guard",
+      "reason": "在可编辑 workspace 与只读 verifier 之间执行权限检查"
+    },
+    "start": 24.84,
+    "duration": 19.944,
+    "end": 44.784
+  },
+  {
+    "id": "04",
+    "kind": "method",
+    "chapter": "Self-Harness",
+    "title": "每次修改，都要变成可证伪主张",
+    "question": "Self-Harness 如何防止自说自话？",
+    "narration": "Self-Harness 把每次修改拆成三步：先从多条 trace 聚类出可复现的弱点；再围绕证据提交最小 diff；最后一步，先过回归，再交给未参与提案的 held-out 任务，决定接受还是拒绝。重点不是 patch 写得多，而是每个 patch 都能被独立结果推翻。",
+    "takeaway": "Evidence → Narrow Diff → Independent Gate",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        740,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          740,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "weakness",
+      "evidence",
+      "proposal",
+      "narrow-diff",
+      "validation",
+      "accept-reject"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "沿证据、窄 diff 与独立 gate 指出三段闭环"
+    },
+    "start": 44.784,
+    "duration": 18.072,
+    "end": 62.856
+  },
+  {
+    "id": "06",
+    "kind": "method",
+    "chapter": "AHE · 可审计",
+    "title": "窄 diff 还要带一条完整证据链",
+    "question": "怎样知道收益确实来自这次修改？",
+    "narration": "AHE 在这条链上再补三层可观测性：组件写成可检查的文件，经历压成可下钻的证据，每次决策先写预测、再动手。于是每份 manifest 都绑定失败证据、推断根因、目标 diff、预期收益与风险；可改文件、预算和回滚版本同时锁定。窄 diff 从此可归因，也可回滚。",
+    "takeaway": "组件可见 · 证据可查 · 决策可证伪",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        740,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          740,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "component",
+      "experience",
+      "decision",
+      "manifest",
+      "lockdown",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "action__write_on_board",
+      "reason": "把三层可观测性汇聚成 manifest 证据链"
+    },
+    "start": 62.856,
+    "duration": 21.624,
+    "end": 84.48
+  },
+  {
+    "id": "07",
+    "kind": "evidence",
+    "chapter": "独立验证",
+    "title": "训练集能过不算赢，留出集才决定合并",
+    "question": "受保护 gate 带来了什么证据？",
+    "narration": "Self-Harness 在 Terminal-Bench-2.0 上报告：三个基础模型的 held-out 通过率，基线分别是百分之四十点五、二十三点八、四十二点九；合并后涨到六十一点九、三十八点一、五十七点一。重点不是绝对分数，而是合并规则：留出任务也变好，候选才被接受。",
+    "takeaway": "Held-in 产候选；Held-out 决定 Accept",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        740,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          740,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "held-in",
+      "held-out",
+      "legend",
+      "baseline-bars",
+      "improved-bars",
+      "gate"
+    ],
+    "avatar_action": {
+      "atom": "post_training_agent__benchmark_evaluation",
+      "reason": "对三组 held-out 结果进行独立评测并指向 accept gate"
+    },
+    "start": 84.48,
+    "duration": 19.272,
+    "end": 103.752
+  },
+  {
+    "id": "09",
+    "kind": "boundary",
+    "chapter": "别越界",
+    "title": "Held-out 也不是安全证明",
+    "question": "通过留出测试后，仍不能声称什么？",
+    "narration": "但 held-out 只说明这批任务没参与提案，不代表所有行为都安全：结果仍受任务分布、测试质量和模型能力上限的约束。所以，提升可以说清来源，安全却永远要靠环外那层控制来兜底。",
+    "takeaway": "可归因提升 ≠ 普适安全证明",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        740,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          740,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "held-out",
+      "distribution",
+      "test-quality",
+      "model-capability",
+      "bounded-claim"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__permission_guard",
+      "reason": "在可归因结论与普适安全声称之间守住边界"
+    },
+    "start": 103.752,
+    "duration": 14.136,
+    "end": 117.888
+  },
+  {
+    "id": "10",
+    "kind": "next",
+    "chapter": "一句话收束",
+    "title": "先保护裁判，再让候选竞争",
+    "question": "什么才有资格叫 Harness-level RSI？",
+    "narration": "只记三项：改的是 Harness，影响的是后续任务；每次更新都经独立验证；verifier、权限、预算与回滚永远在环外。三项同时满足，才叫 Harness-level RSI。下一集进入多候选搜索。你会把哪类文件永久锁在演化环外？",
+    "takeaway": "先有受保护 Gate，才谈多候选演化",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        740,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          740,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "object",
+      "validation",
+      "protected-layer",
+      "rsi-gate",
+      "next-search",
+      "question"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "合拢三项 RSI 门槛并指向下一集的多候选搜索"
+    },
+    "start": 117.888,
+    "duration": 18.96,
+    "end": 136.848
+  }
+]

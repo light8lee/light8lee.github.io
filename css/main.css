@@ -932,6 +932,73 @@ img {
   margin: 8px 0 16px;
 }
 
+.rsi-harness-post .visual-note-title {
+  color: var(--text);
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.22;
+  margin: 6px 0 14px;
+}
+
+.rsi-overview {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 28px 0 22px;
+}
+
+.rsi-overview-step {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.rsi-overview-step img {
+  background: #faf9f5;
+  border-bottom: 1px solid var(--line);
+  display: block;
+  height: 176px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.rsi-overview-step > div {
+  padding: 16px;
+}
+
+.rsi-overview-index,
+.rsi-paper-kicker {
+  color: var(--accent-2) !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin: 0 0 6px !important;
+}
+
+.rsi-overview-step h3 {
+  font-size: 20px;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+
+.rsi-overview-step p:last-child {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.rsi-paper-note {
+  background: color-mix(in srgb, var(--surface) 84%, #e9f2ff);
+  border-left: 3px solid var(--accent-2);
+  margin: 22px 0 30px;
+  padding: 17px 20px 16px;
+}
+
+.rsi-paper-note p:last-child {
+  margin-bottom: 0;
+}
+
 .visual-note p {
   color: var(--text);
 }
@@ -1515,6 +1582,7 @@ img {
   .dpo-unchained-post .paper-card-note,
   .maxrl-post .visual-note,
   .hscodecomp-post .visual-note,
+  .rsi-overview,
   .visual-note {
     grid-template-columns: 1fr;
   }

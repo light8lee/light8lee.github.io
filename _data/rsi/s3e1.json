@@ -1,0 +1,463 @@
+[
+  {
+    "id": "01",
+    "kind": "cover",
+    "chapter": "封面",
+    "title": "改答案，不算递归自我改进",
+    "narration": "改进器会改自己，才叫递归。",
+    "takeaway": "递归的对象，是产生改进的方法",
+    "quick_skip": true,
+    "layout": {
+      "content_bbox": [
+        72,
+        240,
+        930,
+        1440
+      ],
+      "actor_zone": "none",
+      "protected_rects": [
+        [
+          72,
+          240,
+          930,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "cover-copy",
+      "cover-hero"
+    ],
+    "start": 0,
+    "duration": 3.288,
+    "end": 3.288
+  },
+  {
+    "id": "02",
+    "kind": "season_map",
+    "chapter": "Weng RSI 主线",
+    "title": "S3：让“怎样改进”也进入闭环",
+    "question": "为什么到第三季才开始叫 RSI？",
+    "narration": "沿 Weng 的主线：第一季让 Agent 跑起来，第二季把 Harness 变成优化对象，第三季才优化“怎样优化”。本集只回答一个问题：递归的门槛到底在哪里？",
+    "takeaway": "能运行 → 能优化 → 能递归改进",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "s1-runtime",
+      "s2-optimize",
+      "s3-recursive",
+      "episode-focus"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "指向三季主线中从运行、优化到递归改进的对象扩张"
+    },
+    "start": 3.288,
+    "duration": 11.928,
+    "end": 15.216
+  },
+  {
+    "id": "03",
+    "kind": "problem",
+    "chapter": "定义门槛",
+    "title": "三种更新，只有第三种有递归味道",
+    "question": "系统到底改了什么？",
+    "narration": "先区分三种更新。改一份答案，只影响这一次输出；改 Skill、Workflow 或 Code，会影响后续任务的执行方式——但这两层都还不是递归。只有再进一步，去修改“怎样挑失败、怎样提候选、怎样分预算”，也就是改进器本身，才算跨过门槛。它不直接修答案，却改变了以后每次更新怎样产生。",
+    "takeaway": "不是多修一次，而是改“以后怎样修”",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "response",
+      "harness",
+      "improver",
+      "boundary"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__self_reflection_plan_revision",
+      "reason": "先区分单次答案修订，再指向会改变后续更新规则的元层修改"
+    },
+    "start": 15.216,
+    "duration": 22.8,
+    "end": 38.016
+  },
+  {
+    "id": "04",
+    "kind": "method",
+    "chapter": "STOP · 优化对象",
+    "title": "STOP 不先优化答案，而先定义一个 Improver",
+    "question": "“改进器”在操作上是什么？",
+    "narration": "STOP 把第三层“改改进器”写成了具体操作。它定义一个改进器 I：接收当前解 s、效用函数 u 和模型 M，输出更好的解。关键的一步，是把 I 自己当作新的 s——不再优化答案，而是优化“怎样优化答案”。裁判不看某一道题，而看它在一组下游任务上的平均效用。",
+    "takeaway": "I(s, u, M) → s′；再把 I 当作新的 s",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "s",
+      "u",
+      "m",
+      "improver",
+      "solution",
+      "meta-step",
+      "average-utility"
+    ],
+    "avatar_action": {
+      "atom": "action__repair_machine",
+      "reason": "把 Improver 作为可被再次修改的机器，而不是只修当前答案"
+    },
+    "start": 38.016,
+    "duration": 21.072,
+    "end": 59.088
+  },
+  {
+    "id": "05",
+    "kind": "method",
+    "chapter": "STOP · 递归闭环",
+    "title": "候选策略要在未来任务上比赛",
+    "question": "改完 I 之后，怎么知道新的 I 更好？",
+    "narration": "改完 I 之后，怎么知道新的 I 更好？STOP 的回答是：不看这一道题。Seed Improver 会提出多种策略——比如 Beam Search 或遗传搜索——让它们在同一组未来任务上比赛，平均效用最高的进入下一代。但 STOP 也发现：较弱的模型可能越迭代越差。递归结构本身，不等于递归进步。",
+    "takeaway": "评价的是未来任务上的平均效用",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "seed",
+      "candidates",
+      "task-suite",
+      "meta-utility",
+      "select",
+      "weak-model-boundary"
+    ],
+    "avatar_action": {
+      "atom": "advanced_agent__tree_search",
+      "reason": "沿候选策略分支搜索，并由统一的下游任务效用选择下一代"
+    },
+    "start": 59.088,
+    "duration": 22.152,
+    "end": 81.24
+  },
+  {
+    "id": "06",
+    "kind": "bridge",
+    "chapter": "MCE · Harness 桥接",
+    "title": "内层改 Context，外层改“怎样管理 Context”",
+    "question": "MCE 和 STOP 是同一种结构吗？",
+    "narration": "MCE 把同样的结构搬进了 Harness。内层用训练 Rollout 修改 Context Artifact——这是“改产物”，对应 STOP 里的改 s。外层根据 Skill History 和独立验证，进化 Context Management Skill——这是“改方法”，对应 STOP 里的改 I。关键约束是：内层和外层的优化对象、评估数据必须分开，否则外层只是在重复内层的分数。",
+    "takeaway": "内层改产物；外层改产生与选择产物的方法",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "inner-box",
+      "inner-rollout",
+      "inner-mapping",
+      "outer-box",
+      "outer-lines",
+      "outer-drives-inner",
+      "object-split",
+      "data-split"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__context_assembly",
+      "reason": "展示内层装配 Context，同时指出外层修改的是管理这套装配的方法"
+    },
+    "start": 81.24,
+    "duration": 25.776,
+    "end": 107.016
+  },
+  {
+    "id": "07",
+    "kind": "example",
+    "chapter": "贯穿例子",
+    "title": "修 Bug，和改“怎样产生 Patch”不是一回事",
+    "question": "STOP 和 MCE 在实际中长什么样？",
+    "narration": "把 STOP 和 MCE 放进同一个修 Bug 的例子。内层每次都做同一件事：读证据、写 Patch、跑测试，失败就留下一条失败记录——这是在改产物。旧 Skill 规定：只读最近三条失败。它总取最新的，会漏掉反复出现的高频根因。现在外层的元 Skill 出手：它不写 Patch，只改规则——把“最近三条”换成“按根因聚类采样，并保留成功对照”。下一次新 Bug 到来，Proposer 读到的证据已经不同。所以，Patch 修的是当前这个 Bug，对应改 s；元 Skill 改的是“以后怎样修 Bug”，对应改 I。",
+    "takeaway": "Patch 修当前错误；Meta Skill 改后续 Patch 的来源",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "inner-loop",
+      "old-skill",
+      "meta-skill",
+      "new-skill",
+      "next-bug",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__failure_attribution",
+      "reason": "从最近错误回溯到高频失败簇，并改变后续 Patch 的证据来源"
+    },
+    "start": 107.016,
+    "duration": 37.584,
+    "end": 144.6
+  },
+  {
+    "id": "08",
+    "kind": "boundary",
+    "chapter": "RSI 验收门",
+    "title": "叫 Harness-level RSI，至少过三道门",
+    "question": "从 STOP、MCE 和例子中能提炼出什么验收条件？",
+    "narration": "从 STOP、MCE 和这个例子，可以提炼出 Harness-level RSI 的三道验收门。第一，优化对象必须影响后续更新——改答案不算，改改进器才算。第二，用跨任务或留出集独立验证——不能只看当前任务。第三，Verifier、权限、预算和回滚必须留在编辑环外——否则系统可能只是在改裁判，不是真进步。",
+    "takeaway": "改进对象 · 独立验证 · 环外控制",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "object-gate",
+      "validation-gate",
+      "control-gate",
+      "why-each",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__permission_guard",
+      "reason": "守在独立验证与权限门外，强调控制层不属于可编辑表面"
+    },
+    "start": 144.6,
+    "duration": 25.152,
+    "end": 169.752
+  },
+  {
+    "id": "09",
+    "kind": "next",
+    "chapter": "结论与下一集",
+    "title": "递归结构，不等于递归进步",
+    "question": "谁可以被改，谁必须留在环外？",
+    "narration": "回到三层：改答案是结果层，改 Harness 是系统层，改改进器才进入递归层。裁判永远是未来任务上的独立效用。下一集讲受限提案与受保护验证器。你认为哪一层必须永远只读？",
+    "takeaway": "递归的核心不是层数，而是可验证的跨任务改进",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "result-layer",
+      "system-layer",
+      "recursive-layer",
+      "independent-utility",
+      "next-episode",
+      "question"
+    ],
+    "avatar_action": {
+      "atom": "advanced_agent__verification",
+      "reason": "把递归候选交给环外验证，并指向下一集的受保护 accept/reject"
+    },
+    "start": 169.752,
+    "duration": 16.056,
+    "end": 185.808
+  }
+]

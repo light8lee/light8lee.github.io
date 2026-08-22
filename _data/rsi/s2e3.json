@@ -1,0 +1,667 @@
+[
+  {
+    "id": "01",
+    "kind": "cover",
+    "chapter": "封面",
+    "title": "Agent 分数暴涨\n可能只是改了裁判",
+    "narration": "Agent 分数暴涨，可能只是它偷偷改了裁判。自我改进第一条：不许改裁判。",
+    "takeaway": "不许改裁判",
+    "quick_skip": true,
+    "layout": {
+      "content_bbox": [
+        72,
+        240,
+        930,
+        1440
+      ],
+      "actor_zone": "none",
+      "protected_rects": [
+        [
+          72,
+          240,
+          930,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "score-up",
+      "judge-reveal",
+      "rule"
+    ],
+    "start": 0.0,
+    "duration": 6.648,
+    "end": 6.648
+  },
+  {
+    "id": "02",
+    "kind": "season_map",
+    "chapter": "本集位置",
+    "title": "从“怎么做”走到“什么能改”",
+    "question": "这一集解决什么问题？",
+    "narration": "这套系列沿 Lilian Weng 的 Harness Engineering 展开。Context 决定看什么，Workflow 决定怎样做；这一集只讲最后一层：哪些 Harness Code 能改，哪些控制层必须锁住。",
+    "takeaway": "Context → Workflow → Editable Surface",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "context",
+      "workflow",
+      "code",
+      "focus"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "快速指明本集从 Workflow 推进到 Harness Code 的位置"
+    },
+    "visual": [
+      {
+        "type": "node",
+        "xy": [
+          85,
+          430,
+          740,
+          610
+        ],
+        "title": "CONTEXT",
+        "subtitle": "看什么"
+      },
+      {
+        "type": "node",
+        "xy": [
+          85,
+          730,
+          740,
+          910
+        ],
+        "title": "WORKFLOW",
+        "subtitle": "怎样做"
+      },
+      {
+        "type": "node",
+        "xy": [
+          85,
+          1030,
+          740,
+          1210
+        ],
+        "title": "HARNESS CODE",
+        "subtitle": "什么能改",
+        "accent": true
+      },
+      {
+        "type": "text",
+        "xy": [
+          85,
+          1330
+        ],
+        "text": "本集：先划边界",
+        "size": 42,
+        "color": "orange"
+      }
+    ],
+    "start": 6.648,
+    "duration": 13.032,
+    "end": 19.68
+  },
+  {
+    "id": "03",
+    "kind": "problem",
+    "chapter": "重写陷阱",
+    "title": "失败是证据，不是“重写全部”的授权",
+    "question": "为什么不能让 Agent 遇错就全量自改？",
+    "narration": "一次失败，只说明这次运行没达到目标。如果 Agent 同时改 prompt、工具、模型、预算和评测器，下一次分数即使升高，也无法知道是谁起作用；更危险的是，它可能只是把考试改简单了。反馈应该产生一个提案，而不是一张全量重写的通行证。",
+    "takeaway": "Feedback → Proposal，不等于 Rewrite All",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "failure",
+      "rewrite-all",
+      "score-up",
+      "judge-change",
+      "proposal"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__failure_attribution",
+      "reason": "沿失败轨迹定位原因，拒绝一次改动所有组件"
+    },
+    "visual": [
+      {
+        "type": "node",
+        "xy": [
+          85,
+          430,
+          340,
+          600
+        ],
+        "title": "FAILURE",
+        "subtitle": "一次运行失败",
+        "accent": true
+      },
+      {
+        "type": "node",
+        "xy": [
+          475,
+          430,
+          740,
+          600
+        ],
+        "title": "REWRITE ALL",
+        "subtitle": "所有组件同时变化"
+      },
+      {
+        "type": "text",
+        "xy": [
+          85,
+          720
+        ],
+        "text": "分数升了，原因却未知",
+        "size": 40,
+        "color": "blue"
+      },
+      {
+        "type": "text",
+        "xy": [
+          85,
+          840
+        ],
+        "text": "甚至只是评测器被改容易",
+        "size": 36,
+        "color": "muted"
+      },
+      {
+        "type": "text",
+        "xy": [
+          85,
+          1060
+        ],
+        "text": "Feedback → Proposal",
+        "size": 46,
+        "color": "orange"
+      }
+    ],
+    "start": 19.68,
+    "duration": 19.824,
+    "end": 39.504
+  },
+  {
+    "id": "04",
+    "kind": "method",
+    "chapter": "可编辑边界",
+    "title": "能改工作区，不能改裁判席",
+    "question": "Harness Code 的边界怎样划？",
+    "narration": "可编辑工作区可以包含 system prompt、tool description、middleware、skill、memory 和 workflow。它们决定 Agent 如何看、如何做。另一边必须锁住 verifier、原始运行、权限、预算和模型配置。只有先把裁判席留在环外，Agent 提出的修改才可能成为可审计、可比较的 file-level diff。",
+    "takeaway": "Workspace 可编辑；Verifier 留在环外",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "workspace",
+      "components",
+      "locked-layer",
+      "verifier",
+      "diff"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__permission_guard",
+      "reason": "守住 verifier、权限和预算边界，同时允许工作区内修改"
+    },
+    "visual": [
+      {
+        "type": "node",
+        "xy": [
+          85,
+          420,
+          740,
+          670
+        ],
+        "title": "EDITABLE WORKSPACE",
+        "subtitle": "prompt · tool · skill · memory · workflow",
+        "accent": true
+      },
+      {
+        "type": "node",
+        "xy": [
+          85,
+          790,
+          740,
+          1040
+        ],
+        "title": "LOCKED CONTROL",
+        "subtitle": "verifier · run · permission · budget · model"
+      },
+      {
+        "type": "text",
+        "xy": [
+          85,
+          1170
+        ],
+        "text": "能改工作区",
+        "size": 42,
+        "color": "orange"
+      },
+      {
+        "type": "text",
+        "xy": [
+          85,
+          1260
+        ],
+        "text": "不能改裁判席",
+        "size": 42,
+        "color": "blue"
+      },
+      {
+        "type": "text",
+        "xy": [
+          85,
+          1380
+        ],
+        "text": "evidence → file-level diff",
+        "size": 34,
+        "color": "orange"
+      }
+    ],
+    "start": 39.504,
+    "duration": 24.552,
+    "end": 64.056
+  },
+  {
+    "id": "05",
+    "kind": "method",
+    "chapter": "最小 Diff",
+    "title": "一次只验证一个假设",
+    "question": "为什么最小 Diff 比全量重写更可信？",
+    "narration": "Meta-Harness 会读取候选代码、分数和历史，再提出新的 harness 候选。但可信度来自更窄的改动。假设错误来自工具路由，就只改 tool description，再送进留出任务。提升能复现，保留；出现回归，撤回。最小 Diff 不是胆小，而是让收益能够归因、验证和回滚。",
+    "takeaway": "一个假设 → 一个 Diff → 一组独立测试",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "hypothesis",
+      "minimal-diff",
+      "heldout",
+      "accept",
+      "rollback"
+    ],
+    "avatar_action": {
+      "atom": "advanced_agent__verification",
+      "reason": "把单一补丁送入独立测试，并根据结果保留或回滚"
+    },
+    "visual": [
+      {
+        "type": "node",
+        "xy": [
+          85,
+          420,
+          740,
+          590
+        ],
+        "title": "HYPOTHESIS",
+        "subtitle": "错误来自工具路由",
+        "accent": true
+      },
+      {
+        "type": "node",
+        "xy": [
+          85,
+          720,
+          740,
+          890
+        ],
+        "title": "MINIMAL DIFF",
+        "subtitle": "只改 tool description"
+      },
+      {
+        "type": "node",
+        "xy": [
+          85,
+          1020,
+          740,
+          1190
+        ],
+        "title": "HELD-OUT TEST",
+        "subtitle": "复现？回归？副作用？"
+      },
+      {
+        "type": "text",
+        "xy": [
+          85,
+          1310
+        ],
+        "text": "PASS 保留 · FAIL 回滚",
+        "size": 38,
+        "color": "orange"
+      }
+    ],
+    "start": 64.056,
+    "duration": 22.248,
+    "end": 86.304
+  },
+  {
+    "id": "06",
+    "kind": "example",
+    "chapter": "POLARIS 案例",
+    "title": "不要保存三份错题，提炼一条规则",
+    "question": "小而显式的补丁怎样产生？",
+    "narration": "POLARIS 给出一个小尺度案例：把多条失败轨迹压缩成 strategy directive，再生成保守的 policy patch。比如多道题都错在量词范围，就提炼“先判定量词范围”这条规则，而不是保存所有完整解答。它说明补丁可以窄、显式、可撤回；但它并不等于整个 Harness 已经安全自我进化。",
+    "takeaway": "失败轨迹 → 抽象规则 → 保守 Patch",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "failures",
+      "abstraction",
+      "directive",
+      "patch",
+      "boundary"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__failure_attribution",
+      "reason": "从多条失败中提炼共同错误，再形成窄而显式的补丁"
+    },
+    "visual": [
+      {
+        "type": "node",
+        "xy": [
+          85,
+          430,
+          740,
+          610
+        ],
+        "title": "FAILURE TRACES",
+        "subtitle": "共同错误：量词范围"
+      },
+      {
+        "type": "node",
+        "xy": [
+          85,
+          760,
+          740,
+          940
+        ],
+        "title": "STRATEGY DIRECTIVE",
+        "subtitle": "先判定量词范围",
+        "accent": true
+      },
+      {
+        "type": "node",
+        "xy": [
+          85,
+          1090,
+          740,
+          1270
+        ],
+        "title": "POLICY PATCH",
+        "subtitle": "显式 · 可 diff · 可撤回"
+      },
+      {
+        "type": "text",
+        "xy": [
+          85,
+          1380
+        ],
+        "text": "小补丁，不等于安全 RSI",
+        "size": 34,
+        "color": "blue"
+      }
+    ],
+    "start": 86.304,
+    "duration": 21.84,
+    "end": 108.144
+  },
+  {
+    "id": "07",
+    "kind": "next",
+    "chapter": "独立验收",
+    "title": "提出者可以自改，裁判必须独立",
+    "question": "什么样的提升才值得相信？",
+    "narration": "候选 Harness 必须面对它无权编辑的 verifier 和留出任务。原始运行保持只读，权限与预算不随候选变化；通过才进入 archive，失败就拒绝或回滚。所以第二季证明的是 Harness 可以成为受控优化对象，还不是完整 RSI。第三季才继续追问：谁提案、谁验证、谁永远无权编辑。",
+    "takeaway": "自我改进的第一条：不许改裁判",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "proposer",
+      "locked-verifier",
+      "heldout",
+      "accept-reject",
+      "s3"
+    ],
+    "avatar_action": {
+      "atom": "post_training_agent__safety_alignment_gate",
+      "reason": "把候选挡在独立验证门前，满足固定标准才放行"
+    },
+    "visual": [
+      {
+        "type": "node",
+        "xy": [
+          85,
+          430,
+          340,
+          610
+        ],
+        "title": "PROPOSER",
+        "subtitle": "编辑候选",
+        "accent": true
+      },
+      {
+        "type": "node",
+        "xy": [
+          475,
+          430,
+          740,
+          610
+        ],
+        "title": "VERIFIER",
+        "subtitle": "无权编辑"
+      },
+      {
+        "type": "node",
+        "xy": [
+          85,
+          780,
+          740,
+          960
+        ],
+        "title": "HELD-OUT TASKS",
+        "subtitle": "收益 · 回归 · 副作用"
+      },
+      {
+        "type": "text",
+        "xy": [
+          85,
+          1080
+        ],
+        "text": "PASS → Archive",
+        "size": 38,
+        "color": "orange"
+      },
+      {
+        "type": "text",
+        "xy": [
+          85,
+          1170
+        ],
+        "text": "FAIL → Reject / Rollback",
+        "size": 36,
+        "color": "blue"
+      },
+      {
+        "type": "text",
+        "xy": [
+          85,
+          1320
+        ],
+        "text": "记住：不许改裁判",
+        "size": 42,
+        "color": "orange"
+      }
+    ],
+    "start": 108.144,
+    "duration": 24.528,
+    "end": 132.672
+  }
+]

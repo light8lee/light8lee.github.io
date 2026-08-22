@@ -1,0 +1,374 @@
+[
+  {
+    "id": "01",
+    "kind": "cover",
+    "chapter": "封面",
+    "title": "记忆不是塞满上下文",
+    "narration": "记忆不是把历史塞长，而是把经验写入文件，按需取回。",
+    "tts_narration": "记忆不是把历史塞得更长，而是把经验写入文件，按需取回。",
+    "takeaway": "记忆 = 可检索 artifact，不是更长 prompt",
+    "start": 0,
+    "duration": 5.424,
+    "end": 5.424,
+    "quick_skip": true,
+    "layout": {
+      "content_bbox": [
+        72,
+        240,
+        930,
+        1440
+      ],
+      "actor_zone": "none",
+      "protected_rects": [
+        [
+          72,
+          240,
+          930,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "cover-copy",
+      "cover-hero"
+    ]
+  },
+  {
+    "id": "02",
+    "kind": "season_map",
+    "chapter": "全季地图",
+    "title": "S1：先造出可持续运行的系统",
+    "question": "为什么先讲记忆？",
+    "narration": "这套系列沿 Lilian Weng 的文章展开。第一季先建立运行、记忆和并行；这一集只回答一件事：运行经验怎样跨上下文保存、恢复和检查。",
+    "takeaway": "S1E2：把运行经验留在上下文之外",
+    "start": 5.424,
+    "duration": 11.88,
+    "end": 17.304,
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        930,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          930,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "season-1",
+      "season-2",
+      "season-3",
+      "episode-highlight",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "指向 S1E2 的文件化持久记忆节点"
+    }
+  },
+  {
+    "id": "03",
+    "kind": "continuity",
+    "chapter": "承接上一集",
+    "title": "Workflow 留下的历史，\n不能只活在聊天里",
+    "question": "循环一长，结果保存在哪里？",
+    "narration": "上一集的循环是：计划、执行、观察、再决定。它会留下测试输出、改动差异和失败日志。但这些东西如果只躺在当前对话里，窗口一满，细节就被摘要挤掉；任务重启，也不知道该从哪一步继续。Weng 的第二个模式要解决的不是模型记住更多 token，而是让系统在上下文之外拥有状态。",
+    "takeaway": "状态要跨上下文生存",
+    "start": 17.304,
+    "duration": 24.816,
+    "end": 42.12,
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        930,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          930,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "workflow-loop",
+      "run-log",
+      "context-boundary",
+      "resume-arrow",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__trace_review",
+      "reason": "回看工作流留下的日志与差异"
+    }
+  },
+  {
+    "id": "04",
+    "kind": "problem",
+    "chapter": "失败模式",
+    "title": "把全部历史塞进 Prompt，会发生什么？",
+    "question": "长上下文为什么不是持久记忆？",
+    "narration": "最直接的做法，是每一轮都把全部历史粘回 prompt。但历史越长，当前任务越容易被挤到边缘；反复摘要又可能丢掉失败细节。更麻烦的是，模型看见一堆文本，却分不清哪条是已验证事实，哪条只是待验证猜测，哪条是已经失败过的尝试。长上下文可以是工作台，却不该是唯一档案室。",
+    "takeaway": "工作台 ≠ 档案室",
+    "start": 42.12,
+    "duration": 25.008,
+    "end": 67.128,
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        930,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          930,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "context-window",
+      "history-stack",
+      "current-task-squeezed",
+      "three-confusions",
+      "correction",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "指向被历史卡片挤出的当前任务"
+    }
+  },
+  {
+    "id": "05",
+    "kind": "method",
+    "chapter": "文件化记忆",
+    "title": "文件系统：把经验变成可查 artifact",
+    "question": "什么该写进文件？怎样再读回来？",
+    "narration": "文件系统给出朴素但强的接口：写入、读取、搜索和按需抽取。一个说明性的目录可以让 task.md 保存目标与约束，runs 保存原始工具输出，evidence 保存可引用的失败模式，workspace 保存可编辑实现，status.json 保存后台任务状态。模型不用把所有文件读进来，而是先通过索引定位，再读取最相关的片段。于是记忆从隐式的对话残留，变成可审计的外部状态。",
+    "takeaway": "先定位，再读取；不把整座档案柜搬进 prompt",
+    "start": 67.128,
+    "duration": 30.864,
+    "end": 97.992,
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        930,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          930,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "folder-task",
+      "folder-runs",
+      "folder-evidence",
+      "folder-workspace",
+      "folder-status",
+      "write-arrow",
+      "query-index",
+      "retrieve-three-cards",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__memory_write",
+      "reason": "把任务状态写入独立档案，再取回相关证据"
+    }
+  },
+  {
+    "id": "06",
+    "kind": "evidence",
+    "chapter": "ACE 机制",
+    "title": "ACE：不要整体重写，\n要增量维护 playbook",
+    "question": "经验怎样变成下次能用的规则？",
+    "narration": "ACE 提供了一个具体的 memory 组织思路：把 context 看作不断演化的 playbook。生成器先产生任务轨迹；反思器从成败中提炼可操作的经验；整理器再把带标识的条目增量更新进 playbook。重点是每条经验都拆成可单独定位的字段：规则、证据、适用条件和反例。这样系统能检索一条、引用一条，也能只修正失效的一条，而不必覆盖式重写整段 prompt，从而减轻过度压缩和 context collapse。比如，不要把十次退款异常压成一句“注意退款”；应保留 R-17：币种换算在税费后进行，并连着它的证据、条件与反例。",
+    "takeaway": "条目式 memory：可定位、可检索、可局部修正",
+    "start": 97.992,
+    "duration": 42.192,
+    "end": 140.184,
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        930,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          930,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "trajectory",
+      "reflect",
+      "curate",
+      "playbook",
+      "incremental-entry",
+      "r17-evidence",
+      "r17-condition",
+      "r17-counterexample",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "action__write_on_board",
+      "reason": "指向逐条增量更新的 playbook 与 R-17 经验条目"
+    }
+  },
+  {
+    "id": "07",
+    "kind": "boundary",
+    "chapter": "边界",
+    "title": "文件多，不等于记忆好",
+    "question": "把一切落盘，就解决了吗？",
+    "narration": "边界也很重要。文件多不等于记忆好：没有索引、命名和选择规则，Agent 只是从上下文爆炸，换成目录爆炸。文件化 memory 也还不是 RSI；它只是让经验能被保存和检查。到底怎样选择、过滤和组织 context，才是 Context Engineering 要优化的对象。",
+    "takeaway": "持久化是基础；选择规则才决定记忆质量",
+    "start": 140.184,
+    "duration": 23.136,
+    "end": 163.32,
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        930,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          930,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "context-explosion",
+      "directory-explosion",
+      "selector",
+      "s2-bridge",
+      "boundary",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "action__crouch_and_think",
+      "reason": "比较两种信息爆炸，并指向选择规则"
+    }
+  },
+  {
+    "id": "08",
+    "kind": "next",
+    "chapter": "下一集",
+    "title": "下一集：并行任务怎样不把主线程淹没？",
+    "question": "持续状态接下来带来什么？",
+    "narration": "这一集把上一集的运行结果，变成了可检索、可恢复、可检查的文件化状态。最值得记住的一句话是：记忆不是塞满上下文，而是把经验写成能被找到、被引用、被修正的 artifact。有了持续状态，长任务才可以放心拆开。下一集进入 Weng 的第三个设计模式：子代理和后台任务怎样显式地保存、查询、取消和合并。",
+    "takeaway": "从可运行，到可记忆，再到可检查的并行",
+    "start": 163.32,
+    "duration": 25.272,
+    "end": 188.592,
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        930,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          930,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "workflow",
+      "file-memory",
+      "workers",
+      "next-question",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "指向从文件化状态到多个可合并 worker 的下一步"
+    }
+  }
+]

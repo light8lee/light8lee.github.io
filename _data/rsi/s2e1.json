@@ -1,0 +1,588 @@
+[
+  {
+    "id": "01",
+    "kind": "cover",
+    "chapter": "封面",
+    "title": "别再重写提示词：Context 要会进化",
+    "narration": "历史越多，Agent 反而可能越笨。真正要进化的，不是提示词长度，而是 Context。",
+    "takeaway": "历史很多，不等于都要塞给模型",
+    "quick_skip": true,
+    "layout": {
+      "content_bbox": [
+        72,
+        240,
+        930,
+        1440
+      ],
+      "actor_zone": "none",
+      "protected_rects": [
+        [
+          72,
+          240,
+          930,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "cover-copy",
+      "cover-hero"
+    ],
+    "start": 0,
+    "duration": 7.752,
+    "end": 7.752
+  },
+  {
+    "id": "02",
+    "kind": "season_map",
+    "chapter": "Weng RSI 主线",
+    "title": "S2：开始优化 Agent 的 Harness",
+    "question": "为什么这一集先讲 Context？",
+    "narration": "这套系列沿 Lilian Weng 的文章展开。第一季解决 Agent 怎样运行、记忆和并行；第二季开始优化它的 Harness：先决定每次调用看什么，再优化按什么顺序做，最后扩大到定义这些表面的 Harness Code。这一集只抓住第一层：Context。",
+    "takeaway": "Context → Workflow → Harness Code",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "runtime",
+      "context",
+      "workflow",
+      "harness-code",
+      "episode-focus"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "指向 Weng 主线中从 Runtime 到 Context、Workflow 与 Harness Code 的对象扩张"
+    },
+    "start": 7.752,
+    "duration": 18.888,
+    "end": 26.64
+  },
+  {
+    "id": "03",
+    "kind": "problem",
+    "chapter": "问题与过桥",
+    "title": "不是缺历史，而是缺一套选择历史的方法",
+    "question": "为什么复制成功轨迹仍会让 Agent 变笨？",
+    "narration": "把高分轨迹和反思整段塞回 Prompt，会同时带入偶然步骤、重复规则和失效经验。Reward 只说明这次做得怎样，它是更新 Context 的证据，却不会自动决定下次该看什么。ACE 先把 Playbook 拆成可增删改的条目，避免整段重写；但条目结构和 Generate、Reflect、Curate 仍是人写死的管理方法。MCE 要继续进化的，正是这套方法。",
+    "takeaway": "ACE 改 Context；MCE 改“怎样改 Context”",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "copy-all",
+      "noise",
+      "signal",
+      "context-boundary",
+      "ace-diff",
+      "fixed-curator",
+      "connections-last",
+      "mce-bridge"
+    ],
+    "avatar_action": {
+      "atom": "advanced_agent__context_truncation",
+      "reason": "从混杂历史中剪出可编辑条目，并指出固定 Curator 的边界"
+    },
+    "start": 26.64,
+    "duration": 27.336,
+    "end": 53.976
+  },
+  {
+    "id": "04",
+    "kind": "bridge",
+    "chapter": "MCE 总览",
+    "title": "先看全局：外层选方法，内层学函数",
+    "question": "MCE 的内层和外层分别产出什么？",
+    "narration": "进入细节前，先从总体看 MCE。它有两个套在一起的循环。外层由 Meta Agent 读取 Skill History 和独立验证结果，比较并进化 Context Engineering Skill；所以外层产出的是下一代方法。这个 Skill 随后交给内层。内层由 Base Agent 在训练任务上修改静态材料和动态操作，学出与当前 Skill 对应的 Context Function；所以内层产出的是具体函数。获胜的函数再面对新任务生成 Context，交给任务 Agent。先记住区别：外层选方法，内层学函数。",
+    "takeaway": "外层产出 Skill；内层产出 Context Function",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "outer-loop",
+      "skill-output",
+      "inner-loop",
+      "function-output",
+      "new-task",
+      "context",
+      "summary"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "先指明外层产出 Skill、内层产出 Context Function，再展示函数服务新任务"
+    },
+    "start": 53.976,
+    "duration": 37.968,
+    "end": 91.944
+  },
+  {
+    "id": "05",
+    "kind": "method",
+    "chapter": "第一块 · 对象定义",
+    "title": "Context 不是文本，而是一个可执行函数",
+    "question": "MCE 中的一次 Context 怎样产生？",
+    "narration": "第一块先定义 Context Function。面对任务 x，系统从静态组件 ρ 出发。ρ 可以是系统指令、知识库、代码文件、历史规则和模板；随后依次运行动态操作 F，一般包括检索、筛选、排序、压缩、格式化和组合，得到这次真正使用的 Context。论文写成 c(x) 等于多个 F 的复合，作用在 x 和 ρ 上。直白地说，ρ 回答仓库里有什么，F 回答这一题怎样从仓库里拿，c(x) 才是端上桌的那一盘输入。MCE 因而优化的是文件与代码，而不只是一段 Prompt。",
+    "takeaway": "c(x) = (Fₖ ∘ … ∘ F₁)(x; ρ)",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "query-x",
+      "rho",
+      "f1-retrieve",
+      "f2-filter",
+      "f3-compose",
+      "context-output",
+      "formula",
+      "files-code"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__context_assembly",
+      "reason": "把静态材料经过检索、筛选和组合装配成当前 Context"
+    },
+    "start": 91.944,
+    "duration": 39.216,
+    "end": 131.16
+  },
+  {
+    "id": "06",
+    "kind": "example",
+    "chapter": "第一块 · 贯穿例子",
+    "title": "同一个仓库，不同任务要装出不同 Context",
+    "question": "ρ 与 F 在代码修复中分别做什么？",
+    "narration": "用一个贯穿例子。代码仓库同时有接口定义、测试、日志、源码和历史规则，这些构成 ρ。现在任务 x 是修复登录接口参数不匹配。F 先识别它属于接口错误，再检索失败测试、接口定义和调用方源码；接着过滤无关运行日志，压缩已经排除的尝试，最后按证据顺序组合。输出的 c(x) 只包含解决当前错误需要的材料。若下一题变成数据库超时，ρ 可以不变，但 F 会选择完全不同的文件。Context Function 的价值，就是让输入随任务变化，而不是复制同一份历史。",
+    "takeaway": "ρ 决定候选材料；F 决定当前任务看到哪些材料",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "rho-repo",
+      "task-login",
+      "classify",
+      "retrieve-three",
+      "filter",
+      "compose",
+      "context-card",
+      "new-task"
+    ],
+    "avatar_action": {
+      "atom": "advanced_agent__context_packing",
+      "reason": "从代码仓库中为接口错误打包最相关的测试、定义和调用方源码"
+    },
+    "start": 131.16,
+    "duration": 38.88,
+    "end": 170.04
+  },
+  {
+    "id": "07",
+    "kind": "method",
+    "chapter": "第二块 · 内层优化",
+    "title": "给定一个 Skill，Base Agent 学具体的 ρ 与 F",
+    "question": "内层循环到底修改什么？",
+    "narration": "第二块是内层优化。先固定一个候选 CE Skill，记作 s。这个 Skill 不是最终 Context，而是一份工作方法：怎样读训练轨迹，怎样判断信息缺失或噪声过多，怎样修改材料文件，怎样编写检索与压缩代码，又怎样重新运行任务。Base Agent 执行 s，在训练 Rollout 上反复查看结果、编辑 ρ、编辑 F、再运行，直到得到与 s 对应的 Context Function，记作 c 下标 s 等于 ρ 下标 s 与 F 下标 s。这里通常不是训练模型权重，而是 Agent 直接修改可检查的文件、脚本和模板。",
+    "takeaway": "内层：给定 s，优化 cₛ = (ρₛ, Fₛ)",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "fixed-skill",
+      "inspect-rollout",
+      "edit-rho",
+      "edit-f",
+      "rerun",
+      "context-function",
+      "not-weights"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "指向内层从训练轨迹到编辑文件、代码并重新运行的闭环"
+    },
+    "start": 170.04,
+    "duration": 38.808,
+    "end": 208.848
+  },
+  {
+    "id": "08",
+    "kind": "example",
+    "chapter": "第二块 · 贯穿例子",
+    "title": "内层不是选答案，而是在改造 Context 系统",
+    "question": "代码修复 Agent 怎样跑完一次内层？",
+    "narration": "回到登录接口错误。候选 Skill B 要求先按错误类型路由，再按证据优先级装配。Base Agent 第一次运行发现 Context 塞入了几十页无关日志，于是修改 F，增加日志过滤；第二次又发现缺少调用方源码，于是修改 ρ 的源码索引；第三次虽然修复成功，但关键接口定义排在末尾，于是再改 F 的排序。每轮都经历运行、观察失败、编辑文件或代码、重新运行。最终得到的不是一条答案，而是一套能为同类新任务持续产生 Context 的函数。",
+    "takeaway": "Run → Diagnose → Edit ρ/F → Rerun",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "run1",
+      "noise",
+      "edit-f",
+      "run2",
+      "missing-file",
+      "edit-rho",
+      "run3",
+      "reorder",
+      "connections-last",
+      "function-output"
+    ],
+    "avatar_action": {
+      "atom": "advanced_agent__context_packing",
+      "reason": "逐轮过滤日志、补充源码索引并调整证据顺序"
+    },
+    "start": 208.848,
+    "duration": 35.832,
+    "end": 244.68
+  },
+  {
+    "id": "09",
+    "kind": "method",
+    "chapter": "第三块 · 外层进化",
+    "title": "Meta Agent 学的，是“以后应该怎样学”",
+    "question": "为什么内层跑得好还不够？",
+    "narration": "第三块是外层进化。某个 Skill 在训练任务上成功，可能只是记住了旧错误，所以 MCE 保存完整的 Skill History：候选 Skill、本轮学出的 Context Function、训练表现和独立验证表现。Meta Agent 读取这段历史，比较哪些方法能泛化、哪些过拟合，再通过 Agentic Crossover 组合有效部分，产生下一代 Skill。随后 Base Agent 按新 Skill 重新运行内层，验证集再选择更好的方案。于是外层不直接改本次 Context，它改的是指导内层工作的 CE Skill。",
+    "takeaway": "外层：Skill History → Crossover → Validation → 新 Skill",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "skill-history",
+      "train",
+      "validation",
+      "meta-agent",
+      "compare",
+      "crossover",
+      "new-skill",
+      "rerun-inner"
+    ],
+    "avatar_action": {
+      "atom": "advanced_agent__tree_search",
+      "reason": "沿 Skill History 比较候选分支并产生下一代 Skill"
+    },
+    "start": 244.68,
+    "duration": 35.712,
+    "end": 280.392
+  },
+  {
+    "id": "10",
+    "kind": "example",
+    "chapter": "第三块 · 贯穿例子",
+    "title": "训练分数选 Context，验证分数选方法",
+    "question": "Agentic Crossover 怎样产生更好的 Skill？",
+    "narration": "仍看代码修复。Skill A 喜欢保存完整案例，训练成功率高，但新错误上检索很慢；Skill B 擅长按错误类型路由，验证更稳，却保留了太多重复规则；Skill P 的压缩和去重好，但偶尔删掉关键接口定义。Meta Agent 可以保留 B 的错误路由，吸收 P 的压缩策略，再加入关键定义不可删除的验证协议，生成 Skill C。Base Agent 用 C 重做内层；只有当独立验证也更好，C 和它产出的 Context Function 才被保留。",
+    "takeaway": "组合的是管理方法；裁判是独立验证",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "skill-a",
+      "skill-b",
+      "skill-p",
+      "keep-route",
+      "take-compress",
+      "protect-definition",
+      "skill-c",
+      "validation-gate"
+    ],
+    "avatar_action": {
+      "atom": "post_training_agent__preference_comparison",
+      "reason": "比较三种 Skill 的泛化代价并指出独立验证门"
+    },
+    "start": 280.392,
+    "duration": 32.328,
+    "end": 312.72
+  },
+  {
+    "id": "11",
+    "kind": "next",
+    "chapter": "合拢与主线",
+    "title": "两层自动化，让 Harness 学会选择输入",
+    "question": "MCE 在 Weng 的 RSI 主线里完成了哪一步？",
+    "narration": "现在把两层合起来。内层固定 Skill，由 Base Agent 在训练 Rollout 上学习具体的 ρ 和 F；外层由 Meta Agent 根据 Skill History、交叉与独立验证，学习下一代 Skill。最终获胜的 Skill 与 Context Function 被固定下来，为新任务生成 Context，再交给任务 Agent。MCE 因而让 Harness 不只记住经验，还学会怎样组织、检索和更新经验。但验证器、权限、预算与基础模型仍必须留在进化环外。沿 Weng 的 RSI 主线，这一集回答了看什么；下一集继续回答按什么顺序做，也就是 Workflow Optimization。",
+    "takeaway": "内层学“给什么”；外层学“以后怎样学会给什么”",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "outer-loop",
+      "skill",
+      "inner-loop",
+      "context-function",
+      "new-task",
+      "task-agent",
+      "protected-boundary",
+      "weng-next"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "把内外两层合成完整流程，并指向 Weng 主线中的下一步 Workflow"
+    },
+    "start": 312.72,
+    "duration": 40.824,
+    "end": 353.544
+  }
+]

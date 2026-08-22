@@ -1,0 +1,403 @@
+[
+  {
+    "id": "01",
+    "kind": "cover",
+    "chapter": "封面",
+    "title": "只留最高分，系统反而会变笨？",
+    "narration": "只留最高分，系统反而越改越笨。问题不在分数，在搜索。",
+    "takeaway": "最高分，可能是陷阱",
+    "quick_skip": true,
+    "layout": {
+      "content_bbox": [
+        72,
+        180,
+        1008,
+        760
+      ],
+      "actor_zone": "none",
+      "protected_rects": [
+        [
+          72,
+          180,
+          1008,
+          760
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "cover-title",
+      "cover-hero"
+    ],
+    "start": 0,
+    "duration": 5.712,
+    "end": 5.712
+  },
+  {
+    "id": "02",
+    "kind": "problem",
+    "chapter": "问题 · 搜索坍缩",
+    "title": "复制冠军，搜索会坍缩",
+    "question": "为什么当前最高分不能一路复制？",
+    "narration": "为什么？最高分只证明当前评测领先：不证明更稳、更省，也不证明能迁移。只复制冠军，伤害是双重的：其他分支被剪掉，搜索越走越窄；过拟合、泄漏和偶然收益被逐次放大。所以 Weng 换掉了动作本身：不押注单点，保留一组值得探索的候选。",
+    "takeaway": "单点最高分 ≠ 可持续搜索方向",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "winner",
+      "clone",
+      "harm-diversity",
+      "harm-error-amplify",
+      "candidate-set"
+    ],
+    "avatar_action": {
+      "atom": "advanced_agent__branch_pruning",
+      "reason": "剪掉重复冠军分支，同时保留不同方向的候选枝"
+    },
+    "start": 5.712,
+    "duration": 21.384,
+    "end": 27.096
+  },
+  {
+    "id": "03",
+    "kind": "method",
+    "chapter": "方法 · 四步闭环",
+    "title": "存、选、改、验：每步可追溯",
+    "question": "一组候选怎样进入下一代？",
+    "narration": "保留一组，就需要一个循环。第一步，Archive 存档候选代码、分数、轨迹、状态；第二步，Selector 从不同父代取样，保住多样性；第三步，Proposer 拿失败证据生成窄 Diff，好归因好回滚；第四步，候选在固定预算、独立数据上过 Gate，效用、成本、回归全过才接受，否则记录并回滚。而 Verifier、权限、预算只读：能改裁判，就能伪造高分。",
+    "takeaway": "Archive → Select → Narrow Diff → Independent Gate",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "archive",
+      "select",
+      "propose",
+      "fixed-budget",
+      "gate",
+      "accept-reject",
+      "locked-read-only"
+    ],
+    "avatar_action": {
+      "atom": "advanced_agent__verification",
+      "reason": "把窄 Diff 送入独立验证门，区分接受与回滚路径"
+    },
+    "start": 27.096,
+    "duration": 27.48,
+    "end": 54.576
+  },
+  {
+    "id": "04",
+    "kind": "method",
+    "chapter": "方法 · 进化前沿",
+    "title": "保留前沿，不选唯一冠军",
+    "question": "保留谁、淘汰谁，由什么决定？",
+    "narration": "循环里最微妙的是 Select：保留谁、淘汰谁？只看分数，又回到复制冠军。Weng 的标准是前沿：横轴成本，纵轴效用。更强更贵的、更省更稳的，只要没被全面支配，就还在 Pareto Frontier 上。前沿不是宣布赢家，而是给未来留选项——环境一变，更省的随时顶上。",
+    "takeaway": "Frontier 给未来留选项",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "axes",
+      "candidates",
+      "dominated",
+      "frontier",
+      "tradeoff-labels"
+    ],
+    "avatar_action": {
+      "atom": "advanced_agent__tree_search",
+      "reason": "沿效用与成本前沿选择不同父代继续搜索"
+    },
+    "start": 54.576,
+    "duration": 22.392,
+    "end": 76.968
+  },
+  {
+    "id": "05",
+    "kind": "evidence",
+    "chapter": "近期对应 · 双时间尺度",
+    "title": "快环改 Skill，慢环改更新规则",
+    "question": "搜索循环本身，谁来改进？",
+    "narration": "到这里，搜索改的都是 harness。再追问一层：循环自己，谁来改进？MetaSkill-Evolve 给出近期答案——快环对当前任务改 Task Skill，看眼前收益；慢环改的是生成和挑选改动的 Meta-Skill，看这套规则能否持续产出好改动。重点不在名字，而在内外层的优化对象、评估节奏必须分开。",
+    "takeaway": "快环改任务技能；慢环改更新规则",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "fast-loop",
+      "task-skill",
+      "slow-loop",
+      "meta-skill",
+      "separation"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "分别指向快环 Task Skill 与慢环 Meta-Skill 的不同更新对象"
+    },
+    "start": 76.968,
+    "duration": 23.208,
+    "end": 100.176
+  },
+  {
+    "id": "06",
+    "kind": "boundary",
+    "chapter": "边界 · 能力上限",
+    "title": "递归层数，不等于能力",
+    "question": "为什么循环越多不一定越强？",
+    "narration": "听起来层数越多越强？STOP 先泼冷水：较弱模型的递归迭代可能不升反降——连自己的改动好不好都判断不了，递归只会放大弱点。Weng 也拆开两种能力：能写更新，和能用好更新，不是一回事。评估因此必须双份：改动有没有效，模型用它有没有收益。模型能力、任务分布、评测质量，仍是上限。",
+    "takeaway": "会写更新 ≠ 会用好更新后的系统",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "recursive-loop",
+      "weak-model",
+      "update-test",
+      "benefit-test",
+      "capability-ceiling"
+    ],
+    "avatar_action": {
+      "atom": "post_training_agent__benchmark_evaluation",
+      "reason": "分别评测更新质量与模型使用更新后 Harness 的真实收益"
+    },
+    "start": 100.176,
+    "duration": 24.312,
+    "end": 124.488
+  },
+  {
+    "id": "07",
+    "kind": "season_map",
+    "chapter": "回望 · 三季收束",
+    "title": "三季主线，就此收拢",
+    "question": "三季拼图，为什么这是最后一块？",
+    "narration": "把本集放回主线，位置就清楚了：第一季让 Agent 能运行、能恢复；第二季让 Context、Workflow、Code 可优化；第三季才让'怎样产生更新'本身进入搜索。三季拼完，底线只有一条：每一步可观察、可归因，裁判永远在环外。",
+    "takeaway": "可观察 · 可归因 · 裁判在环外",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "season-1",
+      "season-2",
+      "season-3",
+      "series-thesis"
+    ],
+    "avatar_action": {
+      "atom": "post_training_agent__self_reflection",
+      "reason": "回望三季主线，收拢到可观察、可归因、环外裁判的共同底线"
+    },
+    "start": 124.488,
+    "duration": 18.504,
+    "end": 142.992
+  },
+  {
+    "id": "08",
+    "kind": "ending",
+    "chapter": "上线门 · 全系列合拢",
+    "title": "六道闸门，才算可部署 RSI",
+    "question": "上线前必须回答什么？",
+    "narration": "所以上线前别问能不能自我改进，只问六件事：改动有没有版本和 Diff？反馈来自真实结果或独立 Verifier？更新和评估是否泄漏？哪些文件权限只读？每个 Gain 有没有证据、成本、回归？何时停止、回滚？缺一项，只是自动调参；六项齐备，才谈部署。真正递归的不是无限重写，而是环外控制下的搜索。预算固定，你留更强更贵，还是略弱更稳？",
+    "takeaway": "搜索改进器，但不把裁判一起改掉",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "version",
+      "verifier",
+      "leakage",
+      "readonly",
+      "evidence",
+      "stop-rollback",
+      "thesis",
+      "question"
+    ],
+    "avatar_action": {
+      "atom": "post_training_agent__safety_alignment_gate",
+      "reason": "守住版本、验证、只读权限、证据、预算与回滚组成的上线门"
+    },
+    "start": 142.992,
+    "duration": 32.88,
+    "end": 175.872
+  }
+]

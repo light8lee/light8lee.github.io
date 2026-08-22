@@ -1,0 +1,424 @@
+[
+  {
+    "id": "01",
+    "kind": "cover",
+    "chapter": "封面",
+    "title": "并行不是多开聊天框",
+    "narration": "并行不是多开几个聊天框，而是让每个任务的状态都能被检查。",
+    "takeaway": "并行 = 可检查的任务状态",
+    "quick_skip": true,
+    "layout": {
+      "content_bbox": [
+        72,
+        240,
+        930,
+        1440
+      ],
+      "actor_zone": "none",
+      "protected_rects": [
+        [
+          72,
+          240,
+          930,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "cover-copy",
+      "cover-hero"
+    ],
+    "start": 0,
+    "duration": 5.52,
+    "end": 5.52
+  },
+  {
+    "id": "02",
+    "kind": "season_map",
+    "chapter": "全季地图",
+    "title": "S1：先造出可持续运行的系统",
+    "question": "为什么第三集才讲并行？",
+    "narration": "这套系列沿 Lilian Weng 的文章展开。第一季先让 Agent 能运行，再把状态写进文件，最后才把长任务拆成可检查的并行。本集对应她的第三个设计模式：子代理和后台任务。",
+    "takeaway": "S1E3：持续状态，才能支撑可恢复的并行",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        930,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "workflow",
+      "file-memory",
+      "parallel",
+      "episode-highlight",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "指向第一季从运行、记忆到显式并行的第三步"
+    },
+    "start": 5.52,
+    "duration": 14.568,
+    "end": 20.088
+  },
+  {
+    "id": "03",
+    "kind": "problem",
+    "chapter": "真正的问题",
+    "title": "三个聊天窗口，\n不等于一个并行系统",
+    "question": "主线程怎样知道每个任务发生了什么？",
+    "narration": "如果主 Agent 同时开三个对话去搜索、实验和监控，它很快会遇到五个问题：谁拿到了什么输入，谁还在运行，谁已经失败，谁可以被取消，以及结果该怎样合并。没有这些状态，所谓多代理只是把不可见的混乱复制了三份。Weng 的判断是：并行必须显式、可检查、可恢复。",
+    "takeaway": "多代理首先是状态管理，不是窗口数量",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "three-chats",
+      "unknown-input",
+      "unknown-status",
+      "unknown-failure",
+      "unknown-cancel",
+      "unknown-merge",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__trace_review",
+      "reason": "回看三个不可追踪对话造成的状态缺口"
+    },
+    "start": 20.088,
+    "duration": 21.72,
+    "end": 41.808
+  },
+  {
+    "id": "04",
+    "kind": "method",
+    "chapter": "显式并行",
+    "title": "把主 Agent 变成小型 process manager",
+    "question": "一个 worker 必须留下什么？",
+    "narration": "显式并行要把每个子任务当成一条可管理的 job。主 Agent 先写清输入、权限、预算、停止条件和输出路径，再启动 worker。运行中，job 持续更新排队、运行、完成或失败状态；主线程可以查询、取消，也能在中断后恢复。worker 最后交付摘要、原始证据和退出码。这样合并的是带来源的产物，而不是几段对话印象。",
+    "takeaway": "start → query → cancel/recover → merge",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "job-spec",
+      "start",
+      "status",
+      "query",
+      "cancel",
+      "recover",
+      "artifact",
+      "exit-code",
+      "merge",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "action__write_on_board",
+      "reason": "写下 worker 的输入、权限、预算与输出契约"
+    },
+    "start": 41.808,
+    "duration": 28.464,
+    "end": 70.272
+  },
+  {
+    "id": "05",
+    "kind": "example",
+    "chapter": "订单案例",
+    "title": "重复扣款：三个 worker，\n一条可验证结论",
+    "question": "并行结果怎样真正合并？",
+    "narration": "假设订单偶发重复扣款。三个 worker 分别检查重试策略、数据库幂等键和第三方回调日志。它们各自把报告写进独立目录，并附上证据文件和 job 状态。主 Agent 不需要吞下三段完整聊天，而是先读三个结论，再下钻冲突证据。最后 merge 出一条可验证因果链：超时触发重试，而重试请求缺少幂等保护。",
+    "tts_narration": "假设订单偶发重复扣款。三个 worker 分别检查重试策略、数据库幂等键和第三方回吊日志。它们各自把报告写进独立目录，并附上证据文件和 job 状态。主 Agent 不需要吞下三段完整聊天，而是先读三个结论，再下钻冲突证据。最后 merge 出一条可验证因果链：超时触发重试，而重试请求缺少幂等保护。",
+    "takeaway": "合并结论，也保留回到原始证据的路径",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "retry-worker",
+      "db-worker",
+      "callback-worker",
+      "reports",
+      "evidence",
+      "merge",
+      "causal-chain",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "指向三个 worker 报告汇合出的重复扣款因果链"
+    },
+    "start": 70.272,
+    "duration": 26.472,
+    "end": 96.744
+  },
+  {
+    "id": "06",
+    "kind": "evidence",
+    "chapter": "AHE 支点",
+    "title": "AHE：让并行日志\n变成可查证的证据",
+    "question": "并行日志太多，主 Agent 怎样看懂又查得回？",
+    "narration": "AHE 在这里不是用来证明多 Agent 更强，而是回答一个具体问题：并行 worker 产生大量日志后，主 Agent 怎样看得懂、查得回。它把原始轨迹组织成可下钻的证据层：上层是候选结论和失败类型，中层连接具体 episode，底层保留原始日志与组件文件。主 Agent 先用摘要定位，遇到冲突再沿证据链接下钻。这里借用的是状态可见、证据可追溯的 observability；AHE 的 harness 自演化属于后文的递归改进问题。",
+    "takeaway": "AHE 的作用：让并行结果可导航、可追溯、可复核",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "summary-layer",
+      "episode-layer",
+      "raw-log-layer",
+      "evidence-links",
+      "drill-down",
+      "boundary",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "agent_runtime__trace_review",
+      "reason": "沿摘要、episode 到原始日志逐层检查证据"
+    },
+    "start": 96.744,
+    "duration": 32.112,
+    "end": 128.856
+  },
+  {
+    "id": "07",
+    "kind": "boundary",
+    "chapter": "边界",
+    "title": "更多 worker，\n也会制造更多噪声",
+    "question": "什么时候不该继续并行？",
+    "narration": "并行会放大成本、权限风险和协调错误。若两个 worker 争抢同一个可写文件，或每个任务都没有停止条件与明确产物，更多代理只会制造更多噪声。好的 harness 要限制并发、隔离可写范围、记录预算，并在证据足够或收益递减时停止。可检查的并行是能力；代理数量不是。",
+    "takeaway": "并行要有权限、预算和停止条件",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "cost",
+      "permission",
+      "write-conflict",
+      "noise",
+      "concurrency-limit",
+      "budget",
+      "stop-condition",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "action__crouch_and_think",
+      "reason": "权衡并行带来的成本、权限与协调风险"
+    },
+    "start": 128.856,
+    "duration": 22.872,
+    "end": 151.728
+  },
+  {
+    "id": "08",
+    "kind": "next",
+    "chapter": "第一季收束",
+    "title": "S1 完成的是 runtime，\n不是自动变好",
+    "question": "下一步应该优化什么？",
+    "narration": "到这里，第一季只建立了三件事：工作流让 Agent 能执行，文件让状态能保存，并行任务让长工作可拆解、可观察、可恢复。它们仍然不是 RSI，因为系统还没有用独立评估去改进自己。第二季才进入真正的优化问题：到底该改 context、workflow，还是定义二者的 harness code？",
+    "takeaway": "可运行 → 可记忆 → 可观察；然后才谈优化",
+    "layout": {
+      "content_bbox": [
+        72,
+        250,
+        850,
+        1440
+      ],
+      "actor_zone": "lower_right",
+      "protected_rects": [
+        [
+          72,
+          250,
+          850,
+          1440
+        ],
+        [
+          72,
+          1510,
+          1008,
+          1660
+        ],
+        [
+          760,
+          1030,
+          1008,
+          1500
+        ]
+      ]
+    },
+    "reveal_plan": [
+      "workflow",
+      "memory",
+      "parallel",
+      "not-rsi",
+      "s2-context",
+      "s2-workflow",
+      "s2-code",
+      "takeaway"
+    ],
+    "avatar_action": {
+      "atom": "action__point_and_explain",
+      "reason": "收束第一季三个 runtime 能力并指向第二季优化对象"
+    },
+    "start": 151.728,
+    "duration": 23.424,
+    "end": 175.152
+  }
+]
