@@ -99,10 +99,13 @@ export default function Home() {
       <header className="topbar">
         <div className="brand-lockup">
           <div className="brand-mark" aria-hidden="true"><span /><span /><span /></div>
-          <div><p className="eyebrow">PIXEL MULTI-AGENT SIMULATION</p><h1>小城应急局</h1></div>
+          <div><p className="eyebrow">FIELD DESK · INTERACTIVE SIMULATION</p><h1>小城应急局</h1></div>
         </div>
         <div className="city-status"><span className="live-dot" /> 城市频道在线<span className="status-divider" /><span>第 {run.day} 值班日</span></div>
-        <button className="seed-button" onClick={() => navigator.clipboard?.writeText(window.location.href)} title="复制本局链接">SEED / {run.seed} <span>↗</span></button>
+        <div className="topbar-actions">
+          <a className="return-to-desk" href="/" title="返回案头">← 案头</a>
+          <button className="seed-button" onClick={() => navigator.clipboard?.writeText(window.location.href)} title="复制本局链接">SEED / {run.seed} <span>↗</span></button>
+        </div>
       </header>
 
       <section className="mission-strip">

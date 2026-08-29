@@ -6,6 +6,7 @@ summary: "真正的 Agent 智能不只在于会调用什么工具，更在于能
 tags: [Daydreams, 认知型 Agent, 内容理解, 假设生成, Agent 设计]
 series: daydreams
 daydream: true
+thought_axis: 法
 permalink: /daydreams/cognitive-agent-understanding-hypothesis-verification/
 cover: /assets/daydreams/cognitive-agent-understanding-hypothesis-verification/images/01-content-review.png
 body_class: daydream-post

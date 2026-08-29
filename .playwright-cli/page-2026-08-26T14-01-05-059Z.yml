@@ -1,0 +1,276 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "涛涛涛 home" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e4]: 涛
+      - generic [ref=e5]:
+        - strong [ref=e6]: 涛涛涛
+        - generic [ref=e7]: FIELD DESK
+    - paragraph [ref=e8]: 一张持续整理的研究书桌：文章、图解、项目和没写完的问题。
+    - navigation "Primary navigation" [ref=e9]:
+      - link "研究桌" [ref=e10] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e11]: ⌘
+        - text: 研究桌
+      - link "实验场" [ref=e12] [cursor=pointer]:
+        - /url: /pages/projects.html
+        - generic [ref=e13]: ◌
+        - text: 实验场
+      - link "资料室" [ref=e14] [cursor=pointer]:
+        - /url: /archives.html
+        - generic [ref=e15]: ▣
+        - text: 资料室
+      - link "漫游册" [ref=e16] [cursor=pointer]:
+        - /url: /pages/notes.html
+        - generic [ref=e17]: ⌁
+        - text: 漫游册
+      - link "关于" [ref=e18] [cursor=pointer]:
+        - /url: /about.html
+        - generic [ref=e19]: ○
+        - text: 关于
+    - navigation "常看专题" [ref=e20]:
+      - paragraph [ref=e21]: 常看专题
+      - link "Agent Systems" [ref=e22] [cursor=pointer]:
+        - /url: /archives.html
+      - link "RL Field Notes" [ref=e24] [cursor=pointer]:
+        - /url: /archives.html
+      - link "Inside Codex" [ref=e26] [cursor=pointer]:
+        - /url: /archives.html
+    - paragraph [ref=e28]: STATIC SITE · GITHUB PAGES
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - heading "Writing" [level=1] [ref=e31]
+      - paragraph [ref=e32]: All articles, newest first.
+    - generic [ref=e33]:
+      - article [ref=e34]:
+        - time [ref=e35]: 2026-08-21
+        - link "RSI Harness Engineering：从运行系统到受控递归改进" [ref=e36] [cursor=pointer]:
+          - /url: /agent/2026/08/21/rsi-harness-engineering.html
+      - article [ref=e37]:
+        - time [ref=e38]: 2026-08-06
+        - link "BLL-Loss：低概率 Token，为什么不该无限主导 SFT 更新？" [ref=e39] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/08/06/icml-2026-bll-loss.html
+      - article [ref=e40]:
+        - time [ref=e41]: 2026-08-05
+        - link "LALP：99.99% 的复读，为什么可能筛出更差的推理数据？" [ref=e42] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/08/05/icml-2026-lalp.html
+      - article [ref=e43]:
+        - time [ref=e44]: 2026-08-04
+        - link "PIPE：工具改名后，Agent 为什么可能不会用了？" [ref=e45] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/08/04/icml-2026-pipe.html
+      - article [ref=e46]:
+        - time [ref=e47]: 2026-08-03
+        - link "MEnvAgent：修 Bug 前，环境先崩了" [ref=e48] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/08/03/icml-2026-menvagent.html
+      - article [ref=e49]:
+        - time [ref=e50]: 2026-08-02
+        - link "DPO Unchained：从偏好标签到可审计的选择建模" [ref=e51] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/08/02/dpo-unchained.html
+      - article [ref=e52]:
+        - time [ref=e53]: 2026-08-01
+        - link "TerminalTraj：命令成功，为什么奖励仍然是 0？" [ref=e54] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/08/01/icml-2026-terminaltraj.html
+      - article [ref=e55]:
+        - time [ref=e56]: 2026-08-01
+        - link "ICML 2026：代码 Agent 变强，不一定靠更狠的 RL" [ref=e57] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/08/01/icml-2026-davinci-dev.html
+      - article [ref=e58]:
+        - time [ref=e59]: 2026-07-29
+        - link "ICML 2026：RL 为什么会撞上 Base Model Barrier？" [ref=e60] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/07/29/icml-2026-base-model-barrier.html
+      - article [ref=e61]:
+        - time [ref=e62]: 2026-07-28
+        - link "ICML 2026：Pre-Training、Mid-Training 与 RL 如何划定推理能力边缘" [ref=e63] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/07/28/icml-2026-pre-mid-rl.html
+      - article [ref=e64]:
+        - time [ref=e65]: 2026-07-27
+        - link "ACL 2026 反馈优化（三）：用户行为到底在教 Agent 什么？" [ref=e66] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/07/27/acl-2026-behavior-feedback.html
+      - article [ref=e67]:
+        - time [ref=e68]: 2026-07-26
+        - link "ACL 2026 反馈优化（二）：奖励如何教 Agent 留下可复用技能？" [ref=e69] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/07/26/acl-2026-numeric-feedback-sage.html
+      - article [ref=e70]:
+        - time [ref=e71]: 2026-07-25
+        - link "ACL 2026 反馈优化（一）：文字反馈究竟写回哪里？" [ref=e72] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/07/25/acl-2026-text-feedback.html
+      - article [ref=e73]:
+        - time [ref=e74]: 2026-07-21
+        - link "ToolRM：把工具调用错误变成领域裁判的训练数据" [ref=e75] [cursor=pointer]:
+          - /url: /pages/toolrm.html
+      - article [ref=e76]:
+        - time [ref=e77]: 2026-07-20
+        - link "HSCodeComp：专业 Agent 如何在规则树里做出可审计判断" [ref=e78] [cursor=pointer]:
+          - /url: /pages/hscodecomp.html
+      - article [ref=e79]:
+        - time [ref=e80]: 2026-07-20
+        - link "CURE：把反思训练成可检验的下一步搜索" [ref=e81] [cursor=pointer]:
+          - /url: /pages/cure.html
+      - article [ref=e82]:
+        - time [ref=e83]: 2026-07-18
+        - link "On-Policy SFT：让正确答案更像模型自己会写的答案" [ref=e84] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/07/18/on-policy-sft.html
+      - article [ref=e85]:
+        - time [ref=e86]: 2026-07-16
+        - link "RLTF：把文本批评内化成首答能力" [ref=e87] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/07/16/rltf-text-feedback.html
+      - article [ref=e88]:
+        - time [ref=e89]: 2026-07-15
+        - link "多 Agent 协作：五种模式、完成条件与选型" [ref=e90] [cursor=pointer]:
+          - /url: /agents/2026/07/15/multi-agent-collaboration.html
+      - article [ref=e91]:
+        - time [ref=e92]: 2026-07-14
+        - link "OEC：让专家从 Agent 的残局中接手" [ref=e93] [cursor=pointer]:
+          - /url: /agent%20training/2026/07/14/oec.html
+      - article [ref=e94]:
+        - time [ref=e95]: 2026-07-13
+        - link "Retaining by Doing：on-policy 数据为何能减轻遗忘" [ref=e96] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/07/13/retaining-by-doing.html
+      - article [ref=e97]:
+        - time [ref=e98]: 2026-07-12
+        - link "MaxRL：一行 GRPO 改造，把难题重新放回训练信号" [ref=e99] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/07/12/maxrl.html
+      - article [ref=e100]:
+        - time [ref=e101]: 2026-07-11
+        - link "Dive into Codex 08：System 指令与运行约束" [ref=e102] [cursor=pointer]:
+          - /url: /codex/2026/07/11/dive-into-codex-08-system-instructions-constraints.html
+      - article [ref=e103]:
+        - time [ref=e104]: 2026-07-11
+        - link "Dive into Codex 07：Subagent 架构" [ref=e105] [cursor=pointer]:
+          - /url: /codex/2026/07/11/dive-into-codex-07-subagent-architecture.html
+      - article [ref=e106]:
+        - time [ref=e107]: 2026-07-11
+        - link "Dive into Codex 06：Tool Execution 与 Workspace" [ref=e108] [cursor=pointer]:
+          - /url: /codex/2026/07/11/dive-into-codex-06-tool-execution-workspace.html
+      - article [ref=e109]:
+        - time [ref=e110]: 2026-07-10
+        - link "Dive into Codex 05：Sandbox 与权限边界" [ref=e111] [cursor=pointer]:
+          - /url: /codex/2026/07/10/dive-into-codex-05-sandbox-and-permissions.html
+      - article [ref=e112]:
+        - time [ref=e113]: 2026-07-09
+        - link "Dive into Codex 04：Interrupt 与异步事件" [ref=e114] [cursor=pointer]:
+          - /url: /codex/2026/07/09/dive-into-codex-04-interrupt-async-events.html
+      - article [ref=e115]:
+        - time [ref=e116]: 2026-07-07
+        - link "Dive into Codex 03：Cache 与 Compaction" [ref=e117] [cursor=pointer]:
+          - /url: /codex/2026/07/07/dive-into-codex-03-cache-compaction.html
+      - article [ref=e118]:
+        - time [ref=e119]: 2026-07-05
+        - link "Dive into Codex 02：Responses API 事件模型" [ref=e120] [cursor=pointer]:
+          - /url: /codex/2026/07/05/dive-into-codex-02-responses-api-design.html
+      - article [ref=e121]:
+        - time [ref=e122]: 2026-07-04
+        - link "Dive into Codex 01：Agent Loop 的核心地图" [ref=e123] [cursor=pointer]:
+          - /url: /codex/2026/07/04/dive-into-codex-01-agent-loop-core.html
+      - article [ref=e124]:
+        - time [ref=e125]: 2026-07-04
+        - 'link "SCPO: 从失败轨迹里找回正确步骤" [ref=e126] [cursor=pointer]':
+          - /url: /agent%20rl/2026/07/04/scpo-semantic-consistency-policy-optimization.html
+      - article [ref=e127]:
+        - time [ref=e128]: 2026-07-01
+        - link "Yuvion LLM：把对抗鲁棒性放进安全模型训练" [ref=e129] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/07/01/yuvion-llm.html
+      - article [ref=e130]:
+        - time [ref=e131]: 2026-06-29
+        - link "openclaw hermes" [ref=e132] [cursor=pointer]:
+          - /url: /agent/2026/06/29/openclaw-hermes.html
+      - article [ref=e133]:
+        - time [ref=e134]: 2026-06-28
+        - 'link "OPID: 从 Agent 自己的轨迹中提炼技能，让强化学习不再\"盲人摸象\"" [ref=e135] [cursor=pointer]':
+          - /url: /agent/2026/06/28/opid.html
+      - article [ref=e136]:
+        - time [ref=e137]: 2026-06-27
+        - link "Agent 记忆系统大横评：12 个系统，谁才是真正的记忆王者？" [ref=e138] [cursor=pointer]:
+          - /url: /ai%20notes/2026/06/27/agent-memory.html
+      - article [ref=e139]:
+        - time [ref=e140]: 2026-06-27
+        - 'link "Learning at the Right Pace: Adaptive Data Scheduling Improves LLM Reinforcement Learning" [ref=e141] [cursor=pointer]':
+          - /url: /llm%20post-training/2026/06/27/ads.html
+      - article [ref=e142]:
+        - time [ref=e143]: 2026-06-25
+        - link "Experiential Reflective Learning for Self-Improving LLM Agents" [ref=e144] [cursor=pointer]:
+          - /url: /agent/2026/06/25/erl.html
+      - article [ref=e145]:
+        - time [ref=e146]: 2026-06-21
+        - link "CHERRL：让 Rubric-based RL 的 Reward Hacking 可复现、可分析、可检测" [ref=e147] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/06/21/cherrl.html
+      - article [ref=e148]:
+        - time [ref=e149]: 2026-06-21
+        - link "Scaling Laws for Reward Model Overoptimization" [ref=e150] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/06/21/rm-overoptimization.html
+      - article [ref=e151]:
+        - time [ref=e152]: 2026-06-21
+        - link "奖励上涨，为什么安全目标反而变差？" [ref=e153] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/06/21/reward-hacking.html
+      - article [ref=e154]:
+        - time [ref=e155]: 2026-06-19
+        - link "《Agent SFT 最难的，不是训练》脚本" [ref=e156] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/06/19/omniagent-sft.html
+      - article [ref=e157]:
+        - time [ref=e158]: 2026-06-18
+        - 'link "GD^2PO: Mitigating Multi-Reward Conflicts via Group-Dynamic reward-Decoupled Policy Optimization" [ref=e159] [cursor=pointer]':
+          - /url: /llm%20post-training/2026/06/18/gd2po.html
+      - article [ref=e160]:
+        - time [ref=e161]: 2026-06-18
+        - 'link "DharmaOCR: Specialized Small Language Models for Structured OCR that outperform Open-Source and Commercial Baselines" [ref=e162] [cursor=pointer]':
+          - /url: /llm%20post-training/2026/06/18/dharmaocr-dpo.html
+      - article [ref=e163]:
+        - time [ref=e164]: 2026-06-18
+        - link "Rethinking the Divergence Regularization in LLM RL" [ref=e165] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/06/18/drpo.html
+      - article [ref=e166]:
+        - time [ref=e167]: 2026-06-17
+        - link "Computer-use agent真正的难点不是会点按钮或会写命令，而是能不能在长链路任务里稳定编排GUI与CLI" [ref=e168] [cursor=pointer]:
+          - /url: /agent/2026/06/17/weavebench.html
+      - article [ref=e169]:
+        - time [ref=e170]: 2026-06-16
+        - 'link "GoLongRL: Capability-Oriented Long Context Reinforcement Learning with Multitask Alignment" [ref=e171] [cursor=pointer]':
+          - /url: /llm%20post-training/2026/06/16/golongrl.html
+      - article [ref=e172]:
+        - time [ref=e173]: 2026-06-15
+        - link "GRPO PyTorch 伪代码详解：从采样到组内相对优势" [ref=e174] [cursor=pointer]:
+          - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/06/15/grpo-pytorch.html
+      - article [ref=e175]:
+        - time [ref=e176]: 2026-06-14
+        - link "PPO、DPO、GRPO 详解：LLM 偏好对齐方法对比" [ref=e177] [cursor=pointer]:
+          - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/06/14/ppo-dpo-grpo.html
+      - article [ref=e178]:
+        - time [ref=e179]: 2026-06-14
+        - link "RL 为什么非要最后才上场？" [ref=e180] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/06/14/rl-excursions.html
+      - article [ref=e181]:
+        - time [ref=e182]: 2026-06-11
+        - link "DRPO 技术详解：LLM 强化学习可能一直管错了东西" [ref=e183] [cursor=pointer]:
+          - /url: /llm%20post-training/2026/06/11/drpo.html
+      - article [ref=e184]:
+        - time [ref=e185]: 2026-06-10
+        - link "AI Agent 详解：感知、规划、记忆与行动的系统架构" [ref=e186] [cursor=pointer]:
+          - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/06/10/agent.html
+      - article [ref=e187]:
+        - time [ref=e188]: 2026-05-18
+        - link "On-Policy Distillation：让学生在自己的分布上学习" [ref=e189] [cursor=pointer]:
+          - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/18/opd.html
+      - article [ref=e190]:
+        - time [ref=e191]: 2026-05-06
+        - link "top_p、top_k 和 temperature：大模型采样参数详解" [ref=e192] [cursor=pointer]:
+          - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/06/sampling.html
+      - article [ref=e193]:
+        - time [ref=e194]: 2026-05-05
+        - link "LoRA 详解：低秩适配如何高效微调大模型" [ref=e195] [cursor=pointer]:
+          - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/05/lora.html
+      - article [ref=e196]:
+        - time [ref=e197]: 2026-05-05
+        - link "Transformer 详解：从 Attention 到 FFN、残差与 LayerNorm" [ref=e198] [cursor=pointer]:
+          - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/05/transformer.html
+      - article [ref=e199]:
+        - time [ref=e200]: 2026-05-05
+        - link "RoPE 详解：旋转位置编码如何把相对距离写进注意力" [ref=e201] [cursor=pointer]:
+          - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/05/rope.html
+  - contentinfo [ref=e202]:
+    - paragraph [ref=e203]: Writing, experiments, and visual notes by 涛涛涛.
+    - paragraph [ref=e204]:
+      - link "GitHub" [ref=e205] [cursor=pointer]:
+        - /url: https://github.com/light8lee
+      - text: ·
+      - link "RSS" [ref=e206] [cursor=pointer]:
+        - /url: /atom.xml

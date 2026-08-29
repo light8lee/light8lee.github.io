@@ -1,0 +1,136 @@
+---
+layout: default
+title: Interface Lab
+body_class: interface-lab-page
+published: false
+---
+
+<section class="interface-lab" data-interface-lab>
+  <div class="product-frame" data-skin="paper">
+    <aside class="product-sidebar">
+      <a class="product-logo" href="{{ '/' | relative_url }}" aria-label="返回涛涛涛首页">
+        <span class="product-logo-mark">涛</span>
+        <span><strong>taotao</strong><small>FIELD DESK</small></span>
+      </a>
+
+      <p class="sidebar-manifesto">一张持续整理的研究书桌：文章、图解、项目和没写完的问题。</p>
+
+      <nav class="product-nav" aria-label="样机导航">
+        <a href="{{ '/pages/notes.html' | relative_url }}"><span>⌁</span>我见</a>
+        <a class="is-current" href="#workspace"><span>⌘</span>案头</a>
+        <a href="{{ '/pages/projects.html' | relative_url }}"><span>◌</span>工坊</a>
+        <a href="{{ '/archives.html' | relative_url }}"><span>▣</span>书架</a>
+      </nav>
+
+      <div class="sidebar-collections">
+        <p>常看专题</p>
+        <a href="{{ '/?collection=agent#latest-writing' | relative_url }}"><i class="dot dot-lilac"></i>Agent Systems</a>
+        <a href="{{ '/?collection=post-training#latest-writing' | relative_url }}"><i class="dot dot-coral"></i>RL Field Notes</a>
+        <a href="{{ '/?collection=dive-into-codex#latest-writing' | relative_url }}"><i class="dot dot-sky"></i>Inside Codex</a>
+      </div>
+    </aside>
+
+    <div class="product-main" id="workspace">
+      <div class="workspace">
+        <div class="signal-card">
+          <div class="signal-copy">
+            <p>FEATURED NOTE</p>
+            <h3>AI 不会“自己进化”<br>它需要一个可验证的运行环境。</h3>
+            <a href="{{ '/2026/08/21/rsi-harness-engineering.html' | relative_url }}">打开深度笔记 <span>↗</span></a>
+            <button class="signal-expand" type="button" data-note-fold aria-expanded="false">展开边注 <span>＋</span></button>
+            <p class="signal-reveal" data-note-reveal hidden>观察不是证据；任何“变好了”的判断，都要能回到受控 diff 和独立验证。</p>
+          </div>
+          <div class="signal-chart" aria-label="从观察到验证再到可复现进化的循环图">
+            <span class="chart-label label-a">OBSERVE</span><span class="chart-label label-b">VALIDATE</span><span class="chart-label label-c">COMPOUND</span>
+            <div class="chart-orbit orbit-one"></div><div class="chart-orbit orbit-two"></div><div class="chart-core">RSI<small>LOOP</small></div>
+            <span class="chart-spark spark-one"></span><span class="chart-spark spark-two"></span><span class="chart-spark spark-three"></span>
+          </div>
+        </div>
+
+        <div class="explore-tabs" role="tablist" aria-label="内容类型">
+          <span class="tab-indicator" aria-hidden="true"></span>
+          <button class="is-active" type="button" role="tab" aria-selected="true" data-workspace-tab="all">最近文章</button>
+          <button type="button" role="tab" aria-selected="false" data-workspace-tab="agent">Agent</button>
+          <button type="button" role="tab" aria-selected="false" data-workspace-tab="rl">RL / 后训练</button>
+          <button type="button" role="tab" aria-selected="false" data-workspace-tab="codex">Codex 拆解</button>
+        </div>
+
+        <div class="tab-panels">
+          <div class="workspace-panel is-active" role="tabpanel" data-workspace-panel="all">
+            <div class="notes-column">
+              {% for post in site.posts limit: 3 %}
+              <article class="note-card {% if forloop.first %}note-featured{% else %}note-compact{% endif %}">
+                {% unless forloop.first %}<span class="note-number">0{{ forloop.index }}</span>{% endunless %}
+                <div>
+                  <p class="note-meta"><i class="dot {% cycle 'dot-lilac', 'dot-coral', 'dot-sky' %}"></i> {{ post.category | default: 'RESEARCH NOTE' | upcase }} <time>{{ post.date | date: '%Y.%m.%d' }}</time></p>
+                  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                  {% if forloop.first %}<p>{{ post.excerpt | strip_html | truncate: 86 }}</p>{% endif %}
+                </div>
+                {% if forloop.first %}<div class="note-footer"><span class="mini-author">涛</span><a href="{{ post.url | relative_url }}">阅读全文 <b>↗</b></a></div>{% else %}<a class="arrow-link" href="{{ post.url | relative_url }}">↗</a>{% endif %}
+              </article>
+              {% endfor %}
+            </div>
+            <aside class="pulse-column">
+              <div class="pulse-heading"><p>INDEX CARDS</p><a href="{{ '/archives.html' | relative_url }}">所有文章 <span>→</span></a></div>
+              <nav class="paper-index" aria-label="专题索引"><a href="{{ '/archives.html' | relative_url }}"><b>01</b><span>Agent 的运行环境</span><i>↗</i></a><a href="{{ '/pages/llm-basics.html' | relative_url }}"><b>02</b><span>大模型基础知识</span><i>↗</i></a><a href="{{ '/pages/projects.html' | relative_url }}"><b>03</b><span>可播放的项目实验</span><i>↗</i></a></nav>
+              <details class="paper-margin"><summary>这页真的能做什么？</summary><p>文章索引、图文笔记、站内跳转、纯前端动画，以及部署后保持不变的可靠链接。</p></details>
+            </aside>
+          </div>
+          <div class="workspace-panel" role="tabpanel" data-workspace-panel="agent" hidden><div class="empty-panel"><span>⌁</span><p>AGENT SYSTEMS</p><h3>工具、上下文、评估与迭代：把 Agent 当作工程系统来阅读。</h3><a href="{{ '/archives.html' | relative_url }}">浏览文章目录 →</a></div></div>
+          <div class="workspace-panel" role="tabpanel" data-workspace-panel="rl" hidden><div class="empty-panel"><span>◒</span><p>RL / POST-TRAINING</p><h3>从奖励建模到策略优化，拆开每一个有效与失效的环节。</h3><a href="{{ '/archives.html' | relative_url }}">浏览文章目录 →</a></div></div>
+          <div class="workspace-panel" role="tabpanel" data-workspace-panel="codex" hidden><div class="empty-panel"><span>⌘</span><p>INSIDE CODEX</p><h3>一组关于 agentic coding 的机制图解与工程笔记。</h3><a href="{{ '/archives.html' | relative_url }}">浏览文章目录 →</a></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+  (function () {
+    var lab = document.querySelector('[data-interface-lab]');
+    if (!lab) return;
+    var tabList = lab.querySelector('.explore-tabs');
+    var tabButtons = Array.prototype.slice.call(lab.querySelectorAll('[data-workspace-tab]'));
+    var panels = Array.prototype.slice.call(lab.querySelectorAll('[data-workspace-panel]'));
+    var indicator = lab.querySelector('.tab-indicator');
+    var noteFold = lab.querySelector('[data-note-fold]');
+    var noteReveal = lab.querySelector('[data-note-reveal]');
+
+    function placeIndicator(button, instant) {
+      if (!button || !indicator) return;
+      indicator.style.transition = instant ? 'none' : '';
+      indicator.style.width = button.offsetWidth + 'px';
+      indicator.style.transform = 'translateX(' + (button.offsetLeft - tabList.offsetLeft) + 'px)';
+      if (instant) requestAnimationFrame(function () { indicator.style.transition = ''; });
+    }
+
+    if (noteFold && noteReveal) {
+      noteFold.addEventListener('click', function () {
+        var open = noteFold.getAttribute('aria-expanded') === 'true';
+        noteFold.setAttribute('aria-expanded', String(!open));
+        noteReveal.hidden = open;
+        noteFold.querySelector('span').textContent = open ? '＋' : '−';
+      });
+    }
+
+    tabButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var key = button.dataset.workspaceTab;
+        tabButtons.forEach(function (item) {
+          var active = item === button;
+          item.classList.toggle('is-active', active);
+          item.setAttribute('aria-selected', String(active));
+        });
+        panels.forEach(function (panel) {
+          var active = panel.dataset.workspacePanel === key;
+          panel.hidden = !active;
+          panel.classList.toggle('is-active', active);
+        });
+        placeIndicator(button);
+      });
+    });
+    placeIndicator(lab.querySelector('[data-workspace-tab].is-active'), true);
+    window.addEventListener('resize', function () { placeIndicator(lab.querySelector('[data-workspace-tab].is-active'), true); });
+  })();
+</script>

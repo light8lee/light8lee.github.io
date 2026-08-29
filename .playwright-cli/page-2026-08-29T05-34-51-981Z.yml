@@ -1,0 +1,62 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "涛涛涛 home" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - navigation "Primary navigation" [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /pages/notes.html
+      - link [ref=e6] [cursor=pointer]:
+        - /url: /
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /pages/projects.html
+      - link [ref=e8] [cursor=pointer]:
+        - /url: /archives.html
+      - link [ref=e9] [cursor=pointer]:
+        - /url: /about.html
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - heading "工坊" [level=1] [ref=e12]
+      - paragraph [ref=e13]: 可观察、可复现、可回放的研究展示。
+    - region "Project list" [ref=e14]:
+      - article [ref=e15]:
+        - generic [ref=e16]: Interactive simulation
+        - heading "Agent Town / 小城应急局" [level=2] [ref=e17]
+        - paragraph [ref=e18]: 一个用像素城市直观展示 Multi-agent 协作机制的交互模拟器。它把抽象的编排方式放进同一条可观察、可复现、可回放的应急处置轨迹中，让你看到消息如何流动、任务如何拆解，以及不同 Agent 如何汇合结果。
+        - generic "Collaboration modes shown in the simulation" [ref=e19]:
+          - strong [ref=e20]: 五种协作形式
+          - list [ref=e21]:
+            - listitem [ref=e22]:
+              - generic [ref=e23]: Group Chat
+              - generic [ref=e24]: 多角色轮流讨论，共享上下文并形成共识。
+            - listitem [ref=e25]:
+              - generic [ref=e26]: Supervisor
+              - generic [ref=e27]: 中心节点拆解目标、委派子任务并统一收束。
+            - listitem [ref=e28]:
+              - generic [ref=e29]: Event Bus
+              - generic [ref=e30]: Agent 通过事件发布与订阅实现松耦合协作。
+            - listitem [ref=e31]:
+              - generic [ref=e32]: DAG
+              - generic [ref=e33]: 按依赖关系并行执行任务，在关键节点汇合结果。
+            - listitem [ref=e34]:
+              - generic [ref=e35]: Handoff
+              - generic [ref=e36]: 把结构化上下文与任务所有权一起移交，并由接收方确认接管。
+        - generic "Technologies" [ref=e37]:
+          - generic [ref=e38]: Multi-agent
+          - generic [ref=e39]: Simulation
+          - generic [ref=e40]: React
+        - generic [ref=e41]:
+          - link "Launch simulation" [ref=e42] [cursor=pointer]:
+            - /url: /projects/agent-town/
+            - text: Launch simulation
+            - generic [ref=e43]: →
+          - link "Related Writing：多 Agent 协作：五种模式、完成条件与选型" [ref=e44] [cursor=pointer]:
+            - /url: /agents/2026/07/15/multi-agent-collaboration.html
+            - text: Related Writing：多 Agent 协作：五种模式、完成条件与选型 ↗
+  - contentinfo [ref=e45]:
+    - paragraph [ref=e46]: Writing, experiments, and visual notes by 涛涛涛.
+    - paragraph [ref=e47]:
+      - link "GitHub" [ref=e48] [cursor=pointer]:
+        - /url: https://github.com/light8lee
+      - text: ·
+      - link "RSS" [ref=e49] [cursor=pointer]:
+        - /url: /atom.xml

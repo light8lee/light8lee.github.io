@@ -75,6 +75,9 @@ button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px s
 .seed-button:hover { background: var(--amber); color: var(--ink); border-color: var(--amber); }
 .seed-button span { color: var(--amber); margin-left: 5px; }
 .seed-button:hover span { color: inherit; }
+.topbar-actions { align-items: center; display: flex; gap: 9px; justify-self: end; }
+.return-to-desk { border-bottom: 1px solid rgba(255,255,255,.35); color: #f3dd9c; font: 800 10px/1 var(--font-data); padding-bottom: 3px; text-decoration: none; white-space: nowrap; }
+.return-to-desk:hover { border-color: var(--amber); color: var(--amber); }
 
 .mission-strip {
   min-height: 112px;

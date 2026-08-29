@@ -1,28 +1,30 @@
 ---
 layout: default
-title: Home
+title: 案头
 body_class: home
 animation: home-constellation
 ---
 <section class="home-hero">
   <canvas id="home-constellation" aria-hidden="true"></canvas>
   <div class="home-hero-copy">
-    <p class="home-kicker">Agent RL · Engineering Notes · Visual Explainers</p>
-    <h1>涛涛涛</h1>
-    <p>Writing about agents, reinforcement learning, systems, and the craft of making technical ideas easier to see.</p>
+    {% assign featured_post = site.posts | first %}
+    <p class="home-kicker">案头 · RECENT RESEARCH · {{ featured_post.date | date: '%Y.%m.%d' }}</p>
+    <h1>{{ featured_post.title }}</h1>
+    <p>{{ featured_post.excerpt | strip_html | truncate: 160 }}</p>
+    <a class="home-feature-link" href="{{ featured_post.url | relative_url }}">打开这份整理 <span>↗</span></a>
   </div>
 </section>
 
-<section class="content-section social-section" aria-labelledby="social-heading">
+<section class="content-section social-section desk-social-note" aria-labelledby="social-heading">
   <div class="social-copy">
-    <p class="home-kicker">Follow Along</p>
-    <h2 id="social-heading">在小红书和抖音找到我</h2>
-    <p>玄学调参师，随缘捉虫子。扫码关注，后续的技术笔记、图解和短视频会同步更新。</p>
+    <p class="home-kicker">案头便笺 · FOLLOW ALONG</p>
+    <h2 id="social-heading">在小红书和抖音继续见面</h2>
+    <p>玄学调参师，随缘捉虫子。扫码收下这两张案头名片，技术笔记、图解和短视频会同步更新。</p>
   </div>
   <div class="social-grid" aria-label="Social QR codes">
     <figure class="social-card xiaohongshu-card">
       <div class="qr-shell">
-        <img src="{{ '/images/social/xiaohongshu-qr.png' | relative_url }}" alt="小红书二维码，扫码关注涛涛涛" loading="lazy">
+        <img src="{{ '/images/social/xiaohongshu-qr.png' | relative_url }}" alt="小红书二维码，扫码关注涛涛涛" loading="eager">
       </div>
       <figcaption>
         <span>小红书</span>
@@ -32,7 +34,7 @@ animation: home-constellation
     </figure>
     <figure class="social-card douyin-card">
       <div class="qr-shell">
-        <img src="{{ '/images/social/douyin-qr.jpg' | relative_url }}" alt="抖音二维码，扫码关注涛涛涛" loading="lazy">
+        <img src="{{ '/images/social/douyin-qr.jpg' | relative_url }}" alt="抖音二维码，扫码关注涛涛涛" loading="eager">
       </div>
       <figcaption>
         <span>抖音</span>
@@ -45,8 +47,11 @@ animation: home-constellation
 
 <section id="latest-writing" class="content-section">
   <div class="section-heading">
-    <h2>Latest Writing</h2>
-    <a href="{{ '/archives.html' | relative_url }}">Archive</a>
+    <div>
+      <p class="section-kicker">案头 · READING &amp; RESEARCH</p>
+      <h2>最近整理的内容</h2>
+    </div>
+    <a href="{{ '/archives.html' | relative_url }}">走进书架 ↗</a>
   </div>
 
   <div class="video-filters" data-video-filter-root>

@@ -6,6 +6,7 @@ summary: "学生先写出自己的 reasoning，再由多个类别专家复核；
 tags: [Daydreams, MOPD, On-Policy Distillation, Reasoning LLM, 多分类]
 series: daydreams
 daydream: true
+thought_axis: 器
 permalink: /daydreams/mopd-binary-experts-to-multiclass/
 cover: /assets/daydreams/mopd-binary-experts-to-multiclass/images/02-reasoning-critics.png
 body_class: daydream-post

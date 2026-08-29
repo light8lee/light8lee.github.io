@@ -1,0 +1,458 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - link "涛涛涛 home" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - navigation "Primary navigation" [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /pages/notes.html
+      - link [ref=e6] [cursor=pointer]:
+        - /url: /
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /pages/projects.html
+      - link [ref=e8] [cursor=pointer]:
+        - /url: /archives.html
+      - link [ref=e9] [cursor=pointer]:
+        - /url: /about.html
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - paragraph [ref=e12]: FIELD LIBRARY · 2026
+      - heading "书架" [level=1] [ref=e13]
+      - paragraph [ref=e14]: 把文章、推演与研究笔记收在同一张可检索的纸面目录里。
+    - region "书架检索与筛选" [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e20]: 搜索书架
+        - searchbox "搜索书架" [ref=e21]
+        - generic [ref=e22]: ⌘ K
+      - group "按栏目筛选" [ref=e23]:
+        - button "全部 56" [ref=e24] [cursor=pointer]:
+          - text: 全部
+          - generic [ref=e25]: "56"
+        - button "Agent 系统" [ref=e26] [cursor=pointer]
+        - button "RL / 后训练" [active] [pressed] [ref=e27] [cursor=pointer]
+        - button "Codex / 工具" [ref=e28] [cursor=pointer]
+        - button "模型基础" [ref=e29] [cursor=pointer]
+        - button "研究随笔" [ref=e30] [cursor=pointer]
+      - paragraph [ref=e31]: 找到 29 篇。
+    - generic [ref=e32]:
+      - text: ·
+      - article [ref=e46]:
+        - generic [ref=e47]:
+          - paragraph [ref=e48]:
+            - time [ref=e49]: 2026.08.06
+            - generic [ref=e50]: RL / 后训练·
+            - generic [ref=e51]: LLM Post-training
+          - heading [level=2] [ref=e52]:
+            - link "BLL-Loss：低概率 Token，为什么不该无限主导 SFT 更新？" [ref=e53] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/08/06/icml-2026-bll-loss.html
+          - paragraph [ref=e54]:
+            - generic [ref=e55]: ICML 2026
+            - generic [ref=e56]: LLM Post-training
+            - generic [ref=e57]: SFT
+        - generic [ref=e58]: "02"
+      - article [ref=e59]:
+        - generic [ref=e60]:
+          - paragraph [ref=e61]:
+            - time [ref=e62]: 2026.08.05
+            - generic [ref=e63]: RL / 后训练·
+            - generic [ref=e64]: LLM Post-training
+          - heading [level=2] [ref=e65]:
+            - link "LALP：99.99% 的复读，为什么可能筛出更差的推理数据？" [ref=e66] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/08/05/icml-2026-lalp.html
+          - paragraph [ref=e67]:
+            - generic [ref=e68]: ICML 2026
+            - generic [ref=e69]: LLM Post-training
+            - generic [ref=e70]: SFT
+        - generic [ref=e71]: "03"
+      - article [ref=e72]:
+        - generic [ref=e73]:
+          - paragraph [ref=e74]:
+            - time [ref=e75]: 2026.08.04
+            - generic [ref=e76]: RL / 后训练·
+            - generic [ref=e77]: LLM Post-training
+          - heading [level=2] [ref=e78]:
+            - link "PIPE：工具改名后，Agent 为什么可能不会用了？" [ref=e79] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/08/04/icml-2026-pipe.html
+          - paragraph [ref=e80]:
+            - generic [ref=e81]: ICML 2026
+            - generic [ref=e82]: Agent
+            - generic [ref=e83]: Trajectory SFT
+        - generic [ref=e84]: "04"
+      - article [ref=e85]:
+        - generic [ref=e86]:
+          - paragraph [ref=e87]:
+            - time [ref=e88]: 2026.08.03
+            - generic [ref=e89]: RL / 后训练·
+            - generic [ref=e90]: LLM Post-training
+          - heading [level=2] [ref=e91]:
+            - link "MEnvAgent：修 Bug 前，环境先崩了" [ref=e92] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/08/03/icml-2026-menvagent.html
+          - paragraph [ref=e93]:
+            - generic [ref=e94]: ICML 2026
+            - generic [ref=e95]: Software Engineering
+            - generic [ref=e96]: Environment Construction
+        - generic [ref=e97]: "05"
+      - article [ref=e98]:
+        - generic [ref=e99]:
+          - paragraph [ref=e100]:
+            - time [ref=e101]: 2026.08.02
+            - generic [ref=e102]: RL / 后训练·
+            - generic [ref=e103]: LLM Post-training
+          - heading [level=2] [ref=e104]:
+            - link "DPO Unchained：从偏好标签到可审计的选择建模" [ref=e105] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/08/02/dpo-unchained.html
+          - paragraph [ref=e106]:
+            - generic [ref=e107]: ICML 2026
+            - generic [ref=e108]: LLM Post-training
+            - generic [ref=e109]: DPO
+        - generic [ref=e110]: "06"
+      - article [ref=e111]:
+        - generic [ref=e112]:
+          - paragraph [ref=e113]:
+            - time [ref=e114]: 2026.08.01
+            - generic [ref=e115]: RL / 后训练·
+            - generic [ref=e116]: LLM Post-training
+          - heading [level=2] [ref=e117]:
+            - link "TerminalTraj：命令成功，为什么奖励仍然是 0？" [ref=e118] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/08/01/icml-2026-terminaltraj.html
+          - paragraph [ref=e119]:
+            - generic [ref=e120]: ICML 2026
+            - generic [ref=e121]: Terminal Agent
+            - generic [ref=e122]: Agentic Data
+        - generic [ref=e123]: "07"
+      - article [ref=e124]:
+        - generic [ref=e125]:
+          - paragraph [ref=e126]:
+            - time [ref=e127]: 2026.08.01
+            - generic [ref=e128]: RL / 后训练·
+            - generic [ref=e129]: LLM Post-training
+          - heading [level=2] [ref=e130]:
+            - link "ICML 2026：代码 Agent 变强，不一定靠更狠的 RL" [ref=e131] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/08/01/icml-2026-davinci-dev.html
+          - paragraph [ref=e132]:
+            - generic [ref=e133]: ICML 2026
+            - generic [ref=e134]: Code Agent
+            - generic [ref=e135]: Agentic Mid-training
+        - generic [ref=e136]: "08"
+      - article [ref=e137]:
+        - generic [ref=e138]:
+          - paragraph [ref=e139]:
+            - time [ref=e140]: 2026.07.29
+            - generic [ref=e141]: RL / 后训练·
+            - generic [ref=e142]: LLM Post-training
+          - heading [level=2] [ref=e143]:
+            - link "ICML 2026：RL 为什么会撞上 Base Model Barrier？" [ref=e144] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/29/icml-2026-base-model-barrier.html
+          - paragraph [ref=e145]:
+            - generic [ref=e146]: ICML 2026
+            - generic [ref=e147]: LLM Post-training
+            - generic [ref=e148]: Reinforcement Learning
+        - generic [ref=e149]: "09"
+      - article [ref=e150]:
+        - generic [ref=e151]:
+          - paragraph [ref=e152]:
+            - time [ref=e153]: 2026.07.28
+            - generic [ref=e154]: RL / 后训练·
+            - generic [ref=e155]: LLM Post-training
+          - heading [level=2] [ref=e156]:
+            - link "ICML 2026：Pre-Training、Mid-Training 与 RL 如何划定推理能力边缘" [ref=e157] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/28/icml-2026-pre-mid-rl.html
+          - paragraph [ref=e158]:
+            - generic [ref=e159]: ICML 2026
+            - generic [ref=e160]: LLM Post-training
+            - generic [ref=e161]: Reinforcement Learning
+        - generic [ref=e162]: "10"
+      - article [ref=e163]:
+        - generic [ref=e164]:
+          - paragraph [ref=e165]:
+            - time [ref=e166]: 2026.07.27
+            - generic [ref=e167]: RL / 后训练·
+            - generic [ref=e168]: LLM Post-training
+          - heading [level=2] [ref=e169]:
+            - link "ACL 2026 反馈优化（三）：用户行为到底在教 Agent 什么？" [ref=e170] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/27/acl-2026-behavior-feedback.html
+          - paragraph [ref=e171]:
+            - generic [ref=e172]: ACL 2026
+            - generic [ref=e173]: Agent
+            - generic [ref=e174]: Behavior Feedback
+        - generic [ref=e175]: "11"
+      - article [ref=e176]:
+        - generic [ref=e177]:
+          - paragraph [ref=e178]:
+            - time [ref=e179]: 2026.07.26
+            - generic [ref=e180]: RL / 后训练·
+            - generic [ref=e181]: LLM Post-training
+          - heading [level=2] [ref=e182]:
+            - link "ACL 2026 反馈优化（二）：奖励如何教 Agent 留下可复用技能？" [ref=e183] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/26/acl-2026-numeric-feedback-sage.html
+          - paragraph [ref=e184]:
+            - generic [ref=e185]: ACL 2026
+            - generic [ref=e186]: Agent
+            - generic [ref=e187]: Numeric Feedback
+        - generic [ref=e188]: "12"
+      - article [ref=e189]:
+        - generic [ref=e190]:
+          - paragraph [ref=e191]:
+            - time [ref=e192]: 2026.07.25
+            - generic [ref=e193]: RL / 后训练·
+            - generic [ref=e194]: LLM Post-training
+          - heading [level=2] [ref=e195]:
+            - link "ACL 2026 反馈优化（一）：文字反馈究竟写回哪里？" [ref=e196] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/25/acl-2026-text-feedback.html
+          - paragraph [ref=e197]:
+            - generic [ref=e198]: ACL 2026
+            - generic [ref=e199]: Agent
+            - generic [ref=e200]: Text Feedback
+        - generic [ref=e201]: "13"
+      - text: · · ·
+      - article [ref=e241]:
+        - generic [ref=e242]:
+          - paragraph [ref=e243]:
+            - time [ref=e244]: 2026.07.18
+            - generic [ref=e245]: RL / 后训练·
+            - generic [ref=e246]: LLM Post-training
+          - heading [level=2] [ref=e247]:
+            - link "On-Policy SFT：让正确答案更像模型自己会写的答案" [ref=e248] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/18/on-policy-sft.html
+          - paragraph [ref=e249]:
+            - generic [ref=e250]: LLM
+            - generic [ref=e251]: 后训练
+            - generic [ref=e252]: SFT
+        - generic [ref=e253]: "17"
+      - article [ref=e254]:
+        - generic [ref=e255]:
+          - paragraph [ref=e256]:
+            - time [ref=e257]: 2026.07.16
+            - generic [ref=e258]: RL / 后训练·
+            - generic [ref=e259]: LLM Post-training
+          - heading [level=2] [ref=e260]:
+            - link "RLTF：把文本批评内化成首答能力" [ref=e261] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/16/rltf-text-feedback.html
+          - paragraph [ref=e262]:
+            - generic [ref=e263]: LLM
+            - generic [ref=e264]: RLTF
+            - generic [ref=e265]: 强化学习
+        - generic [ref=e266]: "18"
+      - text: · ·
+      - article [ref=e293]:
+        - generic [ref=e294]:
+          - paragraph [ref=e295]:
+            - time [ref=e296]: 2026.07.13
+            - generic [ref=e297]: RL / 后训练·
+            - generic [ref=e298]: LLM Post-training
+          - heading [level=2] [ref=e299]:
+            - link "Retaining by Doing：on-policy 数据为何能减轻遗忘" [ref=e300] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/13/retaining-by-doing.html
+          - paragraph [ref=e301]:
+            - generic [ref=e302]: 强化学习
+            - generic [ref=e303]: 后训练
+            - generic [ref=e304]: On-policy
+        - generic [ref=e305]: "21"
+      - article [ref=e306]:
+        - generic [ref=e307]:
+          - paragraph [ref=e308]:
+            - time [ref=e309]: 2026.07.12
+            - generic [ref=e310]: RL / 后训练·
+            - generic [ref=e311]: LLM Post-training
+          - heading [level=2] [ref=e312]:
+            - link "MaxRL：一行 GRPO 改造，把难题重新放回训练信号" [ref=e313] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/12/maxrl.html
+          - paragraph [ref=e314]:
+            - generic [ref=e315]: 强化学习
+            - generic [ref=e316]: 后训练
+            - generic [ref=e317]: GRPO
+        - generic [ref=e318]: "22"
+      - text: · · · · · · · ·
+      - article [ref=e423]:
+        - generic [ref=e424]:
+          - paragraph [ref=e425]:
+            - time [ref=e426]: 2026.07.04
+            - generic [ref=e427]: RL / 后训练·
+            - generic [ref=e428]: Agent RL
+          - heading [level=2] [ref=e429]:
+            - 'link "SCPO: 从失败轨迹里找回正确步骤" [ref=e430] [cursor=pointer]':
+              - /url: /agent%20rl/2026/07/04/scpo-semantic-consistency-policy-optimization.html
+          - paragraph [ref=e431]:
+            - generic [ref=e432]: 智能体
+            - generic [ref=e433]: 强化学习
+            - generic [ref=e434]: 策略优化
+        - generic [ref=e435]: "31"
+      - article [ref=e436]:
+        - generic [ref=e437]:
+          - paragraph [ref=e438]:
+            - time [ref=e439]: 2026.07.01
+            - generic [ref=e440]: RL / 后训练·
+            - generic [ref=e441]: LLM Post-training
+          - heading [level=2] [ref=e442]:
+            - link "Yuvion LLM：把对抗鲁棒性放进安全模型训练" [ref=e443] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/01/yuvion-llm.html
+          - paragraph [ref=e444]:
+            - generic [ref=e445]: 后训练
+            - generic [ref=e446]: 安全对齐
+            - generic [ref=e447]: 对抗鲁棒性
+        - generic [ref=e448]: "32"
+      - text: · · ·
+      - article [ref=e487]:
+        - generic [ref=e488]:
+          - paragraph [ref=e489]:
+            - time [ref=e490]: 2026.06.27
+            - generic [ref=e491]: RL / 后训练·
+            - generic [ref=e492]: LLM Post-training
+          - heading [level=2] [ref=e493]:
+            - 'link "Learning at the Right Pace: Adaptive Data Scheduling Improves LLM Reinforcement Learning" [ref=e494] [cursor=pointer]':
+              - /url: /llm%20post-training/2026/06/27/ads.html
+          - paragraph [ref=e495]:
+            - generic [ref=e496]: 后训练
+            - generic [ref=e497]: 强化学习
+            - generic [ref=e498]: 训练数据
+        - generic [ref=e499]: "36"
+      - text: ·
+      - article [ref=e513]:
+        - generic [ref=e514]:
+          - paragraph [ref=e515]:
+            - time [ref=e516]: 2026.06.21
+            - generic [ref=e517]: RL / 后训练·
+            - generic [ref=e518]: LLM Post-training
+          - heading [level=2] [ref=e519]:
+            - link "CHERRL：让 Rubric-based RL 的 Reward Hacking 可复现、可分析、可检测" [ref=e520] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/06/21/cherrl.html
+          - paragraph [ref=e521]:
+            - generic [ref=e522]: 后训练
+            - generic [ref=e523]: 强化学习
+            - generic [ref=e524]: 奖励建模
+        - generic [ref=e525]: "38"
+      - article [ref=e526]:
+        - generic [ref=e527]:
+          - paragraph [ref=e528]:
+            - time [ref=e529]: 2026.06.21
+            - generic [ref=e530]: RL / 后训练·
+            - generic [ref=e531]: LLM Post-training
+          - heading [level=2] [ref=e532]:
+            - link "Scaling Laws for Reward Model Overoptimization" [ref=e533] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/06/21/rm-overoptimization.html
+          - paragraph [ref=e534]:
+            - generic [ref=e535]: 后训练
+            - generic [ref=e536]: 奖励建模
+            - generic [ref=e537]: 强化学习
+        - generic [ref=e538]: "39"
+      - article [ref=e539]:
+        - generic [ref=e540]:
+          - paragraph [ref=e541]:
+            - time [ref=e542]: 2026.06.21
+            - generic [ref=e543]: RL / 后训练·
+            - generic [ref=e544]: LLM Post-training
+          - heading [level=2] [ref=e545]:
+            - link "奖励上涨，为什么安全目标反而变差？" [ref=e546] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/06/21/reward-hacking.html
+          - paragraph [ref=e547]:
+            - generic [ref=e548]: 后训练
+            - generic [ref=e549]: 安全对齐
+            - generic [ref=e550]: 奖励建模
+        - generic [ref=e551]: "40"
+      - article [ref=e552]:
+        - generic [ref=e553]:
+          - paragraph [ref=e554]:
+            - time [ref=e555]: 2026.06.19
+            - generic [ref=e556]: RL / 后训练·
+            - generic [ref=e557]: LLM Post-training
+          - heading [level=2] [ref=e558]:
+            - link "《Agent SFT 最难的，不是训练》脚本" [ref=e559] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/06/19/omniagent-sft.html
+          - paragraph [ref=e560]:
+            - generic [ref=e561]: 智能体
+            - generic [ref=e562]: 监督微调
+            - generic [ref=e563]: 训练数据
+        - generic [ref=e564]: "41"
+      - article [ref=e565]:
+        - generic [ref=e566]:
+          - paragraph [ref=e567]:
+            - time [ref=e568]: 2026.06.18
+            - generic [ref=e569]: RL / 后训练·
+            - generic [ref=e570]: LLM Post-training
+          - heading [level=2] [ref=e571]:
+            - 'link "GD^2PO: Mitigating Multi-Reward Conflicts via Group-Dynamic reward-Decoupled Policy Optimization" [ref=e572] [cursor=pointer]':
+              - /url: /llm%20post-training/2026/06/18/gd2po.html
+          - paragraph [ref=e573]:
+            - generic [ref=e574]: 后训练
+            - generic [ref=e575]: 强化学习
+            - generic [ref=e576]: 多目标优化
+        - generic [ref=e577]: "42"
+      - article [ref=e578]:
+        - generic [ref=e579]:
+          - paragraph [ref=e580]:
+            - time [ref=e581]: 2026.06.18
+            - generic [ref=e582]: RL / 后训练·
+            - generic [ref=e583]: LLM Post-training
+          - heading [level=2] [ref=e584]:
+            - 'link "DharmaOCR: Specialized Small Language Models for Structured OCR that outperform Open-Source and Commercial Baselines" [ref=e585] [cursor=pointer]':
+              - /url: /llm%20post-training/2026/06/18/dharmaocr-dpo.html
+          - paragraph [ref=e586]:
+            - generic [ref=e587]: 后训练
+            - generic [ref=e588]: 偏好对齐
+            - generic [ref=e589]: 结构化输出
+        - generic [ref=e590]: "43"
+      - article [ref=e591]:
+        - generic [ref=e592]:
+          - paragraph [ref=e593]:
+            - time [ref=e594]: 2026.06.18
+            - generic [ref=e595]: RL / 后训练·
+            - generic [ref=e596]: LLM Post-training
+          - heading [level=2] [ref=e597]:
+            - link "Rethinking the Divergence Regularization in LLM RL" [ref=e598] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/06/18/drpo.html
+          - paragraph [ref=e599]:
+            - generic [ref=e600]: 后训练
+            - generic [ref=e601]: 强化学习
+            - generic [ref=e602]: 策略优化
+        - generic [ref=e603]: "44"
+      - text: ·
+      - article [ref=e617]:
+        - generic [ref=e618]:
+          - paragraph [ref=e619]:
+            - time [ref=e620]: 2026.06.16
+            - generic [ref=e621]: RL / 后训练·
+            - generic [ref=e622]: LLM Post-training
+          - heading [level=2] [ref=e623]:
+            - 'link "GoLongRL: Capability-Oriented Long Context Reinforcement Learning with Multitask Alignment" [ref=e624] [cursor=pointer]':
+              - /url: /llm%20post-training/2026/06/16/golongrl.html
+          - paragraph [ref=e625]:
+            - generic [ref=e626]: 后训练
+            - generic [ref=e627]: 长上下文
+            - generic [ref=e628]: 强化学习
+        - generic [ref=e629]: "46"
+      - text: · ·
+      - article [ref=e656]:
+        - generic [ref=e657]:
+          - paragraph [ref=e658]:
+            - time [ref=e659]: 2026.06.14
+            - generic [ref=e660]: RL / 后训练·
+            - generic [ref=e661]: LLM Post-training
+          - heading [level=2] [ref=e662]:
+            - link "RL 为什么非要最后才上场？" [ref=e663] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/06/14/rl-excursions.html
+          - paragraph [ref=e664]:
+            - generic [ref=e665]: 预训练
+            - generic [ref=e666]: 强化学习
+        - generic [ref=e667]: "49"
+      - article [ref=e668]:
+        - generic [ref=e669]:
+          - paragraph [ref=e670]:
+            - time [ref=e671]: 2026.06.11
+            - generic [ref=e672]: RL / 后训练·
+            - generic [ref=e673]: LLM Post-training
+          - heading [level=2] [ref=e674]:
+            - link "DRPO 技术详解：LLM 强化学习可能一直管错了东西" [ref=e675] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/06/11/drpo.html
+          - paragraph [ref=e676]:
+            - generic [ref=e677]: 后训练
+            - generic [ref=e678]: 强化学习
+            - generic [ref=e679]: 策略优化
+        - generic [ref=e680]: "50"
+      - text: · · · · · ·
+  - contentinfo [ref=e756]:
+    - paragraph [ref=e757]: Writing, experiments, and visual notes by 涛涛涛.
+    - paragraph [ref=e758]:
+      - link "GitHub" [ref=e759] [cursor=pointer]:
+        - /url: https://github.com/light8lee
+      - text: ·
+      - link "RSS" [ref=e760] [cursor=pointer]:
+        - /url: /atom.xml

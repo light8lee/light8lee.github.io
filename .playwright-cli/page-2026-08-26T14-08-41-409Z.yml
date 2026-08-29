@@ -1,0 +1,221 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "涛涛涛 home" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e4]: 涛
+      - generic [ref=e5]:
+        - strong [ref=e6]: 涛涛涛
+        - generic [ref=e7]: FIELD DESK
+    - paragraph [ref=e8]: 一张持续整理的研究书桌：文章、图解、项目和没写完的问题。
+    - navigation "Primary navigation" [ref=e9]:
+      - link "漫游册" [ref=e10] [cursor=pointer]:
+        - /url: /pages/notes.html
+        - generic [ref=e11]: ⌁
+        - text: 漫游册
+      - link "研究桌" [ref=e12] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e13]: ⌘
+        - text: 研究桌
+      - link "实验场" [ref=e14] [cursor=pointer]:
+        - /url: /pages/projects.html
+        - generic [ref=e15]: ◌
+        - text: 实验场
+      - link "资料室" [ref=e16] [cursor=pointer]:
+        - /url: /archives.html
+        - generic [ref=e17]: ▣
+        - text: 资料室
+      - link "关于" [ref=e18] [cursor=pointer]:
+        - /url: /about.html
+        - generic [ref=e19]: ○
+        - text: 关于
+    - navigation "常看专题" [ref=e20]:
+      - paragraph [ref=e21]: 常看专题
+      - link "Agent Systems ↗" [ref=e22] [cursor=pointer]:
+        - /url: /?collection=agent#latest-writing
+        - generic [ref=e24]: Agent Systems
+        - generic [ref=e25]: ↗
+      - link "RL Field Notes ↗" [ref=e26] [cursor=pointer]:
+        - /url: /?collection=post-training#latest-writing
+        - generic [ref=e28]: RL Field Notes
+        - generic [ref=e29]: ↗
+      - link "Inside Codex ↗" [ref=e30] [cursor=pointer]:
+        - /url: /?collection=dive-into-codex#latest-writing
+        - generic [ref=e32]: Inside Codex
+        - generic [ref=e33]: ↗
+    - paragraph [ref=e34]: STATIC SITE · GITHUB PAGES
+  - main [ref=e35]:
+    - generic [ref=e38]:
+      - paragraph [ref=e39]: FEATURED NOTE · 2026.08.21
+      - heading "RSI Harness Engineering：从运行系统到受控递归改进" [level=1] [ref=e40]
+      - paragraph [ref=e41]: RSI 的重点不是让模型在答案之后“再想一次”，而是改进包围模型的运行系统。Lilian Weng 将这个系统称为 harness：它负责规划、工具调用、上下文、持久状态、artifact 与评估；因此，能否自我改进取决于这台机器是否有稳定的状态、明确的可编辑面和独立的裁判。详见 Weng 的 Harness E...
+      - link "打开这篇笔记 ↗" [ref=e42] [cursor=pointer]:
+        - /url: /agent/2026/08/21/rsi-harness-engineering.html
+    - region [ref=e43]:
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: Follow Along
+        - heading "在小红书和抖音找到我" [level=2] [ref=e46]
+        - paragraph [ref=e47]: 玄学调参师，随缘捉虫子。扫码关注，后续的技术笔记、图解和短视频会同步更新。
+      - generic "Social QR codes" [ref=e48]:
+        - figure "小红书 涛涛涛 小红书号：2698745864" [ref=e49]:
+          - img "小红书二维码，扫码关注涛涛涛" [ref=e51]
+          - generic [ref=e52]:
+            - generic [ref=e53]: 小红书
+            - strong [ref=e54]: 涛涛涛
+            - generic [ref=e55]: 小红书号：2698745864
+        - figure "抖音 涛涛涛 抖音号：taotaotao12053" [ref=e56]:
+          - img "抖音二维码，扫码关注涛涛涛" [ref=e58]
+          - generic [ref=e59]:
+            - generic [ref=e60]: 抖音
+            - strong [ref=e61]: 涛涛涛
+            - generic [ref=e62]: 抖音号：taotaotao12053
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - heading "Latest Writing" [level=2] [ref=e65]
+        - link "Archive" [ref=e66] [cursor=pointer]:
+          - /url: /archives.html
+      - generic [ref=e67]:
+        - search [ref=e68]:
+          - searchbox "搜索文章" [ref=e72]
+          - generic [ref=e73]: /
+        - paragraph [ref=e74]
+        - generic "Video collections" [ref=e75]:
+          - button "全部" [ref=e76] [cursor=pointer]
+          - button "大模型基础知识" [ref=e77] [cursor=pointer]
+          - button "后训练" [ref=e78] [cursor=pointer]
+          - button "agent" [pressed] [ref=e79] [cursor=pointer]
+          - button "dive-into-codex" [ref=e80] [cursor=pointer]
+          - button "反馈优化" [ref=e81] [cursor=pointer]
+        - generic [ref=e82]:
+          - generic [ref=e83]: 主题
+          - combobox "按主题筛选文章" [ref=e84]:
+            - option "全部主题" [selected]
+            - option "MaxRL"
+            - option "GRPO"
+            - option "智能体"
+            - option "智能体运行时"
+            - option "强化学习"
+            - option "后训练"
+            - option "偏好对齐"
+            - option "安全对齐"
+            - option "长上下文"
+            - option "记忆系统"
+            - option "工具调用"
+            - option "多智能体"
+            - option "基准评测"
+            - option "大模型"
+            - option "模型架构"
+            - option "策略优化"
+      - generic [ref=e85]:
+        - article [ref=e86]:
+          - link [ref=e87] [cursor=pointer]:
+            - /url: /agent/2026/08/21/rsi-harness-engineering.html
+            - text: 2026-08-21
+            - heading "RSI Harness Engineering：从运行系统到受控递归改进" [level=3] [ref=e88]
+            - generic "Tags" [ref=e89]:
+              - generic [ref=e90]: Agent
+              - generic [ref=e91]: RSI
+              - generic [ref=e92]: Harness Engineering
+              - generic [ref=e93]: Lilian Weng
+            - paragraph [ref=e94]: 52 张核心图文，循着一条完整链路展开：先搭建可运行的 Agent Harness，再优化 Context、Workflow 与 Code，最后以独立验证、权限边界和进化搜索完成受控的递归改进。
+        - article [ref=e95]:
+          - link [ref=e96] [cursor=pointer]:
+            - /url: /pages/toolrm.html
+            - text: 2026-07-21
+            - heading "ToolRM：把工具调用错误变成领域裁判的训练数据" [level=3] [ref=e97]
+            - generic "Tags" [ref=e98]:
+              - generic [ref=e99]: ToolRM
+              - generic [ref=e100]: Reward Model
+              - generic [ref=e101]: 工具调用
+              - generic [ref=e102]: Agent
+            - paragraph [ref=e103]: 详细拆解偏好数据生产、规则评分、BMDS 采样、两类奖励模型、下游 Agent 应用与方法边界。
+        - article [ref=e104]:
+          - link [ref=e105] [cursor=pointer]:
+            - /url: /pages/hscodecomp.html
+            - text: 2026-07-20
+            - heading "HSCodeComp：专业 Agent 如何穿过十位规则树" [level=3] [ref=e106]
+            - generic "Tags" [ref=e107]:
+              - generic [ref=e108]: HSCodeComp
+              - generic [ref=e109]: Agent
+              - generic [ref=e110]: Benchmark
+              - generic [ref=e111]: 层级规则
+            - paragraph [ref=e112]: 结合 13 张图，完整拆解数据、系统对比、消融、失败案例、工程蓝图与论文疑点。
+        - article [ref=e113]:
+          - link [ref=e114] [cursor=pointer]:
+            - /url: /agents/2026/07/15/multi-agent-collaboration.html
+            - text: 2026-07-15
+            - heading "多 Agent 协作：五种模式、完成条件与选型" [level=3] [ref=e115]
+            - generic "Tags" [ref=e116]:
+              - generic [ref=e117]: 智能体
+              - generic [ref=e118]: 多智能体
+              - generic [ref=e119]: Agent Runtime
+              - generic [ref=e120]: 系统设计
+            - paragraph [ref=e121]: 用同一场城市文化漫游活动，对照 Supervisor、GroupChat、Handoff、State Machine 与 Event Bus 的消息流、完成条件和适用边界。
+        - article [ref=e122]:
+          - link [ref=e123] [cursor=pointer]:
+            - /url: /agent%20training/2026/07/14/oec.html
+            - text: 2026-07-14
+            - heading "OEC：让专家从 Agent 的残局中接手" [level=3] [ref=e124]
+            - generic "Tags" [ref=e125]:
+              - generic [ref=e126]: Agent
+              - generic [ref=e127]: 智能体
+              - generic [ref=e128]: 多轮智能体
+              - generic [ref=e129]: On-policy
+            - paragraph [ref=e130]: On-policy Expert Corrections 先让学生模型在真实环境中行动，再由专家接手；训练时仅学习专家后缀，从而教会多轮 Agent 在走偏后恢复。
+        - article [ref=e131]:
+          - link [ref=e132] [cursor=pointer]:
+            - /url: /agent/2026/06/29/openclaw-hermes.html
+            - text: 2026-06-29
+            - heading "openclaw hermes" [level=3] [ref=e133]
+            - generic "Tags" [ref=e134]:
+              - generic [ref=e135]: 智能体
+              - generic [ref=e136]: 多智能体
+              - generic [ref=e137]: 开源框架
+            - paragraph [ref=e138]: 一个用TypeScript写的多Agent编排平台，GitHub星标38万。一个用Python写的单Agent自进化系统，由Nous Research开源。OpenClaw和Hermes，两种截然不同的Agent设计哲学，今天我们结合源代码，从顶层架构到核心模块，进行top-down的详细拆解和对比。
+        - article [ref=e139]:
+          - link [ref=e140] [cursor=pointer]:
+            - /url: /agent/2026/06/28/opid.html
+            - text: 2026-06-28
+            - 'heading "OPID: 从 Agent 自己的轨迹中提炼技能，让强化学习不再\"盲人摸象\"" [level=3] [ref=e141]'
+            - generic "Tags" [ref=e142]:
+              - generic [ref=e143]: 智能体
+              - generic [ref=e144]: 强化学习
+              - generic [ref=e145]: 技能学习
+            - paragraph [ref=e146]: "### Scene 1: Hero (Hook) 「Agent 做完一个任务，奖励只告诉你成没成功，却不说哪一步做对了、哪一步搞砸了。这篇论文给了一个答案：让 Agent 从自己的轨迹里提炼技能，再反过来教自己。」"
+        - article [ref=e147]:
+          - link [ref=e148] [cursor=pointer]:
+            - /url: /ai%20notes/2026/06/27/agent-memory.html
+            - text: 2026-06-27
+            - heading "Agent 记忆系统大横评：12 个系统，谁才是真正的记忆王者？" [level=3] [ref=e149]
+            - generic "Tags" [ref=e150]:
+              - generic [ref=e151]: 智能体
+              - generic [ref=e152]: 记忆系统
+            - paragraph [ref=e153]: 这是一篇关于 arXiv:2606.24775 论文《Are We Ready For An Agent-Native Memory System?》的中文技术解读视频。
+        - article [ref=e154]:
+          - link [ref=e155] [cursor=pointer]:
+            - /url: /agent/2026/06/25/erl.html
+            - text: 2026-06-25
+            - heading "Experiential Reflective Learning for Self-Improving LLM Agents" [level=3] [ref=e156]
+            - generic "Tags" [ref=e157]:
+              - generic [ref=e158]: 智能体
+              - generic [ref=e159]: 自我改进
+              - generic [ref=e160]: 记忆系统
+            - paragraph [ref=e161]: 2026 年 3 月 31 日，法国 Illuin Technology 的作者团队发布了预印本《Experiential Reflective Learning for Self-Improving LLM Agents》，简称 ERL。这篇工作想解决的，不是 Agent 有没有更多工具可用，而是它能不能像人一样，从一次尝试里记住教训，下次遇到类似任务时主
+        - article [ref=e162]:
+          - link [ref=e163] [cursor=pointer]:
+            - /url: /agent/2026/06/17/weavebench.html
+            - text: 2026-06-17
+            - heading "Computer-use agent真正的难点不是会点按钮或会写命令，而是能不能在长链路任务里稳定编排GUI与CLI" [level=3] [ref=e164]
+            - generic "Tags" [ref=e165]:
+              - generic [ref=e166]: 智能体
+              - generic [ref=e167]: 计算机使用
+              - generic [ref=e168]: 基准评测
+            - paragraph [ref=e169]: 2026 年 6 月 8 日，浙江大学、微软亚洲研究院、清华大学的作者团队发布了预印本《WeaveBench》。这篇工作想测的，不是 Agent 会不会点按钮，也不是会不会敲命令，而是它能不能把 GUI 观察、CLI 操作、代码修改和再次验证，稳定地编排成一条完整工作链路。
+  - contentinfo [ref=e170]:
+    - paragraph [ref=e171]: Writing, experiments, and visual notes by 涛涛涛.
+    - paragraph [ref=e172]:
+      - link "GitHub" [ref=e173] [cursor=pointer]:
+        - /url: https://github.com/light8lee
+      - text: ·
+      - link "RSS" [ref=e174] [cursor=pointer]:
+        - /url: /atom.xml
+  - button "回到页面顶部" [ref=e175] [cursor=pointer]

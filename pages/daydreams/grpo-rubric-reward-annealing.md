@@ -6,6 +6,7 @@ summary: "我想让 0/1 终局奖励始终充当锚点，把 rubric 当作可退
 tags: [Daydreams, GRPO, RLVR, 信用分配, Reward Hacking]
 series: daydreams
 daydream: true
+thought_axis: 器
 permalink: /daydreams/grpo-rubric-reward-annealing/
 cover: /assets/daydreams/grpo-rubric-reward-annealing/images/01-credit-backtrace.png
 body_class: daydream-post

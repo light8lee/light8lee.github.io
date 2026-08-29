@@ -1,15 +1,69 @@
 ---
 layout: default
-title: Daydreams
+title: 我见
 ---
-<section class="page-heading">
-  <h1>Daydreams</h1>
-  <p>Ideas, fragments, and things still taking shape.</p>
+{% assign daydream_pages = site.pages | where: "layout", "post" | where: "daydream", true %}
+{% assign daydreams = daydream_pages | sort: "date" | reverse %}
+{% assign dao_posts = daydreams | where: "thought_axis", "道" %}
+{% assign fa_posts = daydreams | where: "thought_axis", "法" %}
+{% assign shu_posts = daydreams | where: "thought_axis", "术" %}
+{% assign qi_posts = daydreams | where: "thought_axis", "器" %}
+{% assign shi_posts = daydreams | where: "thought_axis", "势" %}
+
+<section class="thought-map-board" aria-labelledby="thought-map-heading">
+  <div class="map-caption">
+    <p>我见 · THOUGHT MAP · ONGOING</p>
+    <h1 id="thought-map-heading">我见</h1>
+    <h2>让问题之间，彼此照亮。</h2>
+    <span>在道、法、术、器、势之间，写下持续变化的看法。</span>
+  </div>
+  <span class="map-node node-dao">道</span>
+  <span class="map-node node-fa">法</span>
+  <span class="map-node node-shu">术</span>
+  <span class="map-node node-qi">器</span>
+  <span class="map-node node-shi">势</span>
+  <span class="map-node node-question">?</span>
+  <figure class="map-tao" aria-hidden="true">
+    <img src="{{ '/assets/images/thought-studio/tao-reference-crop.png' | relative_url }}" alt="">
+  </figure>
 </section>
 
-{% assign daydreams = site.pages | where: "daydream", true | sort: "date" | reverse %}
-<section class="post-list">
-  {% for post in daydreams %}
-    {% include post-card.html post=post %}
-  {% endfor %}
+<section class="thought-atlas" aria-labelledby="thought-atlas-heading">
+  <div class="thought-atlas-intro">
+    <p class="home-kicker">A PERSONAL LENS</p>
+    <h2 id="thought-atlas-heading">从一个判断，慢慢长成一套看法。</h2>
+    <p>这里放的是还在生长的长思考，不急着给它们下结论。</p>
+  </div>
+  <div class="axis-grid" aria-label="道法术器势">
+    <article class="axis-card axis-dao">
+      <img src="{{ '/assets/images/thought-studio/axis-dao.png' | relative_url }}" alt="道，金色手绘圆环与山水">
+      <div class="axis-card-copy"><b>道</b><span>价值与判断</span><small>我在为什么而想</small>
+        <ul class="axis-articles">{% for post in dao_posts %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><time>{{ post.date | date: '%Y.%m.%d' }}</time></li>{% endfor %}</ul>
+      </div>
+    </article>
+    <article class="axis-card axis-fa">
+      <img src="{{ '/assets/images/thought-studio/axis-fa.png' | relative_url }}" alt="法，蓝色手绘波纹与纸面笔迹">
+      <div class="axis-card-copy"><b>法</b><span>框架与原则</span><small>用什么方式理解</small>
+        <ul class="axis-articles">{% for post in fa_posts %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><time>{{ post.date | date: '%Y.%m.%d' }}</time></li>{% endfor %}</ul>
+      </div>
+    </article>
+    <article class="axis-card axis-shu">
+      <img src="{{ '/assets/images/thought-studio/axis-shu.png' | relative_url }}" alt="术，红色手绘笔势与远山">
+      <div class="axis-card-copy"><b>术</b><span>方法与实践</span><small>怎样把想法做出来</small>
+        <ul class="axis-articles">{% for post in shu_posts %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><time>{{ post.date | date: '%Y.%m.%d' }}</time></li>{% else %}<li class="axis-empty">尚在生长</li>{% endfor %}</ul>
+      </div>
+    </article>
+    <article class="axis-card axis-qi">
+      <img src="{{ '/assets/images/thought-studio/axis-qi.png' | relative_url }}" alt="器，青色手绘方框与器皿">
+      <div class="axis-card-copy"><b>器</b><span>工具与系统</span><small>哪些东西值得构造</small>
+        <ul class="axis-articles">{% for post in qi_posts %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><time>{{ post.date | date: '%Y.%m.%d' }}</time></li>{% endfor %}</ul>
+      </div>
+    </article>
+    <article class="axis-card axis-shi">
+      <img src="{{ '/assets/images/thought-studio/axis-shi.png' | relative_url }}" alt="势，紫色手绘趋势线与山势">
+      <div class="axis-card-copy"><b>势</b><span>趋势与位置</span><small>我身处怎样的变化</small>
+        <ul class="axis-articles">{% for post in shi_posts %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><time>{{ post.date | date: '%Y.%m.%d' }}</time></li>{% endfor %}</ul>
+      </div>
+    </article>
+  </div>
 </section>

@@ -1,0 +1,107 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "涛涛涛 home" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e4]: 涛
+      - generic [ref=e5]:
+        - strong [ref=e6]: 涛涛涛
+        - generic [ref=e7]: FIELD DESK
+    - paragraph [ref=e8]: 一张持续整理的研究书桌：文章、图解、项目和没写完的问题。
+    - navigation "Primary navigation" [ref=e9]:
+      - link "研究桌" [ref=e10] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e11]: ⌘
+        - text: 研究桌
+      - link "实验场" [ref=e12] [cursor=pointer]:
+        - /url: /pages/projects.html
+        - generic [ref=e13]: ◌
+        - text: 实验场
+      - link "资料室" [ref=e14] [cursor=pointer]:
+        - /url: /archives.html
+        - generic [ref=e15]: ▣
+        - text: 资料室
+      - link "漫游册" [ref=e16] [cursor=pointer]:
+        - /url: /pages/notes.html
+        - generic [ref=e17]: ⌁
+        - text: 漫游册
+      - link "关于" [ref=e18] [cursor=pointer]:
+        - /url: /about.html
+        - generic [ref=e19]: ○
+        - text: 关于
+    - navigation "常看专题" [ref=e20]:
+      - paragraph [ref=e21]: 常看专题
+      - link "Agent Systems" [ref=e22] [cursor=pointer]:
+        - /url: /archives.html
+      - link "RL Field Notes" [ref=e24] [cursor=pointer]:
+        - /url: /archives.html
+      - link "Inside Codex" [ref=e26] [cursor=pointer]:
+        - /url: /archives.html
+    - paragraph [ref=e28]: STATIC SITE · GITHUB PAGES
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - heading "Daydreams" [level=1] [ref=e31]
+      - paragraph [ref=e32]: Ideas, fragments, and things still taking shape.
+    - generic [ref=e33]:
+      - article [ref=e34]:
+        - link [ref=e35] [cursor=pointer]:
+          - /url: /daydreams/cognitive-agent-understanding-hypothesis-verification/
+          - text: 2026-08-24
+          - heading "从内容审核到认知型 Agent：理解、联想、假设与验证为什么必须被拆成不同能力" [level=3] [ref=e36]
+          - generic "Tags" [ref=e37]:
+            - generic [ref=e38]: Daydreams
+            - generic [ref=e39]: 认知型 Agent
+            - generic [ref=e40]: 内容理解
+            - generic [ref=e41]: 假设生成
+          - paragraph [ref=e42]: 真正的 Agent 智能不只在于会调用什么工具，更在于能提出哪些值得验证的解释。
+      - article [ref=e43]:
+        - link [ref=e44] [cursor=pointer]:
+          - /url: /daydreams/metaphor-content-understanding/
+          - text: 2026-07-26
+          - heading "当语言开始拐弯：内容理解如何跟上隐喻、黑话与双关" [level=3] [ref=e45]
+          - generic "Tags" [ref=e46]:
+            - generic [ref=e47]: Daydreams
+            - generic [ref=e48]: 内容理解
+            - generic [ref=e49]: 隐喻
+            - generic [ref=e50]: LLM
+          - paragraph [ref=e51]: 当语言不再直说，真正困难的不是增加规则或工具，而是生成、比较并验证解释。
+      - article [ref=e52]:
+        - link [ref=e53] [cursor=pointer]:
+          - /url: /daydreams/mopd-binary-experts-to-multiclass/
+          - text: 2026-07-24
+          - heading "让二分类专家审稿：MOPD 能否蒸馏出会先思考的多分类 LLM？" [level=3] [ref=e54]
+          - generic "Tags" [ref=e55]:
+            - generic [ref=e56]: Daydreams
+            - generic [ref=e57]: MOPD
+            - generic [ref=e58]: On-Policy Distillation
+            - generic [ref=e59]: Reasoning LLM
+          - paragraph [ref=e60]: 学生先写出自己的 reasoning，再由多个类别专家复核；真正被蒸馏的是对学生轨迹的联合反馈，而不是几份离线答案。
+      - article [ref=e61]:
+        - link [ref=e62] [cursor=pointer]:
+          - /url: /daydreams/grpo-rubric-reward-annealing/
+          - text: 2026-07-23
+          - heading "让脚手架退场，让终点留下：GRPO 的信用分配与奖励退火" [level=3] [ref=e63]
+          - generic "Tags" [ref=e64]:
+            - generic [ref=e65]: Daydreams
+            - generic [ref=e66]: GRPO
+            - generic [ref=e67]: RLVR
+            - generic [ref=e68]: 信用分配
+          - paragraph [ref=e69]: 我想让 0/1 终局奖励始终充当锚点，把 rubric 当作可退火的信用分配脚手架。
+      - article [ref=e70]:
+        - link [ref=e71] [cursor=pointer]:
+          - /url: /daydreams/confidential-agent-marketplace/
+          - text: 2026-07-23
+          - heading "Agent 清算所：公开信誉，私有经验" [level=3] [ref=e72]
+          - generic "Tags" [ref=e73]:
+            - generic [ref=e74]: Daydreams
+            - generic [ref=e75]: Agent
+            - generic [ref=e76]: Marketplace
+            - generic [ref=e77]: 隐私计算
+          - paragraph [ref=e78]: 未来的 Agent 平台不只是卖能力，还要让技能、数据和经验在不互相暴露的前提下完成交易。
+  - contentinfo [ref=e79]:
+    - paragraph [ref=e80]: Writing, experiments, and visual notes by 涛涛涛.
+    - paragraph [ref=e81]:
+      - link "GitHub" [ref=e82] [cursor=pointer]:
+        - /url: https://github.com/light8lee
+      - text: ·
+      - link "RSS" [ref=e83] [cursor=pointer]:
+        - /url: /atom.xml

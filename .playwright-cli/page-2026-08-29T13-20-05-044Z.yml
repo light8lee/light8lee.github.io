@@ -1,0 +1,823 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "涛涛涛 home" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - navigation "Primary navigation" [ref=e4]:
+      - link "我见" [ref=e5] [cursor=pointer]:
+        - /url: /pages/notes.html
+      - link "案头" [ref=e9] [cursor=pointer]:
+        - /url: /
+      - link "工坊" [ref=e13] [cursor=pointer]:
+        - /url: /pages/projects.html
+      - link "书架" [ref=e17] [cursor=pointer]:
+        - /url: /archives.html
+      - link "关于" [ref=e21] [cursor=pointer]:
+        - /url: /about.html
+  - main [ref=e25]:
+    - generic [ref=e26]:
+      - paragraph [ref=e27]: FIELD LIBRARY · 2026
+      - heading "书架" [level=1] [ref=e28]
+      - paragraph [ref=e29]: 把文章、推演与研究笔记收在同一张可检索的纸面目录里。
+    - region "书架检索与筛选" [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e35]: 搜索书架
+        - searchbox "搜索书架" [ref=e36]
+        - generic [ref=e37]: ⌘ K
+      - group "按栏目筛选" [ref=e38]:
+        - button "全部 56" [pressed] [ref=e39] [cursor=pointer]:
+          - text: 全部
+          - generic [ref=e40]: "56"
+        - button "Agent 系统" [ref=e41] [cursor=pointer]
+        - button "RL / 后训练" [ref=e42] [cursor=pointer]
+        - button "Codex / 工具" [ref=e43] [cursor=pointer]
+        - button "模型基础" [ref=e44] [cursor=pointer]
+        - button "研究随笔" [ref=e45] [cursor=pointer]
+      - paragraph [ref=e46]: 共 56 篇，按时间倒序。
+    - generic [ref=e47]:
+      - article [ref=e48]:
+        - generic [ref=e49]:
+          - paragraph [ref=e50]:
+            - time [ref=e51]: 2026.08.21
+            - generic [ref=e52]: Agent 系统·
+            - generic [ref=e53]: Agent
+          - heading [level=2] [ref=e54]:
+            - link "RSI Harness Engineering：从运行系统到受控递归改进" [ref=e55] [cursor=pointer]:
+              - /url: /agent/2026/08/21/rsi-harness-engineering.html
+          - paragraph [ref=e56]:
+            - generic [ref=e57]: Agent
+            - generic [ref=e58]: RSI
+            - generic [ref=e59]: Harness Engineering
+        - generic [ref=e60]: "56"
+      - article [ref=e61]:
+        - generic [ref=e62]:
+          - paragraph [ref=e63]:
+            - time [ref=e64]: 2026.08.06
+            - generic [ref=e65]: RL / 后训练·
+            - generic [ref=e66]: LLM Post-training
+          - heading [level=2] [ref=e67]:
+            - link "BLL-Loss：低概率 Token，为什么不该无限主导 SFT 更新？" [ref=e68] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/08/06/icml-2026-bll-loss.html
+          - paragraph [ref=e69]:
+            - generic [ref=e70]: ICML 2026
+            - generic [ref=e71]: LLM Post-training
+            - generic [ref=e72]: SFT
+        - generic [ref=e73]: "55"
+      - article [ref=e74]:
+        - generic [ref=e75]:
+          - paragraph [ref=e76]:
+            - time [ref=e77]: 2026.08.05
+            - generic [ref=e78]: RL / 后训练·
+            - generic [ref=e79]: LLM Post-training
+          - heading [level=2] [ref=e80]:
+            - link "LALP：99.99% 的复读，为什么可能筛出更差的推理数据？" [ref=e81] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/08/05/icml-2026-lalp.html
+          - paragraph [ref=e82]:
+            - generic [ref=e83]: ICML 2026
+            - generic [ref=e84]: LLM Post-training
+            - generic [ref=e85]: SFT
+        - generic [ref=e86]: "54"
+      - article [ref=e87]:
+        - generic [ref=e88]:
+          - paragraph [ref=e89]:
+            - time [ref=e90]: 2026.08.04
+            - generic [ref=e91]: RL / 后训练·
+            - generic [ref=e92]: LLM Post-training
+          - heading [level=2] [ref=e93]:
+            - link "PIPE：工具改名后，Agent 为什么可能不会用了？" [ref=e94] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/08/04/icml-2026-pipe.html
+          - paragraph [ref=e95]:
+            - generic [ref=e96]: ICML 2026
+            - generic [ref=e97]: Agent
+            - generic [ref=e98]: Trajectory SFT
+        - generic [ref=e99]: "53"
+      - article [ref=e100]:
+        - generic [ref=e101]:
+          - paragraph [ref=e102]:
+            - time [ref=e103]: 2026.08.03
+            - generic [ref=e104]: RL / 后训练·
+            - generic [ref=e105]: LLM Post-training
+          - heading [level=2] [ref=e106]:
+            - link "MEnvAgent：修 Bug 前，环境先崩了" [ref=e107] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/08/03/icml-2026-menvagent.html
+          - paragraph [ref=e108]:
+            - generic [ref=e109]: ICML 2026
+            - generic [ref=e110]: Software Engineering
+            - generic [ref=e111]: Environment Construction
+        - generic [ref=e112]: "52"
+      - article [ref=e113]:
+        - generic [ref=e114]:
+          - paragraph [ref=e115]:
+            - time [ref=e116]: 2026.08.02
+            - generic [ref=e117]: RL / 后训练·
+            - generic [ref=e118]: LLM Post-training
+          - heading [level=2] [ref=e119]:
+            - link "DPO Unchained：从偏好标签到可审计的选择建模" [ref=e120] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/08/02/dpo-unchained.html
+          - paragraph [ref=e121]:
+            - generic [ref=e122]: ICML 2026
+            - generic [ref=e123]: LLM Post-training
+            - generic [ref=e124]: DPO
+        - generic [ref=e125]: "51"
+      - article [ref=e126]:
+        - generic [ref=e127]:
+          - paragraph [ref=e128]:
+            - time [ref=e129]: 2026.08.01
+            - generic [ref=e130]: RL / 后训练·
+            - generic [ref=e131]: LLM Post-training
+          - heading [level=2] [ref=e132]:
+            - link "TerminalTraj：命令成功，为什么奖励仍然是 0？" [ref=e133] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/08/01/icml-2026-terminaltraj.html
+          - paragraph [ref=e134]:
+            - generic [ref=e135]: ICML 2026
+            - generic [ref=e136]: Terminal Agent
+            - generic [ref=e137]: Agentic Data
+        - generic [ref=e138]: "50"
+      - article [ref=e139]:
+        - generic [ref=e140]:
+          - paragraph [ref=e141]:
+            - time [ref=e142]: 2026.08.01
+            - generic [ref=e143]: RL / 后训练·
+            - generic [ref=e144]: LLM Post-training
+          - heading [level=2] [ref=e145]:
+            - link "ICML 2026：代码 Agent 变强，不一定靠更狠的 RL" [ref=e146] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/08/01/icml-2026-davinci-dev.html
+          - paragraph [ref=e147]:
+            - generic [ref=e148]: ICML 2026
+            - generic [ref=e149]: Code Agent
+            - generic [ref=e150]: Agentic Mid-training
+        - generic [ref=e151]: "49"
+      - article [ref=e152]:
+        - generic [ref=e153]:
+          - paragraph [ref=e154]:
+            - time [ref=e155]: 2026.07.29
+            - generic [ref=e156]: RL / 后训练·
+            - generic [ref=e157]: LLM Post-training
+          - heading [level=2] [ref=e158]:
+            - link "ICML 2026：RL 为什么会撞上 Base Model Barrier？" [ref=e159] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/29/icml-2026-base-model-barrier.html
+          - paragraph [ref=e160]:
+            - generic [ref=e161]: ICML 2026
+            - generic [ref=e162]: LLM Post-training
+            - generic [ref=e163]: Reinforcement Learning
+        - generic [ref=e164]: "48"
+      - article [ref=e165]:
+        - generic [ref=e166]:
+          - paragraph [ref=e167]:
+            - time [ref=e168]: 2026.07.28
+            - generic [ref=e169]: RL / 后训练·
+            - generic [ref=e170]: LLM Post-training
+          - heading [level=2] [ref=e171]:
+            - link "ICML 2026：Pre-Training、Mid-Training 与 RL 如何划定推理能力边缘" [ref=e172] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/28/icml-2026-pre-mid-rl.html
+          - paragraph [ref=e173]:
+            - generic [ref=e174]: ICML 2026
+            - generic [ref=e175]: LLM Post-training
+            - generic [ref=e176]: Reinforcement Learning
+        - generic [ref=e177]: "47"
+      - article [ref=e178]:
+        - generic [ref=e179]:
+          - paragraph [ref=e180]:
+            - time [ref=e181]: 2026.07.27
+            - generic [ref=e182]: RL / 后训练·
+            - generic [ref=e183]: LLM Post-training
+          - heading [level=2] [ref=e184]:
+            - link "ACL 2026 反馈优化（三）：用户行为到底在教 Agent 什么？" [ref=e185] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/27/acl-2026-behavior-feedback.html
+          - paragraph [ref=e186]:
+            - generic [ref=e187]: ACL 2026
+            - generic [ref=e188]: Agent
+            - generic [ref=e189]: Behavior Feedback
+        - generic [ref=e190]: "46"
+      - article [ref=e191]:
+        - generic [ref=e192]:
+          - paragraph [ref=e193]:
+            - time [ref=e194]: 2026.07.26
+            - generic [ref=e195]: RL / 后训练·
+            - generic [ref=e196]: LLM Post-training
+          - heading [level=2] [ref=e197]:
+            - link "ACL 2026 反馈优化（二）：奖励如何教 Agent 留下可复用技能？" [ref=e198] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/26/acl-2026-numeric-feedback-sage.html
+          - paragraph [ref=e199]:
+            - generic [ref=e200]: ACL 2026
+            - generic [ref=e201]: Agent
+            - generic [ref=e202]: Numeric Feedback
+        - generic [ref=e203]: "45"
+      - article [ref=e204]:
+        - generic [ref=e205]:
+          - paragraph [ref=e206]:
+            - time [ref=e207]: 2026.07.25
+            - generic [ref=e208]: RL / 后训练·
+            - generic [ref=e209]: LLM Post-training
+          - heading [level=2] [ref=e210]:
+            - link "ACL 2026 反馈优化（一）：文字反馈究竟写回哪里？" [ref=e211] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/25/acl-2026-text-feedback.html
+          - paragraph [ref=e212]:
+            - generic [ref=e213]: ACL 2026
+            - generic [ref=e214]: Agent
+            - generic [ref=e215]: Text Feedback
+        - generic [ref=e216]: "44"
+      - article [ref=e217]:
+        - generic [ref=e218]:
+          - paragraph [ref=e219]:
+            - time [ref=e220]: 2026.07.21
+            - generic [ref=e221]: 研究随笔·
+            - generic [ref=e222]: 研究笔记
+          - heading [level=2] [ref=e223]:
+            - link "ToolRM：把工具调用错误变成领域裁判的训练数据" [ref=e224] [cursor=pointer]:
+              - /url: /pages/toolrm.html
+          - paragraph [ref=e225]:
+            - generic [ref=e226]: ToolRM
+            - generic [ref=e227]: Reward Model
+            - generic [ref=e228]: 工具调用
+        - generic [ref=e229]: "43"
+      - article [ref=e230]:
+        - generic [ref=e231]:
+          - paragraph [ref=e232]:
+            - time [ref=e233]: 2026.07.20
+            - generic [ref=e234]: 研究随笔·
+            - generic [ref=e235]: 研究笔记
+          - heading [level=2] [ref=e236]:
+            - link "HSCodeComp：专业 Agent 如何在规则树里做出可审计判断" [ref=e237] [cursor=pointer]:
+              - /url: /pages/hscodecomp.html
+          - paragraph [ref=e238]:
+            - generic [ref=e239]: HSCodeComp
+            - generic [ref=e240]: Agent
+            - generic [ref=e241]: Benchmark
+        - generic [ref=e242]: "42"
+      - article [ref=e243]:
+        - generic [ref=e244]:
+          - paragraph [ref=e245]:
+            - time [ref=e246]: 2026.07.20
+            - generic [ref=e247]: 研究随笔·
+            - generic [ref=e248]: 研究笔记
+          - heading [level=2] [ref=e249]:
+            - link "CURE：把反思训练成可检验的下一步搜索" [ref=e250] [cursor=pointer]:
+              - /url: /pages/cure.html
+          - paragraph [ref=e251]:
+            - generic [ref=e252]: CURE
+            - generic [ref=e253]: 强化学习
+            - generic [ref=e254]: GRPO
+        - generic [ref=e255]: "41"
+      - article [ref=e256]:
+        - generic [ref=e257]:
+          - paragraph [ref=e258]:
+            - time [ref=e259]: 2026.07.18
+            - generic [ref=e260]: RL / 后训练·
+            - generic [ref=e261]: LLM Post-training
+          - heading [level=2] [ref=e262]:
+            - link "On-Policy SFT：让正确答案更像模型自己会写的答案" [ref=e263] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/18/on-policy-sft.html
+          - paragraph [ref=e264]:
+            - generic [ref=e265]: LLM
+            - generic [ref=e266]: 后训练
+            - generic [ref=e267]: SFT
+        - generic [ref=e268]: "40"
+      - article [ref=e269]:
+        - generic [ref=e270]:
+          - paragraph [ref=e271]:
+            - time [ref=e272]: 2026.07.16
+            - generic [ref=e273]: RL / 后训练·
+            - generic [ref=e274]: LLM Post-training
+          - heading [level=2] [ref=e275]:
+            - link "RLTF：把文本批评内化成首答能力" [ref=e276] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/16/rltf-text-feedback.html
+          - paragraph [ref=e277]:
+            - generic [ref=e278]: LLM
+            - generic [ref=e279]: RLTF
+            - generic [ref=e280]: 强化学习
+        - generic [ref=e281]: "39"
+      - article [ref=e282]:
+        - generic [ref=e283]:
+          - paragraph [ref=e284]:
+            - time [ref=e285]: 2026.07.15
+            - generic [ref=e286]: Agent 系统·
+            - generic [ref=e287]: Agents
+          - heading [level=2] [ref=e288]:
+            - link "多 Agent 协作：五种模式、完成条件与选型" [ref=e289] [cursor=pointer]:
+              - /url: /agents/2026/07/15/multi-agent-collaboration.html
+          - paragraph [ref=e290]:
+            - generic [ref=e291]: 智能体
+            - generic [ref=e292]: 多智能体
+            - generic [ref=e293]: Agent Runtime
+        - generic [ref=e294]: "38"
+      - article [ref=e295]:
+        - generic [ref=e296]:
+          - paragraph [ref=e297]:
+            - time [ref=e298]: 2026.07.14
+            - generic [ref=e299]: Agent 系统·
+            - generic [ref=e300]: Agent Training
+          - heading [level=2] [ref=e301]:
+            - link "OEC：让专家从 Agent 的残局中接手" [ref=e302] [cursor=pointer]:
+              - /url: /agent%20training/2026/07/14/oec.html
+          - paragraph [ref=e303]:
+            - generic [ref=e304]: Agent
+            - generic [ref=e305]: 智能体
+            - generic [ref=e306]: 多轮智能体
+        - generic [ref=e307]: "37"
+      - article [ref=e308]:
+        - generic [ref=e309]:
+          - paragraph [ref=e310]:
+            - time [ref=e311]: 2026.07.13
+            - generic [ref=e312]: RL / 后训练·
+            - generic [ref=e313]: LLM Post-training
+          - heading [level=2] [ref=e314]:
+            - link "Retaining by Doing：on-policy 数据为何能减轻遗忘" [ref=e315] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/13/retaining-by-doing.html
+          - paragraph [ref=e316]:
+            - generic [ref=e317]: 强化学习
+            - generic [ref=e318]: 后训练
+            - generic [ref=e319]: On-policy
+        - generic [ref=e320]: "36"
+      - article [ref=e321]:
+        - generic [ref=e322]:
+          - paragraph [ref=e323]:
+            - time [ref=e324]: 2026.07.12
+            - generic [ref=e325]: RL / 后训练·
+            - generic [ref=e326]: LLM Post-training
+          - heading [level=2] [ref=e327]:
+            - link "MaxRL：一行 GRPO 改造，把难题重新放回训练信号" [ref=e328] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/12/maxrl.html
+          - paragraph [ref=e329]:
+            - generic [ref=e330]: 强化学习
+            - generic [ref=e331]: 后训练
+            - generic [ref=e332]: GRPO
+        - generic [ref=e333]: "35"
+      - article [ref=e334]:
+        - generic [ref=e335]:
+          - paragraph [ref=e336]:
+            - time [ref=e337]: 2026.07.11
+            - generic [ref=e338]: Codex / 工具·
+            - generic [ref=e339]: Codex
+          - heading [level=2] [ref=e340]:
+            - link "Dive into Codex 08：System 指令与运行约束" [ref=e341] [cursor=pointer]:
+              - /url: /codex/2026/07/11/dive-into-codex-08-system-instructions-constraints.html
+          - paragraph [ref=e342]:
+            - generic [ref=e343]: 智能体运行时
+            - generic [ref=e344]: 指令系统
+            - generic [ref=e345]: 执行安全
+        - generic [ref=e346]: "34"
+      - article [ref=e347]:
+        - generic [ref=e348]:
+          - paragraph [ref=e349]:
+            - time [ref=e350]: 2026.07.11
+            - generic [ref=e351]: Codex / 工具·
+            - generic [ref=e352]: Codex
+          - heading [level=2] [ref=e353]:
+            - link "Dive into Codex 07：Subagent 架构" [ref=e354] [cursor=pointer]:
+              - /url: /codex/2026/07/11/dive-into-codex-07-subagent-architecture.html
+          - paragraph [ref=e355]:
+            - generic [ref=e356]: 多智能体
+            - generic [ref=e357]: 任务编排
+            - generic [ref=e358]: 权限控制
+        - generic [ref=e359]: "33"
+      - article [ref=e360]:
+        - generic [ref=e361]:
+          - paragraph [ref=e362]:
+            - time [ref=e363]: 2026.07.11
+            - generic [ref=e364]: Codex / 工具·
+            - generic [ref=e365]: Codex
+          - heading [level=2] [ref=e366]:
+            - link "Dive into Codex 06：Tool Execution 与 Workspace" [ref=e367] [cursor=pointer]:
+              - /url: /codex/2026/07/11/dive-into-codex-06-tool-execution-workspace.html
+          - paragraph [ref=e368]:
+            - generic [ref=e369]: 智能体运行时
+            - generic [ref=e370]: 工具调用
+            - generic [ref=e371]: 工作区管理
+        - generic [ref=e372]: "32"
+      - article [ref=e373]:
+        - generic [ref=e374]:
+          - paragraph [ref=e375]:
+            - time [ref=e376]: 2026.07.10
+            - generic [ref=e377]: Codex / 工具·
+            - generic [ref=e378]: Codex
+          - heading [level=2] [ref=e379]:
+            - link "Dive into Codex 05：Sandbox 与权限边界" [ref=e380] [cursor=pointer]:
+              - /url: /codex/2026/07/10/dive-into-codex-05-sandbox-and-permissions.html
+          - paragraph [ref=e381]:
+            - generic [ref=e382]: 智能体运行时
+            - generic [ref=e383]: 权限控制
+            - generic [ref=e384]: 执行安全
+        - generic [ref=e385]: "31"
+      - article [ref=e386]:
+        - generic [ref=e387]:
+          - paragraph [ref=e388]:
+            - time [ref=e389]: 2026.07.09
+            - generic [ref=e390]: Codex / 工具·
+            - generic [ref=e391]: Codex
+          - heading [level=2] [ref=e392]:
+            - link "Dive into Codex 04：Interrupt 与异步事件" [ref=e393] [cursor=pointer]:
+              - /url: /codex/2026/07/09/dive-into-codex-04-interrupt-async-events.html
+          - paragraph [ref=e394]:
+            - generic [ref=e395]: 智能体运行时
+            - generic [ref=e396]: 异步控制
+            - generic [ref=e397]: 用户中断
+        - generic [ref=e398]: "30"
+      - article [ref=e399]:
+        - generic [ref=e400]:
+          - paragraph [ref=e401]:
+            - time [ref=e402]: 2026.07.07
+            - generic [ref=e403]: Codex / 工具·
+            - generic [ref=e404]: Codex
+          - heading [level=2] [ref=e405]:
+            - link "Dive into Codex 03：Cache 与 Compaction" [ref=e406] [cursor=pointer]:
+              - /url: /codex/2026/07/07/dive-into-codex-03-cache-compaction.html
+          - paragraph [ref=e407]:
+            - generic [ref=e408]: 上下文管理
+            - generic [ref=e409]: 长上下文
+            - generic [ref=e410]: 缓存优化
+        - generic [ref=e411]: "29"
+      - article [ref=e412]:
+        - generic [ref=e413]:
+          - paragraph [ref=e414]:
+            - time [ref=e415]: 2026.07.05
+            - generic [ref=e416]: Codex / 工具·
+            - generic [ref=e417]: Codex
+          - heading [level=2] [ref=e418]:
+            - link "Dive into Codex 02：Responses API 事件模型" [ref=e419] [cursor=pointer]:
+              - /url: /codex/2026/07/05/dive-into-codex-02-responses-api-design.html
+          - paragraph [ref=e420]:
+            - generic [ref=e421]: 智能体运行时
+            - generic [ref=e422]: 模型接口
+            - generic [ref=e423]: 工具调用
+        - generic [ref=e424]: "28"
+      - article [ref=e425]:
+        - generic [ref=e426]:
+          - paragraph [ref=e427]:
+            - time [ref=e428]: 2026.07.04
+            - generic [ref=e429]: Codex / 工具·
+            - generic [ref=e430]: Codex
+          - heading [level=2] [ref=e431]:
+            - link "Dive into Codex 01：Agent Loop 的核心地图" [ref=e432] [cursor=pointer]:
+              - /url: /codex/2026/07/04/dive-into-codex-01-agent-loop-core.html
+          - paragraph [ref=e433]:
+            - generic [ref=e434]: 智能体运行时
+            - generic [ref=e435]: 上下文管理
+            - generic [ref=e436]: 工具调用
+        - generic [ref=e437]: "27"
+      - article [ref=e438]:
+        - generic [ref=e439]:
+          - paragraph [ref=e440]:
+            - time [ref=e441]: 2026.07.04
+            - generic [ref=e442]: RL / 后训练·
+            - generic [ref=e443]: Agent RL
+          - heading [level=2] [ref=e444]:
+            - 'link "SCPO: 从失败轨迹里找回正确步骤" [ref=e445] [cursor=pointer]':
+              - /url: /agent%20rl/2026/07/04/scpo-semantic-consistency-policy-optimization.html
+          - paragraph [ref=e446]:
+            - generic [ref=e447]: 智能体
+            - generic [ref=e448]: 强化学习
+            - generic [ref=e449]: 策略优化
+        - generic [ref=e450]: "26"
+      - article [ref=e451]:
+        - generic [ref=e452]:
+          - paragraph [ref=e453]:
+            - time [ref=e454]: 2026.07.01
+            - generic [ref=e455]: RL / 后训练·
+            - generic [ref=e456]: LLM Post-training
+          - heading [level=2] [ref=e457]:
+            - link "Yuvion LLM：把对抗鲁棒性放进安全模型训练" [ref=e458] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/07/01/yuvion-llm.html
+          - paragraph [ref=e459]:
+            - generic [ref=e460]: 后训练
+            - generic [ref=e461]: 安全对齐
+            - generic [ref=e462]: 对抗鲁棒性
+        - generic [ref=e463]: "25"
+      - article [ref=e464]:
+        - generic [ref=e465]:
+          - paragraph [ref=e466]:
+            - time [ref=e467]: 2026.06.29
+            - generic [ref=e468]: Agent 系统·
+            - generic [ref=e469]: Agent
+          - heading [level=2] [ref=e470]:
+            - link "openclaw hermes" [ref=e471] [cursor=pointer]:
+              - /url: /agent/2026/06/29/openclaw-hermes.html
+          - paragraph [ref=e472]:
+            - generic [ref=e473]: 智能体
+            - generic [ref=e474]: 多智能体
+            - generic [ref=e475]: 开源框架
+        - generic [ref=e476]: "24"
+      - article [ref=e477]:
+        - generic [ref=e478]:
+          - paragraph [ref=e479]:
+            - time [ref=e480]: 2026.06.28
+            - generic [ref=e481]: Agent 系统·
+            - generic [ref=e482]: Agent
+          - heading [level=2] [ref=e483]:
+            - 'link "OPID: 从 Agent 自己的轨迹中提炼技能，让强化学习不再\"盲人摸象\"" [ref=e484] [cursor=pointer]':
+              - /url: /agent/2026/06/28/opid.html
+          - paragraph [ref=e485]:
+            - generic [ref=e486]: 智能体
+            - generic [ref=e487]: 强化学习
+            - generic [ref=e488]: 技能学习
+        - generic [ref=e489]: "23"
+      - article [ref=e490]:
+        - generic [ref=e491]:
+          - paragraph [ref=e492]:
+            - time [ref=e493]: 2026.06.27
+            - generic [ref=e494]: 研究随笔·
+            - generic [ref=e495]: AI Notes
+          - heading [level=2] [ref=e496]:
+            - link "Agent 记忆系统大横评：12 个系统，谁才是真正的记忆王者？" [ref=e497] [cursor=pointer]:
+              - /url: /ai%20notes/2026/06/27/agent-memory.html
+          - paragraph [ref=e498]:
+            - generic [ref=e499]: 智能体
+            - generic [ref=e500]: 记忆系统
+        - generic [ref=e501]: "22"
+      - article [ref=e502]:
+        - generic [ref=e503]:
+          - paragraph [ref=e504]:
+            - time [ref=e505]: 2026.06.27
+            - generic [ref=e506]: RL / 后训练·
+            - generic [ref=e507]: LLM Post-training
+          - heading [level=2] [ref=e508]:
+            - 'link "Learning at the Right Pace: Adaptive Data Scheduling Improves LLM Reinforcement Learning" [ref=e509] [cursor=pointer]':
+              - /url: /llm%20post-training/2026/06/27/ads.html
+          - paragraph [ref=e510]:
+            - generic [ref=e511]: 后训练
+            - generic [ref=e512]: 强化学习
+            - generic [ref=e513]: 训练数据
+        - generic [ref=e514]: "21"
+      - article [ref=e515]:
+        - generic [ref=e516]:
+          - paragraph [ref=e517]:
+            - time [ref=e518]: 2026.06.25
+            - generic [ref=e519]: Agent 系统·
+            - generic [ref=e520]: Agent
+          - heading [level=2] [ref=e521]:
+            - link "Experiential Reflective Learning for Self-Improving LLM Agents" [ref=e522] [cursor=pointer]:
+              - /url: /agent/2026/06/25/erl.html
+          - paragraph [ref=e523]:
+            - generic [ref=e524]: 智能体
+            - generic [ref=e525]: 自我改进
+            - generic [ref=e526]: 记忆系统
+        - generic [ref=e527]: "20"
+      - article [ref=e528]:
+        - generic [ref=e529]:
+          - paragraph [ref=e530]:
+            - time [ref=e531]: 2026.06.21
+            - generic [ref=e532]: RL / 后训练·
+            - generic [ref=e533]: LLM Post-training
+          - heading [level=2] [ref=e534]:
+            - link "CHERRL：让 Rubric-based RL 的 Reward Hacking 可复现、可分析、可检测" [ref=e535] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/06/21/cherrl.html
+          - paragraph [ref=e536]:
+            - generic [ref=e537]: 后训练
+            - generic [ref=e538]: 强化学习
+            - generic [ref=e539]: 奖励建模
+        - generic [ref=e540]: "19"
+      - article [ref=e541]:
+        - generic [ref=e542]:
+          - paragraph [ref=e543]:
+            - time [ref=e544]: 2026.06.21
+            - generic [ref=e545]: RL / 后训练·
+            - generic [ref=e546]: LLM Post-training
+          - heading [level=2] [ref=e547]:
+            - link "Scaling Laws for Reward Model Overoptimization" [ref=e548] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/06/21/rm-overoptimization.html
+          - paragraph [ref=e549]:
+            - generic [ref=e550]: 后训练
+            - generic [ref=e551]: 奖励建模
+            - generic [ref=e552]: 强化学习
+        - generic [ref=e553]: "18"
+      - article [ref=e554]:
+        - generic [ref=e555]:
+          - paragraph [ref=e556]:
+            - time [ref=e557]: 2026.06.21
+            - generic [ref=e558]: RL / 后训练·
+            - generic [ref=e559]: LLM Post-training
+          - heading [level=2] [ref=e560]:
+            - link "奖励上涨，为什么安全目标反而变差？" [ref=e561] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/06/21/reward-hacking.html
+          - paragraph [ref=e562]:
+            - generic [ref=e563]: 后训练
+            - generic [ref=e564]: 安全对齐
+            - generic [ref=e565]: 奖励建模
+        - generic [ref=e566]: "17"
+      - article [ref=e567]:
+        - generic [ref=e568]:
+          - paragraph [ref=e569]:
+            - time [ref=e570]: 2026.06.19
+            - generic [ref=e571]: RL / 后训练·
+            - generic [ref=e572]: LLM Post-training
+          - heading [level=2] [ref=e573]:
+            - link "《Agent SFT 最难的，不是训练》脚本" [ref=e574] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/06/19/omniagent-sft.html
+          - paragraph [ref=e575]:
+            - generic [ref=e576]: 智能体
+            - generic [ref=e577]: 监督微调
+            - generic [ref=e578]: 训练数据
+        - generic [ref=e579]: "16"
+      - article [ref=e580]:
+        - generic [ref=e581]:
+          - paragraph [ref=e582]:
+            - time [ref=e583]: 2026.06.18
+            - generic [ref=e584]: RL / 后训练·
+            - generic [ref=e585]: LLM Post-training
+          - heading [level=2] [ref=e586]:
+            - 'link "GD^2PO: Mitigating Multi-Reward Conflicts via Group-Dynamic reward-Decoupled Policy Optimization" [ref=e587] [cursor=pointer]':
+              - /url: /llm%20post-training/2026/06/18/gd2po.html
+          - paragraph [ref=e588]:
+            - generic [ref=e589]: 后训练
+            - generic [ref=e590]: 强化学习
+            - generic [ref=e591]: 多目标优化
+        - generic [ref=e592]: "15"
+      - article [ref=e593]:
+        - generic [ref=e594]:
+          - paragraph [ref=e595]:
+            - time [ref=e596]: 2026.06.18
+            - generic [ref=e597]: RL / 后训练·
+            - generic [ref=e598]: LLM Post-training
+          - heading [level=2] [ref=e599]:
+            - 'link "DharmaOCR: Specialized Small Language Models for Structured OCR that outperform Open-Source and Commercial Baselines" [ref=e600] [cursor=pointer]':
+              - /url: /llm%20post-training/2026/06/18/dharmaocr-dpo.html
+          - paragraph [ref=e601]:
+            - generic [ref=e602]: 后训练
+            - generic [ref=e603]: 偏好对齐
+            - generic [ref=e604]: 结构化输出
+        - generic [ref=e605]: "14"
+      - article [ref=e606]:
+        - generic [ref=e607]:
+          - paragraph [ref=e608]:
+            - time [ref=e609]: 2026.06.18
+            - generic [ref=e610]: RL / 后训练·
+            - generic [ref=e611]: LLM Post-training
+          - heading [level=2] [ref=e612]:
+            - link "Rethinking the Divergence Regularization in LLM RL" [ref=e613] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/06/18/drpo.html
+          - paragraph [ref=e614]:
+            - generic [ref=e615]: 后训练
+            - generic [ref=e616]: 强化学习
+            - generic [ref=e617]: 策略优化
+        - generic [ref=e618]: "13"
+      - article [ref=e619]:
+        - generic [ref=e620]:
+          - paragraph [ref=e621]:
+            - time [ref=e622]: 2026.06.17
+            - generic [ref=e623]: Agent 系统·
+            - generic [ref=e624]: Agent
+          - heading [level=2] [ref=e625]:
+            - link "Computer-use agent真正的难点不是会点按钮或会写命令，而是能不能在长链路任务里稳定编排GUI与CLI" [ref=e626] [cursor=pointer]:
+              - /url: /agent/2026/06/17/weavebench.html
+          - paragraph [ref=e627]:
+            - generic [ref=e628]: 智能体
+            - generic [ref=e629]: 计算机使用
+            - generic [ref=e630]: 基准评测
+        - generic [ref=e631]: "12"
+      - article [ref=e632]:
+        - generic [ref=e633]:
+          - paragraph [ref=e634]:
+            - time [ref=e635]: 2026.06.16
+            - generic [ref=e636]: RL / 后训练·
+            - generic [ref=e637]: LLM Post-training
+          - heading [level=2] [ref=e638]:
+            - 'link "GoLongRL: Capability-Oriented Long Context Reinforcement Learning with Multitask Alignment" [ref=e639] [cursor=pointer]':
+              - /url: /llm%20post-training/2026/06/16/golongrl.html
+          - paragraph [ref=e640]:
+            - generic [ref=e641]: 后训练
+            - generic [ref=e642]: 长上下文
+            - generic [ref=e643]: 强化学习
+        - generic [ref=e644]: "11"
+      - article [ref=e645]:
+        - generic [ref=e646]:
+          - paragraph [ref=e647]:
+            - time [ref=e648]: 2026.06.15
+            - generic [ref=e649]: 模型基础·
+            - generic [ref=e650]: 大模型基础知识
+          - heading [level=2] [ref=e651]:
+            - link "GRPO PyTorch 伪代码详解：从采样到组内相对优势" [ref=e652] [cursor=pointer]:
+              - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/06/15/grpo-pytorch.html
+          - paragraph [ref=e653]:
+            - generic [ref=e654]: 后训练
+            - generic [ref=e655]: 强化学习
+            - generic [ref=e656]: 策略优化
+        - generic [ref=e657]: "10"
+      - article [ref=e658]:
+        - generic [ref=e659]:
+          - paragraph [ref=e660]:
+            - time [ref=e661]: 2026.06.14
+            - generic [ref=e662]: 模型基础·
+            - generic [ref=e663]: 大模型基础知识
+          - heading [level=2] [ref=e664]:
+            - link "PPO、DPO、GRPO 详解：LLM 偏好对齐方法对比" [ref=e665] [cursor=pointer]:
+              - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/06/14/ppo-dpo-grpo.html
+          - paragraph [ref=e666]:
+            - generic [ref=e667]: 后训练
+            - generic [ref=e668]: 偏好对齐
+            - generic [ref=e669]: 强化学习
+        - generic [ref=e670]: "09"
+      - article [ref=e671]:
+        - generic [ref=e672]:
+          - paragraph [ref=e673]:
+            - time [ref=e674]: 2026.06.14
+            - generic [ref=e675]: RL / 后训练·
+            - generic [ref=e676]: LLM Post-training
+          - heading [level=2] [ref=e677]:
+            - link "RL 为什么非要最后才上场？" [ref=e678] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/06/14/rl-excursions.html
+          - paragraph [ref=e679]:
+            - generic [ref=e680]: 预训练
+            - generic [ref=e681]: 强化学习
+        - generic [ref=e682]: "08"
+      - article [ref=e683]:
+        - generic [ref=e684]:
+          - paragraph [ref=e685]:
+            - time [ref=e686]: 2026.06.11
+            - generic [ref=e687]: RL / 后训练·
+            - generic [ref=e688]: LLM Post-training
+          - heading [level=2] [ref=e689]:
+            - link "DRPO 技术详解：LLM 强化学习可能一直管错了东西" [ref=e690] [cursor=pointer]:
+              - /url: /llm%20post-training/2026/06/11/drpo.html
+          - paragraph [ref=e691]:
+            - generic [ref=e692]: 后训练
+            - generic [ref=e693]: 强化学习
+            - generic [ref=e694]: 策略优化
+        - generic [ref=e695]: "07"
+      - article [ref=e696]:
+        - generic [ref=e697]:
+          - paragraph [ref=e698]:
+            - time [ref=e699]: 2026.06.10
+            - generic [ref=e700]: 模型基础·
+            - generic [ref=e701]: 大模型基础知识
+          - heading [level=2] [ref=e702]:
+            - link "AI Agent 详解：感知、规划、记忆与行动的系统架构" [ref=e703] [cursor=pointer]:
+              - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/06/10/agent.html
+          - paragraph [ref=e704]:
+            - generic [ref=e705]: 智能体
+            - generic [ref=e706]: 任务规划
+            - generic [ref=e707]: 记忆系统
+        - generic [ref=e708]: "06"
+      - article [ref=e709]:
+        - generic [ref=e710]:
+          - paragraph [ref=e711]:
+            - time [ref=e712]: 2026.05.18
+            - generic [ref=e713]: 模型基础·
+            - generic [ref=e714]: 大模型基础知识
+          - heading [level=2] [ref=e715]:
+            - link "On-Policy Distillation：让学生在自己的分布上学习" [ref=e716] [cursor=pointer]:
+              - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/18/opd.html
+          - paragraph [ref=e717]:
+            - generic [ref=e718]: 后训练
+            - generic [ref=e719]: 知识蒸馏
+        - generic [ref=e720]: "05"
+      - article [ref=e721]:
+        - generic [ref=e722]:
+          - paragraph [ref=e723]:
+            - time [ref=e724]: 2026.05.06
+            - generic [ref=e725]: 模型基础·
+            - generic [ref=e726]: 大模型基础知识
+          - heading [level=2] [ref=e727]:
+            - link "top_p、top_k 和 temperature：大模型采样参数详解" [ref=e728] [cursor=pointer]:
+              - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/06/sampling.html
+          - paragraph [ref=e729]:
+            - generic [ref=e730]: 大模型
+            - generic [ref=e731]: 推理采样
+        - generic [ref=e732]: "04"
+      - article [ref=e733]:
+        - generic [ref=e734]:
+          - paragraph [ref=e735]:
+            - time [ref=e736]: 2026.05.05
+            - generic [ref=e737]: 模型基础·
+            - generic [ref=e738]: 大模型基础知识
+          - heading [level=2] [ref=e739]:
+            - link "LoRA 详解：低秩适配如何高效微调大模型" [ref=e740] [cursor=pointer]:
+              - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/05/lora.html
+          - paragraph [ref=e741]:
+            - generic [ref=e742]: 大模型
+            - generic [ref=e743]: 参数高效微调
+        - generic [ref=e744]: "03"
+      - article [ref=e745]:
+        - generic [ref=e746]:
+          - paragraph [ref=e747]:
+            - time [ref=e748]: 2026.05.05
+            - generic [ref=e749]: 模型基础·
+            - generic [ref=e750]: 大模型基础知识
+          - heading [level=2] [ref=e751]:
+            - link "Transformer 详解：从 Attention 到 FFN、残差与 LayerNorm" [ref=e752] [cursor=pointer]:
+              - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/05/transformer.html
+          - paragraph [ref=e753]:
+            - generic [ref=e754]: 大模型
+            - generic [ref=e755]: 模型架构
+            - generic [ref=e756]: 注意力机制
+        - generic [ref=e757]: "02"
+      - article [ref=e758]:
+        - generic [ref=e759]:
+          - paragraph [ref=e760]:
+            - time [ref=e761]: 2026.05.05
+            - generic [ref=e762]: 模型基础·
+            - generic [ref=e763]: 大模型基础知识
+          - heading [level=2] [ref=e764]:
+            - link "RoPE 详解：旋转位置编码如何把相对距离写进注意力" [ref=e765] [cursor=pointer]:
+              - /url: /%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/2026/05/05/rope.html
+          - paragraph [ref=e766]:
+            - generic [ref=e767]: 大模型
+            - generic [ref=e768]: 模型架构
+            - generic [ref=e769]: 位置编码
+        - generic [ref=e770]: "01"
+  - contentinfo [ref=e771]:
+    - paragraph [ref=e772]: Writing, experiments, and visual notes by 涛涛涛.
+    - paragraph [ref=e773]:
+      - link "GitHub" [ref=e774] [cursor=pointer]:
+        - /url: https://github.com/light8lee
+      - text: ·
+      - link "RSS" [ref=e775] [cursor=pointer]:
+        - /url: /atom.xml

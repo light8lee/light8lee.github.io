@@ -1,0 +1,591 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "涛涛涛 home" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e4]: 涛
+      - generic [ref=e5]:
+        - strong [ref=e6]: 涛涛涛
+        - generic [ref=e7]: FIELD DESK
+    - paragraph [ref=e8]: 一张持续整理的研究书桌：文章、图解、项目和没写完的问题。
+    - navigation "Primary navigation" [ref=e9]:
+      - link "研究桌" [ref=e10] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e11]: ⌘
+        - text: 研究桌
+      - link "实验场" [ref=e12] [cursor=pointer]:
+        - /url: /pages/projects.html
+        - generic [ref=e13]: ◌
+        - text: 实验场
+      - link "资料室" [ref=e14] [cursor=pointer]:
+        - /url: /archives.html
+        - generic [ref=e15]: ▣
+        - text: 资料室
+      - link "漫游册" [ref=e16] [cursor=pointer]:
+        - /url: /pages/notes.html
+        - generic [ref=e17]: ⌁
+        - text: 漫游册
+      - link "关于" [ref=e18] [cursor=pointer]:
+        - /url: /about.html
+        - generic [ref=e19]: ○
+        - text: 关于
+    - navigation "常看专题" [ref=e20]:
+      - paragraph [ref=e21]: 常看专题
+      - link "Agent Systems" [ref=e22] [cursor=pointer]:
+        - /url: /archives.html
+      - link "RL Field Notes" [ref=e24] [cursor=pointer]:
+        - /url: /archives.html
+      - link "Inside Codex" [ref=e26] [cursor=pointer]:
+        - /url: /archives.html
+    - paragraph [ref=e28]: STATIC SITE · GITHUB PAGES
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - complementary [ref=e31]:
+        - navigation "本文目录" [ref=e32]:
+          - link "先把整件事看成一张图" [ref=e33] [cursor=pointer]:
+            - /url: "#%E5%85%88%E6%8A%8A%E6%95%B4%E4%BB%B6%E4%BA%8B%E7%9C%8B%E6%88%90%E4%B8%80%E5%BC%A0%E5%9B%BE"
+          - link "运行并留下状态" [ref=e34] [cursor=pointer]:
+            - /url: "#%E8%BF%90%E8%A1%8C%E5%B9%B6%E7%95%99%E4%B8%8B%E7%8A%B6%E6%80%81"
+          - link "把 Harness 当作候选程序" [ref=e35] [cursor=pointer]:
+            - /url: "#%E6%8A%8A-harness-%E5%BD%93%E4%BD%9C%E5%80%99%E9%80%89%E7%A8%8B%E5%BA%8F"
+          - link "提案和裁决必须分离" [ref=e36] [cursor=pointer]:
+            - /url: "#%E6%8F%90%E6%A1%88%E5%92%8C%E8%A3%81%E5%86%B3%E5%BF%85%E9%A1%BB%E5%88%86%E7%A6%BB"
+          - link "一、先让系统持续运行" [ref=e37] [cursor=pointer]:
+            - /url: "#%E4%B8%80%E5%85%88%E8%AE%A9%E7%B3%BB%E7%BB%9F%E6%8C%81%E7%BB%AD%E8%BF%90%E8%A1%8C"
+          - link "Workflow：把 Prompt 变成可观察的运行闭环" [ref=e38] [cursor=pointer]:
+            - /url: "#workflow%E6%8A%8A-prompt-%E5%8F%98%E6%88%90%E5%8F%AF%E8%A7%82%E5%AF%9F%E7%9A%84%E8%BF%90%E8%A1%8C%E9%97%AD%E7%8E%AF"
+          - link "Memory：把运行历史写成按需读取的文件" [ref=e39] [cursor=pointer]:
+            - /url: "#memory%E6%8A%8A%E8%BF%90%E8%A1%8C%E5%8E%86%E5%8F%B2%E5%86%99%E6%88%90%E6%8C%89%E9%9C%80%E8%AF%BB%E5%8F%96%E7%9A%84%E6%96%87%E4%BB%B6"
+          - link "Parallelism：让并行成为可查询的 Job 系统" [ref=e40] [cursor=pointer]:
+            - /url: "#parallelism%E8%AE%A9%E5%B9%B6%E8%A1%8C%E6%88%90%E4%B8%BA%E5%8F%AF%E6%9F%A5%E8%AF%A2%E7%9A%84-job-%E7%B3%BB%E7%BB%9F"
+          - link "二、再把 Harness 变成优化对象" [ref=e41] [cursor=pointer]:
+            - /url: "#%E4%BA%8C%E5%86%8D%E6%8A%8A-harness-%E5%8F%98%E6%88%90%E4%BC%98%E5%8C%96%E5%AF%B9%E8%B1%A1"
+          - link "Context：从“有历史”到“选择历史”" [ref=e42] [cursor=pointer]:
+            - /url: "#context%E4%BB%8E%E6%9C%89%E5%8E%86%E5%8F%B2%E5%88%B0%E9%80%89%E6%8B%A9%E5%8E%86%E5%8F%B2"
+          - link "Workflow：从单条流程到可搜索程序" [ref=e43] [cursor=pointer]:
+            - /url: "#workflow%E4%BB%8E%E5%8D%95%E6%9D%A1%E6%B5%81%E7%A8%8B%E5%88%B0%E5%8F%AF%E6%90%9C%E7%B4%A2%E7%A8%8B%E5%BA%8F"
+          - link "Harness Code：允许修改，但锁住裁判" [ref=e44] [cursor=pointer]:
+            - /url: "#harness-code%E5%85%81%E8%AE%B8%E4%BF%AE%E6%94%B9%E4%BD%86%E9%94%81%E4%BD%8F%E8%A3%81%E5%88%A4"
+          - link "三、最后让改进器进入闭环" [ref=e45] [cursor=pointer]:
+            - /url: "#%E4%B8%89%E6%9C%80%E5%90%8E%E8%AE%A9%E6%94%B9%E8%BF%9B%E5%99%A8%E8%BF%9B%E5%85%A5%E9%97%AD%E7%8E%AF"
+          - link "RSI 门槛：改答案、改 Harness、改 Improver" [ref=e46] [cursor=pointer]:
+            - /url: "#rsi-%E9%97%A8%E6%A7%9B%E6%94%B9%E7%AD%94%E6%A1%88%E6%94%B9-harness%E6%94%B9-improver"
+          - link "可信闭环：证据 → 窄 Diff → 独立 Gate" [ref=e47] [cursor=pointer]:
+            - /url: "#%E5%8F%AF%E4%BF%A1%E9%97%AD%E7%8E%AF%E8%AF%81%E6%8D%AE--%E7%AA%84-diff--%E7%8B%AC%E7%AB%8B-gate"
+          - link "进化搜索：保留前沿，而非复制冠军" [ref=e48] [cursor=pointer]:
+            - /url: "#%E8%BF%9B%E5%8C%96%E6%90%9C%E7%B4%A2%E4%BF%9D%E7%95%99%E5%89%8D%E6%B2%BF%E8%80%8C%E9%9D%9E%E5%A4%8D%E5%88%B6%E5%86%A0%E5%86%9B"
+          - link "从 Weng 原文继续读" [ref=e49] [cursor=pointer]:
+            - /url: "#weng-"
+      - article [ref=e50]:
+        - generic [ref=e51]:
+          - paragraph [ref=e52]: 2026-08-21
+          - heading "RSI Harness Engineering：从运行系统到受控递归改进" [level=1] [ref=e53]
+          - paragraph [ref=e54]: 52 张核心图文，循着一条完整链路展开：先搭建可运行的 Agent Harness，再优化 Context、Workflow 与 Code，最后以独立验证、权限边界和进化搜索完成受控的递归改进。
+          - generic [ref=e55]:
+            - generic [ref=e56]: Agent
+            - generic [ref=e57]: RSI
+            - generic [ref=e58]: Harness Engineering
+            - generic [ref=e59]: Lilian Weng
+            - generic [ref=e60]: visual-essay
+            - generic [ref=e61]: image-series
+        - generic [ref=e62]:
+          - paragraph [ref=e63]:
+            - text: RSI 的重点不是让模型在答案之后“再想一次”，而是改进包围模型的运行系统。Lilian Weng 将这个系统称为 harness：它负责规划、工具调用、上下文、持久状态、artifact 与评估；因此，能否自我改进取决于这台机器是否有稳定的状态、明确的可编辑面和独立的裁判。详见 Weng 的
+            - link "Harness Engineering for Self-Improvement" [ref=e64] [cursor=pointer]:
+              - /url: https://lilianweng.github.io/posts/2026-07-04-harness/
+            - text: 。
+          - heading "先把整件事看成一张图" [level=2] [ref=e65]
+          - paragraph [ref=e66]:
+            - text: 本文只讨论部署层的 RSI：不改基础模型权重，而是把模型放入一个可运行、可观察的 harness，再有条件地优化这套系统。逻辑只有一条：
+            - strong [ref=e67]: 先让任务留下可用证据；再让 evidence 指导一个范围受限的改动；最后由不在改动范围内的验证器决定它能否留下。
+          - region "RSI Harness Engineering 总体脉络" [ref=e68]:
+            - article [ref=e69]:
+              - img "任务通过计划、工具、测试与观察构成运行闭环" [ref=e70]
+              - generic [ref=e71]:
+                - paragraph [ref=e72]: 01 · 先让系统跑起来
+                - heading "运行并留下状态" [level=3] [ref=e73]
+                - paragraph [ref=e74]: Workflow、文件记忆与后台任务，让一次任务变成可回放的过程，而不是一次性对话。
+            - article [ref=e75]:
+              - img "多个工作流候选运行、评分并进入归档" [ref=e76]
+              - generic [ref=e77]:
+                - paragraph [ref=e78]: 02 · 再限定能改什么
+                - heading "把 Harness 当作候选程序" [level=3] [ref=e79]
+                - paragraph [ref=e80]: Context、控制流与部分 code 可以成为候选；每次改动必须带版本、diff、证据和可比较的结果。
+            - article [ref=e81]:
+              - img "证据驱动提案，通过留出验证后接受或拒绝，验证器处于保护边界之外" [ref=e82]
+              - generic [ref=e83]:
+                - paragraph [ref=e84]: 03 · 最后才允许递归改进
+                - heading "提案和裁决必须分离" [level=3] [ref=e85]
+                - paragraph [ref=e86]: 改进器从失败证据提出窄 diff；held-out 测试、权限、预算与回滚保持只读，负责 accept 或 reject。
+          - paragraph [ref=e87]: 关键区别在于：模型可以提出改动，但不能同时修改裁判。缺少第一步，系统没有稳定的优化对象；缺少第三步，所谓“变好”可能只是在改写评分规则。
+          - paragraph [ref=e88]: 为避免同一张地图、封面与结论反复出现，本文从原始 79 张场景卡中保留 52 张核心图文：机制、流程、案例和关键约束都在；重复的导览页、连载预告与“本页要点”复述被收起。
+          - heading "一、先让系统持续运行" [level=2] [ref=e89]
+          - paragraph [ref=e90]: 递归改进的前提，是有一个能执行任务、留下状态、从中断恢复并调度并行工作的基础设施。先解决“任务怎么跑起来”，运行过程才会变得可观察、可复现，之后的优化也才有对象可改。
+          - heading "Workflow：把 Prompt 变成可观察的运行闭环" [level=3] [ref=e91]
+          - generic [ref=e92]:
+            - figure [ref=e93]:
+              - img "Workflow 图文：Weng 这篇文章到底做了什么？" [ref=e94]
+            - generic [ref=e95]:
+              - paragraph [ref=e96]: 运行闭环 · 1 / 5
+              - paragraph [ref=e97]: Weng 这篇文章到底做了什么？
+              - paragraph [ref=e98]: 这篇文章的核心贡献，是把注意力从单次模型回答，移到模型外部的 Harness：谁组织计划，谁调工具，状态放在哪里，结果怎样被评估。它给出的不是一个神奇算法，而是一张工程路线图。今天这一集只放大其中的 Pattern 1，Workflow Automation，因为任何优化，都必须先拥有一个真实、可观察、能再次执行的过程。
+          - generic [ref=e99]:
+            - figure [ref=e100]:
+              - img "Workflow 图文：Prompt 是请求，Workflow 是运行时" [ref=e101]
+            - generic [ref=e102]:
+              - paragraph [ref=e103]: 运行闭环 · 2 / 5
+              - paragraph [ref=e104]: Prompt 是请求，Workflow 是运行时
+              - paragraph [ref=e105]: 提示词可以说，请仔细修复这个 bug。但它只规定这一次模型该怎样思考，并没有定义先读哪个文件、何时调用工具、失败后看哪段日志、测试通过前能不能停止。现实任务有状态、有副作用，也会被中断。Workflow 的作用，就是把这些动作接成可继续、可恢复的运行时。
+          - generic [ref=e106]:
+            - figure [ref=e107]:
+              - img "Workflow 图文：最小闭环：每一步都被下一步纠正" [ref=e108]
+            - generic [ref=e109]:
+              - paragraph [ref=e110]: 运行闭环 · 3 / 5
+              - paragraph [ref=e111]: 最小闭环：每一步都被下一步纠正
+              - paragraph [ref=e112]: 把 Pattern 1 压缩成最小状态机，就是目标进入计划，计划触发工具执行，工具返回真实结果，系统观察测试或日志，再决定下一步，直到满足停止条件。模型每一轮只处理当前必要上下文；Harness 保存状态、编排工具并控制何时继续。重点不是多调用几次模型，而是每个动作都能被下一次观察纠正。
+          - generic [ref=e113]:
+            - figure [ref=e114]:
+              - img "Workflow 图文：AI Harness Engineering：会写代码，为什么还不够？" [ref=e115]
+            - generic [ref=e116]:
+              - paragraph [ref=e117]: 运行闭环 · 4 / 5
+              - paragraph [ref=e118]: AI Harness Engineering： 会写代码，为什么还不够？
+              - paragraph [ref=e119]: 一篇与本集更直接相关的论文，是 AI Harness Engineering。它追问的不是模型能不能写出补丁，而是：为什么模型明明会写代码，仍会看错文件、跑错测试、忘记任务状态，甚至在没有验证时宣布完成？论文的回答是，软件工程能力来自模型、Harness 与环境组成的整个系统。为了把 Harness 的作用单独看清，作者固定模型、任务和仓库，只逐级增加运行时支持。H0 只有任务和代码库；H1 加入工具与测试命令；H2 再加入项目记忆、任务状态和上下文选择；H3 最后加入问题复现、失败归因、确定性检查与验证报告。每次运行还会被打包成可审计的 episode，记录动作、工具、上下文、验证、失败归因、人工介入、维护负担和最终结果。在论文的受控登录验证案例里，四个层级都可能产出可用补丁，但只有 H3 系统性留下复现记录、失败归因、逐项检查和结构化验证报告。它的价值不是证明 Harness 一定让模型写出更多代码，而是把“完成”从一句自我声明，变成有证据的工程结论。这正好支撑 Weng 的 Workflow Automation：执行之后必须观察、验证并据此决定下一步。边界也要说明，这只是一个受控案例和研究框架，不是大规模性能结论。
+          - generic [ref=e120]:
+            - figure [ref=e121]:
+              - img "Workflow 图文：核心价值：把行为变成可追溯证据" [ref=e122]
+            - generic [ref=e123]:
+              - paragraph [ref=e124]: 运行闭环 · 5 / 5
+              - paragraph [ref=e125]: 核心价值：把行为变成可追溯证据
+              - paragraph [ref=e126]: 一旦执行和观察被接成闭环，我们就能回放因果链：哪个 diff 让哪组测试通过，哪条命令导致超时，哪次重试没有带来新信息。运行过程因此变成可检查的 artifact，也为后续优化提供证据。但边界必须说清：一个固定的计划执行循环，仍然可能由人写死，也可能空转。它是可部署 Agent 的必要条件，却不是 RSI 的充分条件。
+          - heading "Memory：把运行历史写成按需读取的文件" [level=3] [ref=e127]
+          - paragraph [ref=e128]: Workflow 解决“怎么跑”，但长任务还要解决“如何记住”。文件系统把中间产物、检查点和任务状态外化，使后续步骤或新的子代理能按需读取，而不必把所有历史塞回上下文窗口。
+          - complementary [ref=e129]:
+            - paragraph [ref=e130]: 论文拆解｜ACE 与 MCE 分别改什么
+            - paragraph [ref=e131]:
+              - link "ACE" [ref=e132] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2510.04618
+              - text: 把 context 当作会累积的 playbook，而不是反复整体重写的一段 prompt：生成器留下轨迹，反思器从成败中抽规则，整理器以增量条目更新知识，从而保留细节并避免 context collapse。比如“退款金额不对”不应沉淀成一句模糊提醒，而应写成带条件、证据链接和反例的规则。
+              - link "MCE" [ref=e133] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2601.21557
+              - text: 再加一层：底层 agent 用当前 skill 组织文件与代码，外层 agent 根据历史 skill、执行记录和验证结果改进“如何管理 context”的 skill。前者优化当前输入，后者优化产生输入的方法；两层不能共用同一份训练证据来宣布胜利。
+          - generic [ref=e134]:
+            - figure [ref=e135]:
+              - img "Memory 图文：Workflow 留下的历史，不能只活在聊天里" [ref=e136]
+            - generic [ref=e137]:
+              - paragraph [ref=e138]: 持久记忆 · 1 / 5
+              - paragraph [ref=e139]: Workflow 留下的历史， 不能只活在聊天里
+              - paragraph [ref=e140]: 上一集的循环是：计划、执行、观察、再决定。它会留下测试输出、改动差异和失败日志。但这些东西如果只躺在当前对话里，窗口一满，细节就被摘要挤掉；任务重启，也不知道该从哪一步继续。Weng 的第二个模式要解决的不是模型记住更多 token，而是让系统在上下文之外拥有状态。
+          - generic [ref=e141]:
+            - figure [ref=e142]:
+              - img "Memory 图文：把全部历史塞进 Prompt，会发生什么？" [ref=e143]
+            - generic [ref=e144]:
+              - paragraph [ref=e145]: 持久记忆 · 2 / 5
+              - paragraph [ref=e146]: 把全部历史塞进 Prompt，会发生什么？
+              - paragraph [ref=e147]: 最直接的做法，是每一轮都把全部历史粘回 prompt。但历史越长，当前任务越容易被挤到边缘；反复摘要又可能丢掉失败细节。更麻烦的是，模型看见一堆文本，却分不清哪条是已验证事实，哪条只是待验证猜测，哪条是已经失败过的尝试。长上下文可以是工作台，却不该是唯一档案室。
+          - generic [ref=e148]:
+            - figure [ref=e149]:
+              - img "Memory 图文：文件系统：把经验变成可查 artifact" [ref=e150]
+            - generic [ref=e151]:
+              - paragraph [ref=e152]: 持久记忆 · 3 / 5
+              - paragraph [ref=e153]: 文件系统：把经验变成可查 artifact
+              - paragraph [ref=e154]: 文件系统给出朴素但强的接口：写入、读取、搜索和按需抽取。一个说明性的目录可以让 task.md 保存目标与约束，runs 保存原始工具输出，evidence 保存可引用的失败模式，workspace 保存可编辑实现，status.json 保存后台任务状态。模型不用把所有文件读进来，而是先通过索引定位，再读取最相关的片段。于是记忆从隐式的对话残留，变成可审计的外部状态。
+          - generic [ref=e155]:
+            - figure [ref=e156]:
+              - img "Memory 图文：ACE：不要整体重写，要增量维护 playbook" [ref=e157]
+            - generic [ref=e158]:
+              - paragraph [ref=e159]: 持久记忆 · 4 / 5
+              - paragraph [ref=e160]: ACE：不要整体重写， 要增量维护 playbook
+              - paragraph [ref=e161]: ACE 提供了一个具体的 memory 组织思路：把 context 看作不断演化的 playbook。生成器先产生任务轨迹；反思器从成败中提炼可操作的经验；整理器再把带标识的条目增量更新进 playbook。重点是每条经验都拆成可单独定位的字段：规则、证据、适用条件和反例。这样系统能检索一条、引用一条，也能只修正失效的一条，而不必覆盖式重写整段 prompt，从而减轻过度压缩和 context collapse。比如，不要把十次退款异常压成一句“注意退款”；应保留 R-17：币种换算在税费后进行，并连着它的证据、条件与反例。
+          - generic [ref=e162]:
+            - figure [ref=e163]:
+              - img "Memory 图文：文件多，不等于记忆好" [ref=e164]
+            - generic [ref=e165]:
+              - paragraph [ref=e166]: 持久记忆 · 5 / 5
+              - paragraph [ref=e167]: 文件多，不等于记忆好
+              - paragraph [ref=e168]: 边界也很重要。文件多不等于记忆好：没有索引、命名和选择规则，Agent 只是从上下文爆炸，换成目录爆炸。文件化 memory 也还不是 RSI；它只是让经验能被保存和检查。到底怎样选择、过滤和组织 context，才是 Context Engineering 要优化的对象。
+          - heading "Parallelism：让并行成为可查询的 Job 系统" [level=3] [ref=e169]
+          - paragraph [ref=e170]: 有了可恢复的状态，下一步才是并发。关键不在于一次启动更多模型，而在于把子任务变成有 ID、状态、日志和结果的 job：主任务可以提交、查询、汇总，也能在失败时定位和重试。
+          - generic [ref=e171]:
+            - figure [ref=e172]:
+              - img "Parallelism 图文：三个聊天窗口，不等于一个并行系统" [ref=e173]
+            - generic [ref=e174]:
+              - paragraph [ref=e175]: 并行协作 · 1 / 5
+              - paragraph [ref=e176]: 三个聊天窗口， 不等于一个并行系统
+              - paragraph [ref=e177]: 如果主 Agent 同时开三个对话去搜索、实验和监控，它很快会遇到五个问题：谁拿到了什么输入，谁还在运行，谁已经失败，谁可以被取消，以及结果该怎样合并。没有这些状态，所谓多代理只是把不可见的混乱复制了三份。Weng 的判断是：并行必须显式、可检查、可恢复。
+          - generic [ref=e178]:
+            - figure [ref=e179]:
+              - img "Parallelism 图文：把主 Agent 变成小型 process manager" [ref=e180]
+            - generic [ref=e181]:
+              - paragraph [ref=e182]: 并行协作 · 2 / 5
+              - paragraph [ref=e183]: 把主 Agent 变成小型 process manager
+              - paragraph [ref=e184]: 显式并行要把每个子任务当成一条可管理的 job。主 Agent 先写清输入、权限、预算、停止条件和输出路径，再启动 worker。运行中，job 持续更新排队、运行、完成或失败状态；主线程可以查询、取消，也能在中断后恢复。worker 最后交付摘要、原始证据和退出码。这样合并的是带来源的产物，而不是几段对话印象。
+          - generic [ref=e185]:
+            - figure [ref=e186]:
+              - img "Parallelism 图文：重复扣款：三个 worker，一条可验证结论" [ref=e187]
+            - generic [ref=e188]:
+              - paragraph [ref=e189]: 并行协作 · 3 / 5
+              - paragraph [ref=e190]: 重复扣款：三个 worker， 一条可验证结论
+              - paragraph [ref=e191]: 假设订单偶发重复扣款。三个 worker 分别检查重试策略、数据库幂等键和第三方回调日志。它们各自把报告写进独立目录，并附上证据文件和 job 状态。主 Agent 不需要吞下三段完整聊天，而是先读三个结论，再下钻冲突证据。最后 merge 出一条可验证因果链：超时触发重试，而重试请求缺少幂等保护。
+          - generic [ref=e192]:
+            - figure [ref=e193]:
+              - img "Parallelism 图文：AHE：让并行日志变成可查证的证据" [ref=e194]
+            - generic [ref=e195]:
+              - paragraph [ref=e196]: 并行协作 · 4 / 5
+              - paragraph [ref=e197]: AHE：让并行日志 变成可查证的证据
+              - paragraph [ref=e198]: AHE 在这里不是用来证明多 Agent 更强，而是回答一个具体问题：并行 worker 产生大量日志后，主 Agent 怎样看得懂、查得回。它把原始轨迹组织成可下钻的证据层：上层是候选结论和失败类型，中层连接具体 episode，底层保留原始日志与组件文件。主 Agent 先用摘要定位，遇到冲突再沿证据链接下钻。这里借用的是状态可见、证据可追溯的 observability；AHE 的 harness 自演化属于后文的递归改进问题。
+          - generic [ref=e199]:
+            - figure [ref=e200]:
+              - img "Parallelism 图文：更多 worker，也会制造更多噪声" [ref=e201]
+            - generic [ref=e202]:
+              - paragraph [ref=e203]: 并行协作 · 5 / 5
+              - paragraph [ref=e204]: 更多 worker， 也会制造更多噪声
+              - paragraph [ref=e205]: 并行会放大成本、权限风险和协调错误。若两个 worker 争抢同一个可写文件，或每个任务都没有停止条件与明确产物，更多代理只会制造更多噪声。好的 harness 要限制并发、隔离可写范围、记录预算，并在证据足够或收益递减时停止。可检查的并行是能力；代理数量不是。
+          - heading "二、再把 Harness 变成优化对象" [level=2] [ref=e206]
+          - paragraph [ref=e207]: 系统稳定地产生过程与证据之后，才讨论应当改什么。顺序是从“模型看见什么”（Context），到“系统如何推进任务”（Workflow），再到“哪些代码表面允许被编辑”（Harness Code）。每一步都要同时说清：反馈从哪里来、变更落在哪里、效果由谁判断。
+          - heading "Context：从“有历史”到“选择历史”" [level=3] [ref=e208]
+          - paragraph [ref=e209]: 持久记忆并不等于有效上下文。系统必须为当前任务筛选、压缩和组织证据；否则上下文越长，噪声、遗漏和错误锚定就越严重。这里的优化对象，是输入给模型的信息结构，而不是模型本身。
+          - generic [ref=e210]:
+            - figure [ref=e211]:
+              - img "Context 图文：不是缺历史，而是缺一套选择历史的方法" [ref=e212]
+            - generic [ref=e213]:
+              - paragraph [ref=e214]: 上下文选择 · 1 / 8
+              - paragraph [ref=e215]: 不是缺历史，而是缺一套选择历史的方法
+              - paragraph [ref=e216]: 把高分轨迹和反思整段塞回 Prompt，会同时带入偶然步骤、重复规则和失效经验。Reward 只说明这次做得怎样，它是更新 Context 的证据，却不会自动决定下次该看什么。ACE 先把 Playbook 拆成可增删改的条目，避免整段重写；但条目结构和 Generate、Reflect、Curate 仍是人写死的管理方法。MCE 要继续进化的，正是这套方法。
+          - generic [ref=e217]:
+            - figure [ref=e218]:
+              - img "Context 图文：先看全局：外层选方法，内层学函数" [ref=e219]
+            - generic [ref=e220]:
+              - paragraph [ref=e221]: 上下文选择 · 2 / 8
+              - paragraph [ref=e222]: 先看全局：外层选方法，内层学函数
+              - paragraph [ref=e223]: 进入细节前，先从总体看 MCE。它有两个套在一起的循环。外层由 Meta Agent 读取 Skill History 和独立验证结果，比较并进化 Context Engineering Skill；所以外层产出的是下一代方法。这个 Skill 随后交给内层。内层由 Base Agent 在训练任务上修改静态材料和动态操作，学出与当前 Skill 对应的 Context Function；所以内层产出的是具体函数。获胜的函数再面对新任务生成 Context，交给任务 Agent。先记住区别：外层选方法，内层学函数。
+          - generic [ref=e224]:
+            - figure [ref=e225]:
+              - img "Context 图文：Context 不是文本，而是一个可执行函数" [ref=e226]
+            - generic [ref=e227]:
+              - paragraph [ref=e228]: 上下文选择 · 3 / 8
+              - paragraph [ref=e229]: Context 不是文本，而是一个可执行函数
+              - paragraph [ref=e230]: 第一块先定义 Context Function。面对任务 x，系统从静态组件 ρ 出发。ρ 可以是系统指令、知识库、代码文件、历史规则和模板；随后依次运行动态操作 F，一般包括检索、筛选、排序、压缩、格式化和组合，得到这次真正使用的 Context。论文写成 c(x) 等于多个 F 的复合，作用在 x 和 ρ 上。直白地说，ρ 回答仓库里有什么，F 回答这一题怎样从仓库里拿，c(x) 才是端上桌的那一盘输入。MCE 因而优化的是文件与代码，而不只是一段 Prompt。
+          - generic [ref=e231]:
+            - figure [ref=e232]:
+              - img "Context 图文：同一个仓库，不同任务要装出不同 Context" [ref=e233]
+            - generic [ref=e234]:
+              - paragraph [ref=e235]: 上下文选择 · 4 / 8
+              - paragraph [ref=e236]: 同一个仓库，不同任务要装出不同 Context
+              - paragraph [ref=e237]: 用一个贯穿例子。代码仓库同时有接口定义、测试、日志、源码和历史规则，这些构成 ρ。现在任务 x 是修复登录接口参数不匹配。F 先识别它属于接口错误，再检索失败测试、接口定义和调用方源码；接着过滤无关运行日志，压缩已经排除的尝试，最后按证据顺序组合。输出的 c(x) 只包含解决当前错误需要的材料。若下一题变成数据库超时，ρ 可以不变，但 F 会选择完全不同的文件。Context Function 的价值，就是让输入随任务变化，而不是复制同一份历史。
+          - generic [ref=e238]:
+            - figure [ref=e239]:
+              - img "Context 图文：给定一个 Skill，Base Agent 学具体的 ρ 与 F" [ref=e240]
+            - generic [ref=e241]:
+              - paragraph [ref=e242]: 上下文选择 · 5 / 8
+              - paragraph [ref=e243]: 给定一个 Skill，Base Agent 学具体的 ρ 与 F
+              - paragraph [ref=e244]: 第二块是内层优化。先固定一个候选 CE Skill，记作 s。这个 Skill 不是最终 Context，而是一份工作方法：怎样读训练轨迹，怎样判断信息缺失或噪声过多，怎样修改材料文件，怎样编写检索与压缩代码，又怎样重新运行任务。Base Agent 执行 s，在训练 Rollout 上反复查看结果、编辑 ρ、编辑 F、再运行，直到得到与 s 对应的 Context Function，记作 c 下标 s 等于 ρ 下标 s 与 F 下标 s。这里通常不是训练模型权重，而是 Agent 直接修改可检查的文件、脚本和模板。
+          - generic [ref=e245]:
+            - figure [ref=e246]:
+              - img "Context 图文：内层不是选答案，而是在改造 Context 系统" [ref=e247]
+            - generic [ref=e248]:
+              - paragraph [ref=e249]: 上下文选择 · 6 / 8
+              - paragraph [ref=e250]: 内层不是选答案，而是在改造 Context 系统
+              - paragraph [ref=e251]: 回到登录接口错误。候选 Skill B 要求先按错误类型路由，再按证据优先级装配。Base Agent 第一次运行发现 Context 塞入了几十页无关日志，于是修改 F，增加日志过滤；第二次又发现缺少调用方源码，于是修改 ρ 的源码索引；第三次虽然修复成功，但关键接口定义排在末尾，于是再改 F 的排序。每轮都经历运行、观察失败、编辑文件或代码、重新运行。最终得到的不是一条答案，而是一套能为同类新任务持续产生 Context 的函数。
+          - generic [ref=e252]:
+            - figure [ref=e253]:
+              - img "Context 图文：Meta Agent 学的，是“以后应该怎样学”" [ref=e254]
+            - generic [ref=e255]:
+              - paragraph [ref=e256]: 上下文选择 · 7 / 8
+              - paragraph [ref=e257]: Meta Agent 学的，是“以后应该怎样学”
+              - paragraph [ref=e258]: 第三块是外层进化。某个 Skill 在训练任务上成功，可能只是记住了旧错误，所以 MCE 保存完整的 Skill History：候选 Skill、本轮学出的 Context Function、训练表现和独立验证表现。Meta Agent 读取这段历史，比较哪些方法能泛化、哪些过拟合，再通过 Agentic Crossover 组合有效部分，产生下一代 Skill。随后 Base Agent 按新 Skill 重新运行内层，验证集再选择更好的方案。于是外层不直接改本次 Context，它改的是指导内层工作的 CE Skill。
+          - generic [ref=e259]:
+            - figure [ref=e260]:
+              - img "Context 图文：训练分数选 Context，验证分数选方法" [ref=e261]
+            - generic [ref=e262]:
+              - paragraph [ref=e263]: 上下文选择 · 8 / 8
+              - paragraph [ref=e264]: 训练分数选 Context，验证分数选方法
+              - paragraph [ref=e265]: 仍看代码修复。Skill A 喜欢保存完整案例，训练成功率高，但新错误上检索很慢；Skill B 擅长按错误类型路由，验证更稳，却保留了太多重复规则；Skill P 的压缩和去重好，但偶尔删掉关键接口定义。Meta Agent 可以保留 B 的错误路由，吸收 P 的压缩策略，再加入关键定义不可删除的验证协议，生成 Skill C。Base Agent 用 C 重做内层；只有当独立验证也更好，C 和它产出的 Context Function 才被保留。
+          - heading "Workflow：从单条流程到可搜索程序" [level=3] [ref=e266]
+          - paragraph [ref=e267]: 当 Context 已经可控，瓶颈往往转到控制流：先检索还是先分解、何时调用工具、哪些步骤可以并行、失败后怎样回退。把 workflow 表达为可修改、可评估的程序，才有可能在多种策略中搜索更好的执行方式。
+          - complementary [ref=e268]:
+            - paragraph [ref=e269]: 论文拆解｜ADAS 发明候选，AFlow 搜索候选
+            - paragraph [ref=e270]:
+              - link "ADAS" [ref=e271] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2408.08435
+              - text: 的核心设定是：用一个 meta-agent 编写 agent 的代码，并把以往发现放入持续增长的 archive；它探索的可以是 prompt、工具使用、角色分工或控制流的组合。
+              - link "AFlow" [ref=e272] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2410.10762
+              - text: 则把 code 表示的 workflow 看作一棵搜索树：节点是候选流程，边代表一次代码修改；每个候选实际运行后返回分数，MCTS 决定哪些分支值得继续扩展。直观例子是把
+              - code [ref=e273]: 写结论 → 补验证
+              - text: 改成
+              - code [ref=e274]: 取证 → verify → 写结论
+              - text: ：真正被比较的不是文案好坏，而是两套可执行流程在留出任务上的结果。
+          - generic [ref=e275]:
+            - figure [ref=e276]:
+              - img "Workflow 图文：流程写死时，模型只能在错误顺序里努力" [ref=e277]
+            - generic [ref=e278]:
+              - paragraph [ref=e279]: 流程搜索 · 1 / 8
+              - paragraph [ref=e280]: 流程写死时，模型只能在错误顺序里努力
+              - paragraph [ref=e281]: 假设一个数据分析 Agent 先写结论，最后才运行代码。即使 Prompt 再长，它仍可能先编出数字，再用执行结果补洞。真正的问题不是它缺一句提醒，而是验证节点放错了位置。Workflow 决定调用谁、先做什么、何时循环、何时停止。控制流错了，模型只能在错误顺序里更努力。
+          - generic [ref=e282]:
+            - figure [ref=e283]:
+              - img "Workflow 图文：把 Workflow 写成可执行、可打分的程序" [ref=e284]
+            - generic [ref=e285]:
+              - paragraph [ref=e286]: 流程搜索 · 2 / 8
+              - paragraph [ref=e287]: 把 Workflow 写成可执行、可打分的程序
+              - paragraph [ref=e288]: 要搜索 Workflow，第一步是把它显式表示成程序。节点可以是模型调用、检索、工具执行或验证；边表示路由、循环和停止条件。候选流程必须真的运行，记录结果和成本，再由独立任务给分。因为它是 Code，我们能版本化每张图，也能只把 Write 前插入 Verify，而不是重写整套 Agent。
+          - generic [ref=e289]:
+            - figure [ref=e290]:
+              - img "Workflow 图文：ADAS：让 Meta-Agent 直接编写新 Agent" [ref=e291]
+            - generic [ref=e292]:
+              - paragraph [ref=e293]: 流程搜索 · 3 / 8
+              - paragraph [ref=e294]: ADAS：让 Meta-Agent 直接编写新 Agent
+              - paragraph [ref=e295]: ADAS 解决的是候选从哪里来。它让 Meta-Agent 读取已有 Agent、任务反馈与设计经验，直接输出一段新的 Agent 代码。代码定义角色、提示、工具与控制流；候选随后在任务上运行并被评价，表现好的设计进入后续迭代。它把 Agent Design 从人工模板变成可编程搜索对象。边界也很清楚：提出者可以写候选，但不能靠改评分器宣布自己变好。
+          - generic [ref=e296]:
+            - figure [ref=e297]:
+              - img "Workflow 图文：AFlow：把 Workflow 放进 MCTS 搜索树" [ref=e298]
+            - generic [ref=e299]:
+              - paragraph [ref=e300]: 流程搜索 · 4 / 8
+              - paragraph [ref=e301]: AFlow：把 Workflow 放进 MCTS 搜索树
+              - paragraph [ref=e302]: AFlow 解决的是搜索怎样推进。它把 Code 表示的 Workflow 放进蒙特卡洛树搜索。每个节点是一版流程；执行结果给出奖励，搜索据此选择更值得扩展的分支，再由优化器修改一条边、一个节点或一段提示，生成子节点。多轮运行后，验证表现更好的流程被保留。它优化的是控制流及节点配置，不是基础模型参数。
+          - generic [ref=e303]:
+            - figure [ref=e304]:
+              - img "Workflow 图文：ADAS 与 AFlow：一个负责发明，一个负责导航" [ref=e305]
+            - generic [ref=e306]:
+              - paragraph [ref=e307]: 流程搜索 · 5 / 8
+              - paragraph [ref=e308]: ADAS 与 AFlow：一个负责发明，一个负责导航
+              - paragraph [ref=e309]: 把两篇工作并排看。ADAS 强调 Meta-Agent 通过编程发明新的 Agent 设计，重点是扩大候选表达；AFlow 强调在 Workflow 树里选择、扩展和回传分数，重点是用搜索策略分配试验预算。它们共享同一闭环：候选必须可执行，结果必须可评价，改动必须留痕。可以把它们记成一句话：ADAS 负责发明候选，AFlow 负责导航搜索。
+          - generic [ref=e310]:
+            - figure [ref=e311]:
+              - img "Workflow 图文：只插入一个 Verify，失败就更可定位" [ref=e312]
+            - generic [ref=e313]:
+              - paragraph [ref=e314]: 流程搜索 · 6 / 8
+              - paragraph [ref=e315]: 只插入一个 Verify，失败就更可定位
+              - paragraph [ref=e316]: 回到数据分析。流程 A 先写最终报告，再补运行；一旦数字错了，很难判断是代码、数据还是表述出错。流程 B 先检查数据，再执行分析，保存图表，由另一个节点核对关键数字，最后才写报告。候选改动其实很窄：只是在 Write 前插入 Verify，并把失败路由回计算节点。模型没换，但可验证事实先于写作，错误也有了明确回路。
+          - generic [ref=e317]:
+            - figure [ref=e318]:
+              - img "Workflow 图文：5.7% 说明搜索有效，不说明越复杂越好" [ref=e319]
+            - generic [ref=e320]:
+              - paragraph [ref=e321]: 流程搜索 · 7 / 8
+              - paragraph [ref=e322]: 5.7% 说明搜索有效，不说明越复杂越好
+              - paragraph [ref=e323]: AFlow 报告，在六个数据集上，相对强基线平均提升 5.7%。这条证据支持的是：在论文的任务、初始模板、评估函数和搜索预算下，自动搜索选到了更好的 Workflow。它不支持两个夸张结论：不是任何任务都该无限搜索，也不是图越复杂就越强。真正有价值的是，改动后的流程能在独立任务上复现收益。
+          - generic [ref=e324]:
+            - figure [ref=e325]:
+              - img "Workflow 图文：搜索器也会过拟合：三道门必须留在环外" [ref=e326]
+            - generic [ref=e327]:
+              - paragraph [ref=e328]: 流程搜索 · 8 / 8
+              - paragraph [ref=e329]: 搜索器也会过拟合：三道门必须留在环外
+              - paragraph [ref=e330]: Workflow 搜索有三类约束。第一，留出任务：不能只在生成候选的 Benchmark 上选赢家。第二，成本预算：更高分可能只是多调用了十倍模型。第三，独立评估：候选不能修改测试、权限或验收标准。还要保存版本和运行轨迹，才能知道收益来自哪条边。搜索器可以编辑 Workflow，但裁判、预算和权限必须留在环外。
+          - heading "Harness Code：允许修改，但锁住裁判" [level=3] [ref=e331]
+          - paragraph [ref=e332]: 编辑范围扩大到 harness code 后，系统终于能修正工具封装、调度逻辑和记忆接口；风险也同步放大。可编辑的业务层与不可编辑的评估、权限、预算和日志层必须分开，否则系统可以通过改写规则而不是改进能力来“赢得”分数。
+          - complementary [ref=e333]:
+            - paragraph [ref=e334]: 论文拆解｜从候选 Harness 到可审计 Patch
+            - paragraph [ref=e335]:
+              - link "Meta-Harness" [ref=e336] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2603.28052
+              - text: 把优化放到外循环：proposer 通过文件系统查看每一版 harness 的源码、分数和执行轨迹，再提出下一版 code；它强调把完整历史作为可检索证据，而非压缩成一小段反馈。
+              - link "POLARIS" [ref=e337] [cursor=pointer]:
+                - /url: https://aclanthology.org/2026.findings-acl.1969/
+              - text: 给出更小的例子：先把多次失败抽象成可复用策略，再做保守的 policy patch 并检查。比如三次都误解“混合物总量”，可新增一条“先判断量词范围”的规则；这比保存三段答案，或一次性重写整个 agent，都更容易验证因果。
+          - generic [ref=e338]:
+            - figure [ref=e339]:
+              - img "Harness Code 图文：失败是证据，不是“重写全部”的授权" [ref=e340]
+            - generic [ref=e341]:
+              - paragraph [ref=e342]: 可编辑边界 · 1 / 4
+              - paragraph [ref=e343]: 失败是证据，不是“重写全部”的授权
+              - paragraph [ref=e344]: 一次失败，只说明这次运行没达到目标。如果 Agent 同时改 prompt、工具、模型、预算和评测器，下一次分数即使升高，也无法知道是谁起作用；更危险的是，它可能只是把考试改简单了。反馈应该产生一个提案，而不是一张全量重写的通行证。
+          - generic [ref=e345]:
+            - figure [ref=e346]:
+              - img "Harness Code 图文：能改工作区，不能改裁判席" [ref=e347]
+            - generic [ref=e348]:
+              - paragraph [ref=e349]: 可编辑边界 · 2 / 4
+              - paragraph [ref=e350]: 能改工作区，不能改裁判席
+              - paragraph [ref=e351]: 可编辑工作区可以包含 system prompt、tool description、middleware、skill、memory 和 workflow。它们决定 Agent 如何看、如何做。另一边必须锁住 verifier、原始运行、权限、预算和模型配置。只有先把裁判席留在环外，Agent 提出的修改才可能成为可审计、可比较的 file-level diff。
+          - generic [ref=e352]:
+            - figure [ref=e353]:
+              - img "Harness Code 图文：一次只验证一个假设" [ref=e354]
+            - generic [ref=e355]:
+              - paragraph [ref=e356]: 可编辑边界 · 3 / 4
+              - paragraph [ref=e357]: 一次只验证一个假设
+              - paragraph [ref=e358]: Meta-Harness 会读取候选代码、分数和历史，再提出新的 harness 候选。但可信度来自更窄的改动。假设错误来自工具路由，就只改 tool description，再送进留出任务。提升能复现，保留；出现回归，撤回。最小 Diff 不是胆小，而是让收益能够归因、验证和回滚。
+          - generic [ref=e359]:
+            - figure [ref=e360]:
+              - img "Harness Code 图文：不要保存三份错题，提炼一条规则" [ref=e361]
+            - generic [ref=e362]:
+              - paragraph [ref=e363]: 可编辑边界 · 4 / 4
+              - paragraph [ref=e364]: 不要保存三份错题，提炼一条规则
+              - paragraph [ref=e365]: POLARIS 给出一个小尺度案例：把多条失败轨迹压缩成 strategy directive，再生成保守的 policy patch。比如多道题都错在量词范围，就提炼“先判定量词范围”这条规则，而不是保存所有完整解答。它说明补丁可以窄、显式、可撤回；但它并不等于整个 Harness 已经安全自我进化。
+          - heading "三、最后让改进器进入闭环" [level=2] [ref=e366]
+          - paragraph [ref=e367]: 现在系统既有可修改的对象，也有运行中留下的证据。接下来要解决更难的一层：谁来提出改动、如何防止它迎合自己的评测、以及怎样在大量候选中保留真正有价值的改进。答案不是无限重写，而是受约束的提案、独立验证与有记忆的搜索。
+          - heading "RSI 门槛：改答案、改 Harness、改 Improver" [level=3] [ref=e368]
+          - paragraph [ref=e369]: 先厘清“自我改进”到底在改什么。改一次任务答案是局部修正；改 harness 才会影响未来同类任务；让优化器本身改进，才进入更高一层的递归。层级越高，越需要把可编辑范围和外部约束写清楚。
+          - complementary [ref=e370]:
+            - paragraph [ref=e371]: 论文拆解｜STOP 为什么是“改进器的改进器”
+            - paragraph [ref=e372]:
+              - link "STOP" [ref=e373] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2310.02304
+              - text: 从一个 seed improver 开始：它接收待改程序、效用函数和语言模型，多次调用模型后返回候选中的较优解。随后不只让 improver 改下游程序，还让它改写自己；评价标准也随之变成“新 improver 在一组未来任务上的平均效用”，而不是某一次回答有没有更顺。论文中模型会提出 beam search、遗传算法等策略，但基础模型权重没有变化，因此作者明确不把它称为完整 RSI。这个限制正好说明：多套一层循环不是重点，能否在未来任务上独立验证才是。
+          - generic [ref=e374]:
+            - figure [ref=e375]:
+              - img "RSI 图文：三种更新，只有第三种有递归味道" [ref=e376]
+            - generic [ref=e377]:
+              - paragraph [ref=e378]: 递归层级 · 1 / 6
+              - paragraph [ref=e379]: 三种更新，只有第三种有递归味道
+              - paragraph [ref=e380]: 先区分三种更新。改一份答案，只影响这一次输出；改 Skill、Workflow 或 Code，会影响后续任务的执行方式——但这两层都还不是递归。只有再进一步，去修改“怎样挑失败、怎样提候选、怎样分预算”，也就是改进器本身，才算跨过门槛。它不直接修答案，却改变了以后每次更新怎样产生。
+          - generic [ref=e381]:
+            - figure [ref=e382]:
+              - img "RSI 图文：STOP 不先优化答案，而先定义一个 Improver" [ref=e383]
+            - generic [ref=e384]:
+              - paragraph [ref=e385]: 递归层级 · 2 / 6
+              - paragraph [ref=e386]: STOP 不先优化答案，而先定义一个 Improver
+              - paragraph [ref=e387]: STOP 把第三层“改改进器”写成了具体操作。它定义一个改进器 I：接收当前解 s、效用函数 u 和模型 M，输出更好的解。关键的一步，是把 I 自己当作新的 s——不再优化答案，而是优化“怎样优化答案”。裁判不看某一道题，而看它在一组下游任务上的平均效用。
+          - generic [ref=e388]:
+            - figure [ref=e389]:
+              - img "RSI 图文：候选策略要在未来任务上比赛" [ref=e390]
+            - generic [ref=e391]:
+              - paragraph [ref=e392]: 递归层级 · 3 / 6
+              - paragraph [ref=e393]: 候选策略要在未来任务上比赛
+              - paragraph [ref=e394]: 改完 I 之后，怎么知道新的 I 更好？STOP 的回答是：不看这一道题。Seed Improver 会提出多种策略——比如 Beam Search 或遗传搜索——让它们在同一组未来任务上比赛，平均效用最高的进入下一代。但 STOP 也发现：较弱的模型可能越迭代越差。递归结构本身，不等于递归进步。
+          - generic [ref=e395]:
+            - figure [ref=e396]:
+              - img "RSI 图文：内层改 Context，外层改“怎样管理 Context”" [ref=e397]
+            - generic [ref=e398]:
+              - paragraph [ref=e399]: 递归层级 · 4 / 6
+              - paragraph [ref=e400]: 内层改 Context，外层改“怎样管理 Context”
+              - paragraph [ref=e401]: MCE 把同样的结构搬进了 Harness。内层用训练 Rollout 修改 Context Artifact——这是“改产物”，对应 STOP 里的改 s。外层根据 Skill History 和独立验证，进化 Context Management Skill——这是“改方法”，对应 STOP 里的改 I。关键约束是：内层和外层的优化对象、评估数据必须分开，否则外层只是在重复内层的分数。
+          - generic [ref=e402]:
+            - figure [ref=e403]:
+              - img "RSI 图文：修 Bug，和改“怎样产生 Patch”不是一回事" [ref=e404]
+            - generic [ref=e405]:
+              - paragraph [ref=e406]: 递归层级 · 5 / 6
+              - paragraph [ref=e407]: 修 Bug，和改“怎样产生 Patch”不是一回事
+              - paragraph [ref=e408]: 把 STOP 和 MCE 放进同一个修 Bug 的例子。内层每次都做同一件事：读证据、写 Patch、跑测试，失败就留下一条失败记录——这是在改产物。旧 Skill 规定：只读最近三条失败。它总取最新的，会漏掉反复出现的高频根因。现在外层的元 Skill 出手：它不写 Patch，只改规则——把“最近三条”换成“按根因聚类采样，并保留成功对照”。下一次新 Bug 到来，Proposer 读到的证据已经不同。所以，Patch 修的是当前这个 Bug，对应改 s；元 Skill 改的是“以后怎样修 Bug”，对应改 I。
+          - generic [ref=e409]:
+            - figure [ref=e410]:
+              - img "RSI 图文：叫 Harness-level RSI，至少过三道门" [ref=e411]
+            - generic [ref=e412]:
+              - paragraph [ref=e413]: 递归层级 · 6 / 6
+              - paragraph [ref=e414]: 叫 Harness-level RSI，至少过三道门
+              - paragraph [ref=e415]: 从 STOP、MCE 和这个例子，可以提炼出 Harness-level RSI 的三道验收门。第一，优化对象必须影响后续更新——改答案不算，改改进器才算。第二，用跨任务或留出集独立验证——不能只看当前任务。第三，Verifier、权限、预算和回滚必须留在编辑环外——否则系统可能只是在改裁判，不是真进步。
+          - heading "可信闭环：证据 → 窄 Diff → 独立 Gate" [level=3] [ref=e416]
+          - paragraph [ref=e417]: 一个可信的闭环应当把诊断、提案、执行与裁决拆开：从失败证据识别问题，生成范围受限的 diff，再让独立的测试、评估或跨任务验证决定是否接受。这样，改进器可以很灵活，控制层却不会随它一起漂移。
+          - complementary [ref=e418]:
+            - paragraph [ref=e419]: 论文拆解｜Self-Harness 与 AHE 怎样让改动可信
+            - paragraph [ref=e420]:
+              - link "Self-Harness" [ref=e421] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2606.09498
+              - text: 把循环明确拆为三段：从 execution traces 挖掘某个基础模型特有的失败模式（Weakness Mining），据此提出多样但最小的 harness 修改（Harness Proposal），再用回归测试决定接受或拒绝（Proposal Validation）。例如发现一个模型经常遗漏 artifact 路径，就只修改产物索引与读取策略，并在未参与提案的任务上复测。
+              - link "AHE" [ref=e422] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.25850
+              - text: 补上可观测性：组件以文件形式暴露，海量轨迹被压成可下钻的证据层，每个 edit 都附带“我预计它会改善什么”的可证伪预测。两者共同强调：不是让 agent 任意改仓库，而是让每个改动成为可追溯、可回滚的实验。
+          - generic [ref=e423]:
+            - figure [ref=e424]:
+              - img "可信闭环图文：同一个 Agent，不能既参赛又改裁判" [ref=e425]
+            - generic [ref=e426]:
+              - paragraph [ref=e427]: 独立验证 · 1 / 5
+              - paragraph [ref=e428]: 同一个 Agent，不能既参赛又改裁判
+              - paragraph [ref=e429]: 问题的根子是：如果连 verifier.py 都能改，Agent 删掉超时检查，通过率立刻上升。分数涨了，能力没涨，只是裁判变松。所以规则只有一条：workspace 里的 Skill 和工具路由可编辑；verifier、权限、预算、回滚，全部只读。
+          - generic [ref=e430]:
+            - figure [ref=e431]:
+              - img "可信闭环图文：每次修改，都要变成可证伪主张" [ref=e432]
+            - generic [ref=e433]:
+              - paragraph [ref=e434]: 独立验证 · 2 / 5
+              - paragraph [ref=e435]: 每次修改，都要变成可证伪主张
+              - paragraph [ref=e436]: Self-Harness 把每次修改拆成三步：先从多条 trace 聚类出可复现的弱点；再围绕证据提交最小 diff；最后一步，先过回归，再交给未参与提案的 held-out 任务，决定接受还是拒绝。重点不是 patch 写得多，而是每个 patch 都能被独立结果推翻。
+          - generic [ref=e437]:
+            - figure [ref=e438]:
+              - img "可信闭环图文：窄 diff 还要带一条完整证据链" [ref=e439]
+            - generic [ref=e440]:
+              - paragraph [ref=e441]: 独立验证 · 3 / 5
+              - paragraph [ref=e442]: 窄 diff 还要带一条完整证据链
+              - paragraph [ref=e443]: AHE 在这条链上再补三层可观测性：组件写成可检查的文件，经历压成可下钻的证据，每次决策先写预测、再动手。于是每份 manifest 都绑定失败证据、推断根因、目标 diff、预期收益与风险；可改文件、预算和回滚版本同时锁定。窄 diff 从此可归因，也可回滚。
+          - generic [ref=e444]:
+            - figure [ref=e445]:
+              - img "可信闭环图文：训练集能过不算赢，留出集才决定合并" [ref=e446]
+            - generic [ref=e447]:
+              - paragraph [ref=e448]: 独立验证 · 4 / 5
+              - paragraph [ref=e449]: 训练集能过不算赢，留出集才决定合并
+              - paragraph [ref=e450]: Self-Harness 在 Terminal-Bench-2.0 上报告：三个基础模型的 held-out 通过率，基线分别是百分之四十点五、二十三点八、四十二点九；合并后涨到六十一点九、三十八点一、五十七点一。重点不是绝对分数，而是合并规则：留出任务也变好，候选才被接受。
+          - generic [ref=e451]:
+            - figure [ref=e452]:
+              - img "可信闭环图文：Held-out 也不是安全证明" [ref=e453]
+            - generic [ref=e454]:
+              - paragraph [ref=e455]: 独立验证 · 5 / 5
+              - paragraph [ref=e456]: Held-out 也不是安全证明
+              - paragraph [ref=e457]: 但 held-out 只说明这批任务没参与提案，不代表所有行为都安全：结果仍受任务分布、测试质量和模型能力上限的约束。所以，提升可以说清来源，安全却永远要靠环外那层控制来兜底。
+          - heading "进化搜索：保留前沿，而非复制冠军" [level=3] [ref=e458]
+          - paragraph [ref=e459]: 单一的“当前最好版本”很容易过拟合一次评测或卡在局部最优。进化式搜索把多个候选保留为一个可比较的种群，围绕它们变异、评估、筛选，并设置预算、停止条件与回滚；改进因此是一条可审计的搜索轨迹，而非不可逆的自我覆盖。
+          - complementary [ref=e460]:
+            - paragraph [ref=e461]: 论文拆解｜MetaSkill-Evolve 的双时间尺度
+            - paragraph [ref=e462]:
+              - link "MetaSkill-Evolve" [ref=e463] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2607.05297
+              - text: 用同一个冻结的模型骨干运行两条不同速度的更新：快环修改 task skill，即“当前任务怎么做”；慢环修改 meta-skill，即“怎样分析失败、检索经验、分配预算、提出候选和演化候选”。其 meta-skill 显式参数化 Analyzer、Retriever、Allocator、Proposer 与 Evolver 五个角色。用代码修复作类比：快环可以把“先运行最小复现”写进当前 skill；慢环则改变“从哪些失败簇取样、给哪些假设更多预算”的规则。前者改行为，后者改产生行为改动的机制。
+          - generic [ref=e464]:
+            - figure [ref=e465]:
+              - img "进化搜索图文：复制冠军，搜索会坍缩" [ref=e466]
+            - generic [ref=e467]:
+              - paragraph [ref=e468]: 候选搜索 · 1 / 5
+              - paragraph [ref=e469]: 复制冠军，搜索会坍缩
+              - paragraph [ref=e470]: 为什么？最高分只证明当前评测领先：不证明更稳、更省，也不证明能迁移。只复制冠军，伤害是双重的：其他分支被剪掉，搜索越走越窄；过拟合、泄漏和偶然收益被逐次放大。所以 Weng 换掉了动作本身：不押注单点，保留一组值得探索的候选。
+          - generic [ref=e471]:
+            - figure [ref=e472]:
+              - img "进化搜索图文：存、选、改、验：每步可追溯" [ref=e473]
+            - generic [ref=e474]:
+              - paragraph [ref=e475]: 候选搜索 · 2 / 5
+              - paragraph [ref=e476]: 存、选、改、验：每步可追溯
+              - paragraph [ref=e477]: 保留一组，就需要一个循环。第一步，Archive 存档候选代码、分数、轨迹、状态；第二步，Selector 从不同父代取样，保住多样性；第三步，Proposer 拿失败证据生成窄 Diff，好归因好回滚；第四步，候选在固定预算、独立数据上过 Gate，效用、成本、回归全过才接受，否则记录并回滚。而 Verifier、权限、预算只读：能改裁判，就能伪造高分。
+          - generic [ref=e478]:
+            - figure [ref=e479]:
+              - img "进化搜索图文：保留前沿，不选唯一冠军" [ref=e480]
+            - generic [ref=e481]:
+              - paragraph [ref=e482]: 候选搜索 · 3 / 5
+              - paragraph [ref=e483]: 保留前沿，不选唯一冠军
+              - paragraph [ref=e484]: 循环里最微妙的是 Select：保留谁、淘汰谁？只看分数，又回到复制冠军。Weng 的标准是前沿：横轴成本，纵轴效用。更强更贵的、更省更稳的，只要没被全面支配，就还在 Pareto Frontier 上。前沿不是宣布赢家，而是给未来留选项——环境一变，更省的随时顶上。
+          - generic [ref=e485]:
+            - figure [ref=e486]:
+              - img "进化搜索图文：快环改 Skill，慢环改更新规则" [ref=e487]
+            - generic [ref=e488]:
+              - paragraph [ref=e489]: 候选搜索 · 4 / 5
+              - paragraph [ref=e490]: 快环改 Skill，慢环改更新规则
+              - paragraph [ref=e491]: 到这里，搜索改的都是 harness。再追问一层：循环自己，谁来改进？MetaSkill-Evolve 给出近期答案——快环对当前任务改 Task Skill，看眼前收益；慢环改的是生成和挑选改动的 Meta-Skill，看这套规则能否持续产出好改动。重点不在名字，而在内外层的优化对象、评估节奏必须分开。
+          - generic [ref=e492]:
+            - figure [ref=e493]:
+              - img "进化搜索图文：递归层数，不等于能力" [ref=e494]
+            - generic [ref=e495]:
+              - paragraph [ref=e496]: 候选搜索 · 5 / 5
+              - paragraph [ref=e497]: 递归层数，不等于能力
+              - paragraph [ref=e498]: 听起来层数越多越强？STOP 先泼冷水：较弱模型的递归迭代可能不升反降——连自己的改动好不好都判断不了，递归只会放大弱点。Weng 也拆开两种能力：能写更新，和能用好更新，不是一回事。评估因此必须双份：改动有没有效，模型用它有没有收益。模型能力、任务分布、评测质量，仍是上限。
+          - generic [ref=e499]:
+            - figure [ref=e500]:
+              - img "进化搜索的上线检查：六道闸门，才算可部署 RSI" [ref=e501]
+            - generic [ref=e502]:
+              - paragraph [ref=e503]: 候选搜索 · 上线检查
+              - paragraph [ref=e504]: 六道闸门，才算可部署 RSI
+              - paragraph [ref=e505]: 所以上线前别问能不能自我改进，只问六件事：改动有没有版本和 Diff？反馈来自真实结果或独立 Verifier？更新和评估是否泄漏？哪些文件权限只读？每个 Gain 有没有证据、成本、回归？何时停止、回滚？缺一项，只是自动调参；六项齐备，才谈部署。真正递归的不是无限重写，而是环外控制下的搜索。预算固定，你留更强更贵，还是略弱更稳？
+          - generic [ref=e506]:
+            - heading "从 Weng 原文继续读" [level=2] [ref=e507]
+            - list [ref=e508]:
+              - listitem [ref=e509]:
+                - link "Harness Design Patterns" [ref=e510] [cursor=pointer]:
+                  - /url: https://lilianweng.github.io/posts/2026-07-04-harness/#harness-design-patterns
+                - text: ：Workflow、文件系统持久记忆、子代理与后台任务。
+              - listitem [ref=e511]:
+                - link "Harness Optimization" [ref=e512] [cursor=pointer]:
+                  - /url: https://lilianweng.github.io/posts/2026-07-04-harness/#harness-optimization
+                - text: ：Context、Workflow、Harness Code 与 optimizer code 的对象递进。
+              - listitem [ref=e513]:
+                - link "Self-Improving Harness" [ref=e514] [cursor=pointer]:
+                  - /url: https://lilianweng.github.io/posts/2026-07-04-harness/#self-improving-harness
+                - text: ：受限提案、独立验证和环外权限。
+              - listitem [ref=e515]:
+                - link "Evolutionary Search" [ref=e516] [cursor=pointer]:
+                  - /url: https://lilianweng.github.io/posts/2026-07-04-harness/#evolutionary-search
+                - text: ：候选 harness 的变异、评估、保留和停止条件。
+            - paragraph [ref=e517]:
+              - text: 原始 79 张图片与文字均保留在
+              - code [ref=e518]: D:\Codex\Video\RSI-series-2026-publish
+              - text: ；本页只重新编排阅读路径，不含视频。
+  - contentinfo [ref=e519]:
+    - paragraph [ref=e520]: Writing, experiments, and visual notes by 涛涛涛.
+    - paragraph [ref=e521]:
+      - link "GitHub" [ref=e522] [cursor=pointer]:
+        - /url: https://github.com/light8lee
+      - text: ·
+      - link "RSS" [ref=e523] [cursor=pointer]:
+        - /url: /atom.xml
+  - button "回到页面顶部"

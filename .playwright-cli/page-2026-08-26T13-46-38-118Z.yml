@@ -1,0 +1,119 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - link "涛涛涛 home" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e4]: 涛
+      - generic [ref=e5]: 涛涛涛
+    - navigation "Primary navigation" [ref=e6]:
+      - link "Home" [ref=e7] [cursor=pointer]:
+        - /url: /
+      - link "Writing" [ref=e8] [cursor=pointer]:
+        - /url: /archives.html
+      - link "Projects" [ref=e9] [cursor=pointer]:
+        - /url: /pages/projects.html
+      - link "Daydreams" [ref=e10] [cursor=pointer]:
+        - /url: /pages/notes.html
+      - link "About" [ref=e11] [cursor=pointer]:
+        - /url: /about.html
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - paragraph [ref=e16]: UI STUDY · 01
+          - heading "把技术笔记做成 一个可以探索的软件。" [level=1] [ref=e17]: 把技术笔记做成一个可以探索的软件。
+        - paragraph [ref=e18]: Paper 方向的可交互样机：它不假装是一个需要登录的 SaaS，而是把 GitHub Pages 能稳定呈现的文章、专题和路径做成可探索的研究书桌。
+      - generic [ref=e19]:
+        - complementary [ref=e20]:
+          - link "返回涛涛涛首页" [ref=e21] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e22]: 涛
+            - generic [ref=e23]:
+              - strong [ref=e24]: taotao
+              - generic [ref=e25]: RESEARCH OS
+          - paragraph [ref=e26]: 一张持续整理的研究书桌：文章、图解、项目和没写完的问题。
+          - navigation "样机导航" [ref=e27]:
+            - link "⌘ 工作台" [ref=e28] [cursor=pointer]:
+              - /url: "#workspace"
+              - generic [ref=e29]: ⌘
+              - text: 工作台
+            - link "▣ 文章目录" [ref=e30] [cursor=pointer]:
+              - /url: /archives.html
+              - generic [ref=e31]: ▣
+              - text: 文章目录
+            - link "◌ 项目实验" [ref=e32] [cursor=pointer]:
+              - /url: /pages/projects.html
+              - generic [ref=e33]: ◌
+              - text: 项目实验
+            - link "⌁ Daydreams" [ref=e34] [cursor=pointer]:
+              - /url: /pages/notes.html
+              - generic [ref=e35]: ⌁
+              - text: Daydreams
+          - generic [ref=e36]:
+            - paragraph [ref=e37]: 常看专题
+            - link "Agent Systems" [ref=e38] [cursor=pointer]:
+              - /url: /archives.html
+            - link "RL Field Notes" [ref=e40] [cursor=pointer]:
+              - /url: /archives.html
+            - link "Inside Codex" [ref=e42] [cursor=pointer]:
+              - /url: /archives.html
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - text: 涛涛涛/
+              - strong [ref=e47]: 研究书桌
+            - link "打开文章目录 ↗" [ref=e49] [cursor=pointer]:
+              - /url: /archives.html
+          - generic [ref=e50]:
+            - generic [ref=e51]:
+              - generic [ref=e52]:
+                - paragraph [ref=e53]: CURATED INTELLIGENCE
+                - heading "研究书桌 STATIC INDEX" [level=2] [ref=e54]
+              - paragraph [ref=e55]: 随文章一起静态生成没有伪造的在线状态
+            - generic [ref=e56]:
+              - generic [ref=e57]:
+                - paragraph [ref=e58]: FEATURED NOTE
+                - heading "AI 不会“自己进化” 它需要一个可验证的运行环境。" [level=3] [ref=e59]: AI 不会“自己进化”它需要一个可验证的运行环境。
+                - link "打开深度笔记 ↗" [ref=e60] [cursor=pointer]:
+                  - /url: /2026/08/21/rsi-harness-engineering.html
+                - button "展开边注 −" [expanded] [ref=e145] [cursor=pointer]
+                - paragraph [ref=e146]: 观察不是证据；任何“变好了”的判断，都要能回到受控 diff 和独立验证。
+              - generic "从观察到验证再到可复现进化的循环图" [ref=e62]:
+                - generic [ref=e63]: OBSERVE
+                - generic [ref=e64]: VALIDATE
+                - generic [ref=e65]: COMPOUND
+                - generic [ref=e68]:
+                  - text: RSI
+                  - generic [ref=e69]: LOOP
+            - tablist "内容类型" [ref=e73]:
+              - tab "最近文章" [ref=e75] [cursor=pointer]
+              - tab "Agent" [ref=e76] [cursor=pointer]
+              - tab "RL / 后训练" [active] [selected] [ref=e77] [cursor=pointer]
+              - tab "Codex 拆解" [ref=e78] [cursor=pointer]
+            - tabpanel [ref=e147]:
+              - generic [ref=e148]:
+                - generic [ref=e149]: ◒
+                - paragraph [ref=e150]: RL / POST-TRAINING
+                - heading "从奖励建模到策略优化，拆开每一个有效与失效的环节。" [level=3] [ref=e151]
+                - link "浏览文章目录 →" [ref=e152] [cursor=pointer]:
+                  - /url: /archives.html
+      - generic [ref=e130]:
+        - article [ref=e131]:
+          - text: "01"
+          - heading "静态可用" [level=2] [ref=e132]
+          - paragraph [ref=e133]: 所有入口都是可部署的文章页、专题页或项目页，不依赖登录、数据库和实时服务。
+        - article [ref=e134]:
+          - text: "02"
+          - heading "Paper 的动感" [level=2] [ref=e135]
+          - paragraph [ref=e136]: Tab 指示条、边注展开、轨道缓动与卡片悬停，服务于阅读而不是制造虚假的“在线感”。
+        - article [ref=e137]:
+          - text: "03"
+          - heading "下一步" [level=2] [ref=e138]
+          - paragraph [ref=e139]: 如果你确认这个方向，再把同一语言扩展到首页、归档和文章阅读页。
+  - contentinfo [ref=e140]:
+    - paragraph [ref=e141]: Writing, experiments, and visual notes by 涛涛涛.
+    - paragraph [ref=e142]:
+      - link "GitHub" [ref=e143] [cursor=pointer]:
+        - /url: https://github.com/light8lee
+      - text: ·
+      - link "RSS" [ref=e144] [cursor=pointer]:
+        - /url: /atom.xml

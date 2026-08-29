@@ -8,7 +8,11 @@ paginate:     8
 # Handling Reading
 safe:         false
 include:      [".htaccess"]
-exclude:      []
+exclude:
+  - projects/agent-town/node_modules
+  - projects/agent-town/dist
+  - output
+  - .playwright-cli
 keep_files:   [".git", ".svn"]
 encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
@@ -48,15 +52,15 @@ favicon: /images/favicon-sunflower.png
 
 # Nav config
 nav:
-  - text: Home
-    url: /
-  - text: Writing
-    url: /archives.html
-  - text: Projects
-    url: /pages/projects.html
-  - text: Daydreams
+  - text: 我见
     url: /pages/notes.html
-  - text: About
+  - text: 案头
+    url: /
+  - text: 工坊
+    url: /pages/projects.html
+  - text: 书架
+    url: /archives.html
+  - text: 关于
     url: /about.html
 
 home_tag_filters:

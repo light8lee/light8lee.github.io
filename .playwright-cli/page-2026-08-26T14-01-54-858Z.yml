@@ -1,0 +1,57 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "涛涛涛 home" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e4]: 涛
+      - generic [ref=e5]:
+        - strong [ref=e6]: 涛涛涛
+        - generic [ref=e7]: FIELD DESK
+    - paragraph [ref=e8]: 一张持续整理的研究书桌：文章、图解、项目和没写完的问题。
+    - navigation "Primary navigation" [ref=e9]:
+      - link "研究桌" [ref=e10] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e11]: ⌘
+        - text: 研究桌
+      - link "实验场" [ref=e12] [cursor=pointer]:
+        - /url: /pages/projects.html
+        - generic [ref=e13]: ◌
+        - text: 实验场
+      - link "资料室" [ref=e14] [cursor=pointer]:
+        - /url: /archives.html
+        - generic [ref=e15]: ▣
+        - text: 资料室
+      - link "漫游册" [ref=e16] [cursor=pointer]:
+        - /url: /pages/notes.html
+        - generic [ref=e17]: ⌁
+        - text: 漫游册
+      - link "关于" [ref=e18] [cursor=pointer]:
+        - /url: /about.html
+        - generic [ref=e19]: ○
+        - text: 关于
+    - navigation "常看专题" [ref=e20]:
+      - paragraph [ref=e21]: 常看专题
+      - link "Agent Systems" [ref=e22] [cursor=pointer]:
+        - /url: /archives.html
+      - link "RL Field Notes" [ref=e24] [cursor=pointer]:
+        - /url: /archives.html
+      - link "Inside Codex" [ref=e26] [cursor=pointer]:
+        - /url: /archives.html
+    - paragraph [ref=e28]: STATIC SITE · GITHUB PAGES
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - heading "About" [level=1] [ref=e31]
+      - paragraph [ref=e32]: 涛涛涛 writes about Agent RL, systems, engineering practice, and technical visualization.
+    - generic [ref=e33]:
+      - paragraph [ref=e34]: I use this site as a durable notebook for research reading, implementation notes, visual explainers, and small static experiments.
+      - paragraph [ref=e35]: The current focus is on LLM agents, reinforcement learning for agent behavior, evaluation, and ways to turn dense technical material into clear visual narratives.
+      - paragraph [ref=e36]:
+        - link "GitHub" [ref=e37] [cursor=pointer]:
+          - /url: https://github.com/light8lee
+  - contentinfo [ref=e38]:
+    - paragraph [ref=e39]: Writing, experiments, and visual notes by 涛涛涛.
+    - paragraph [ref=e40]:
+      - link "GitHub" [ref=e41] [cursor=pointer]:
+        - /url: https://github.com/light8lee
+      - text: ·
+      - link "RSS" [ref=e42] [cursor=pointer]:
+        - /url: /atom.xml

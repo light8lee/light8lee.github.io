@@ -6,6 +6,7 @@ summary: "未来的 Agent 平台不只是卖能力，还要让技能、数据和
 tags: [Daydreams, Agent, Marketplace, 隐私计算, 数据安全]
 series: daydreams
 daydream: true
+thought_axis: 势
 permalink: /daydreams/confidential-agent-marketplace/
 cover: /assets/daydreams/confidential-agent-marketplace/images/01-sealed-execution.png
 body_class: daydream-post

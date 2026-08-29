@@ -1,11 +1,25 @@
 <header class="site-header">
   <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
-    <span class="brand-mark">&#28059;</span>
-    <span class="brand-text">{{ site.title }}</span>
+    <span class="brand-mark"><img src="{{ '/images/favicon-sunflower.png' | relative_url }}" alt="" aria-hidden="true"></span>
+    <span class="brand-text"><strong>{{ site.title }}</strong><small>TAO NOTES</small></span>
   </a>
+  <p class="site-manifesto">把短暂的阅读，写成长期的问题。</p>
   <nav class="site-nav" aria-label="Primary navigation">
     {% for link in site.nav %}
-    <a href="{{ link.url | relative_url }}" {% if page.url == link.url %}aria-current="page"{% endif %}>{{ link.text }}</a>
+    <a href="{{ link.url | relative_url }}" {% if page.url == link.url %}aria-current="page"{% endif %}>
+      <span class="site-nav__pin" aria-hidden="true"></span><span class="site-nav__trail" aria-hidden="true"></span><span class="site-nav__label">{{ link.text }}</span>
+    </a>
     {% endfor %}
   </nav>
+  <nav class="site-collections" aria-label="研究专题">
+    <p>研究专题</p>
+    <a href="{{ '/?collection=agent#latest-writing' | relative_url }}"><i class="topic-dot topic-dot--violet"></i><span>Agent Systems</span><b>↗</b></a>
+    <a href="{{ '/?collection=post-training#latest-writing' | relative_url }}"><i class="topic-dot topic-dot--coral"></i><span>RL Field Notes</span><b>↗</b></a>
+    <a href="{{ '/?collection=dive-into-codex#latest-writing' | relative_url }}"><i class="topic-dot topic-dot--sky"></i><span>Inside Codex</span><b>↗</b></a>
+  </nav>
+  <div class="thinking-axes" aria-label="思考的五个面向">
+    <p>思考的五个面向</p>
+    <span><b>道</b>价值与判断</span><span><b>法</b>框架与原则</span><span><b>术</b>方法与实践</span><span><b>器</b>工具与系统</span><span><b>势</b>趋势与位置</span>
+  </div>
+  <p class="site-footnote">STATIC SITE · GITHUB PAGES</p>
 </header>

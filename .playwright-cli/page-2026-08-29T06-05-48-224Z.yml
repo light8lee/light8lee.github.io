@@ -1,0 +1,36 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "涛涛涛 home" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - navigation "Primary navigation" [ref=e4]:
+      - link "我见" [ref=e5] [cursor=pointer]:
+        - /url: /pages/notes.html
+      - link "案头" [ref=e9] [cursor=pointer]:
+        - /url: /
+      - link "工坊" [ref=e13] [cursor=pointer]:
+        - /url: /pages/projects.html
+      - link "书架" [ref=e17] [cursor=pointer]:
+        - /url: /archives.html
+      - link "关于" [ref=e21] [cursor=pointer]:
+        - /url: /about.html
+  - main [ref=e25]:
+    - generic [ref=e26]:
+      - heading "关于" [level=1] [ref=e27]
+      - paragraph [ref=e28]: 围绕 Agent RL、工程实践与技术可视化的长期研究书桌。
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - paragraph [ref=e31]: 这里更像一张长期摊开的研究案头：读论文、拆系统、做实验，也把复杂技术整理成能被看见的图。
+        - paragraph [ref=e32]: 当前重点放在 LLM Agent、Agent RL、评估方法、工程 harness，以及如何把密集技术材料转译成清楚的视觉叙事。
+      - complementary "当前关注" [ref=e33]:
+        - generic [ref=e34]: 正在看的问题
+        - generic [ref=e35]: Agent 如何把经验沉淀成下一次行动？
+        - link "看代码与实验" [ref=e36] [cursor=pointer]:
+          - /url: https://github.com/light8lee
+  - contentinfo [ref=e37]:
+    - paragraph [ref=e38]: Writing, experiments, and visual notes by 涛涛涛.
+    - paragraph [ref=e39]:
+      - link "GitHub" [ref=e40] [cursor=pointer]:
+        - /url: https://github.com/light8lee
+      - text: ·
+      - link "RSS" [ref=e41] [cursor=pointer]:
+        - /url: /atom.xml

@@ -1,19 +1,123 @@
 ---
 layout: default
-title: Writing
+title: 书架
+body_class: archive-page
 ---
 <section class="page-heading">
-  <h1>Writing</h1>
-  <p>All articles, newest first.</p>
+  <p class="page-kicker">FIELD LIBRARY · {{ site.time | date: '%Y' }}</p>
+  <h1>书架</h1>
+  <p>把文章、推演与研究笔记收在同一张可检索的纸面目录里。</p>
 </section>
 
-<section class="archive-list">
-  {% assign standalone_articles = site.pages | where: "layout", "post" | where_exp: "page", "page.daydream != true" %}
-  {% assign writing = site.posts | concat: standalone_articles | sort: "date" | reverse %}
+{% assign standalone_articles = site.pages | where: "layout", "post" | where_exp: "page", "page.daydream != true" %}
+{% assign writing = site.posts | concat: standalone_articles | sort: "date" | reverse %}
+
+<section class="archive-tools" aria-label="书架检索与筛选" data-archive-tools>
+  <div class="writing-search archive-search">
+    <svg class="writing-search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="5.9"></circle><path d="m15.2 15.2 5 5"></path></svg>
+    <label class="sr-only" for="archive-search-input">搜索书架</label>
+    <input id="archive-search-input" type="search" autocomplete="off" placeholder="搜索标题、栏目或标签" data-archive-search>
+    <kbd aria-hidden="true">⌘ K</kbd>
+  </div>
+  <div class="collection-filter archive-filter" role="group" aria-label="按栏目筛选">
+    <button class="filter-chip is-active" type="button" data-archive-filter="all" aria-pressed="true">全部 <span>{{ writing.size }}</span></button>
+    <button class="filter-chip" type="button" data-archive-filter="agent" aria-pressed="false">Agent 系统</button>
+    <button class="filter-chip" type="button" data-archive-filter="rl" aria-pressed="false">RL / 后训练</button>
+    <button class="filter-chip" type="button" data-archive-filter="codex" aria-pressed="false">Codex / 工具</button>
+    <button class="filter-chip" type="button" data-archive-filter="foundation" aria-pressed="false">模型基础</button>
+    <button class="filter-chip" type="button" data-archive-filter="research" aria-pressed="false">研究随笔</button>
+  </div>
+  <p class="search-status" data-archive-status aria-live="polite">共 {{ writing.size }} 篇，按时间倒序。</p>
+</section>
+
+<section class="archive-list archive-library" data-archive-list>
   {% for post in writing %}
-  <article class="archive-item">
-    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  {% assign archive_category = post.category | default: '研究笔记' %}
+  {% assign archive_category_down = archive_category | downcase %}
+  {% assign archive_family = 'research' %}
+  {% assign archive_family_label = '研究随笔' %}
+  {% assign archive_art = '/assets/images/archive-art/postcard-research-notes.png' %}
+  {% if archive_category_down contains 'codex' %}
+    {% assign archive_family = 'codex' %}
+    {% assign archive_family_label = 'Codex / 工具' %}
+    {% assign archive_art = '/assets/images/archive-art/postcard-codex-tools.png' %}
+  {% elsif archive_category_down contains 'post-training' or archive_category_down contains 'rl' %}
+    {% assign archive_family = 'rl' %}
+    {% assign archive_family_label = 'RL / 后训练' %}
+    {% assign archive_art = '/assets/images/archive-art/postcard-rl-posttraining.png' %}
+  {% elsif archive_category_down contains 'agent' %}
+    {% assign archive_family = 'agent' %}
+    {% assign archive_family_label = 'Agent 系统' %}
+    {% assign archive_art = '/assets/images/archive-art/postcard-agent-systems.png' %}
+  {% elsif archive_category_down contains '基础' or archive_category_down contains '模型' %}
+    {% assign archive_family = 'foundation' %}
+    {% assign archive_family_label = '模型基础' %}
+    {% assign archive_art = '/assets/images/archive-art/postcard-model-foundations.png' %}
+  {% endif %}
+  {% assign archive_number = writing.size | minus: forloop.index0 %}
+  {% assign archive_shift = forloop.index0 | times: 41 | modulo: 263 %}
+  <article class="archive-item archive-item--illustrated archive-item--{{ archive_family }}" data-archive-item data-archive-family="{{ archive_family }}" data-archive-search-text="{{ post.title | append: ' ' | append: archive_category | append: ' ' | append: post.tags | join: ' ' | escape }}" style="--archive-shift: {{ archive_shift }}px; --archive-art: url('{{ archive_art | relative_url }}');">
+    <div class="archive-item__copy">
+      <p class="archive-item__meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time><span>{{ archive_family_label }}</span><span>{{ archive_category }}</span></p>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      {% if post.tags and post.tags.size > 0 %}
+      <p class="archive-item__tags">{% for tag in post.tags limit: 3 %}<span>{{ tag }}</span>{% endfor %}</p>
+      {% endif %}
+    </div>
+    <span class="archive-item__index" aria-hidden="true">{{ archive_number | prepend: '0' | slice: -2, 2 }}</span>
   </article>
   {% endfor %}
+  <p class="archive-empty" data-archive-empty hidden>没有找到相符的文章。试试更短的关键词，或清除栏目筛选。</p>
 </section>
+
+<script>
+  (function () {
+    var tools = document.querySelector('[data-archive-tools]');
+    if (!tools) return;
+    var input = tools.querySelector('[data-archive-search]');
+    var buttons = Array.prototype.slice.call(tools.querySelectorAll('[data-archive-filter]'));
+    var items = Array.prototype.slice.call(document.querySelectorAll('[data-archive-item]'));
+    var status = tools.querySelector('[data-archive-status]');
+    var empty = document.querySelector('[data-archive-empty]');
+    var currentFamily = 'all';
+
+    function refresh() {
+      var term = input.value.trim().toLocaleLowerCase();
+      var count = 0;
+      items.forEach(function (item) {
+        var familyMatches = currentFamily === 'all' || item.dataset.archiveFamily === currentFamily;
+        var searchMatches = !term || item.dataset.archiveSearchText.toLocaleLowerCase().indexOf(term) !== -1;
+        var visible = familyMatches && searchMatches;
+        item.hidden = !visible;
+        if (visible) count += 1;
+      });
+      var suffix = term ? '，关键词“' + input.value.trim() + '”' : '';
+      status.textContent = '找到 ' + count + ' 篇' + suffix + '。';
+      empty.hidden = count !== 0;
+    }
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        currentFamily = button.dataset.archiveFilter;
+        buttons.forEach(function (item) {
+          var selected = item === button;
+          item.classList.toggle('is-active', selected);
+          item.setAttribute('aria-pressed', String(selected));
+        });
+        refresh();
+      });
+    });
+    input.addEventListener('input', refresh);
+    document.addEventListener('keydown', function (event) {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+        event.preventDefault();
+        input.focus();
+      }
+      if (event.key === 'Escape' && document.activeElement === input) {
+        input.value = '';
+        refresh();
+        input.blur();
+      }
+    });
+  })();
+</script>

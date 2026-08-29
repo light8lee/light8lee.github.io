@@ -1,0 +1,189 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "涛涛涛 home" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e4]: 涛
+      - generic [ref=e5]: 涛涛涛
+    - navigation "Primary navigation" [ref=e6]:
+      - link "Home" [ref=e7] [cursor=pointer]:
+        - /url: /
+      - link "Writing" [ref=e8] [cursor=pointer]:
+        - /url: /archives.html
+      - link "Projects" [ref=e9] [cursor=pointer]:
+        - /url: /pages/projects.html
+      - link "Daydreams" [ref=e10] [cursor=pointer]:
+        - /url: /pages/notes.html
+      - link "About" [ref=e11] [cursor=pointer]:
+        - /url: /about.html
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - paragraph [ref=e16]: UI STUDY · 01
+          - heading "把技术笔记做成 一个可以探索的软件。" [level=1] [ref=e17]: 把技术笔记做成一个可以探索的软件。
+        - paragraph [ref=e18]: 这是一个不改动现有首页的可交互样机。三种皮肤共享同一信息架构；试着点顶部的内容 Tab，也可以切换不同的视觉方向。
+      - generic [ref=e19]:
+        - complementary [ref=e20]:
+          - link "返回涛涛涛首页" [ref=e21] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e22]: 涛
+            - generic [ref=e23]:
+              - strong [ref=e24]: taotao
+              - generic [ref=e25]: RESEARCH OS
+          - generic [ref=e26]:
+            - generic [ref=e28]:
+              - strong [ref=e29]: 涛涛涛
+              - generic [ref=e30]: 独立研究笔记
+            - button "打开账户菜单" [ref=e31] [cursor=pointer]: ⌄
+          - navigation "样机导航" [ref=e32]:
+            - link "⌘ 工作台" [ref=e33] [cursor=pointer]:
+              - /url: "#workspace"
+              - generic [ref=e34]: ⌘
+              - text: 工作台
+            - link "▣ 知识库" [ref=e35] [cursor=pointer]:
+              - /url: "#library"
+              - generic [ref=e36]: ▣
+              - text: 知识库
+            - link "◌ 项目实验" [ref=e37] [cursor=pointer]:
+              - /url: "#projects"
+              - generic [ref=e38]: ◌
+              - text: 项目实验
+            - link "⌁ 灵感收集" [ref=e39] [cursor=pointer]:
+              - /url: "#signals"
+              - generic [ref=e40]: ⌁
+              - text: 灵感收集
+          - generic [ref=e41]:
+            - paragraph [ref=e42]:
+              - text: COLLECTIONS
+              - button "新建收藏夹" [ref=e43] [cursor=pointer]: +
+            - link [ref=e44] [cursor=pointer]:
+              - /url: "#agent"
+              - text: Agent Systems
+              - emphasis [ref=e46]: "24"
+            - link [ref=e47] [cursor=pointer]:
+              - /url: "#rl"
+              - text: RL Field Notes
+              - emphasis [ref=e49]: "18"
+            - link [ref=e50] [cursor=pointer]:
+              - /url: "#codex"
+              - text: Inside Codex
+              - emphasis [ref=e52]: "09"
+          - generic [ref=e53]: SYNCED JUST NOW
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - text: Library/
+              - strong [ref=e58]: Explore
+            - generic [ref=e59]:
+              - button "⌕ 搜索笔记 ⌘ K" [ref=e60]:
+                - generic [ref=e61]: ⌕
+                - text: 搜索笔记
+                - generic [ref=e62]: ⌘ K
+              - button "通知" [ref=e63] [cursor=pointer]: ◔
+              - button "个人资料" [ref=e65] [cursor=pointer]: 涛
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - generic [ref=e68]:
+                - paragraph [ref=e69]: CURATED INTELLIGENCE
+                - heading "研究工作台 LIVE" [level=2] [ref=e70]
+              - generic "切换界面风格" [ref=e71]:
+                - button "Aether" [ref=e72] [cursor=pointer]
+                - button "Paper" [ref=e74] [cursor=pointer]
+                - button "Flux" [ref=e76] [cursor=pointer]
+            - generic [ref=e78]:
+              - generic [ref=e79]:
+                - paragraph [ref=e80]: THIS WEEK'S THREAD
+                - heading "AI 不会“自己进化” 它需要一个可验证的运行环境。" [level=3] [ref=e81]: AI 不会“自己进化”它需要一个可验证的运行环境。
+                - link "打开深度笔记 ↗" [ref=e82] [cursor=pointer]:
+                  - /url: /2026/08/21/rsi-harness-engineering.html
+              - generic "从观察到验证再到可复现进化的循环图" [ref=e83]:
+                - generic [ref=e84]: OBSERVE
+                - generic [ref=e85]: VALIDATE
+                - generic [ref=e86]: COMPOUND
+                - generic [ref=e89]:
+                  - text: RSI
+                  - generic [ref=e90]: LOOP
+            - tablist "内容类型" [ref=e94]:
+              - tab [selected] [ref=e96] [cursor=pointer]:
+                - text: 全部信号
+                - emphasis [ref=e97]: "48"
+              - tab [ref=e98] [cursor=pointer]:
+                - text: Agent
+                - emphasis [ref=e99]: "24"
+              - tab [ref=e100] [cursor=pointer]:
+                - text: RL / 后训练
+                - emphasis [ref=e101]: "18"
+              - tab [ref=e102] [cursor=pointer]:
+                - text: Codex 拆解
+                - emphasis [ref=e103]: "09"
+            - tabpanel [ref=e105]:
+              - generic [ref=e106]:
+                - article [ref=e107]:
+                  - paragraph [ref=e108]:
+                    - text: AGENT SYSTEMS
+                    - time [ref=e110]: 3 小时前
+                  - heading "Harness Engineering：让改进成为一个可信闭环" [level=3] [ref=e111]
+                  - paragraph [ref=e112]: 把规划、工具、上下文、评估和回滚放进同一套可审计的运行时里。
+                  - generic [ref=e113]:
+                    - generic [ref=e114]: 涛
+                    - generic [ref=e115]: 12 min read
+                    - button "保存 ＋" [ref=e116] [cursor=pointer]
+                - article [ref=e117]:
+                  - generic [ref=e118]: "02"
+                  - generic [ref=e119]:
+                    - paragraph [ref=e120]:
+                      - text: RL FIELD NOTES
+                      - time [ref=e122]: 昨天
+                    - heading "为什么 Best-of-N 的分数不等于稳定提升" [level=3] [ref=e123]
+                  - generic [ref=e124]: ↗
+                - article [ref=e125]:
+                  - generic [ref=e126]: "03"
+                  - generic [ref=e127]:
+                    - paragraph [ref=e128]:
+                      - text: INSIDE CODEX
+                      - time [ref=e130]: 8 月 21 日
+                    - heading "一次真正的 Agent Loop 里，发生了什么？" [level=3] [ref=e131]
+                  - generic [ref=e132]: ↗
+              - complementary [ref=e133]:
+                - generic [ref=e134]:
+                  - paragraph [ref=e135]: RESEARCH PULSE
+                  - button "查看全部 →" [ref=e136] [cursor=pointer]
+                - generic [ref=e137]:
+                  - text: 本周阅读
+                  - strong [ref=e138]: 16篇
+                  - emphasis [ref=e147]: +28%
+                - generic [ref=e148]:
+                  - paragraph [ref=e149]:
+                    - text: 正在积累
+                    - generic [ref=e150]: "03"
+                  - link "○ 长上下文里的记忆策略" [ref=e151] [cursor=pointer]:
+                    - /url: "#"
+                  - link "○ Agent Eval 的盲区" [ref=e152] [cursor=pointer]:
+                    - /url: "#"
+                  - link "○ 多智能体的协调成本" [ref=e153] [cursor=pointer]:
+                    - /url: "#"
+                - generic [ref=e154]:
+                  - text: “
+                  - paragraph [ref=e155]: 好系统的关键，不是能跑多远，而是每一次改动都知道为什么。
+                  - text: — 本周笔记
+      - generic [ref=e156]:
+        - article [ref=e157]:
+          - text: "01"
+          - heading "Aether" [level=2] [ref=e158]
+          - paragraph [ref=e159]: 推荐。深靛蓝与雾白，像一个克制的研究操作台。适合你现在的 Agent / RL 内容。
+        - article [ref=e160]:
+          - text: "02"
+          - heading "Paper" [level=2] [ref=e161]
+          - paragraph [ref=e162]: 低饱和纸张与墨水，保留阅读感，但结构仍然是软件而不是普通博客。
+        - article [ref=e163]:
+          - text: "03"
+          - heading "Flux" [level=2] [ref=e164]
+          - paragraph [ref=e165]: 深色数据屏与高亮荧光。更有未来感，适合把“项目”和交互展示放大。
+  - contentinfo [ref=e166]:
+    - paragraph [ref=e167]: Writing, experiments, and visual notes by 涛涛涛.
+    - paragraph [ref=e168]:
+      - link "GitHub" [ref=e169] [cursor=pointer]:
+        - /url: https://github.com/light8lee
+      - text: ·
+      - link "RSS" [ref=e170] [cursor=pointer]:
+        - /url: /atom.xml
