@@ -630,6 +630,18 @@ body.page-shell:not(.interface-lab-page) .site-footer a {
   }
 }
 
+/* The fixed left rail leaves a narrower article column on laptop screens.
+   Evidence blocks become a vertical sequence before their two-column minimums
+   can force the document wider than the viewport. */
+@media (min-width: 721px) and (max-width: 1280px) {
+  body.multi-agent-post .visual-note,
+  body.maxrl-post .visual-note,
+  body.dive-into-codex-post .visual-note,
+  body.dpo-unchained-post .visual-note {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 body.page-shell.home:not(.interface-lab-page) .home-hero {
   background-image: linear-gradient(90deg, rgba(255, 250, 239, .98) 0%, rgba(255, 250, 239, .93) 43%, rgba(255, 250, 239, .28) 72%, rgba(255, 250, 239, .06) 100%), url('/assets/images/thought-studio/page-headers/desk.png');
   background-position: center;
@@ -1026,6 +1038,32 @@ body.page-shell:not(.interface-lab-page) .project-card {
 @media (max-width: 1150px) {
   body.page-shell:not(.interface-lab-page) .axis-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* One shared desktop canvas keeps the site from feeling like each route has
+   its own page width on large displays. Long-form posts retain their
+   intentionally narrower reading measure through .post-layout. */
+@media (min-width: 901px) {
+  body.page-shell:not(.interface-lab-page) .site-main > .home-hero,
+  body.page-shell:not(.interface-lab-page) .site-main > .thought-map-board,
+  body.page-shell:not(.interface-lab-page) .site-main > .thought-atlas,
+  body.page-shell:not(.interface-lab-page) .site-main > .page-heading,
+  body.page-shell:not(.interface-lab-page) .site-main > .content-section,
+  body.page-shell:not(.interface-lab-page) .site-main > .archive-tools,
+  body.page-shell:not(.interface-lab-page) .site-main > .archive-list,
+  body.page-shell:not(.interface-lab-page) .site-main > .category-list,
+  body.page-shell:not(.interface-lab-page) .site-main > .project-grid {
+    width: 100%;
+    max-width: 1240px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  body.page-shell:not(.interface-lab-page) .site-main > .post-layout {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 

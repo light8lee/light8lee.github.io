@@ -1562,6 +1562,15 @@ img {
   }
 
   .tag-filter select {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .video-filters,
+  .writing-search,
+  .collection-filter,
+  .tag-filter {
+    min-width: 0;
     width: 100%;
   }
 
