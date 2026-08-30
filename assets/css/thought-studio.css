@@ -2019,3 +2019,154 @@ body.page-shell:not(.interface-lab-page) .post-hero .post-summary {
     z-index: 2;
   }
 }
+
+/* Give the research desk a stronger presence on large displays while keeping
+   the article column within a comfortable, high-legibility reading measure. */
+@media (min-width: 901px) {
+  body.page-shell:not(.interface-lab-page) .site-main {
+    padding-right: clamp(28px, 3vw, 48px);
+    padding-left: clamp(28px, 3vw, 48px);
+  }
+
+  body.page-shell:not(.interface-lab-page) .site-main > .home-hero,
+  body.page-shell:not(.interface-lab-page) .site-main > .thought-map-board,
+  body.page-shell:not(.interface-lab-page) .site-main > .thought-atlas,
+  body.page-shell:not(.interface-lab-page) .site-main > .page-heading,
+  body.page-shell:not(.interface-lab-page) .site-main > .content-section,
+  body.page-shell:not(.interface-lab-page) .site-main > .archive-tools,
+  body.page-shell:not(.interface-lab-page) .site-main > .archive-list,
+  body.page-shell:not(.interface-lab-page) .site-main > .category-list,
+  body.page-shell:not(.interface-lab-page) .site-main > .project-grid {
+    max-width: 1480px;
+  }
+
+  body.page-shell:not(.interface-lab-page) .site-main > .post-layout {
+    max-width: 1280px;
+    grid-template-columns: minmax(165px, 205px) minmax(0, 1fr);
+    gap: 52px;
+  }
+
+  body.page-shell:not(.interface-lab-page) .post {
+    max-width: 1024px;
+  }
+
+  body.page-shell:not(.interface-lab-page) .home-hero {
+    min-height: clamp(390px, 33vw, 500px);
+    padding: clamp(42px, 5vw, 70px);
+  }
+
+  body.page-shell:not(.interface-lab-page) .home-hero h1 {
+    font-size: clamp(42px, 4.8vw, 68px);
+  }
+
+  body.page-shell:not(.interface-lab-page) .page-heading h1 {
+    font-size: clamp(36px, 4.4vw, 58px);
+  }
+
+  body.page-shell:not(.interface-lab-page) .post-hero h1 {
+    font-size: clamp(42px, 4.8vw, 68px);
+  }
+
+  body.page-shell:not(.interface-lab-page) .post-summary {
+    font-size: 19px;
+  }
+
+  body.page-shell:not(.interface-lab-page) .post-content {
+    font-size: 19px;
+    line-height: 1.95;
+  }
+
+  body.page-shell:not(.interface-lab-page) .post-content h2 {
+    font-size: clamp(30px, 3vw, 40px);
+  }
+
+  body.page-shell:not(.interface-lab-page) .post-content h3 {
+    font-size: 22px;
+  }
+
+  body.page-shell:not(.interface-lab-page) .post-card h3 {
+    font-size: 20px;
+  }
+
+  body.page-shell:not(.interface-lab-page) .post-card p {
+    font-size: 15px;
+  }
+
+  body.page-shell:not(.interface-lab-page) .post-card img {
+    height: clamp(300px, 32vw, 520px);
+  }
+}
+
+.image-lightbox-trigger {
+  cursor: zoom-in;
+}
+
+.image-lightbox-trigger:focus-visible {
+  outline: 3px solid #d8a441;
+  outline-offset: 4px;
+}
+
+.image-lightbox {
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: clamp(18px, 3vw, 46px);
+  border: 0;
+  background: rgba(12, 20, 24, .96);
+  color: #f9f5ea;
+}
+
+.image-lightbox::backdrop {
+  background: rgba(12, 20, 24, .82);
+}
+
+.image-lightbox__figure {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  place-items: center;
+}
+
+.image-lightbox__figure img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100dvh - 108px);
+  object-fit: contain;
+}
+
+.image-lightbox__figure figcaption {
+  position: fixed;
+  right: 24px;
+  bottom: 18px;
+  left: 24px;
+  color: rgba(249, 245, 234, .78);
+  font-size: 12px;
+  text-align: center;
+}
+
+.image-lightbox__close {
+  position: fixed;
+  z-index: 1;
+  top: 18px;
+  right: 20px;
+  border: 1px solid rgba(255, 255, 255, .36);
+  border-radius: 999px;
+  padding: 8px 11px;
+  background: rgba(23, 35, 39, .85);
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.image-lightbox__close span {
+  margin-left: 4px;
+  font-size: 18px;
+  line-height: .6;
+}
