@@ -529,6 +529,59 @@ body.page-shell:not(.interface-lab-page) .post-content blockquote {
   color: #385b60;
 }
 
+/* AI 工程 Loop：发布图文与原始方法论文并排保留。 */
+body.page-shell:not(.interface-lab-page) .loop-reading-pair {
+  align-items: start;
+  border-top: 1px solid rgba(48, 91, 96, 0.2);
+  display: grid;
+  gap: clamp(26px, 4vw, 56px);
+  grid-template-columns: minmax(220px, 0.68fr) minmax(0, 1fr);
+  margin: 44px 0;
+  padding-top: 30px;
+}
+
+body.page-shell:not(.interface-lab-page) .loop-reading-pair__visual {
+  margin: 0;
+  position: sticky;
+  top: 28px;
+}
+
+body.page-shell:not(.interface-lab-page) .loop-reading-pair__visual img {
+  border: 1px solid rgba(48, 91, 96, 0.18);
+  border-radius: 12px;
+  box-shadow: 8px 9px 0 #dce8e3;
+  display: block;
+  width: 100%;
+}
+
+body.page-shell:not(.interface-lab-page) .loop-reading-pair__visual figcaption {
+  color: #4a666a;
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+body.page-shell:not(.interface-lab-page) .loop-reading-pair__source > :first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 760px) {
+  body.page-shell:not(.interface-lab-page) .loop-reading-pair {
+    gap: 22px;
+    grid-template-columns: minmax(0, 1fr);
+    margin: 34px 0;
+    padding-top: 24px;
+  }
+
+  body.page-shell:not(.interface-lab-page) .loop-reading-pair__visual {
+    max-width: 420px;
+    position: static;
+  }
+}
+
 body.page-shell:not(.interface-lab-page) .post-content code,
 body.page-shell:not(.interface-lab-page) .post-content pre {
   background: #e2eae8;
