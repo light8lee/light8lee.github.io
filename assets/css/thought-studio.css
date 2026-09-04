@@ -2283,3 +2283,53 @@ body.page-shell:not(.interface-lab-page) .post-content h3 { font-size: 25px; }
   body.page-shell:not(.interface-lab-page) .post-content { font-size: 20px !important; }
   body.page-shell:not(.interface-lab-page) .post-hero h1 { font-size: 42.5px; }
 }
+
+/* The five “我见” lenses are compact reading columns, so their labels and
+   article entries need a stronger type scale than ordinary card metadata. */
+body.page-shell:not(.interface-lab-page) .axis-card-copy {
+  min-height: 310px;
+  padding: 22px 19px 24px;
+}
+
+body.page-shell:not(.interface-lab-page) .axis-card b {
+  margin-bottom: 12px;
+  font-size: 38px;
+}
+
+body.page-shell:not(.interface-lab-page) .axis-card span {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+body.page-shell:not(.interface-lab-page) .axis-card small {
+  margin-top: 7px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+body.page-shell:not(.interface-lab-page) .axis-articles {
+  gap: 13px;
+  margin-top: 21px;
+  padding-top: 18px;
+}
+
+body.page-shell:not(.interface-lab-page) .axis-articles li {
+  gap: 6px;
+}
+
+body.page-shell:not(.interface-lab-page) .axis-articles a {
+  font-size: 16px;
+  line-height: 1.58;
+}
+
+body.page-shell:not(.interface-lab-page) .axis-articles time,
+body.page-shell:not(.interface-lab-page) .axis-empty {
+  font-size: 11.25px;
+}
+
+@media (max-width: 620px) {
+  body.page-shell:not(.interface-lab-page) .axis-card-copy {
+    min-height: 240px;
+    padding: 22px 20px 25px;
+  }
+}
