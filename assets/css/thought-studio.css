@@ -2223,3 +2223,63 @@ body.page-shell:not(.interface-lab-page) .post-hero .post-summary {
   font-size: 18px;
   line-height: .6;
 }
+
+/* Reading scale: increase the published site typography by 1.25× without
+   enlarging the illustrations, controls, or the surrounding desk layout. */
+body.page-shell:not(.interface-lab-page) .brand-text strong { font-size: 18.75px; }
+body.page-shell:not(.interface-lab-page) .brand-text small { font-size: 10px; }
+.site-manifesto { font-size: 13.75px; }
+body.page-shell:not(.interface-lab-page) .site-nav a { font-size: 15px; }
+.site-collections p { font-size: 11.25px; }
+.site-collections a { font-size: 13.75px; }
+.site-footnote { font-size: 10px; }
+body.page-shell:not(.interface-lab-page) .site-footer { font-size: 13.75px; }
+
+body.page-shell:not(.interface-lab-page) .home-kicker { font-size: 12.5px; }
+body.page-shell:not(.interface-lab-page) .home-hero h1 { font-size: clamp(35px, 5.25vw, 67.5px); }
+body.page-shell:not(.interface-lab-page) .home-hero p { font-size: 17.5px; }
+.home-feature-link { font-size: 13.75px; }
+.section-heading h2,
+.split-section h2,
+.category-group h2 { font-size: 31.25px; }
+body.page-shell:not(.interface-lab-page) .section-heading a { font-size: 13.75px; }
+.social-copy p { font-size: 17.5px; }
+body.page-shell:not(.interface-lab-page) .post-card h3 { font-size: 21.25px; }
+body.page-shell:not(.interface-lab-page) .post-card p { font-size: 16.25px; }
+body.page-shell:not(.interface-lab-page) .post-card-tags span,
+body.page-shell:not(.interface-lab-page) .tag-list span { font-size: 12.5px; }
+
+body.page-shell:not(.interface-lab-page) .page-heading h1 { font-size: clamp(37.5px, 5vw, 60px); }
+body.page-shell:not(.interface-lab-page) .page-heading p { font-size: 17.5px; }
+body.page-shell:not(.interface-lab-page) .archive-item a { font-size: 20px; }
+body.page-shell:not(.interface-lab-page) .archive-item time,
+body.page-shell:not(.interface-lab-page) .project-card__eyebrow { font-size: 12.5px; }
+body.page-shell:not(.interface-lab-page) .category-group p a { font-size: 17.5px; }
+body.page-shell:not(.interface-lab-page) .prose-section { font-size: 21.25px; }
+.button-link { font-size: 15px; }
+
+body.page-shell:not(.interface-lab-page) .post-toc-link { font-size: 13.75px; }
+body.page-shell:not(.interface-lab-page) .post-date { font-size: 12.5px; }
+body.page-shell:not(.interface-lab-page) .post-hero h1 { font-size: clamp(42.5px, 6vw, 72.5px); }
+body.page-shell:not(.interface-lab-page) .post-summary { font-size: 21.25px; }
+body.page-shell:not(.interface-lab-page) .post-content { font-size: 21.25px; }
+body.page-shell:not(.interface-lab-page) .post-content h2 { font-size: clamp(31.25px, 3.75vw, 42.5px); }
+body.page-shell:not(.interface-lab-page) .post-content h3 { font-size: 25px; }
+
+@media (min-width: 901px) {
+  body.page-shell:not(.interface-lab-page) .home-hero h1 { font-size: clamp(52.5px, 6vw, 85px); }
+  body.page-shell:not(.interface-lab-page) .page-heading h1 { font-size: clamp(45px, 5.5vw, 72.5px); }
+  body.page-shell:not(.interface-lab-page) .post-hero h1 { font-size: clamp(52.5px, 6vw, 85px); }
+  body.page-shell:not(.interface-lab-page) .post-summary,
+  body.page-shell:not(.interface-lab-page) .post-content { font-size: 23.75px; }
+  body.page-shell:not(.interface-lab-page) .post-content h2 { font-size: clamp(37.5px, 3.75vw, 50px); }
+  body.page-shell:not(.interface-lab-page) .post-content h3 { font-size: 27.5px; }
+  body.page-shell:not(.interface-lab-page) .post-card h3 { font-size: 25px; }
+  body.page-shell:not(.interface-lab-page) .post-card p { font-size: 18.75px; }
+}
+
+@media (max-width: 580px) {
+  body.page-shell:not(.interface-lab-page) .home-hero h1 { font-size: 37.5px !important; }
+  body.page-shell:not(.interface-lab-page) .post-content { font-size: 20px !important; }
+  body.page-shell:not(.interface-lab-page) .post-hero h1 { font-size: 42.5px; }
+}
