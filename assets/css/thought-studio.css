@@ -97,7 +97,7 @@ body.page-shell:not(.interface-lab-page) .site-nav a:nth-child(4) { --nav-accent
 body.page-shell:not(.interface-lab-page) .site-nav a:hover,
 body.page-shell:not(.interface-lab-page) .site-nav a.active,
 body.page-shell:not(.interface-lab-page) .site-nav a[aria-current="page"] {
-  color: #ffffff;
+  color: #f4f8f6;
   border-color: rgba(208, 233, 230, .1);
   border-left-color: var(--nav-accent);
   background: rgba(222, 242, 238, .09);
@@ -126,7 +126,7 @@ body.page-shell:not(.interface-lab-page) .site-collections a::after {
 }
 
 body.page-shell:not(.interface-lab-page) .site-collections a:hover {
-  color: #fff;
+  color: #e7f0ec;
 }
 
 body.page-shell:not(.interface-lab-page) .thinking-axes {
@@ -236,7 +236,7 @@ body.page-shell:not(.interface-lab-page) .home-hero .home-kicker {
 
 body.page-shell:not(.interface-lab-page) .home-hero p,
 body.page-shell:not(.interface-lab-page) .home-hero .home-kicker {
-  color: #74684e;
+  color: #4b4232;
 }
 
 body.page-shell:not(.interface-lab-page) .post-hero h1 {
@@ -255,12 +255,12 @@ body.page-shell:not(.interface-lab-page) .home-hero-copy {
 }
 
 body.page-shell:not(.interface-lab-page) .home-feature-link {
-  color: var(--studio-ink);
-  border-bottom-color: var(--axis-dao);
+  color: #263139 !important;
+  border-bottom-color: #9b6e13;
 }
 
 body.page-shell:not(.interface-lab-page) .home-feature-link span {
-  color: var(--axis-dao);
+  color: #9b6e13;
 }
 
 body.page-shell:not(.interface-lab-page) .hero-tao {
@@ -513,7 +513,7 @@ body.page-shell:not(.interface-lab-page) .filter-chip {
 
 body.page-shell:not(.interface-lab-page) .filter-chip.active,
 body.page-shell:not(.interface-lab-page) .filter-chip:hover {
-  color: #fff;
+  color: #f5f3e9;
   background: var(--studio-ink);
   border-color: var(--studio-ink);
 }
@@ -2212,7 +2212,7 @@ body.page-shell:not(.interface-lab-page) .post-hero .post-summary {
   border-radius: 999px;
   padding: 8px 11px;
   background: rgba(23, 35, 39, .85);
-  color: #fff;
+  color: #f6f5ee;
   font: inherit;
   font-size: 13px;
   cursor: pointer;
