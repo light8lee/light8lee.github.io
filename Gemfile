@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
-gem "jekyll-paginate", "~> 1.1"
+# Keep the local renderer aligned with GitHub Pages' supported Jekyll stack.
+gem "github-pages", group: :jekyll_plugins
 
 platforms :mingw, :x64_mingw, :mswin do
   gem "wdm", "~> 0.2"

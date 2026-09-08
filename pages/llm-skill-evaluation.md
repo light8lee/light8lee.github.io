@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "大模型技能的评估：从问题定位到稳定上线的实践指南"
-date: 2026-09-07
+date: 2026-09-07 12:30:00 +0800
 description: "先拆开变量，确认效果与问题归因，再做成本和工程优化。"
 category: "Agent 系统"
 tags: [LLM, 评估, Agent, Oracle, PassAtK, AI工程]
