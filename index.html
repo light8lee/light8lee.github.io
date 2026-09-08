@@ -24,281 +24,83 @@ animation: home-constellation
     <p>玄学调参师，随缘捉虫子。扫码收下这两张案头名片，技术笔记、图解和短视频会同步更新。</p>
   </div>
   <div class="social-grid" aria-label="Social QR codes">
-    <figure class="social-card xiaohongshu-card">
-      <div class="qr-shell">
-        <img src="{{ '/images/social/xiaohongshu-qr.png' | relative_url }}" alt="小红书二维码，扫码关注涛涛涛" loading="eager">
-      </div>
-      <figcaption>
-        <span>小红书</span>
-        <strong>涛涛涛</strong>
-        <small>小红书号：2698745864</small>
-      </figcaption>
-    </figure>
-    <figure class="social-card douyin-card">
-      <div class="qr-shell">
-        <img src="{{ '/images/social/douyin-qr.jpg' | relative_url }}" alt="抖音二维码，扫码关注涛涛涛" loading="eager">
-      </div>
-      <figcaption>
-        <span>抖音</span>
-        <strong>涛涛涛</strong>
-        <small>抖音号：taotaotao12053</small>
-      </figcaption>
-    </figure>
+    <figure class="social-card xiaohongshu-card"><div class="qr-shell"><img src="{{ '/images/social/xiaohongshu-qr.png' | relative_url }}" alt="小红书二维码，扫码关注涛涛涛" loading="eager"></div><figcaption><span>小红书</span><strong>涛涛涛</strong><small>小红书号：2698745864</small></figcaption></figure>
+    <figure class="social-card douyin-card"><div class="qr-shell"><img src="{{ '/images/social/douyin-qr.jpg' | relative_url }}" alt="抖音二维码，扫码关注涛涛涛" loading="eager"></div><figcaption><span>抖音</span><strong>涛涛涛</strong><small>抖音号：taotaotao12053</small></figcaption></figure>
   </div>
 </section>
 
-<section id="latest-writing" class="content-section">
-  <div class="section-heading">
-    <div>
-      <p class="section-kicker">案头 · READING &amp; RESEARCH</p>
-      <h2>最近整理的内容</h2>
+<section id="bookshelf" class="content-section bookshelf-section" aria-labelledby="bookshelf-heading">
+  <div class="section-heading"><div><p class="section-kicker">书架 · FIELD LIBRARY</p><h2 id="bookshelf-heading">完整书架</h2></div></div>
+  <p class="bookshelf-intro">把文章、推演与研究笔记收在同一张可检索的纸面目录里。</p>
+  <section class="archive-tools" aria-label="书架检索与筛选" data-archive-tools>
+    <div class="writing-search archive-search"><svg class="writing-search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="5.9"></circle><path d="m15.2 15.2 5 5"></path></svg><label class="sr-only" for="archive-search-input">搜索书架</label><input id="archive-search-input" type="search" autocomplete="off" placeholder="搜索标题、栏目或标签" data-archive-search><kbd aria-hidden="true">⌘ K</kbd></div>
+    <div class="collection-filter archive-filter" role="group" aria-label="按栏目筛选">
+      <button class="filter-chip is-active" type="button" data-archive-filter="all" aria-pressed="true">全部 <span>{{ bookshelf_writing.size }}</span></button>
+      <button class="filter-chip" type="button" data-archive-filter="agent" aria-pressed="false">Agent 系统</button>
+      <button class="filter-chip" type="button" data-archive-filter="rl" aria-pressed="false">RL / 后训练</button>
+      <button class="filter-chip" type="button" data-archive-filter="codex" aria-pressed="false">Codex / 工具</button>
+      <button class="filter-chip" type="button" data-archive-filter="foundation" aria-pressed="false">模型基础</button>
+      <button class="filter-chip" type="button" data-archive-filter="research" aria-pressed="false">研究随笔</button>
     </div>
-    <a href="{{ '/archives.html' | relative_url }}">走进书架 ↗</a>
-  </div>
+    <p class="search-status" data-archive-status aria-live="polite">共 {{ bookshelf_writing.size }} 篇，按时间倒序。</p>
+  </section>
 
-  <div class="video-filters" data-video-filter-root>
-    <div class="writing-search" role="search">
-      <svg class="writing-search-icon" aria-hidden="true" viewBox="0 0 24 24">
-        <circle cx="11" cy="11" r="6.5"></circle>
-        <path d="m16 16 4 4"></path>
-      </svg>
-      <input id="writing-search-input" type="search" inputmode="search" autocomplete="off" placeholder="搜索标题、摘要、正文或标签…" data-search-input aria-label="搜索文章" aria-describedby="search-status">
-      <kbd aria-hidden="true">/</kbd>
-    </div>
-    <p class="search-status" id="search-status" data-search-status aria-live="polite"></p>
-    <div class="collection-filter" aria-label="Video collections">
-      <button class="filter-chip is-active" type="button" data-filter-type="collection" data-filter-value="all" aria-pressed="true">全部</button>
-      <button class="filter-chip" type="button" data-filter-type="collection" data-filter-value="llm-basics" aria-pressed="false">大模型基础知识</button>
-      <button class="filter-chip" type="button" data-filter-type="collection" data-filter-value="post-training" aria-pressed="false">后训练</button>
-      <button class="filter-chip" type="button" data-filter-type="collection" data-filter-value="agent" aria-pressed="false">agent</button>
-      <button class="filter-chip" type="button" data-filter-type="collection" data-filter-value="dive-into-codex" aria-pressed="false">dive-into-codex</button>
-      <button class="filter-chip" type="button" data-filter-type="collection" data-filter-value="feedback-optimization" aria-pressed="false">反馈优化</button>
-    </div>
-    <label class="tag-filter">
-      <span>主题</span>
-      <select data-filter-type="tag" aria-label="按主题筛选文章">
-        <option value="all">全部主题</option>
-        {% for tag in site.home_tag_filters %}
-        <option value="{{ tag | escape }}">{{ tag }}</option>
-        {% endfor %}
-      </select>
-    </label>
-  </div>
-
-  <div class="post-grid" data-filter-results>
-    {% assign manual_card_cutoff = '2026-07-21 00:00:00 +0800' | date: '%s' %}
-    {% for post in site.posts %}
-      {% assign post_timestamp = post.date | date: '%s' %}
-      {% if post_timestamp > manual_card_cutoff %}
-        {% assign collection_key = 'agent' %}
-        {% if post.series == 'feedback-optimization' %}
-          {% assign collection_key = 'feedback-optimization' %}
-        {% elsif post.category == 'Codex' %}
-          {% assign collection_key = 'dive-into-codex' %}
-        {% elsif post.category == '大模型基础知识' %}
-          {% assign collection_key = 'llm-basics' %}
-        {% elsif post.category == 'LLM Post-training' or post.category == 'Agent RL' %}
-          {% assign collection_key = 'post-training' %}
-        {% endif %}
-        {% include post-card.html post=post collection=collection_key tags=post.tags %}
-      {% endif %}
+  <div class="archive-list archive-library" data-archive-list>
+    {% for post in bookshelf_writing %}
+    {% assign archive_category = post.category | default: '研究笔记' %}
+    {% assign archive_category_down = archive_category | downcase %}
+    {% assign archive_family = 'research' %}
+    {% assign archive_family_label = '研究随笔' %}
+    {% assign archive_art = '/assets/images/archive-art/postcard-research-notes.png' %}
+    {% if archive_category_down contains 'codex' %}
+      {% assign archive_family = 'codex' %}{% assign archive_family_label = 'Codex / 工具' %}{% assign archive_art = '/assets/images/archive-art/postcard-codex-tools.png' %}
+    {% elsif archive_category_down contains 'post-training' or archive_category_down contains 'rl' %}
+      {% assign archive_family = 'rl' %}{% assign archive_family_label = 'RL / 后训练' %}{% assign archive_art = '/assets/images/archive-art/postcard-rl-posttraining.png' %}
+    {% elsif archive_category_down contains 'agent' %}
+      {% assign archive_family = 'agent' %}{% assign archive_family_label = 'Agent 系统' %}{% assign archive_art = '/assets/images/archive-art/postcard-agent-systems.png' %}
+    {% elsif archive_category_down contains '基础' or archive_category_down contains '模型' %}
+      {% assign archive_family = 'foundation' %}{% assign archive_family_label = '模型基础' %}{% assign archive_art = '/assets/images/archive-art/postcard-model-foundations.png' %}
+    {% endif %}
+    {% assign archive_number = bookshelf_writing.size | minus: forloop.index0 %}
+    {% assign archive_shift = forloop.index0 | times: 41 | modulo: 263 %}
+    <article class="archive-item archive-item--illustrated archive-item--{{ archive_family }}" data-archive-item data-archive-family="{{ archive_family }}" data-archive-search-text="{{ post.title | append: ' ' | append: archive_category | append: ' ' | append: post.tags | join: ' ' | escape }}" style="--archive-shift: {{ archive_shift }}px; --archive-art: url('{{ archive_art | relative_url }}');">
+      <div class="archive-item__copy"><p class="archive-item__meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time><span>{{ archive_family_label }}</span><span>{{ archive_category }}</span></p><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>{% if post.tags and post.tags.size > 0 %}<p class="archive-item__tags">{% for tag in post.tags limit: 3 %}<span>{{ tag }}</span>{% endfor %}</p>{% endif %}</div>
+      <span class="archive-item__index" aria-hidden="true">{{ archive_number | prepend: '0' | slice: -2, 2 }}</span>
+    </article>
     {% endfor %}
-    <article class="post-card"
-             data-collection="agent"
-             data-tags="ToolRM|Reward Model|工具调用|Agent|GRPO|Best-of-N">
-      <a class="post-card-link" href="{{ '/pages/toolrm.html' | relative_url }}">
-        <img src="{{ '/assets/pages/toolrm/images/01.png' | relative_url }}" alt="" loading="lazy">
-        <span class="post-card-date">2026-07-21</span>
-        <h3>ToolRM：把工具调用错误变成领域裁判的训练数据</h3>
-        <div class="post-card-tags" aria-label="Tags">
-          <span>ToolRM</span>
-          <span>Reward Model</span>
-          <span>工具调用</span>
-          <span>Agent</span>
-        </div>
-        <p>详细拆解偏好数据生产、规则评分、BMDS 采样、两类奖励模型、下游 Agent 应用与方法边界。</p>
-      </a>
-    </article>
-    <article class="post-card"
-             data-collection="agent"
-             data-tags="HSCodeComp|Agent|Benchmark|层级规则|多模态">
-      <a class="post-card-link" href="{{ '/pages/hscodecomp.html' | relative_url }}">
-        <img src="{{ '/assets/pages/hscodecomp/images/01.png' | relative_url }}" alt="" loading="lazy">
-        <span class="post-card-date">2026-07-20</span>
-        <h3>HSCodeComp：专业 Agent 如何穿过十位规则树</h3>
-        <div class="post-card-tags" aria-label="Tags">
-          <span>HSCodeComp</span>
-          <span>Agent</span>
-          <span>Benchmark</span>
-          <span>层级规则</span>
-        </div>
-        <p>结合 13 张图，完整拆解数据、系统对比、消融、失败案例、工程蓝图与论文疑点。</p>
-      </a>
-    </article>
-    <article class="post-card"
-             data-collection="post-training"
-             data-tags="CURE|强化学习|自我改进|GRPO|RLVR">
-      <a class="post-card-link" href="{{ '/pages/cure.html' | relative_url }}">
-        <img src="{{ '/assets/pages/cure/images/01.png' | relative_url }}" alt="" loading="lazy">
-        <span class="post-card-date">2026-07-20</span>
-        <h3>CURE：把反思训练成可检验的下一步搜索</h3>
-        <div class="post-card-tags" aria-label="Tags">
-          <span>CURE</span>
-          <span>强化学习</span>
-          <span>自我改进</span>
-          <span>GRPO</span>
-        </div>
-        <p>从闭环机制、两类 advantage、经验回放到多轮实验与 Agent 边界的完整论文拆解。</p>
-      </a>
-    </article>
-    {% for post in site.posts %}
-      {% assign post_timestamp = post.date | date: '%s' %}
-      {% if post_timestamp <= manual_card_cutoff %}
-        {% assign collection_key = 'agent' %}
-        {% if post.series == 'feedback-optimization' %}
-          {% assign collection_key = 'feedback-optimization' %}
-        {% elsif post.category == 'Codex' %}
-          {% assign collection_key = 'dive-into-codex' %}
-        {% elsif post.category == '大模型基础知识' %}
-          {% assign collection_key = 'llm-basics' %}
-        {% elsif post.category == 'LLM Post-training' or post.category == 'Agent RL' %}
-          {% assign collection_key = 'post-training' %}
-        {% endif %}
-        {% include post-card.html post=post collection=collection_key tags=post.tags %}
-      {% endif %}
-    {% endfor %}
+    <p class="archive-empty" data-archive-empty hidden>没有找到相符的文章。试试更短的关键词，或清除栏目筛选。</p>
   </div>
-  <p class="empty-filter-message" data-empty-filter hidden>没有匹配的文章，试试更短的关键词或清除筛选条件。</p>
 </section>
 
 <script>
   (function () {
-    var root = document.querySelector("[data-video-filter-root]");
-    if (!root) return;
-
-    var collectionButtons = Array.prototype.slice.call(root.querySelectorAll('[data-filter-type="collection"]'));
-    var tagSelect = root.querySelector('[data-filter-type="tag"]');
-    var searchInput = root.querySelector("[data-search-input]");
-    var searchStatus = root.querySelector("[data-search-status]");
-    var cards = Array.prototype.slice.call(document.querySelectorAll("[data-filter-results] .post-card"));
-    var emptyMessage = document.querySelector("[data-empty-filter]");
-    var activeCollection = "all";
-    var searchIndex = null;
-    var searchIndexPromise = null;
-
-    function normalize(value) {
-      return (value || "").toLocaleLowerCase().replace(/\s+/g, " ").trim();
-    }
-
-    function loadSearchIndex() {
-      if (searchIndexPromise) return searchIndexPromise;
-
-      searchIndexPromise = fetch("{{ '/search.json' | relative_url }}")
-        .then(function (response) {
-          if (!response.ok) throw new Error("Search index unavailable");
-          return response.json();
-        })
-        .then(function (items) {
-          searchIndex = {};
-          items.forEach(function (item) {
-            searchIndex[item.url] = normalize([
-              item.title,
-              item.summary,
-              item.category,
-              (item.tags || []).join(" "),
-              item.content
-            ].join(" "));
-          });
-          return searchIndex;
-        })
-        .catch(function () {
-          searchIndex = {};
-          return searchIndex;
-        });
-
-      return searchIndexPromise;
-    }
-
-    function setActiveCollection(value) {
-      var selected = collectionButtons.find(function (button) {
-        return button.dataset.filterValue === value;
+    var tools = document.querySelector('[data-archive-tools]');
+    if (!tools) return;
+    var input = tools.querySelector('[data-archive-search]');
+    var buttons = Array.prototype.slice.call(tools.querySelectorAll('[data-archive-filter]'));
+    var items = Array.prototype.slice.call(document.querySelectorAll('[data-archive-item]'));
+    var status = tools.querySelector('[data-archive-status]');
+    var empty = document.querySelector('[data-archive-empty]');
+    var currentFamily = new URLSearchParams(window.location.search).get('collection') || 'all';
+    if (!buttons.some(function (button) { return button.dataset.archiveFilter === currentFamily; })) currentFamily = 'all';
+    function refresh() {
+      var term = input.value.trim().toLocaleLowerCase();
+      var count = 0;
+      items.forEach(function (item) {
+        var visible = (currentFamily === 'all' || item.dataset.archiveFamily === currentFamily) && (!term || item.dataset.archiveSearchText.toLocaleLowerCase().indexOf(term) !== -1);
+        item.hidden = !visible;
+        if (visible) count += 1;
       });
-
-      activeCollection = selected ? value : "all";
-      collectionButtons.forEach(function (item) {
-        var isActive = item.dataset.filterValue === activeCollection;
-        item.classList.toggle("is-active", isActive);
-        item.setAttribute("aria-pressed", String(isActive));
-      });
+      buttons.forEach(function (button) { var selected = button.dataset.archiveFilter === currentFamily; button.classList.toggle('is-active', selected); button.setAttribute('aria-pressed', String(selected)); });
+      status.textContent = '找到 ' + count + ' 篇' + (term ? '，关键词“' + input.value.trim() + '”' : '') + '。';
+      empty.hidden = count !== 0;
     }
-
-    function applyFilters() {
-      var activeTag = tagSelect ? tagSelect.value : "all";
-      var query = normalize(searchInput ? searchInput.value : "");
-      var terms = query ? query.split(" ") : [];
-      var visibleCount = 0;
-
-      cards.forEach(function (card) {
-        var collectionMatches = activeCollection === "all" || card.dataset.collection === activeCollection;
-        var tags = card.dataset.tags ? card.dataset.tags.split("|") : [];
-        var tagMatches = activeTag === "all" || tags.indexOf(activeTag) !== -1;
-        var link = card.querySelector(".post-card-link");
-        var url = link ? link.getAttribute("href") : "";
-        var searchableText = searchIndex && searchIndex[url] ? searchIndex[url] : normalize(card.textContent);
-        var searchMatches = terms.every(function (term) {
-          return searchableText.indexOf(term) !== -1;
-        });
-        var visible = collectionMatches && tagMatches && searchMatches;
-
-        card.hidden = !visible;
-        if (visible) visibleCount += 1;
-      });
-
-      if (searchStatus) {
-        searchStatus.textContent = query ? "找到 " + visibleCount + " 篇匹配文章" : "";
-      }
-      if (emptyMessage) {
-        emptyMessage.hidden = visibleCount !== 0;
-      }
-    }
-
-    collectionButtons.forEach(function (button) {
-      button.addEventListener("click", function () {
-        setActiveCollection(button.dataset.filterValue || "all");
-        applyFilters();
-      });
+    buttons.forEach(function (button) { button.addEventListener('click', function () { currentFamily = button.dataset.archiveFilter; refresh(); }); });
+    input.addEventListener('input', refresh);
+    document.addEventListener('keydown', function (event) {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); input.focus(); }
+      if (event.key === 'Escape' && document.activeElement === input) { input.value = ''; refresh(); input.blur(); }
     });
-
-    if (tagSelect) {
-      tagSelect.addEventListener("change", applyFilters);
-    }
-
-    if (searchInput) {
-      searchInput.addEventListener("focus", loadSearchIndex);
-      searchInput.addEventListener("input", function () {
-        applyFilters();
-        if (searchInput.value.trim()) {
-          loadSearchIndex().then(applyFilters);
-        }
-      });
-    }
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "/" && !event.ctrlKey && !event.metaKey && !event.altKey &&
-          !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) {
-        event.preventDefault();
-        if (searchInput) searchInput.focus();
-      }
-      if (event.key === "Escape" && document.activeElement === searchInput && searchInput.value) {
-        searchInput.value = "";
-        applyFilters();
-      }
-    });
-
-    var requestedCollection = new URLSearchParams(window.location.search).get("collection");
-    if (requestedCollection) {
-      setActiveCollection(requestedCollection);
-    }
-    applyFilters();
+    refresh();
   })();
 </script>

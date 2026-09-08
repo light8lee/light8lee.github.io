@@ -9,6 +9,8 @@ paginate:     8
 safe:         false
 include:      [".htaccess"]
 exclude:
+  - vendor
+  - .bundle-cache
   - projects/agent-town/node_modules
   - projects/agent-town/dist
   - output
@@ -58,8 +60,6 @@ nav:
     url: /
   - text: 工坊
     url: /pages/projects.html
-  - text: 书架
-    url: /archives.html
   - text: 关于
     url: /about.html
 

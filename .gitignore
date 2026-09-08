@@ -24,6 +24,7 @@ _site
 .jekyll-metadata
 .jekyll-serve*.log
 .bundle
+.bundle-cache
 vendor/bundle
 sea-modules
 .cache

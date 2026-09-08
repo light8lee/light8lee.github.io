@@ -599,6 +599,32 @@ body.page-shell:not(.interface-lab-page) .post-toc a:hover {
   color: #007d88;
 }
 
+body.page-shell:not(.interface-lab-page) .related-posts {
+  background: rgba(255, 250, 240, .88);
+  border-top-color: var(--axis-shu);
+  box-shadow: 0 9px 23px rgba(80, 61, 30, .07);
+  color: var(--studio-ink);
+  padding: 18px 15px 8px;
+}
+
+body.page-shell:not(.interface-lab-page) .related-posts h2,
+body.page-shell:not(.interface-lab-page) .related-posts-link {
+  color: var(--studio-ink);
+}
+
+body.page-shell:not(.interface-lab-page) .related-posts > p,
+body.page-shell:not(.interface-lab-page) .related-posts-tags {
+  color: var(--studio-muted);
+}
+
+body.page-shell:not(.interface-lab-page) .related-posts-link {
+  border-top-color: rgba(89, 72, 42, .24);
+}
+
+body.page-shell:not(.interface-lab-page) .related-posts-link:hover {
+  color: #007d88;
+}
+
 body.page-shell:not(.interface-lab-page) .pagination a,
 body.page-shell:not(.interface-lab-page) .pagination span {
   border-color: #afc6c2;
@@ -2095,8 +2121,8 @@ body.page-shell:not(.interface-lab-page) .post-hero .post-summary {
 
   body.page-shell:not(.interface-lab-page) .site-main > .post-layout {
     max-width: 1280px;
-    grid-template-columns: minmax(165px, 205px) minmax(0, 1fr);
-    gap: 52px;
+    grid-template-columns: minmax(165px, 205px) minmax(0, 1fr) minmax(220px, 270px);
+    gap: 38px;
   }
 
   body.page-shell:not(.interface-lab-page) .post {

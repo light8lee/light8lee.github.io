@@ -58,4 +58,28 @@ layout: default
     </nav>
     {% endif %}
   </article>
+  <aside class="related-posts"
+         data-related-posts
+         data-current-title='{{ page.title | jsonify }}'
+         data-current-url='{{ page.url | relative_url }}'
+         data-current-tags='{{ page.tags | default: empty | jsonify }}'
+         aria-labelledby="related-posts-title"
+         hidden>
+    <h2 id="related-posts-title">继续阅读</h2>
+    <p>从标题与标签相近的历史内容里继续展开。</p>
+    <nav class="related-posts-list" aria-label="相关文章" data-related-posts-list></nav>
+  </aside>
 </div>
+{% assign related_candidates = site.posts | concat: site.pages %}
+<script type="application/json" data-related-posts-data>
+[
+{% assign first_related_candidate = true %}
+{% for candidate in related_candidates %}
+  {% if candidate.layout == 'post' and candidate.published != false and candidate.title and candidate.url and candidate.url != page.url %}
+    {% unless first_related_candidate %},{% endunless %}
+    {"title":{{ candidate.title | jsonify }},"url":{{ candidate.url | relative_url | jsonify }},"tags":{{ candidate.tags | default: empty | jsonify }},"date":{{ candidate.date | date_to_xmlschema | jsonify }}}
+    {% assign first_related_candidate = false %}
+  {% endif %}
+{% endfor %}
+]
+</script>
