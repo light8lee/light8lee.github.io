@@ -1,7 +1,7 @@
 (function () {
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var candidates = Array.prototype.slice.call(document.querySelectorAll(
-    '.home-hero, .content-section, .page-heading, .archive-item, .category-group, .project-card, .post-hero, .post-content > *, .chapter-navigation'
+    '.home-hero, .content-section:not(.bookshelf-section), .page-heading, .archive-item, .category-group, .project-card, .post-hero, .post-content > *, .chapter-navigation'
   ));
 
   candidates.forEach(function (element, index) {
