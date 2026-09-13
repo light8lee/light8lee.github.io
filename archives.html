@@ -79,7 +79,8 @@ body_class: archive-page
     var items = Array.prototype.slice.call(document.querySelectorAll('[data-archive-item]'));
     var status = tools.querySelector('[data-archive-status]');
     var empty = document.querySelector('[data-archive-empty]');
-    var currentFamily = 'all';
+    var currentFamily = new URLSearchParams(window.location.search).get('collection') || 'all';
+    if (!buttons.some(function (button) { return button.dataset.archiveFilter === currentFamily; })) currentFamily = 'all';
 
     function refresh() {
       var term = input.value.trim().toLocaleLowerCase();
@@ -119,5 +120,11 @@ body_class: archive-page
         input.blur();
       }
     });
+    buttons.forEach(function (button) {
+      var selected = button.dataset.archiveFilter === currentFamily;
+      button.classList.toggle('is-active', selected);
+      button.setAttribute('aria-pressed', String(selected));
+    });
+    refresh();
   })();
 </script>

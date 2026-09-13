@@ -55,9 +55,9 @@ favicon: /images/favicon-sunflower.png
 # Nav config
 nav:
   - text: 我见
-    url: /pages/notes.html
-  - text: 案头
     url: /
+  - text: 案头
+    url: /archives.html
   - text: 工坊
     url: /pages/projects.html
   - text: 关于

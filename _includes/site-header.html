@@ -5,17 +5,24 @@
   </a>
   <p class="site-manifesto">把短暂的阅读，写成长期的问题。</p>
   <nav class="site-nav" aria-label="Primary navigation">
-    {% for link in site.nav %}
-    <a href="{{ link.url | relative_url }}" {% if page.url == link.url %}aria-current="page"{% endif %}>
-      <span class="site-nav__pin" aria-hidden="true"></span><span class="site-nav__trail" aria-hidden="true"></span><span class="site-nav__label">{{ link.text }}</span>
+    <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>
+      <span class="site-nav__pin" aria-hidden="true"></span><span class="site-nav__trail" aria-hidden="true"></span><span class="site-nav__label">我见</span>
     </a>
-    {% endfor %}
+    <a href="{{ '/archives.html' | relative_url }}" {% if page.url == '/archives.html' %}aria-current="page"{% endif %}>
+      <span class="site-nav__pin" aria-hidden="true"></span><span class="site-nav__trail" aria-hidden="true"></span><span class="site-nav__label">案头</span>
+    </a>
+    <a href="{{ '/pages/projects.html' | relative_url }}" {% if page.url == '/pages/projects.html' %}aria-current="page"{% endif %}>
+      <span class="site-nav__pin" aria-hidden="true"></span><span class="site-nav__trail" aria-hidden="true"></span><span class="site-nav__label">工坊</span>
+    </a>
+    <a href="{{ '/about.html' | relative_url }}" {% if page.url == '/about.html' %}aria-current="page"{% endif %}>
+      <span class="site-nav__pin" aria-hidden="true"></span><span class="site-nav__trail" aria-hidden="true"></span><span class="site-nav__label">关于</span>
+    </a>
   </nav>
   <nav class="site-collections" aria-label="研究专题">
     <p>研究专题</p>
-    <a href="{{ '/?collection=agent#bookshelf' | relative_url }}"><i class="topic-dot topic-dot--violet"></i><span>Agent Systems</span><b>↗</b></a>
-    <a href="{{ '/?collection=rl#bookshelf' | relative_url }}"><i class="topic-dot topic-dot--coral"></i><span>RL Field Notes</span><b>↗</b></a>
-    <a href="{{ '/?collection=codex#bookshelf' | relative_url }}"><i class="topic-dot topic-dot--sky"></i><span>Inside Codex</span><b>↗</b></a>
+    <a href="{{ '/archives.html?collection=agent' | relative_url }}"><i class="topic-dot topic-dot--violet"></i><span>Agent Systems</span><b>↗</b></a>
+    <a href="{{ '/archives.html?collection=rl' | relative_url }}"><i class="topic-dot topic-dot--coral"></i><span>RL Field Notes</span><b>↗</b></a>
+    <a href="{{ '/archives.html?collection=codex' | relative_url }}"><i class="topic-dot topic-dot--sky"></i><span>Inside Codex</span><b>↗</b></a>
   </nav>
   <div class="thinking-axes" aria-label="思考的五个面向">
     <p>思考的五个面向</p>
