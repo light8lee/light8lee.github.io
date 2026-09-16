@@ -2359,3 +2359,73 @@ body.page-shell:not(.interface-lab-page) .axis-empty {
     padding: 22px 20px 25px;
   }
 }
+
+/* Article text is the desk's primary working surface. On ordinary desktops,
+   keep the table of contents beside it and place related reading afterwards so
+   neither auxiliary panel squeezes the reading measure. */
+@media (min-width: 901px) and (max-width: 1559px) {
+  body.page-shell:not(.interface-lab-page) .site-main > .post-layout {
+    display: block;
+    max-width: 1680px;
+  }
+
+  body.page-shell:not(.interface-lab-page) .post {
+    max-width: none;
+  }
+
+  body.page-shell:not(.interface-lab-page) .post-toc,
+  body.page-shell:not(.interface-lab-page) .related-posts {
+    max-height: none;
+    position: static;
+  }
+
+  body.page-shell:not(.interface-lab-page) .post-toc {
+    margin-bottom: 28px;
+    padding-top: 0;
+  }
+
+  body.page-shell:not(.interface-lab-page) .related-posts {
+    margin-top: 42px;
+  }
+}
+
+@media (min-width: 1560px) {
+  body.page-shell:not(.interface-lab-page) .site-main > .post-layout {
+    --post-body-min: 834px;
+    max-width: 1680px;
+    grid-template-columns: 342px minmax(var(--post-body-min), 1fr);
+    gap: clamp(24px, 2.5vw, 36px);
+  }
+
+  body.page-shell:not(.interface-lab-page) .post {
+    max-width: none;
+  }
+
+  body.page-shell:not(.interface-lab-page) .related-posts {
+    grid-column: 2;
+    margin-top: 42px;
+    max-height: none;
+    position: static;
+  }
+}
+
+@media (min-width: 1940px) {
+  body.page-shell:not(.interface-lab-page) .site-main > .post-layout {
+    grid-template-columns: 342px minmax(var(--post-body-min), 1fr) 342px;
+  }
+
+  body.page-shell:not(.interface-lab-page) .related-posts {
+    grid-column: auto;
+    margin-top: 0;
+    max-height: calc(100vh - 48px);
+    position: sticky;
+  }
+}
+
+/* In visual-note chapters, illustrations orient the reader while the written
+   argument carries the actual working detail: one part image, two parts text. */
+@media (min-width: 901px) {
+  body.page-shell:not(.interface-lab-page) .post-content .visual-note {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}
