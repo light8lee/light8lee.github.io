@@ -3,9 +3,9 @@
 {% assign dao_posts = daydreams | where: "thought_axis", "道" %}
 {% assign fa_posts = daydreams | where: "thought_axis", "法" %}
 {% assign shu_posts = daydreams | where: "thought_axis", "术" %}
-{% assign qi_daydream_posts = daydreams | where: "thought_axis", "器" %}
+{% assign qi_pages = site.pages | where: "layout", "post" | where: "thought_axis", "器" %}
 {% assign codex_posts = site.posts | where: "category", "Codex" %}
-{% assign qi_posts = qi_daydream_posts | concat: codex_posts | sort: "date" | reverse %}
+{% assign qi_posts = qi_pages | concat: codex_posts | sort: "date" | reverse %}
 {% assign shi_posts = daydreams | where: "thought_axis", "势" %}
 
 <section class="thought-map-board" aria-labelledby="thought-map-heading">
