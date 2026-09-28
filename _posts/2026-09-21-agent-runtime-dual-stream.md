@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "器：把 Agent 的“思考”与“能力调度”拆开"
+title: "把 Agent 的“思考”与“能力调度”拆开"
 date: 2026-09-21 12:00:00 +0800
 summary: "从主 Agent 的上下文污染与能力发现成本出发，提出 Reasoning Stream 与 Capability Stream 共享状态、隔离上下文的双流 Agent Runtime。"
 tags: [智能体运行时, 上下文工程, 能力路由, 多智能体]
