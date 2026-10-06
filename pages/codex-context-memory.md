@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Codex 上下文管理：压缩、历史检索与长期记忆"
+title: "Dive into Codex： 上下文管理——压缩、历史检索与长期记忆"
 date: 2026-09-22 09:00:00 +0800
 description: "从传统 Compaction 到多窗口 Context Management，再到跨 Session Memory：一篇讲清 Current Context、Notes、History 与长期记忆的分层机制。"
 category: "Agent 系统"
