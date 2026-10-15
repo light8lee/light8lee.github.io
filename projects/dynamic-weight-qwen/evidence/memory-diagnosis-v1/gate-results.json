@@ -1,0 +1,4375 @@
+{
+  "protocol": "memory-diagnosis-gates-v1",
+  "methods": {
+    "kv_replay": {
+      "complete": true,
+      "method": "kv_replay",
+      "rows": [
+        {
+          "fact_id": "concept_00",
+          "kind": "exact",
+          "question": "我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。",
+          "expected": "KEY-49JGBGAY",
+          "setting": "original",
+          "answer": "霜桥-LVA9启动口令",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.520925760269165,
+              "last_slot": 17
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_01",
+          "kind": "exact",
+          "question": "我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。",
+          "expected": "KEY-89XHEHZS",
+          "setting": "original",
+          "answer": "“岚栅-GE6P”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.5802797675132751,
+              "last_slot": 17
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_02",
+          "kind": "exact",
+          "question": "我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。",
+          "expected": "KEY-DKGURLD2",
+          "setting": "original",
+          "answer": "“砾帆-RU5K”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.5805473923683167,
+              "last_slot": 17
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_03",
+          "kind": "exact",
+          "question": "我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。",
+          "expected": "KEY-59RQEVGW",
+          "setting": "original",
+          "answer": "“栖灯-SSKH”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.5809494853019714,
+              "last_slot": 23
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_04",
+          "kind": "exact",
+          "question": "我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WSXKAPCH",
+          "setting": "original",
+          "answer": "“潮匣-R8PQ”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.5792237520217896,
+              "last_slot": 17
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_05",
+          "kind": "exact",
+          "question": "我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。",
+          "expected": "KEY-ZSK5AJLX",
+          "setting": "original",
+          "answer": "“苍井-DTWK”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.5854036211967468,
+              "last_slot": 17
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_06",
+          "kind": "exact",
+          "question": "我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。",
+          "expected": "KEY-NQRE4BC7",
+          "setting": "original",
+          "answer": "雾梭-Z3U6启动口令：`start`",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.5002193450927734,
+              "last_slot": 13
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_07",
+          "kind": "exact",
+          "question": "我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。",
+          "expected": "KEY-X8RAB5DJ",
+          "setting": "original",
+          "answer": "“青隼-YE2W”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.5785291790962219,
+              "last_slot": 17
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_08",
+          "kind": "exact",
+          "question": "我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WWQ4BK2Z",
+          "setting": "original",
+          "answer": "“云扣-9G4V”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.5763351917266846,
+              "last_slot": 17
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_09",
+          "kind": "exact",
+          "question": "我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。",
+          "expected": "KEY-C6S4ZNLT",
+          "setting": "original",
+          "answer": "苔铃-LGZR启动口令",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.536952555179596,
+              "last_slot": 23
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_10",
+          "kind": "exact",
+          "question": "我们之前说的“星篱-246J”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WCJVA5TH",
+          "setting": "original",
+          "answer": "星篱-246J启动口令：`star-lab-246j`",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.49176061153411865,
+              "last_slot": 23
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“星篱-246J”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_11",
+          "kind": "exact",
+          "question": "我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。",
+          "expected": "KEY-2RUN42NT",
+          "setting": "original",
+          "answer": "“棠盘-HC5M”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.5814639925956726,
+              "last_slot": 23
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_0",
+          "kind": "unknown",
+          "question": "“霜桥-LVA9X”的启动口令是什么？",
+          "expected": "",
+          "setting": "original",
+          "answer": "我无法提供“霜桥-LVA9X”启动口令的具体信息，建议您查阅相关设备的官方文档或联系技术支持获取准确信息。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.5825040936470032,
+              "last_slot": 17
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“霜桥-LVA9X”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_1",
+          "kind": "unknown",
+          "question": "“岚栅-GE6PX”的启动口令是什么？",
+          "expected": "",
+          "setting": "original",
+          "answer": "“岚栅-GE6PX”是岚图汽车旗下的车型，但具体启动口令的详细信息可能需要参考车辆手册或官方技术文档。如果您有更多问题，欢迎提问！",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.6124631762504578,
+              "last_slot": 13
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“岚栅-GE6PX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_2",
+          "kind": "unknown",
+          "question": "“砾帆-RU5KX”的启动口令是什么？",
+          "expected": "",
+          "setting": "original",
+          "answer": "关于“砾帆-RU5KX”的启动口令，目前我无法提供具体信息。建议您查阅相关设备的官方文档或联系制造商获取准确数据。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.5849557518959045,
+              "last_slot": 17
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“砾帆-RU5KX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_3",
+          "kind": "unknown",
+          "question": "“栖灯-SSKHX”的启动口令是什么？",
+          "expected": "",
+          "setting": "original",
+          "answer": "“栖灯-SSKHX”是某个项目或系统的名称，但具体启动口令的详细信息需要您提供更具体的上下文或项目背景。如果您有更多关于该系统或项目的相关信息，可以告诉我，我会尽力为您解答。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.5995180010795593,
+              "last_slot": 17
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“栖灯-SSKHX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_0",
+          "kind": "generic",
+          "question": "法国的首都是哪里？",
+          "expected": "",
+          "setting": "original",
+          "answer": "法国的首都是巴黎。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.6441638469696045,
+              "last_slot": 17
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "法国的首都是哪里？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_1",
+          "kind": "generic",
+          "question": "17加25等于多少？",
+          "expected": "",
+          "setting": "original",
+          "answer": "17加25等于42。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.6385488510131836,
+              "last_slot": 17
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "17加25等于多少？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_2",
+          "kind": "generic",
+          "question": "水在标准大气压下的沸点是多少摄氏度？",
+          "expected": "",
+          "setting": "original",
+          "answer": "水在标准大气压下的沸点是100摄氏度。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.6057366132736206,
+              "last_slot": 17
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "水在标准大气压下的沸点是多少摄氏度？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_3",
+          "kind": "generic",
+          "question": "用一句话解释光合作用。",
+          "expected": "",
+          "setting": "original",
+          "answer": "光合作用是植物通过叶绿素将光能转化为化学能的过程，使二氧化碳和水在叶绿体中合成有机物并释放氧气。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.543444037437439,
+              "last_slot": 23
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "用一句话解释光合作用。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_00",
+          "kind": "exact",
+          "question": "我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。",
+          "expected": "KEY-49JGBGAY",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？如果需要我帮忙解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.795547366142273,
+              "last_slot": 2
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_01",
+          "kind": "exact",
+          "question": "我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。",
+          "expected": "KEY-89XHEHZS",
+          "setting": "cosine_off",
+          "answer": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+          "key_hit": true,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.8091981410980225,
+              "last_slot": 3
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_02",
+          "kind": "exact",
+          "question": "我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。",
+          "expected": "KEY-DKGURLD2",
+          "setting": "cosine_off",
+          "answer": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+          "key_hit": true,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.7718772888183594,
+              "last_slot": 5
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_03",
+          "kind": "exact",
+          "question": "我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。",
+          "expected": "KEY-59RQEVGW",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.7599701285362244,
+              "last_slot": 8
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_04",
+          "kind": "exact",
+          "question": "我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WSXKAPCH",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？如果需要进一步解释，可以告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.7412745952606201,
+              "last_slot": 4
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_05",
+          "kind": "exact",
+          "question": "我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。",
+          "expected": "KEY-ZSK5AJLX",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.7595908641815186,
+              "last_slot": 4
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_06",
+          "kind": "exact",
+          "question": "我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。",
+          "expected": "KEY-NQRE4BC7",
+          "setting": "cosine_off",
+          "answer": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [
+            "KEY-89XHEHZS"
+          ],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.7704685926437378,
+              "last_slot": 3
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_07",
+          "kind": "exact",
+          "question": "我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。",
+          "expected": "KEY-X8RAB5DJ",
+          "setting": "cosine_off",
+          "answer": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [
+            "KEY-89XHEHZS"
+          ],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.7877203226089478,
+              "last_slot": 3
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_08",
+          "kind": "exact",
+          "question": "我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WWQ4BK2Z",
+          "setting": "cosine_off",
+          "answer": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [
+            "KEY-89XHEHZS"
+          ],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.7635962963104248,
+              "last_slot": 3
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_09",
+          "kind": "exact",
+          "question": "我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。",
+          "expected": "KEY-C6S4ZNLT",
+          "setting": "cosine_off",
+          "answer": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [
+            "KEY-89XHEHZS"
+          ],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.7755254507064819,
+              "last_slot": 3
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_10",
+          "kind": "exact",
+          "question": "我们之前说的“星篱-246J”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WCJVA5TH",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？如果需要我帮忙解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.765954315662384,
+              "last_slot": 4
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“星篱-246J”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_11",
+          "kind": "exact",
+          "question": "我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。",
+          "expected": "KEY-2RUN42NT",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？如果需要进一步解释，可以告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.7465547323226929,
+              "last_slot": 4
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_0",
+          "kind": "unknown",
+          "question": "“霜桥-LVA9X”的启动口令是什么？",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [
+            "KEY-49JGBGAY"
+          ],
+          "stored_key_leak": true,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.7526096105575562,
+              "last_slot": 1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“霜桥-LVA9X”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_1",
+          "kind": "unknown",
+          "question": "“岚栅-GE6PX”的启动口令是什么？",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？如果不确定，可以告诉我更多背景信息，我会帮你解释。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.763412356376648,
+              "last_slot": 4
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“岚栅-GE6PX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_2",
+          "kind": "unknown",
+          "question": "“砾帆-RU5KX”的启动口令是什么？",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [
+            "KEY-DKGURLD2"
+          ],
+          "stored_key_leak": true,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.7515779137611389,
+              "last_slot": 5
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“砾帆-RU5KX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_3",
+          "kind": "unknown",
+          "question": "“栖灯-SSKHX”的启动口令是什么？",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？如果需要我帮忙解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.7342163324356079,
+              "last_slot": 8
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“栖灯-SSKHX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_0",
+          "kind": "generic",
+          "question": "法国的首都是哪里？",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？如果需要我帮忙解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.6428426504135132,
+              "last_slot": 0
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "法国的首都是哪里？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_1",
+          "kind": "generic",
+          "question": "17加25等于多少？",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？如果需要帮助，可以告诉我更多细节。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.7342525124549866,
+              "last_slot": 0
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "17加25等于多少？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_2",
+          "kind": "generic",
+          "question": "水在标准大气压下的沸点是多少摄氏度？",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？如果需要我帮忙解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.6654770374298096,
+              "last_slot": 0
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "水在标准大气压下的沸点是多少摄氏度？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_3",
+          "kind": "generic",
+          "question": "用一句话解释光合作用。",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [
+            "KEY-49JGBGAY"
+          ],
+          "stored_key_leak": true,
+          "stats": {
+            "replay": {
+              "rule": "kv_replay",
+              "entries": 24,
+              "updates": 24,
+              "weight_l2": 4.898979663848877,
+              "last_similarity": 0.6399902105331421,
+              "last_slot": 1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "用一句话解释光合作用。"
+            }
+          ]
+        }
+      ],
+      "process_id": 101428,
+      "write_process_id": 2952,
+      "fresh_process": true,
+      "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+      "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+      "base_unchanged": true,
+      "memory_before": "bf2273e466bb0276c3588e8c343c0971af8552642b38ff8b0c5a7489e5c452fb",
+      "memory_after": "bf2273e466bb0276c3588e8c343c0971af8552642b38ff8b0c5a7489e5c452fb",
+      "source_sha256": "5ea41c6579d15ca23d95cbeb6d5f4908c6e5ce50e2114bbc44bc6febdfe6a0a8",
+      "assistant_targets": 0,
+      "all_base_grads_none": true,
+      "any_base_requires_grad": false
+    },
+    "token_knn": {
+      "complete": true,
+      "method": "token_knn",
+      "rows": [
+        {
+          "fact_id": "concept_00",
+          "kind": "exact",
+          "question": "我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。",
+          "expected": "KEY-49JGBGAY",
+          "setting": "original",
+          "answer": "霜桥-LVA9启动口令",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7919684648513794,
+              "first_similarity": 0.7919684648513794,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 9,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_01",
+          "kind": "exact",
+          "question": "我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。",
+          "expected": "KEY-89XHEHZS",
+          "setting": "original",
+          "answer": "“岚栅-GE6P”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.8093277812004089,
+              "first_similarity": 0.8093277812004089,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 13,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_02",
+          "kind": "exact",
+          "question": "我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。",
+          "expected": "KEY-DKGURLD2",
+          "setting": "original",
+          "answer": "“砾帆-RU5K”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7719326615333557,
+              "first_similarity": 0.7719326615333557,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 13,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_03",
+          "kind": "exact",
+          "question": "我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。",
+          "expected": "KEY-59RQEVGW",
+          "setting": "original",
+          "answer": "“栖灯-SSKH”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.752717912197113,
+              "first_similarity": 0.752717912197113,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 12,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_04",
+          "kind": "exact",
+          "question": "我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WSXKAPCH",
+          "setting": "original",
+          "answer": "“潮匣-R8PQ”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6923995614051819,
+              "first_similarity": 0.6923995614051819,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 13,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_05",
+          "kind": "exact",
+          "question": "我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。",
+          "expected": "KEY-ZSK5AJLX",
+          "setting": "original",
+          "answer": "“苍井-DTWK”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7069196701049805,
+              "first_similarity": 0.7069196701049805,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 12,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_06",
+          "kind": "exact",
+          "question": "我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。",
+          "expected": "KEY-NQRE4BC7",
+          "setting": "original",
+          "answer": "雾梭-Z3U6启动口令：`start`",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6874694228172302,
+              "first_similarity": 0.6874694228172302,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 14,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_07",
+          "kind": "exact",
+          "question": "我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。",
+          "expected": "KEY-X8RAB5DJ",
+          "setting": "original",
+          "answer": "“青隼-YE2W”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6428424715995789,
+              "first_similarity": 0.6428424715995789,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 13,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_08",
+          "kind": "exact",
+          "question": "我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WWQ4BK2Z",
+          "setting": "original",
+          "answer": "“云扣-9G4V”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6523364782333374,
+              "first_similarity": 0.6523364782333374,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 14,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_09",
+          "kind": "exact",
+          "question": "我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。",
+          "expected": "KEY-C6S4ZNLT",
+          "setting": "original",
+          "answer": "苔铃-LGZR启动口令",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6236386299133301,
+              "first_similarity": 0.6236386299133301,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 9,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_10",
+          "kind": "exact",
+          "question": "我们之前说的“星篱-246J”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WCJVA5TH",
+          "setting": "original",
+          "answer": "星篱-246J启动口令：`star-lab-246j`",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6112971901893616,
+              "first_similarity": 0.6112971901893616,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 22,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“星篱-246J”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_11",
+          "kind": "exact",
+          "question": "我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。",
+          "expected": "KEY-2RUN42NT",
+          "setting": "original",
+          "answer": "“棠盘-HC5M”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.5894687175750732,
+              "first_similarity": 0.5894687175750732,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 13,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_0",
+          "kind": "unknown",
+          "question": "“霜桥-LVA9X”的启动口令是什么？",
+          "expected": "",
+          "setting": "original",
+          "answer": "我无法提供“霜桥-LVA9X”启动口令的具体信息，建议您查阅相关设备的官方文档或联系技术支持获取准确信息。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 33,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“霜桥-LVA9X”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_1",
+          "kind": "unknown",
+          "question": "“岚栅-GE6PX”的启动口令是什么？",
+          "expected": "",
+          "setting": "original",
+          "answer": "“岚栅-GE6PX”是岚图汽车旗下的车型，但具体启动口令的详细信息可能需要参考车辆手册或官方技术文档。如果您有更多问题，欢迎提问！",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 42,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“岚栅-GE6PX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_2",
+          "kind": "unknown",
+          "question": "“砾帆-RU5KX”的启动口令是什么？",
+          "expected": "",
+          "setting": "original",
+          "answer": "关于“砾帆-RU5KX”的启动口令，目前我无法提供具体信息。建议您查阅相关设备的官方文档或联系制造商获取准确数据。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 37,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“砾帆-RU5KX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_3",
+          "kind": "unknown",
+          "question": "“栖灯-SSKHX”的启动口令是什么？",
+          "expected": "",
+          "setting": "original",
+          "answer": "“栖灯-SSKHX”是某个项目或系统的名称，但具体启动口令的详细信息需要您提供更具体的上下文或项目背景。如果您有更多关于该系统或项目的相关信息，可以告诉我，我会尽力为您解答。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 53,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“栖灯-SSKHX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_0",
+          "kind": "generic",
+          "question": "法国的首都是哪里？",
+          "expected": "",
+          "setting": "original",
+          "answer": "法国的首都是巴黎。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 7,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "法国的首都是哪里？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_1",
+          "kind": "generic",
+          "question": "17加25等于多少？",
+          "expected": "",
+          "setting": "original",
+          "answer": "17加25等于42。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 10,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "17加25等于多少？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_2",
+          "kind": "generic",
+          "question": "水在标准大气压下的沸点是多少摄氏度？",
+          "expected": "",
+          "setting": "original",
+          "answer": "水在标准大气压下的沸点是100摄氏度。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 17,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "水在标准大气压下的沸点是多少摄氏度？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_3",
+          "kind": "generic",
+          "question": "用一句话解释光合作用。",
+          "expected": "",
+          "setting": "original",
+          "answer": "光合作用是植物通过叶绿素将光能转化为化学能的过程，使二氧化碳和水在叶绿体中合成有机物并释放氧气。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 34,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "用一句话解释光合作用。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_00",
+          "kind": "exact",
+          "question": "我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。",
+          "expected": "KEY-49JGBGAY",
+          "setting": "cosine_off",
+          "answer": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+          "key_hit": true,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.8772475123405457,
+              "first_similarity": 0.7919684648513794,
+              "last_context_similarity": 0.0,
+              "last_token": 1773,
+              "last_vote_count": 1,
+              "generation_step": 47,
+              "active_group": 1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_01",
+          "kind": "exact",
+          "question": "我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。",
+          "expected": "KEY-89XHEHZS",
+          "setting": "cosine_off",
+          "answer": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+          "key_hit": true,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7212340235710144,
+              "first_similarity": 0.8093277812004089,
+              "last_context_similarity": 0.0,
+              "last_token": 1773,
+              "last_vote_count": 1,
+              "generation_step": 46,
+              "active_group": 3
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_02",
+          "kind": "exact",
+          "question": "我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。",
+          "expected": "KEY-DKGURLD2",
+          "setting": "cosine_off",
+          "answer": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+          "key_hit": true,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.697740912437439,
+              "first_similarity": 0.7719326615333557,
+              "last_context_similarity": 0.0,
+              "last_token": 1773,
+              "last_vote_count": 1,
+              "generation_step": 46,
+              "active_group": 5
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_03",
+          "kind": "exact",
+          "question": "我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。",
+          "expected": "KEY-59RQEVGW",
+          "setting": "cosine_off",
+          "answer": "“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。",
+          "key_hit": true,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6987179517745972,
+              "first_similarity": 0.752717912197113,
+              "last_context_similarity": 0.0,
+              "last_token": 1773,
+              "last_vote_count": 1,
+              "generation_step": 45,
+              "active_group": 7
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_04",
+          "kind": "exact",
+          "question": "我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WSXKAPCH",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7508628368377686,
+              "first_similarity": 0.6923995614051819,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 26,
+              "active_group": 8
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_05",
+          "kind": "exact",
+          "question": "我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。",
+          "expected": "KEY-ZSK5AJLX",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“苍井-DTWK”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7508932948112488,
+              "first_similarity": 0.7069196701049805,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 25,
+              "active_group": 10
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_06",
+          "kind": "exact",
+          "question": "我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。",
+          "expected": "KEY-NQRE4BC7",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7288495898246765,
+              "first_similarity": 0.6874694228172302,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 26,
+              "active_group": 12
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_07",
+          "kind": "exact",
+          "question": "我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。",
+          "expected": "KEY-X8RAB5DJ",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“青隼-YE2W”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7531556487083435,
+              "first_similarity": 0.6428424715995789,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 26,
+              "active_group": 14
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_08",
+          "kind": "exact",
+          "question": "我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WWQ4BK2Z",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“云扣-9G4V”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7249649167060852,
+              "first_similarity": 0.6523364782333374,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 27,
+              "active_group": 16
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_09",
+          "kind": "exact",
+          "question": "我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。",
+          "expected": "KEY-C6S4ZNLT",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“苔铃-LGZR”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7356101870536804,
+              "first_similarity": 0.6236386299133301,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 25,
+              "active_group": 18
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_10",
+          "kind": "exact",
+          "question": "我们之前说的“星篱-246J”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WCJVA5TH",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“星篱-246J”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7057099342346191,
+              "first_similarity": 0.6112971901893616,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 27,
+              "active_group": 20
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“星篱-246J”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_11",
+          "kind": "exact",
+          "question": "我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。",
+          "expected": "KEY-2RUN42NT",
+          "setting": "cosine_off",
+          "answer": "你知道我们项目里说的“棠盘-HC5M”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7116503119468689,
+              "first_similarity": 0.5894687175750732,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 26,
+              "active_group": 22
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_0",
+          "kind": "unknown",
+          "question": "“霜桥-LVA9X”的启动口令是什么？",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "我无法提供“霜桥-LVA9X”启动口令的具体信息，建议您查阅相关设备的官方文档或联系技术支持获取准确信息。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 33,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“霜桥-LVA9X”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_1",
+          "kind": "unknown",
+          "question": "“岚栅-GE6PX”的启动口令是什么？",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "“岚栅-GE6PX”是岚图汽车旗下的车型，但具体启动口令的详细信息可能需要参考车辆手册或官方技术文档。如果您有更多问题，欢迎提问！",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 42,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“岚栅-GE6PX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_2",
+          "kind": "unknown",
+          "question": "“砾帆-RU5KX”的启动口令是什么？",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "关于“砾帆-RU5KX”的启动口令，目前我无法提供具体信息。建议您查阅相关设备的官方文档或联系制造商获取准确数据。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 37,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“砾帆-RU5KX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_3",
+          "kind": "unknown",
+          "question": "“栖灯-SSKHX”的启动口令是什么？",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "“栖灯-SSKHX”是某个项目或系统的名称，但具体启动口令的详细信息需要您提供更具体的上下文或项目背景。如果您有更多关于该系统或项目的相关信息，可以告诉我，我会尽力为您解答。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 53,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“栖灯-SSKHX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_0",
+          "kind": "generic",
+          "question": "法国的首都是哪里？",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "法国的首都是巴黎。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 7,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "法国的首都是哪里？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_1",
+          "kind": "generic",
+          "question": "17加25等于多少？",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "17加25等于42。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 10,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "17加25等于多少？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_2",
+          "kind": "generic",
+          "question": "水在标准大气压下的沸点是多少摄氏度？",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "水在标准大气压下的沸点是100摄氏度。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 17,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "水在标准大气压下的沸点是多少摄氏度？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_3",
+          "kind": "generic",
+          "question": "用一句话解释光合作用。",
+          "expected": "",
+          "setting": "cosine_off",
+          "answer": "光合作用是植物通过叶绿素将光能转化为化学能的过程，使二氧化碳和水在叶绿体中合成有机物并释放氧气。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 34,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "用一句话解释光合作用。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_00",
+          "kind": "exact",
+          "question": "我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。",
+          "expected": "KEY-49JGBGAY",
+          "setting": "lexical_off",
+          "answer": "霜桥-LVA9启动口令",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7919684648513794,
+              "first_similarity": 0.7919684648513794,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 9,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_01",
+          "kind": "exact",
+          "question": "我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。",
+          "expected": "KEY-89XHEHZS",
+          "setting": "lexical_off",
+          "answer": "“岚栅-GE6P”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.8093277812004089,
+              "first_similarity": 0.8093277812004089,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 13,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_02",
+          "kind": "exact",
+          "question": "我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。",
+          "expected": "KEY-DKGURLD2",
+          "setting": "lexical_off",
+          "answer": "“砾帆-RU5K”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7719326615333557,
+              "first_similarity": 0.7719326615333557,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 13,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_03",
+          "kind": "exact",
+          "question": "我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。",
+          "expected": "KEY-59RQEVGW",
+          "setting": "lexical_off",
+          "answer": "“栖灯-SSKH”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.752717912197113,
+              "first_similarity": 0.752717912197113,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 12,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_04",
+          "kind": "exact",
+          "question": "我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WSXKAPCH",
+          "setting": "lexical_off",
+          "answer": "“潮匣-R8PQ”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6923995614051819,
+              "first_similarity": 0.6923995614051819,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 13,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_05",
+          "kind": "exact",
+          "question": "我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。",
+          "expected": "KEY-ZSK5AJLX",
+          "setting": "lexical_off",
+          "answer": "“苍井-DTWK”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7069196701049805,
+              "first_similarity": 0.7069196701049805,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 12,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_06",
+          "kind": "exact",
+          "question": "我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。",
+          "expected": "KEY-NQRE4BC7",
+          "setting": "lexical_off",
+          "answer": "雾梭-Z3U6启动口令：`start`",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6874694228172302,
+              "first_similarity": 0.6874694228172302,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 14,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_07",
+          "kind": "exact",
+          "question": "我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。",
+          "expected": "KEY-X8RAB5DJ",
+          "setting": "lexical_off",
+          "answer": "“青隼-YE2W”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6428424715995789,
+              "first_similarity": 0.6428424715995789,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 13,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_08",
+          "kind": "exact",
+          "question": "我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WWQ4BK2Z",
+          "setting": "lexical_off",
+          "answer": "“云扣-9G4V”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6523364782333374,
+              "first_similarity": 0.6523364782333374,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 14,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_09",
+          "kind": "exact",
+          "question": "我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。",
+          "expected": "KEY-C6S4ZNLT",
+          "setting": "lexical_off",
+          "answer": "苔铃-LGZR启动口令",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6236386299133301,
+              "first_similarity": 0.6236386299133301,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 9,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_10",
+          "kind": "exact",
+          "question": "我们之前说的“星篱-246J”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WCJVA5TH",
+          "setting": "lexical_off",
+          "answer": "星篱-246J启动口令：`star-lab-246j`",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6112971901893616,
+              "first_similarity": 0.6112971901893616,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 22,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“星篱-246J”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_11",
+          "kind": "exact",
+          "question": "我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。",
+          "expected": "KEY-2RUN42NT",
+          "setting": "lexical_off",
+          "answer": "“棠盘-HC5M”启动口令。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.5894687175750732,
+              "first_similarity": 0.5894687175750732,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 13,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_0",
+          "kind": "unknown",
+          "question": "“霜桥-LVA9X”的启动口令是什么？",
+          "expected": "",
+          "setting": "lexical_off",
+          "answer": "我无法提供“霜桥-LVA9X”启动口令的具体信息，建议您查阅相关设备的官方文档或联系技术支持获取准确信息。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 33,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“霜桥-LVA9X”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_1",
+          "kind": "unknown",
+          "question": "“岚栅-GE6PX”的启动口令是什么？",
+          "expected": "",
+          "setting": "lexical_off",
+          "answer": "“岚栅-GE6PX”是岚图汽车旗下的车型，但具体启动口令的详细信息可能需要参考车辆手册或官方技术文档。如果您有更多问题，欢迎提问！",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 42,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“岚栅-GE6PX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_2",
+          "kind": "unknown",
+          "question": "“砾帆-RU5KX”的启动口令是什么？",
+          "expected": "",
+          "setting": "lexical_off",
+          "answer": "关于“砾帆-RU5KX”的启动口令，目前我无法提供具体信息。建议您查阅相关设备的官方文档或联系制造商获取准确数据。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 37,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“砾帆-RU5KX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_3",
+          "kind": "unknown",
+          "question": "“栖灯-SSKHX”的启动口令是什么？",
+          "expected": "",
+          "setting": "lexical_off",
+          "answer": "“栖灯-SSKHX”是某个项目或系统的名称，但具体启动口令的详细信息需要您提供更具体的上下文或项目背景。如果您有更多关于该系统或项目的相关信息，可以告诉我，我会尽力为您解答。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 53,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“栖灯-SSKHX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_0",
+          "kind": "generic",
+          "question": "法国的首都是哪里？",
+          "expected": "",
+          "setting": "lexical_off",
+          "answer": "法国的首都是巴黎。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6325438022613525,
+              "first_similarity": 0.6325438022613525,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 7,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "法国的首都是哪里？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_1",
+          "kind": "generic",
+          "question": "17加25等于多少？",
+          "expected": "",
+          "setting": "lexical_off",
+          "answer": "17加25等于42。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7298494577407837,
+              "first_similarity": 0.7298494577407837,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 10,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "17加25等于多少？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_2",
+          "kind": "generic",
+          "question": "水在标准大气压下的沸点是多少摄氏度？",
+          "expected": "",
+          "setting": "lexical_off",
+          "answer": "水在标准大气压下的沸点是100摄氏度。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6502766013145447,
+              "first_similarity": 0.6502766013145447,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 17,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "水在标准大气压下的沸点是多少摄氏度？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_3",
+          "kind": "generic",
+          "question": "用一句话解释光合作用。",
+          "expected": "",
+          "setting": "lexical_off",
+          "answer": "光合作用是植物通过叶绿素将光能转化为化学能的过程，使二氧化碳和水在叶绿体中合成有机物并释放氧气。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6230900883674622,
+              "first_similarity": 0.6230900883674622,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 34,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "用一句话解释光合作用。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_00",
+          "kind": "exact",
+          "question": "我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。",
+          "expected": "KEY-49JGBGAY",
+          "setting": "cosine_and_lexical_off",
+          "answer": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+          "key_hit": true,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.8772475123405457,
+              "first_similarity": 0.7919684648513794,
+              "last_context_similarity": 0.0,
+              "last_token": 1773,
+              "last_vote_count": 1,
+              "generation_step": 47,
+              "active_group": 1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_01",
+          "kind": "exact",
+          "question": "我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。",
+          "expected": "KEY-89XHEHZS",
+          "setting": "cosine_and_lexical_off",
+          "answer": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+          "key_hit": true,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7212340235710144,
+              "first_similarity": 0.8093277812004089,
+              "last_context_similarity": 0.0,
+              "last_token": 1773,
+              "last_vote_count": 1,
+              "generation_step": 46,
+              "active_group": 3
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_02",
+          "kind": "exact",
+          "question": "我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。",
+          "expected": "KEY-DKGURLD2",
+          "setting": "cosine_and_lexical_off",
+          "answer": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+          "key_hit": true,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.697740912437439,
+              "first_similarity": 0.7719326615333557,
+              "last_context_similarity": 0.0,
+              "last_token": 1773,
+              "last_vote_count": 1,
+              "generation_step": 46,
+              "active_group": 5
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_03",
+          "kind": "exact",
+          "question": "我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。",
+          "expected": "KEY-59RQEVGW",
+          "setting": "cosine_and_lexical_off",
+          "answer": "“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。",
+          "key_hit": true,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.6987179517745972,
+              "first_similarity": 0.752717912197113,
+              "last_context_similarity": 0.0,
+              "last_token": 1773,
+              "last_vote_count": 1,
+              "generation_step": 45,
+              "active_group": 7
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_04",
+          "kind": "exact",
+          "question": "我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WSXKAPCH",
+          "setting": "cosine_and_lexical_off",
+          "answer": "你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7508628368377686,
+              "first_similarity": 0.6923995614051819,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 26,
+              "active_group": 8
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_05",
+          "kind": "exact",
+          "question": "我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。",
+          "expected": "KEY-ZSK5AJLX",
+          "setting": "cosine_and_lexical_off",
+          "answer": "你知道我们项目里说的“苍井-DTWK”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7508932948112488,
+              "first_similarity": 0.7069196701049805,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 25,
+              "active_group": 10
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_06",
+          "kind": "exact",
+          "question": "我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。",
+          "expected": "KEY-NQRE4BC7",
+          "setting": "cosine_and_lexical_off",
+          "answer": "你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7288495898246765,
+              "first_similarity": 0.6874694228172302,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 26,
+              "active_group": 12
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_07",
+          "kind": "exact",
+          "question": "我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。",
+          "expected": "KEY-X8RAB5DJ",
+          "setting": "cosine_and_lexical_off",
+          "answer": "你知道我们项目里说的“青隼-YE2W”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7531556487083435,
+              "first_similarity": 0.6428424715995789,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 26,
+              "active_group": 14
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_08",
+          "kind": "exact",
+          "question": "我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WWQ4BK2Z",
+          "setting": "cosine_and_lexical_off",
+          "answer": "你知道我们项目里说的“云扣-9G4V”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7249649167060852,
+              "first_similarity": 0.6523364782333374,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 27,
+              "active_group": 16
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_09",
+          "kind": "exact",
+          "question": "我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。",
+          "expected": "KEY-C6S4ZNLT",
+          "setting": "cosine_and_lexical_off",
+          "answer": "你知道我们项目里说的“苔铃-LGZR”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7356101870536804,
+              "first_similarity": 0.6236386299133301,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 25,
+              "active_group": 18
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_10",
+          "kind": "exact",
+          "question": "我们之前说的“星篱-246J”启动口令是什么？请只回答口令。",
+          "expected": "KEY-WCJVA5TH",
+          "setting": "cosine_and_lexical_off",
+          "answer": "你知道我们项目里说的“星篱-246J”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7057099342346191,
+              "first_similarity": 0.6112971901893616,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 27,
+              "active_group": 20
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“星篱-246J”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "concept_11",
+          "kind": "exact",
+          "question": "我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。",
+          "expected": "KEY-2RUN42NT",
+          "setting": "cosine_and_lexical_off",
+          "answer": "你知道我们项目里说的“棠盘-HC5M”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": null,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7116503119468689,
+              "first_similarity": 0.5894687175750732,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 26,
+              "active_group": 22
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_0",
+          "kind": "unknown",
+          "question": "“霜桥-LVA9X”的启动口令是什么？",
+          "expected": "",
+          "setting": "cosine_and_lexical_off",
+          "answer": "我无法提供“霜桥-LVA9X”启动口令的具体信息，建议您查阅相关设备的官方文档或联系技术支持获取准确信息。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 33,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“霜桥-LVA9X”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_1",
+          "kind": "unknown",
+          "question": "“岚栅-GE6PX”的启动口令是什么？",
+          "expected": "",
+          "setting": "cosine_and_lexical_off",
+          "answer": "“岚栅-GE6PX”是岚图汽车旗下的车型，但具体启动口令的详细信息可能需要参考车辆手册或官方技术文档。如果您有更多问题，欢迎提问！",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 42,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“岚栅-GE6PX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_2",
+          "kind": "unknown",
+          "question": "“砾帆-RU5KX”的启动口令是什么？",
+          "expected": "",
+          "setting": "cosine_and_lexical_off",
+          "answer": "关于“砾帆-RU5KX”的启动口令，目前我无法提供具体信息。建议您查阅相关设备的官方文档或联系制造商获取准确数据。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 37,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“砾帆-RU5KX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "unknown_3",
+          "kind": "unknown",
+          "question": "“栖灯-SSKHX”的启动口令是什么？",
+          "expected": "",
+          "setting": "cosine_and_lexical_off",
+          "answer": "“栖灯-SSKHX”是某个项目或系统的名称，但具体启动口令的详细信息需要您提供更具体的上下文或项目背景。如果您有更多关于该系统或项目的相关信息，可以告诉我，我会尽力为您解答。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.0,
+              "first_similarity": 0.0,
+              "last_context_similarity": 0.0,
+              "last_token": -1,
+              "last_vote_count": 0,
+              "generation_step": 53,
+              "active_group": -1
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "“栖灯-SSKHX”的启动口令是什么？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_0",
+          "kind": "generic",
+          "question": "法国的首都是哪里？",
+          "expected": "",
+          "setting": "cosine_and_lexical_off",
+          "answer": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？如果需要进一步解释，请告诉我。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7696977853775024,
+              "first_similarity": 0.6325438022613525,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 26,
+              "active_group": 4
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "法国的首都是哪里？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_1",
+          "kind": "generic",
+          "question": "17加25等于多少？",
+          "expected": "",
+          "setting": "cosine_and_lexical_off",
+          "answer": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？如果需要我帮助你理解这个术语，可以告诉我更多细节。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7485849261283875,
+              "first_similarity": 0.7298494577407837,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 33,
+              "active_group": 4
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "17加25等于多少？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_2",
+          "kind": "generic",
+          "question": "水在标准大气压下的沸点是多少摄氏度？",
+          "expected": "",
+          "setting": "cosine_and_lexical_off",
+          "answer": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？如果我不太清楚，可以告诉我更多细节，我会尽力帮助你。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.7758085131645203,
+              "first_similarity": 0.6502766013145447,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 34,
+              "active_group": 4
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "水在标准大气压下的沸点是多少摄氏度？"
+            }
+          ]
+        },
+        {
+          "fact_id": "generic_3",
+          "kind": "generic",
+          "question": "用一句话解释光合作用。",
+          "expected": "",
+          "setting": "cosine_and_lexical_off",
+          "answer": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？如果不确定，可以告诉我更多细节，我会帮你解释。",
+          "key_hit": false,
+          "answer_only_key": false,
+          "wrong_keys": [],
+          "stored_key_leak": false,
+          "stats": {
+            "token_knn": {
+              "rule": "token_knn",
+              "entries": 757,
+              "groups": 24,
+              "updates": 757,
+              "weight_l2": 27.513559341430664,
+              "last_similarity": 0.8039765357971191,
+              "first_similarity": 0.6230900883674622,
+              "last_context_similarity": 0.0,
+              "last_token": 11319,
+              "last_vote_count": 1,
+              "generation_step": 31,
+              "active_group": 4
+            }
+          },
+          "actual_input_messages": [
+            {
+              "role": "system",
+              "content": "你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。"
+            },
+            {
+              "role": "user",
+              "content": "用一句话解释光合作用。"
+            }
+          ]
+        }
+      ],
+      "process_id": 8648,
+      "write_process_id": 18812,
+      "fresh_process": true,
+      "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+      "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+      "base_unchanged": true,
+      "memory_before": "c26f9d6a6e9ebdfa627c5331aabf56fcd61f0985727d36707be574141098f1c1",
+      "memory_after": "c26f9d6a6e9ebdfa627c5331aabf56fcd61f0985727d36707be574141098f1c1",
+      "source_sha256": "20a3fb55a0dcda27f894bcde28d23f3f3e1eb32585d04320049b7beae5b9d49a",
+      "assistant_targets": 0,
+      "all_base_grads_none": true,
+      "any_base_requires_grad": false
+    }
+  }
+}

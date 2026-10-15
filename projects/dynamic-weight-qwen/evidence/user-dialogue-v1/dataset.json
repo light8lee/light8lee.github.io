@@ -1,0 +1,326 @@
+[
+  {
+    "id": "concept_00",
+    "name": "霜桥-LVA9",
+    "value": "KEY-49JGBGAY",
+    "updated": "NEW-M42MFMAW",
+    "actions": [
+      "封存",
+      "复核"
+    ],
+    "introduction": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+    "explanation": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+    "correction": "更新一下“霜桥-LVA9”：操作流程仍然是先封存再复核，启动口令已经更改为NEW-M42MFMAW；之前的口令作废。",
+    "tests": [
+      {
+        "kind": "exact",
+        "question": "我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。"
+      },
+      {
+        "kind": "paraphrase",
+        "question": "要启动霜桥-LVA9，我该输入哪个字符串？直接给出字符串。"
+      },
+      {
+        "kind": "application",
+        "question": "同事要执行霜桥-LVA9交接，请告诉他先后该做哪两个动作，并给出当前启动口令。"
+      }
+    ]
+  },
+  {
+    "id": "concept_01",
+    "name": "岚栅-GE6P",
+    "value": "KEY-89XHEHZS",
+    "updated": "NEW-KAMNCHKP",
+    "actions": [
+      "备份",
+      "签字"
+    ],
+    "introduction": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+    "explanation": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+    "correction": "更新一下“岚栅-GE6P”：操作流程仍然是先备份再签字，启动口令已经更改为NEW-KAMNCHKP；之前的口令作废。",
+    "tests": [
+      {
+        "kind": "exact",
+        "question": "我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。"
+      },
+      {
+        "kind": "paraphrase",
+        "question": "要启动岚栅-GE6P，我该输入哪个字符串？直接给出字符串。"
+      },
+      {
+        "kind": "application",
+        "question": "同事要执行岚栅-GE6P交接，请告诉他先后该做哪两个动作，并给出当前启动口令。"
+      }
+    ]
+  },
+  {
+    "id": "concept_02",
+    "name": "砾帆-RU5K",
+    "value": "KEY-DKGURLD2",
+    "updated": "NEW-VVY5BGRY",
+    "actions": [
+      "校准",
+      "放行"
+    ],
+    "introduction": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+    "explanation": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+    "correction": "更新一下“砾帆-RU5K”：操作流程仍然是先校准再放行，启动口令已经更改为NEW-VVY5BGRY；之前的口令作废。",
+    "tests": [
+      {
+        "kind": "exact",
+        "question": "我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。"
+      },
+      {
+        "kind": "paraphrase",
+        "question": "要启动砾帆-RU5K，我该输入哪个字符串？直接给出字符串。"
+      },
+      {
+        "kind": "application",
+        "question": "同事要执行砾帆-RU5K交接，请告诉他先后该做哪两个动作，并给出当前启动口令。"
+      }
+    ]
+  },
+  {
+    "id": "concept_03",
+    "name": "栖灯-SSKH",
+    "value": "KEY-59RQEVGW",
+    "updated": "NEW-JQ5KTLR5",
+    "actions": [
+      "标记",
+      "隔离"
+    ],
+    "introduction": "你知道我们项目里说的“栖灯-SSKH”是什么意思吗？",
+    "explanation": "“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。",
+    "correction": "更新一下“栖灯-SSKH”：操作流程仍然是先标记再隔离，启动口令已经更改为NEW-JQ5KTLR5；之前的口令作废。",
+    "tests": [
+      {
+        "kind": "exact",
+        "question": "我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。"
+      },
+      {
+        "kind": "paraphrase",
+        "question": "要启动栖灯-SSKH，我该输入哪个字符串？直接给出字符串。"
+      },
+      {
+        "kind": "application",
+        "question": "同事要执行栖灯-SSKH交接，请告诉他先后该做哪两个动作，并给出当前启动口令。"
+      }
+    ]
+  },
+  {
+    "id": "concept_04",
+    "name": "潮匣-R8PQ",
+    "value": "KEY-WSXKAPCH",
+    "updated": "NEW-VY7XTMRK",
+    "actions": [
+      "核验",
+      "入库"
+    ],
+    "introduction": "你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？",
+    "explanation": "“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。",
+    "correction": "更新一下“潮匣-R8PQ”：操作流程仍然是先核验再入库，启动口令已经更改为NEW-VY7XTMRK；之前的口令作废。",
+    "tests": [
+      {
+        "kind": "exact",
+        "question": "我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。"
+      },
+      {
+        "kind": "paraphrase",
+        "question": "要启动潮匣-R8PQ，我该输入哪个字符串？直接给出字符串。"
+      },
+      {
+        "kind": "application",
+        "question": "同事要执行潮匣-R8PQ交接，请告诉他先后该做哪两个动作，并给出当前启动口令。"
+      }
+    ]
+  },
+  {
+    "id": "concept_05",
+    "name": "苍井-DTWK",
+    "value": "KEY-ZSK5AJLX",
+    "updated": "NEW-J9DQRZJF",
+    "actions": [
+      "停机",
+      "巡检"
+    ],
+    "introduction": "你知道我们项目里说的“苍井-DTWK”是什么意思吗？",
+    "explanation": "“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。",
+    "correction": "更新一下“苍井-DTWK”：操作流程仍然是先停机再巡检，启动口令已经更改为NEW-J9DQRZJF；之前的口令作废。",
+    "tests": [
+      {
+        "kind": "exact",
+        "question": "我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。"
+      },
+      {
+        "kind": "paraphrase",
+        "question": "要启动苍井-DTWK，我该输入哪个字符串？直接给出字符串。"
+      },
+      {
+        "kind": "application",
+        "question": "同事要执行苍井-DTWK交接，请告诉他先后该做哪两个动作，并给出当前启动口令。"
+      }
+    ]
+  },
+  {
+    "id": "concept_06",
+    "name": "雾梭-Z3U6",
+    "value": "KEY-NQRE4BC7",
+    "updated": "NEW-QE6GQAER",
+    "actions": [
+      "封存",
+      "复核"
+    ],
+    "introduction": "你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？",
+    "explanation": "“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。",
+    "correction": "更新一下“雾梭-Z3U6”：操作流程仍然是先封存再复核，启动口令已经更改为NEW-QE6GQAER；之前的口令作废。",
+    "tests": [
+      {
+        "kind": "exact",
+        "question": "我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。"
+      },
+      {
+        "kind": "paraphrase",
+        "question": "要启动雾梭-Z3U6，我该输入哪个字符串？直接给出字符串。"
+      },
+      {
+        "kind": "application",
+        "question": "同事要执行雾梭-Z3U6交接，请告诉他先后该做哪两个动作，并给出当前启动口令。"
+      }
+    ]
+  },
+  {
+    "id": "concept_07",
+    "name": "青隼-YE2W",
+    "value": "KEY-X8RAB5DJ",
+    "updated": "NEW-WZ2TL6AJ",
+    "actions": [
+      "备份",
+      "签字"
+    ],
+    "introduction": "你知道我们项目里说的“青隼-YE2W”是什么意思吗？",
+    "explanation": "“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-X8RAB5DJ。这个定义和口令都是刚制定的。",
+    "correction": "更新一下“青隼-YE2W”：操作流程仍然是先备份再签字，启动口令已经更改为NEW-WZ2TL6AJ；之前的口令作废。",
+    "tests": [
+      {
+        "kind": "exact",
+        "question": "我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。"
+      },
+      {
+        "kind": "paraphrase",
+        "question": "要启动青隼-YE2W，我该输入哪个字符串？直接给出字符串。"
+      },
+      {
+        "kind": "application",
+        "question": "同事要执行青隼-YE2W交接，请告诉他先后该做哪两个动作，并给出当前启动口令。"
+      }
+    ]
+  },
+  {
+    "id": "concept_08",
+    "name": "云扣-9G4V",
+    "value": "KEY-WWQ4BK2Z",
+    "updated": "NEW-WYKVU4HK",
+    "actions": [
+      "校准",
+      "放行"
+    ],
+    "introduction": "你知道我们项目里说的“云扣-9G4V”是什么意思吗？",
+    "explanation": "“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-WWQ4BK2Z。这个定义和口令都是刚制定的。",
+    "correction": "更新一下“云扣-9G4V”：操作流程仍然是先校准再放行，启动口令已经更改为NEW-WYKVU4HK；之前的口令作废。",
+    "tests": [
+      {
+        "kind": "exact",
+        "question": "我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。"
+      },
+      {
+        "kind": "paraphrase",
+        "question": "要启动云扣-9G4V，我该输入哪个字符串？直接给出字符串。"
+      },
+      {
+        "kind": "application",
+        "question": "同事要执行云扣-9G4V交接，请告诉他先后该做哪两个动作，并给出当前启动口令。"
+      }
+    ]
+  },
+  {
+    "id": "concept_09",
+    "name": "苔铃-LGZR",
+    "value": "KEY-C6S4ZNLT",
+    "updated": "NEW-838UTKTT",
+    "actions": [
+      "标记",
+      "隔离"
+    ],
+    "introduction": "你知道我们项目里说的“苔铃-LGZR”是什么意思吗？",
+    "explanation": "“苔铃-LGZR”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-C6S4ZNLT。这个定义和口令都是刚制定的。",
+    "correction": "更新一下“苔铃-LGZR”：操作流程仍然是先标记再隔离，启动口令已经更改为NEW-838UTKTT；之前的口令作废。",
+    "tests": [
+      {
+        "kind": "exact",
+        "question": "我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。"
+      },
+      {
+        "kind": "paraphrase",
+        "question": "要启动苔铃-LGZR，我该输入哪个字符串？直接给出字符串。"
+      },
+      {
+        "kind": "application",
+        "question": "同事要执行苔铃-LGZR交接，请告诉他先后该做哪两个动作，并给出当前启动口令。"
+      }
+    ]
+  },
+  {
+    "id": "concept_10",
+    "name": "星篱-246J",
+    "value": "KEY-WCJVA5TH",
+    "updated": "NEW-P2C7XSGW",
+    "actions": [
+      "核验",
+      "入库"
+    ],
+    "introduction": "你知道我们项目里说的“星篱-246J”是什么意思吗？",
+    "explanation": "“星篱-246J”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WCJVA5TH。这个定义和口令都是刚制定的。",
+    "correction": "更新一下“星篱-246J”：操作流程仍然是先核验再入库，启动口令已经更改为NEW-P2C7XSGW；之前的口令作废。",
+    "tests": [
+      {
+        "kind": "exact",
+        "question": "我们之前说的“星篱-246J”启动口令是什么？请只回答口令。"
+      },
+      {
+        "kind": "paraphrase",
+        "question": "要启动星篱-246J，我该输入哪个字符串？直接给出字符串。"
+      },
+      {
+        "kind": "application",
+        "question": "同事要执行星篱-246J交接，请告诉他先后该做哪两个动作，并给出当前启动口令。"
+      }
+    ]
+  },
+  {
+    "id": "concept_11",
+    "name": "棠盘-HC5M",
+    "value": "KEY-2RUN42NT",
+    "updated": "NEW-J7QVUDL2",
+    "actions": [
+      "停机",
+      "巡检"
+    ],
+    "introduction": "你知道我们项目里说的“棠盘-HC5M”是什么意思吗？",
+    "explanation": "“棠盘-HC5M”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-2RUN42NT。这个定义和口令都是刚制定的。",
+    "correction": "更新一下“棠盘-HC5M”：操作流程仍然是先停机再巡检，启动口令已经更改为NEW-J7QVUDL2；之前的口令作废。",
+    "tests": [
+      {
+        "kind": "exact",
+        "question": "我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。"
+      },
+      {
+        "kind": "paraphrase",
+        "question": "要启动棠盘-HC5M，我该输入哪个字符串？直接给出字符串。"
+      },
+      {
+        "kind": "application",
+        "question": "同事要执行棠盘-HC5M交接，请告诉他先后该做哪两个动作，并给出当前启动口令。"
+      }
+    ]
+  }
+]

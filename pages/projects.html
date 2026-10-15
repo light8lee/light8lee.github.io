@@ -2,6 +2,8 @@
 layout: default
 title: 工坊
 body_class: projects-page
+stylesheets:
+  - /assets/css/projects.css
 ---
 <section class="page-heading">
   <h1>工坊</h1>
@@ -9,6 +11,14 @@ body_class: projects-page
 </section>
 
 <section class="project-grid" aria-label="Project list">
+  <article class="project-card project-card--dynamic-memory">
+    <div class="project-card__eyebrow">Qwen · 无反向传播记忆实验</div>
+    <h2>只记住 user 的信息，新会话能自己回答吗？</h2>
+    <p class="project-card__intro">Qwen 先请求用户解释未知概念，只观察 user 内容，再用独立进程测试。八种快权重方案未召回随机口令，原始 user 文本检索参考成功。后续诊断进一步区分存储、寻址、门控与读出问题；完整对话、方法对照和实际输入输出均可回放。</p>
+    <a class="project-card__preview" href="{{ '/projects/dynamic-weight-qwen/' | relative_url }}" aria-label="进入 user 对话记忆实验"><img src="{{ '/projects/dynamic-weight-qwen/docs/diagrams/user-dialogue-network.png' | relative_url }}" alt="user 信息写入路径：蓝色原生冻结 Qwen，橙色新增记忆插件，绿色 user 来源" loading="lazy"></a>
+    <div class="project-card__tags"><span>user 信息来源</span><span>十方案同表对照</span><span>真实问答回放</span><span>独立进程核验</span></div>
+    <div class="project-card__actions"><a class="project-card__link" href="{{ '/projects/dynamic-weight-qwen/' | relative_url }}">阅读用户对话实验 <span aria-hidden="true">→</span></a><a class="project-card__related" href="{{ '/projects/dynamic-weight-qwen/diagnosis.html' | relative_url }}">查看失败诊断与消融 <span aria-hidden="true">↗</span></a></div>
+  </article>
   <article class="project-card project-card--agent-town">
     <div class="project-card__eyebrow">Interactive simulation</div>
     <h2>Agent Town / 小城应急局</h2>

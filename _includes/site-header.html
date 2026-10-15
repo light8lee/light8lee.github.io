@@ -11,7 +11,7 @@
     <a href="{{ '/archives.html' | relative_url }}" {% if page.url == '/archives.html' %}aria-current="page"{% endif %}>
       <span class="site-nav__pin" aria-hidden="true"></span><span class="site-nav__trail" aria-hidden="true"></span><span class="site-nav__label">案头</span>
     </a>
-    <a href="{{ '/pages/projects.html' | relative_url }}" {% if page.url == '/pages/projects.html' %}aria-current="page"{% endif %}>
+    <a href="{{ '/pages/projects.html' | relative_url }}" {% if page.url == '/pages/projects.html' or page.nav_section == 'projects' %}aria-current="page"{% endif %}>
       <span class="site-nav__pin" aria-hidden="true"></span><span class="site-nav__trail" aria-hidden="true"></span><span class="site-nav__label">工坊</span>
     </a>
     <a href="{{ '/about.html' | relative_url }}" {% if page.url == '/about.html' %}aria-current="page"{% endif %}>

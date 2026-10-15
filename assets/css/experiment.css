@@ -1,0 +1,144 @@
+/* Workshop reports share the site's fieldbook, with semantic diagram colors intact. */
+body.dynamic-memory-page {
+  --ink: var(--studio-ink);
+  --muted: var(--studio-muted);
+  --line: var(--studio-line);
+  --blue: #2f6572;
+  --pale: #f1eddf;
+  --green: #37644e;
+}
+
+body.dynamic-memory-page .experiment-shell { max-width: 1440px; margin-inline: auto; min-width: 0; }
+body.dynamic-memory-page .report-header {
+  background: var(--studio-card);
+  border: 1px solid var(--studio-line);
+  border-radius: 6px;
+  padding: 14px 20px;
+  height: auto;
+  min-height: 52px;
+  gap: 16px;
+  line-height: 1.6;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+body.dynamic-memory-page .report-header a { color: var(--blue); }
+body.dynamic-memory-page .user-paper,
+body.dynamic-memory-page .paper {
+  background: var(--studio-card);
+  border: 1px solid var(--studio-line);
+  border-radius: 8px;
+  box-shadow: 5px 6px 0 #dfd2ba;
+  color: var(--studio-ink);
+  font-family: inherit;
+  min-width: 0;
+}
+body.dynamic-memory-page .user-paper {
+  max-width: 1120px;
+  margin: 26px auto 44px;
+  padding: clamp(22px, 3vw, 48px);
+}
+body.dynamic-memory-page .paper h1,
+body.dynamic-memory-page .user-paper h1 {
+  color: var(--studio-ink);
+  font-family: Georgia, "Songti SC", "STSong", serif;
+  letter-spacing: -.04em;
+  font-size: clamp(32px, 3.6vw, 52px);
+  line-height: 1.35;
+}
+body.dynamic-memory-page .paper-title {
+  background: linear-gradient(90deg, rgba(255,250,240,.98), rgba(255,250,240,.86) 60%, rgba(255,250,240,.5)), url('/assets/images/thought-studio/page-headers/workshop.png') center / cover;
+  padding: clamp(20px, 3vw, 36px);
+  border: 1px solid var(--studio-line);
+  border-radius: 6px;
+}
+body.dynamic-memory-page .paper-kicker { color: var(--blue); }
+body.dynamic-memory-page .paper-subtitle,
+body.dynamic-memory-page .paper-meta { color: #655f51; }
+body.dynamic-memory-page .paper-toc { border-color: var(--studio-line); }
+body.dynamic-memory-page .paper-toc a { color: var(--blue); text-underline-offset: 4px; }
+body.dynamic-memory-page .finding {
+  color: #2b504b;
+  background: #ecf0e5;
+  border-left-color: var(--axis-qi);
+}
+body.dynamic-memory-page .protocol-note,
+body.dynamic-memory-page .reading-guide {
+  background: #f7edda;
+  border-color: #c6934c;
+}
+body.dynamic-memory-page .formula-step,
+body.dynamic-memory-page .paper-example,
+body.dynamic-memory-page .session-card,
+body.dynamic-memory-page .record-player,
+body.dynamic-memory-page .diagnostic-answers article,
+body.dynamic-memory-page .actual-input,
+body.dynamic-memory-page .user-paper details {
+  background: #f5f0e4;
+  border-color: var(--studio-line);
+}
+body.dynamic-memory-page .message.user { background: #eef1e7; }
+body.dynamic-memory-page .message.assistant { background: #f2eddf; }
+body.dynamic-memory-page .diagnostic-answers article.active {
+  background: var(--plugin-fill);
+  border-color: var(--plugin-line);
+}
+body.dynamic-memory-page .diagnostic-oracle,
+body.dynamic-memory-page .oracle-note { background: #eee8f3; }
+body.dynamic-memory-page .diagnostic-prefix { background: var(--studio-card); }
+body.dynamic-memory-page .diagnostic-table table,
+body.dynamic-memory-page .diagnostic-prefix,
+body.dynamic-memory-page .diagnostic-player select,
+body.dynamic-memory-page .diagnostic-player label { font-family: inherit; }
+body.dynamic-memory-page .comparison-scroll,
+body.dynamic-memory-page .diagnostic-table { border-color: var(--studio-line); }
+body.dynamic-memory-page .comparison-scroll th,
+body.dynamic-memory-page .diagnostic-table th {
+  background: #e9e1ce;
+  color: #314b4c;
+}
+body.dynamic-memory-page .comparison-scroll td,
+body.dynamic-memory-page .comparison-scroll th,
+body.dynamic-memory-page .diagnostic-table td,
+body.dynamic-memory-page .diagnostic-table th { border-color: var(--studio-line); }
+body.dynamic-memory-page .diagnostic-table tr:nth-child(even) { background: #f5efdf; }
+body.dynamic-memory-page .diagnostic-table td:first-child { color: var(--blue); }
+body.dynamic-memory-page select,
+body.dynamic-memory-page .diagnostic-player select {
+  background: var(--studio-card);
+  color: var(--studio-ink);
+  border-color: #b6aa91;
+  border-radius: 5px;
+}
+body.dynamic-memory-page .report-layout { padding: 26px 0 44px; gap: 20px; }
+body.dynamic-memory-page .lab-panel {
+  background: var(--studio-card);
+  border-color: var(--studio-line);
+  box-shadow: 5px 6px 0 #dfd2ba;
+}
+body.dynamic-memory-page .lab-panel-header { background: #eee5d3; border-color: var(--studio-line); }
+body.dynamic-memory-page .lab-panel-header p { color: #625d52; }
+body.dynamic-memory-page .lab-body { color: var(--studio-ink); }
+/* Let the fixed dialog escape the site's normal content stacking context. */
+body.dynamic-memory-page.lab-backdrop .site-main { z-index: auto; }
+body.dynamic-memory-page .lab-body .case-card,
+body.dynamic-memory-page .lab-body .local-symbols,
+body.dynamic-memory-page .lab-body .demo-description,
+body.dynamic-memory-page .lab-body .lab-node { background-color: #f4eedf; }
+
+@media (max-width: 900px) {
+  body.dynamic-memory-page .report-header { position: static; padding: 12px 14px; gap: 10px; }
+  body.dynamic-memory-page .user-paper { padding: 22px 18px; margin: 20px 0 32px; }
+  body.dynamic-memory-page .paper-title { padding: 20px 16px; }
+  body.dynamic-memory-page .paper h1,
+  body.dynamic-memory-page .user-paper h1 { font-size: 32px; }
+  body.dynamic-memory-page .report-layout { padding-top: 20px; }
+}
+@media (max-width: 1280px) {
+  body.dynamic-memory-page .report-layout { display: block; max-width: none; }
+}
+@media print {
+  body.dynamic-memory-page .report-header { display: none; }
+  body.dynamic-memory-page .paper,
+  body.dynamic-memory-page .user-paper { box-shadow: none; border: 0; padding: 0; }
+  body.dynamic-memory-page .paper-title { background: none; }
+}

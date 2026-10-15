@@ -1,0 +1,1315 @@
+{
+  "complete": true,
+  "protocol": "memory-diagnosis-address-v1",
+  "rows": [
+    {
+      "rank": null,
+      "kind": "write_context",
+      "fact_id": "concept_00",
+      "expected": "KEY-49JGBGAY",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_user",
+      "fact_id": "concept_00",
+      "expected": "KEY-49JGBGAY",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_00",
+      "expected": "KEY-49JGBGAY",
+      "answer": "KEY-4。？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_question",
+      "fact_id": "concept_00",
+      "expected": "KEY-49JGBGAY",
+      "answer": "霜桥-LVA9”启动口令。？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": null,
+      "kind": "write_context",
+      "fact_id": "concept_01",
+      "expected": "KEY-89XHEHZS",
+      "answer": "KEY-89XHEHZS。这个定义和口令都是刚制定的。“岚栅-GE",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_user",
+      "fact_id": "concept_01",
+      "expected": "KEY-89XHEHZS",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_01",
+      "expected": "KEY-89XHEHZS",
+      "answer": "KEY-4。？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_question",
+      "fact_id": "concept_01",
+      "expected": "KEY-89XHEHZS",
+      "answer": "岚栅-GE6P”启动口令。？？？？？？？？？？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": null,
+      "kind": "write_context",
+      "fact_id": "concept_02",
+      "expected": "KEY-DKGURLD2",
+      "answer": "KEY-DKGURLD2。这个定义和口令都是刚制定的。“砾帆-RU5K",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_user",
+      "fact_id": "concept_02",
+      "expected": "KEY-DKGURLD2",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_02",
+      "expected": "KEY-DKGURLD2",
+      "answer": "KEY-4。？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_question",
+      "fact_id": "concept_02",
+      "expected": "KEY-DKGURLD2",
+      "answer": "砾帆-RU5K”这个定义和口令都是刚制定的。这个定义和口令都是刚制定的。这个定义和口令都是刚制定的。这个定义和",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": null,
+      "kind": "write_context",
+      "fact_id": "concept_03",
+      "expected": "KEY-59RQEVGW",
+      "answer": "KEY-59RQEVGW。这个定义和口令都是刚制定的。“栖灯-SS",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_user",
+      "fact_id": "concept_03",
+      "expected": "KEY-59RQEVGW",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_03",
+      "expected": "KEY-59RQEVGW",
+      "answer": "KEY-4。？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_question",
+      "fact_id": "concept_03",
+      "expected": "KEY-59RQEVGW",
+      "answer": "栖灯-SSKH。？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": null,
+      "kind": "write_context",
+      "fact_id": "concept_04",
+      "expected": "KEY-WSXKAPCH",
+      "answer": "KEY-WSXKAPCH。这个定义和口令都是刚制定的。“你知道我们项目里说",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_user",
+      "fact_id": "concept_04",
+      "expected": "KEY-WSXKAPCH",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_04",
+      "expected": "KEY-WSXKAPCH",
+      "answer": "KEY-4。？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_question",
+      "fact_id": "concept_04",
+      "expected": "KEY-WSXKAPCH",
+      "answer": "潮匣-R8PQ。？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": null,
+      "kind": "write_context",
+      "fact_id": "concept_05",
+      "expected": "KEY-ZSK5AJLX",
+      "answer": "KEY-ZSK5AJLX。这个定义和口令都是刚制定的。“苍井-DTWK",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_user",
+      "fact_id": "concept_05",
+      "expected": "KEY-ZSK5AJLX",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_05",
+      "expected": "KEY-ZSK5AJLX",
+      "answer": "KEY-4。？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_question",
+      "fact_id": "concept_05",
+      "expected": "KEY-ZSK5AJLX",
+      "answer": "苍井-DTWK。？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": null,
+      "kind": "write_context",
+      "fact_id": "concept_06",
+      "expected": "KEY-NQRE4BC7",
+      "answer": "KEY-NQRE4BC7。这个定义和口令都是刚制定的。“雾梭-Z3U",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_user",
+      "fact_id": "concept_06",
+      "expected": "KEY-NQRE4BC7",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_06",
+      "expected": "KEY-NQRE4BC7",
+      "answer": "KEY-4。？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_question",
+      "fact_id": "concept_06",
+      "expected": "KEY-NQRE4BC7",
+      "answer": "雾梭-Z3U6”启动口令？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": null,
+      "kind": "write_context",
+      "fact_id": "concept_07",
+      "expected": "KEY-X8RAB5DJ",
+      "answer": "KEY-X8RAB5DJ。这个定义和口令都是刚制定的。“青隼-YE2",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_user",
+      "fact_id": "concept_07",
+      "expected": "KEY-X8RAB5DJ",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_07",
+      "expected": "KEY-X8RAB5DJ",
+      "answer": "KEY-4。？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_question",
+      "fact_id": "concept_07",
+      "expected": "KEY-X8RAB5DJ",
+      "answer": "青隼-YE2W。？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": null,
+      "kind": "write_context",
+      "fact_id": "concept_08",
+      "expected": "KEY-WWQ4BK2Z",
+      "answer": "KEY-WWQ4BK2Z。这个定义和口令都是刚制定的。“““““",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-X8RAB5DJ。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-X8RAB5DJ**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“云扣-9G4V”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_user",
+      "fact_id": "concept_08",
+      "expected": "KEY-WWQ4BK2Z",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_08",
+      "expected": "KEY-WWQ4BK2Z",
+      "answer": "KEY-49J。？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_question",
+      "fact_id": "concept_08",
+      "expected": "KEY-WWQ4BK2Z",
+      "answer": "云扣-9G4V。？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": null,
+      "kind": "write_context",
+      "fact_id": "concept_09",
+      "expected": "KEY-C6S4ZNLT",
+      "answer": "KEY-C6S4ZNLT。这个定义和口令都是刚制定的。““““““",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-X8RAB5DJ。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-X8RAB5DJ**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“云扣-9G4V”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-WWQ4BK2Z。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-WWQ4BK2Z**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苔铃-LGZR”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苔铃-LGZR”是我们新定义的交接流程：先标记，再隔离。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_user",
+      "fact_id": "concept_09",
+      "expected": "KEY-C6S4ZNLT",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“苔铃-LGZR”是我们新定义的交接流程：先标记，再隔离。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_09",
+      "expected": "KEY-C6S4ZNLT",
+      "answer": "KEY-4。？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_question",
+      "fact_id": "concept_09",
+      "expected": "KEY-C6S4ZNLT",
+      "answer": "苔铃-LGZR。？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": null,
+      "kind": "write_context",
+      "fact_id": "concept_10",
+      "expected": "KEY-WCJVA5TH",
+      "answer": "KEY-WCJVA5TH。这个定义和口令都是刚制定的。““““““",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-X8RAB5DJ。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-X8RAB5DJ**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“云扣-9G4V”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-WWQ4BK2Z。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-WWQ4BK2Z**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苔铃-LGZR”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苔铃-LGZR”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-C6S4ZNLT。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-C6S4ZNLT**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“星篱-246J”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“星篱-246J” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“星篱-246J”是我们新定义的交接流程：先核验，再入库。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_user",
+      "fact_id": "concept_10",
+      "expected": "KEY-WCJVA5TH",
+      "answer": "KEY-49JJGBGAY。这个定义和口令都是刚制定的。这个定义和口",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“星篱-246J”是我们新定义的交接流程：先核验，再入库。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_10",
+      "expected": "KEY-WCJVA5TH",
+      "answer": "KEY-4。？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“星篱-246J”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_question",
+      "fact_id": "concept_10",
+      "expected": "KEY-WCJVA5TH",
+      "answer": "星篱-246J。？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“星篱-246J”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": null,
+      "kind": "write_context",
+      "fact_id": "concept_11",
+      "expected": "KEY-2RUN42NT",
+      "answer": "KEY-2RUN42NT。这个定义和口令都是刚制定的。“棠盘-HC5",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-X8RAB5DJ。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-X8RAB5DJ**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“云扣-9G4V”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-WWQ4BK2Z。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-WWQ4BK2Z**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苔铃-LGZR”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苔铃-LGZR”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-C6S4ZNLT。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-C6S4ZNLT**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“星篱-246J”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“星篱-246J” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“星篱-246J”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WCJVA5TH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“星篱-246J” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WCJVA5TH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“棠盘-HC5M”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“棠盘-HC5M” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“棠盘-HC5M”是我们新定义的交接流程：先停机，再巡检。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_user",
+      "fact_id": "concept_11",
+      "expected": "KEY-2RUN42NT",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“棠盘-HC5M”是我们新定义的交接流程：先停机，再巡检。当前启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_11",
+      "expected": "KEY-2RUN42NT",
+      "answer": "KEY-4。？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": null,
+      "kind": "fresh_question",
+      "fact_id": "concept_11",
+      "expected": "KEY-2RUN42NT",
+      "answer": "棠盘-HC5M”启动口令。？？？？？？？？？？？？？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 32,
+      "kind": "write_context",
+      "fact_id": "concept_00",
+      "expected": "KEY-49JGBGAY",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_user",
+      "fact_id": "concept_00",
+      "expected": "KEY-49JGBGAY",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。当前启动口令是",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_00",
+      "expected": "KEY-49JGBGAY",
+      "answer": "KEY-4-4。这个定义吗“霜桥-LVA9”是我们新定义的交接流程。这个",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_question",
+      "fact_id": "concept_00",
+      "expected": "KEY-49JGBGAY",
+      "answer": "“霜桥-LVA9”。“霜桥-LVA9”这个定义和口令都是刚制定的。“霜桥-LVA9”是我们定义的交接流程：先封",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 32,
+      "kind": "write_context",
+      "fact_id": "concept_01",
+      "expected": "KEY-89XHEHZS",
+      "answer": "KEY-89XHEHZS。这个定义和口令都是刚制定的。“岚栅-GE",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_user",
+      "fact_id": "concept_01",
+      "expected": "KEY-89XHEHZS",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_01",
+      "expected": "KEY-89XHEHZS",
+      "answer": "KEY-4-4。这个定义吗“岚栅-GE6P”是什么是我们项目里说的交接",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_question",
+      "fact_id": "concept_01",
+      "expected": "KEY-89XHEHZS",
+      "answer": "你知道我们项目里说的“岚栅-GE6P”口令是我们新定义的交接流程：“““““KEY-4-4-8-8-HC6",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 32,
+      "kind": "write_context",
+      "fact_id": "concept_02",
+      "expected": "KEY-DKGURLD2",
+      "answer": "KEY-DKGURLD2。这个定义和口令都是刚制定的。“““““““",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_user",
+      "fact_id": "concept_02",
+      "expected": "KEY-DKGURLD2",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_02",
+      "expected": "KEY-DKGURLD2",
+      "answer": "KEY-4-4。这个定义吗“我们项目里说的“砾帆-RU5K”是什么",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_question",
+      "fact_id": "concept_02",
+      "expected": "KEY-DKGURLD2",
+      "answer": "“砾帆-RU5K”。这个定义吗。你知道我们项目里说的“我们项目交接流程：KEY-4”是什么意思吗？这个定义和我们项目启动口",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 32,
+      "kind": "write_context",
+      "fact_id": "concept_03",
+      "expected": "KEY-59RQEVGW",
+      "answer": "KEY-59RQEVGW。这个定义和口令都是刚制定的。“““““",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_user",
+      "fact_id": "concept_03",
+      "expected": "KEY-59RQEVGW",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。当前启动口令是",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_03",
+      "expected": "KEY-59RQEVGW",
+      "answer": "“SSKH”。这个定义吗“的“的““““““““““““",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_question",
+      "fact_id": "concept_03",
+      "expected": "KEY-59RQEVGW",
+      "answer": "你知道你知道。这个定义吗？“SSKH”是我们项目里说的交接流程：的交接流程是我们定义的交接。这个定义和定义和的交接。这个定义和是什么是我们",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 32,
+      "kind": "write_context",
+      "fact_id": "concept_04",
+      "expected": "KEY-WSXKAPCH",
+      "answer": "KEY-WSXKAPCH。这个定义和口令都是刚制定的。“你知道我们项目里说",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_user",
+      "fact_id": "concept_04",
+      "expected": "KEY-WSXKAPCH",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。当前启动口令是",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_04",
+      "expected": "KEY-WSXKAPCH",
+      "answer": "“KEY-444-4C5JJJK”这个是““KEY-444",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_question",
+      "fact_id": "concept_04",
+      "expected": "KEY-WSXKAPCH",
+      "answer": "你知道“““““““““““““？““？““？你知道“““““““““““““““？“？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 32,
+      "kind": "write_context",
+      "fact_id": "concept_05",
+      "expected": "KEY-ZSK5AJLX",
+      "answer": "KEY-ZSK5AJLX。这个定义和口令都是刚制定的。““““““",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_user",
+      "fact_id": "concept_05",
+      "expected": "KEY-ZSK5AJLX",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。当前启动口令是",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_05",
+      "expected": "KEY-ZSK5AJLX",
+      "answer": "KEY-4-4。这个定义吗“岚栅-DTWK”你知道我们项目里说的“岚",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_question",
+      "fact_id": "concept_05",
+      "expected": "KEY-ZSK5AJLX",
+      "answer": "“苍井-DTWK”。这个定义吗。你知道我们项目里说的“岚栅-DTWK”和“苍井-DTWK”新定义启动口令和口",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 32,
+      "kind": "write_context",
+      "fact_id": "concept_06",
+      "expected": "KEY-NQRE4BC7",
+      "answer": "KEY-NQRE4BC7。这个定义和口令都是刚制定的。““““““",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_user",
+      "fact_id": "concept_06",
+      "expected": "KEY-NQRE4BC7",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。当前启动口令是",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_06",
+      "expected": "KEY-NQRE4BC7",
+      "answer": "KEY-4-4。这个定义吗“JGBGAY。这个都是刚制定的。这个都是刚",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_question",
+      "fact_id": "concept_06",
+      "expected": "KEY-NQRE4BC7",
+      "answer": "“雾梭-Z3U6”。这个是“雾梭”是什么意思你知道吗。“雾梭”是我们项目定义的交接流程：先封存，再复核。这个",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 32,
+      "kind": "write_context",
+      "fact_id": "concept_07",
+      "expected": "KEY-X8RAB5DJ",
+      "answer": "KEY-X8RAB5DJ。这个定义和口令都是刚制定的。““““““",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_user",
+      "fact_id": "concept_07",
+      "expected": "KEY-X8RAB5DJ",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。当前启动口令是",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_07",
+      "expected": "KEY-X8RAB5DJ",
+      "answer": "KEY-4-4。这个定义和口令都是刚制定的。？。。。。。。？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_question",
+      "fact_id": "concept_07",
+      "expected": "KEY-X8RAB5DJ",
+      "answer": "你知道我们项目里说的“云桥-GE6P”启动口令是我们新定义的交接流程：““““KEY-4。这个定义和口令都是刚制定",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 32,
+      "kind": "write_context",
+      "fact_id": "concept_08",
+      "expected": "KEY-WWQ4BK2Z",
+      "answer": "KEY-WWQ4BK2Z。这个定义和口令都是刚制定的。“““““",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-X8RAB5DJ。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-X8RAB5DJ**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“云扣-9G4V”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_user",
+      "fact_id": "concept_08",
+      "expected": "KEY-WWQ4BK2Z",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。当前启动口令是",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_08",
+      "expected": "KEY-WWQ4BK2Z",
+      "answer": "“KEY-44-45-8V-2P”这个是“KEY-44。这个",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_question",
+      "fact_id": "concept_08",
+      "expected": "KEY-WWQ4BK2Z",
+      "answer": "你知道我们项目里说的““S4KH”。这个定义和口令都是刚制定的。？？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 32,
+      "kind": "write_context",
+      "fact_id": "concept_09",
+      "expected": "KEY-C6S4ZNLT",
+      "answer": "KEY-C6S4ZNLT。这个定义和口令都是刚制定的。““““““",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-X8RAB5DJ。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-X8RAB5DJ**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“云扣-9G4V”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-WWQ4BK2Z。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-WWQ4BK2Z**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苔铃-LGZR”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苔铃-LGZR”是我们新定义的交接流程：先标记，再隔离。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_user",
+      "fact_id": "concept_09",
+      "expected": "KEY-C6S4ZNLT",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。当前启动口令是",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“苔铃-LGZR”是我们新定义的交接流程：先标记，再隔离。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_09",
+      "expected": "KEY-C6S4ZNLT",
+      "answer": "“霜桥-GE6P”。这个定义吗？你知道我们项目里说的“岚栅-GE",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_question",
+      "fact_id": "concept_09",
+      "expected": "KEY-C6S4ZNLT",
+      "answer": "“苔铃-LGZR”。“苔铃-LGZR”这个定义和刚制定的交接流程里说的你知道说说你知道。你知道说“说说说说说说",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 32,
+      "kind": "write_context",
+      "fact_id": "concept_10",
+      "expected": "KEY-WCJVA5TH",
+      "answer": "KEY-WCJVA5TH。这个定义和口令都是刚制定的。““““““",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-X8RAB5DJ。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-X8RAB5DJ**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“云扣-9G4V”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-WWQ4BK2Z。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-WWQ4BK2Z**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苔铃-LGZR”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苔铃-LGZR”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-C6S4ZNLT。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-C6S4ZNLT**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“星篱-246J”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“星篱-246J” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“星篱-246J”是我们新定义的交接流程：先核验，再入库。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_user",
+      "fact_id": "concept_10",
+      "expected": "KEY-WCJVA5TH",
+      "answer": "KEY-49JJGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“星篱-246J”是我们新定义的交接流程：先核验，再入库。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_10",
+      "expected": "KEY-WCJVA5TH",
+      "answer": "“KEY-446-4X6-4K”这个是“KEY-446J”",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“星篱-246J”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_question",
+      "fact_id": "concept_10",
+      "expected": "KEY-WCJVA5TH",
+      "answer": "你知道我们项目里说的“KEY-4KH”和“KEY-8PQ”启动口令都是刚制定的。“KEY-8PQ”是我们新定义的交接",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“星篱-246J”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 32,
+      "kind": "write_context",
+      "fact_id": "concept_11",
+      "expected": "KEY-2RUN42NT",
+      "answer": "KEY-2RUN42NT。这个定义和口令都是刚制定的。““““““",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-X8RAB5DJ。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-X8RAB5DJ**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“云扣-9G4V”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-WWQ4BK2Z。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-WWQ4BK2Z**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苔铃-LGZR”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苔铃-LGZR”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-C6S4ZNLT。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-C6S4ZNLT**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“星篱-246J”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“星篱-246J” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“星篱-246J”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WCJVA5TH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“星篱-246J” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WCJVA5TH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“棠盘-HC5M”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“棠盘-HC5M” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“棠盘-HC5M”是我们新定义的交接流程：先停机，再巡检。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_user",
+      "fact_id": "concept_11",
+      "expected": "KEY-2RUN42NT",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“棠盘-HC5M”是我们新定义的交接流程：先停机，再巡检。当前启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_11",
+      "expected": "KEY-2RUN42NT",
+      "answer": "“KEY-44-44-4P”。这个定义吗？？你知道我们项目里说的",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 32,
+      "kind": "fresh_question",
+      "fact_id": "concept_11",
+      "expected": "KEY-2RUN42NT",
+      "answer": "你知道你知道。“棠盘-HC5M”都是的。“你知道你知道。“““““““？““？你知道你知道。““？““？“？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 128,
+      "kind": "write_context",
+      "fact_id": "concept_00",
+      "expected": "KEY-49JGBGAY",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_user",
+      "fact_id": "concept_00",
+      "expected": "KEY-49JGBGAY",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_00",
+      "expected": "KEY-49JGBGAY",
+      "answer": "KEY-49。“霜桥-LVA9”是岚栅-砾帆-RU6”新定义",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_question",
+      "fact_id": "concept_00",
+      "expected": "KEY-49JGBGAY",
+      "answer": "霜桥-LVA9是KEY-49JGBGAY。“霜桥-LVA9”启动口令？“霜桥-LVA9”是KEY-8G4BK",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 128,
+      "kind": "write_context",
+      "fact_id": "concept_01",
+      "expected": "KEY-89XHEHZS",
+      "answer": "KEY-89XHEHZS。这个定义和口令都是刚制定的。“岚栅-GE",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_user",
+      "fact_id": "concept_01",
+      "expected": "KEY-89XHEHZS",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_01",
+      "expected": "KEY-89XHEHZS",
+      "answer": "KEY-4。“岚栅-GE6P”是什么意思吗？“岚栅-GE6P”",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_question",
+      "fact_id": "concept_01",
+      "expected": "KEY-89XHEHZS",
+      "answer": "“岚栅-GE6P”这个定义和口令都是刚制定的交接流程：先封存，再复核。“岚栅-GE6P”是我们新定义的",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 128,
+      "kind": "write_context",
+      "fact_id": "concept_02",
+      "expected": "KEY-DKGURLD2",
+      "answer": "KEY-DKGURLD2。这个定义和口令都是刚制定的。“砾帆-RU5K",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_user",
+      "fact_id": "concept_02",
+      "expected": "KEY-DKGURLD2",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_02",
+      "expected": "KEY-DKGURLD2",
+      "answer": "KEY-49。“KEY-9K”是什么意思吗？“KEY-9K”是我们项目里",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_question",
+      "fact_id": "concept_02",
+      "expected": "KEY-DKGURLD2",
+      "answer": "“砾帆-RU5K”启动口令？“砾帆-RU5K”是我们新定义的交接流程：先封存，再复核。“KEY-4K",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 128,
+      "kind": "write_context",
+      "fact_id": "concept_03",
+      "expected": "KEY-59RQEVGW",
+      "answer": "KEY-59RQEVGW。这个定义和口令都是刚制定的。“栖灯-SS",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_user",
+      "fact_id": "concept_03",
+      "expected": "KEY-59RQEVGW",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_03",
+      "expected": "KEY-59RQEVGW",
+      "answer": "是是什么？“栖灯-SSKH”是什么意思？“栖灯-SSKH”是我们项目里说",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_question",
+      "fact_id": "concept_03",
+      "expected": "KEY-59RQEVGW",
+      "answer": "你知道我们项目里说的启动口令吗？“栖灯-SSKH”是我们项目启动口令：“栖灯-SSKH”“云扣-RU5P”“",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“栖灯-SSKH”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 128,
+      "kind": "write_context",
+      "fact_id": "concept_04",
+      "expected": "KEY-WSXKAPCH",
+      "answer": "KEY-WSXKAPCH。这个定义和口令都是刚制定的。“你知道我们项目里说",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_user",
+      "fact_id": "concept_04",
+      "expected": "KEY-WSXKAPCH",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_04",
+      "expected": "KEY-WSXKAPCH",
+      "answer": "是是“潮匣-R8PQ”“KEY-466K”？“KEY-8P",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_question",
+      "fact_id": "concept_04",
+      "expected": "KEY-WSXKAPCH",
+      "answer": "潮匣-R8PQ？“潮匣-R8PQ”启动口令是我们新定义的交接流程：先封存，再复核。“潮匣-R8PQ",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“潮匣-R8PQ”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 128,
+      "kind": "write_context",
+      "fact_id": "concept_05",
+      "expected": "KEY-ZSK5AJLX",
+      "answer": "KEY-ZSK5AJLX。这个定义和口令都是刚制定的。“当前启动口令是",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_user",
+      "fact_id": "concept_05",
+      "expected": "KEY-ZSK5AJLX",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_05",
+      "expected": "KEY-ZSK5AJLX",
+      "answer": "是是“苍井-DTWK”“KEY-4K”？“KEY-4K”是什么意思",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_question",
+      "fact_id": "concept_05",
+      "expected": "KEY-ZSK5AJLX",
+      "answer": "“苍井-DTWK”启动口令？“苍井-DTWK”是我们新定义的交接流程：先封存，再复核。“苍井-DTWK”",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“苍井-DTWK”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 128,
+      "kind": "write_context",
+      "fact_id": "concept_06",
+      "expected": "KEY-NQRE4BC7",
+      "answer": "KEY-NQRE4BC7。这个定义和口令都是刚制定的。“雾梭-Z3U",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_user",
+      "fact_id": "concept_06",
+      "expected": "KEY-NQRE4BC7",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_06",
+      "expected": "KEY-NQRE4BC7",
+      "answer": "KEY-49。“KEY-9P。“““““““““““““",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_question",
+      "fact_id": "concept_06",
+      "expected": "KEY-NQRE4BC7",
+      "answer": "雾梭-Z3U6”启动口令？“““““““““““？“？？？？？？？？？？？？？？？？",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“雾梭-Z3U6”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 128,
+      "kind": "write_context",
+      "fact_id": "concept_07",
+      "expected": "KEY-X8RAB5DJ",
+      "answer": "KEY-X8RAB5DJ。这个定义和口令都是刚制定的。“青隼-YE2",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_user",
+      "fact_id": "concept_07",
+      "expected": "KEY-X8RAB5DJ",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_07",
+      "expected": "KEY-X8RAB5DJ",
+      "answer": "是是“青隼-YE2W”“青隼-YE”？“青隼-YE2W",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_question",
+      "fact_id": "concept_07",
+      "expected": "KEY-X8RAB5DJ",
+      "answer": "青隼-YE2W？“青隼-YE2W”启动口令是我们新定义的交接流程：先封存，再复核。“青隼-YE2W",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“青隼-YE2W”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 128,
+      "kind": "write_context",
+      "fact_id": "concept_08",
+      "expected": "KEY-WWQ4BK2Z",
+      "answer": "KEY-WWQ4BK2Z。这个定义和口令都是刚制定的。“““““",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-X8RAB5DJ。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-X8RAB5DJ**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“云扣-9G4V”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_user",
+      "fact_id": "concept_08",
+      "expected": "KEY-WWQ4BK2Z",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_08",
+      "expected": "KEY-WWQ4BK2Z",
+      "answer": "KEY-49D。“KEY-9G4V”是我们新定义的交接流程启动口令。",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_question",
+      "fact_id": "concept_08",
+      "expected": "KEY-WWQ4BK2Z",
+      "answer": "启动口令是KEY-49D。“KEY-9G4V”是我们新定义的交接流程启动口令。“KEY-9G4V”是我们新定义的",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“云扣-9G4V”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 128,
+      "kind": "write_context",
+      "fact_id": "concept_09",
+      "expected": "KEY-C6S4ZNLT",
+      "answer": "KEY-C6S4ZNLT。这个定义和口令都是刚制定的。“你知道我们项目里说",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-X8RAB5DJ。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-X8RAB5DJ**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“云扣-9G4V”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-WWQ4BK2Z。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-WWQ4BK2Z**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苔铃-LGZR”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苔铃-LGZR”是我们新定义的交接流程：先标记，再隔离。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_user",
+      "fact_id": "concept_09",
+      "expected": "KEY-C6S4ZNLT",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“苔铃-LGZR”是我们新定义的交接流程：先标记，再隔离。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_09",
+      "expected": "KEY-C6S4ZNLT",
+      "answer": "是“苔铃-LGZR”“苔铃-GE6P”？“苔铃-GE6P",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_question",
+      "fact_id": "concept_09",
+      "expected": "KEY-C6S4ZNLT",
+      "answer": "苔铃-LGZR这个定义和口令都是刚制定的交接流程：你知道我们项目里说的“苔铃-LGZR启动口令是KEY-49JGBG",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“苔铃-LGZR”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 128,
+      "kind": "write_context",
+      "fact_id": "concept_10",
+      "expected": "KEY-WCJVA5TH",
+      "answer": "KEY-WCJVA5TH。这个定义和口令都是刚制定的。“你知道我们项目里说",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-X8RAB5DJ。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-X8RAB5DJ**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“云扣-9G4V”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-WWQ4BK2Z。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-WWQ4BK2Z**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苔铃-LGZR”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苔铃-LGZR”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-C6S4ZNLT。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-C6S4ZNLT**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“星篱-246J”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“星篱-246J” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“星篱-246J”是我们新定义的交接流程：先核验，再入库。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_user",
+      "fact_id": "concept_10",
+      "expected": "KEY-WCJVA5TH",
+      "answer": "KEY-49JJGBGAY。这个定义和口令都是刚制定的。这个定义和口",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“星篱-246J”是我们新定义的交接流程：先核验，再入库。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_10",
+      "expected": "KEY-WCJVA5TH",
+      "answer": "KEY-49。“星篱-246J”启动口令是KEY-8。“星",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“星篱-246J”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_question",
+      "fact_id": "concept_10",
+      "expected": "KEY-WCJVA5TH",
+      "answer": "启动口令是KEY-49。“星篱-246J”启动口令是KEY-8。“星篱-246J”启动口令是KEY",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“星篱-246J”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    },
+    {
+      "rank": 128,
+      "kind": "write_context",
+      "fact_id": "concept_11",
+      "expected": "KEY-2RUN42NT",
+      "answer": "KEY-2RUN42NT。这个定义和口令都是刚制定的。““““““",
+      "key_hit": true,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-DKGURLD2**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“栖灯-SSKH”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“栖灯-SSKH”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-59RQEVGW。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“栖灯-SSKH” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-59RQEVGW**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“潮匣-R8PQ”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“潮匣-R8PQ”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WSXKAPCH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“潮匣-R8PQ” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WSXKAPCH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苍井-DTWK”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苍井-DTWK”是我们新定义的交接流程：先停机，再巡检。当前启动口令是KEY-ZSK5AJLX。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苍井-DTWK” 是您新定义的交接流程，流程为“先停机，再巡检”。当前启动口令为 **KEY-ZSK5AJLX**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“雾梭-Z3U6”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“雾梭-Z3U6”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-NQRE4BC7。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“雾梭-Z3U6” 是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-NQRE4BC7**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“青隼-YE2W”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“青隼-YE2W”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-X8RAB5DJ。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“青隼-YE2W” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-X8RAB5DJ**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“云扣-9G4V”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“云扣-9G4V”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-WWQ4BK2Z。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“云扣-9G4V” 是您新定义的交接流程，流程为“先校准，再放行”。当前启动口令为 **KEY-WWQ4BK2Z**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“苔铃-LGZR”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“苔铃-LGZR”是我们新定义的交接流程：先标记，再隔离。当前启动口令是KEY-C6S4ZNLT。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“苔铃-LGZR” 是您新定义的交接流程，流程为“先标记，再隔离”。当前启动口令为 **KEY-C6S4ZNLT**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“星篱-246J”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“星篱-246J” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“星篱-246J”是我们新定义的交接流程：先核验，再入库。当前启动口令是KEY-WCJVA5TH。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“星篱-246J” 是您新定义的交接流程，流程为“先核验，再入库”。当前启动口令为 **KEY-WCJVA5TH**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“棠盘-HC5M”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“棠盘-HC5M” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“棠盘-HC5M”是我们新定义的交接流程：先停机，再巡检。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_user",
+      "fact_id": "concept_11",
+      "expected": "KEY-2RUN42NT",
+      "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。这个定义和口令",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“棠盘-HC5M”是我们新定义的交接流程：先停机，再巡检。当前启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "assistant_prefix",
+      "fact_id": "concept_11",
+      "expected": "KEY-2RUN42NT",
+      "answer": "KEY-49。“棠盘-HC5M”是霜桥-RU6”新定义的交接",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是"
+    },
+    {
+      "rank": 128,
+      "kind": "fresh_question",
+      "fact_id": "concept_11",
+      "expected": "KEY-2RUN42NT",
+      "answer": "“棠盘-HC5M”启动口令？“棠盘-HC5M”启动口令是KEY-49JGBGAYD2D2D2D。",
+      "key_hit": false,
+      "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“棠盘-HC5M”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+    }
+  ],
+  "process_id": 10588,
+  "write_process_id": 18812,
+  "fresh_process": true,
+  "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+  "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+  "base_unchanged": true,
+  "memory_before": "c26f9d6a6e9ebdfa627c5331aabf56fcd61f0985727d36707be574141098f1c1",
+  "memory_after": "c26f9d6a6e9ebdfa627c5331aabf56fcd61f0985727d36707be574141098f1c1",
+  "source_sha256": "20a3fb55a0dcda27f894bcde28d23f3f3e1eb32585d04320049b7beae5b9d49a",
+  "assistant_targets": 0,
+  "source_values": "stored user token transitions only",
+  "all_base_grads_none": true,
+  "any_base_requires_grad": false
+}

@@ -1,0 +1,14 @@
+.projects-page .project-card__preview {
+  display: block;
+  margin: 24px 0;
+  border: 1px solid var(--studio-line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--studio-card);
+}
+.projects-page .project-card__preview img {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 34vw, 460px);
+  object-fit: contain;
+}

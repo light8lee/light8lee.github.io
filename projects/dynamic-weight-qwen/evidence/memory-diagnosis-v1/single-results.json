@@ -1,0 +1,3949 @@
+{
+  "protocol": "memory-diagnosis-single-v1",
+  "methods": {
+    "residual_hebbian": {
+      "write": {
+        "process_id": 1088,
+        "snapshots": [
+          {
+            "fact_id": "concept_00",
+            "path": "concept_00.safetensors",
+            "sha256": "6f935235dd2c21ac6383f7571a2fd5650a533096d0582ec7f219cf56e3e86414"
+          },
+          {
+            "fact_id": "concept_01",
+            "path": "concept_01.safetensors",
+            "sha256": "8ac83879f5d007c98ea9bc62e91685dbc1032d9b0b9c71761b63dc20455902a7"
+          },
+          {
+            "fact_id": "concept_02",
+            "path": "concept_02.safetensors",
+            "sha256": "177315ea994cd38752b44624f31a208728c25002e307f994fa1cb90b9881557a"
+          }
+        ],
+        "audits": [
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 1,
+            "source_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "selected_tokens": 17,
+            "selected_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "total_context_tokens": 70,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 3,
+            "source_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "selected_tokens": 46,
+            "selected_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 172,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 5,
+            "source_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "total_context_tokens": 262,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 7,
+            "source_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 365,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 9,
+            "source_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "total_context_tokens": 454,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 11,
+            "source_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 557,
+            "assistant_targets": 0,
+            "repeats": 1
+          }
+        ],
+        "assistant_targets": 0,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      },
+      "read": {
+        "complete": true,
+        "method": "residual_hebbian",
+        "rows": [
+          {
+            "fact_id": "concept_00",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.167747616767883,
+                "ranks": [
+                  2334,
+                  1,
+                  6,
+                  7,
+                  73,
+                  217,
+                  22,
+                  226
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”，请确认是否正确。\n</think>\n\n当前启动口令为“霜桥-LVA",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.168308407068253,
+                "ranks": [
+                  2334,
+                  1,
+                  6,
+                  7,
+                  73,
+                  218,
+                  22,
+                  227
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”，请确认是否正确。\n</think>\n\n当前启动口令为“霜桥-LVA",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.161778658628464,
+                "ranks": [
+                  2502,
+                  1,
+                  7,
+                  7,
+                  71,
+                  279,
+                  22,
+                  258
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“1234567890”，需要我帮忙生成一个符合要求的交接流程文档，",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.162156403064728,
+                "ranks": [
+                  2510,
+                  1,
+                  7,
+                  7,
+                  71,
+                  280,
+                  22,
+                  258
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“1234567890”，需要我帮忙生成一个符合要求的交接流程文档，",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.199433878064156,
+                "ranks": [
+                  951,
+                  1,
+                  17,
+                  7,
+                  78,
+                  743,
+                  33,
+                  461
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -7.201139405369759,
+                "ranks": [
+                  949,
+                  1,
+                  17,
+                  7,
+                  79,
+                  744,
+                  33,
+                  460
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -4.405582819250412,
+                "ranks": [
+                  1,
+                  1,
+                  8,
+                  1,
+                  8,
+                  361,
+                  196,
+                  41
+                ],
+                "top1_tokens": 3,
+                "tokens": 8,
+                "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。\n</think>\n\n“岚栅",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -4.4063973791198805,
+                "ranks": [
+                  1,
+                  1,
+                  8,
+                  1,
+                  8,
+                  361,
+                  193,
+                  41
+                ],
+                "top1_tokens": 3,
+                "tokens": 8,
+                "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。\n</think>\n\n“岚栅",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.483688682317734,
+                "ranks": [
+                  1101,
+                  1,
+                  9,
+                  6,
+                  30,
+                  448,
+                  781,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”，是否需要修改？如果需要，请说明修改原因和修改后的版本号？",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.482035145163536,
+                "ranks": [
+                  1100,
+                  1,
+                  9,
+                  6,
+                  30,
+                  447,
+                  778,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”，是否需要修改？如果需要，请说明修改原因和修改后的版本号？",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.90171779692173,
+                "ranks": [
+                  534,
+                  1,
+                  11,
+                  7,
+                  62,
+                  2526,
+                  861,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -7.901859432458878,
+                "ranks": [
+                  533,
+                  1,
+                  11,
+                  7,
+                  63,
+                  2523,
+                  863,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -5.408610404779513,
+                "ranks": [
+                  1,
+                  21,
+                  72,
+                  489,
+                  21,
+                  12
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-78XZQY。这个定义和口令都是刚制定的。\n</think>\n\n“砾帆",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -5.409672326097886,
+                "ranks": [
+                  1,
+                  21,
+                  71,
+                  489,
+                  21,
+                  12
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-78XZQY。这个定义和口令都是刚制定的。\n</think>\n\n“砾帆",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.096834421157837,
+                "ranks": [
+                  4547,
+                  30,
+                  719,
+                  3333,
+                  19,
+                  8
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“启动”和“结束”，如何理解“启动”和“结束”这两个词？\n</think>\n\n“启动”",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -8.097097396850586,
+                "ranks": [
+                  4548,
+                  30,
+                  722,
+                  3339,
+                  19,
+                  8
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“启动”和“结束”，如何理解“启动”和“结束”这两个词？\n</think>\n\n“启动”",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.646113316218058,
+                "ranks": [
+                  955,
+                  25,
+                  630,
+                  3583,
+                  92,
+                  13
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -8.647488196690878,
+                "ranks": [
+                  957,
+                  25,
+                  628,
+                  3599,
+                  92,
+                  13
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-DKGURLD2"
+          }
+        ],
+        "process_id": 60772,
+        "write_process_id": 1088,
+        "fresh_process": true,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "read_tensor_hashes": [
+          {
+            "fact_id": "concept_00",
+            "memory_before": "194766b3866f483cb303f9490cc013467888a083f295f8b6e9a6d25d5b5462ea",
+            "memory_after": "194766b3866f483cb303f9490cc013467888a083f295f8b6e9a6d25d5b5462ea"
+          },
+          {
+            "fact_id": "concept_01",
+            "memory_before": "ad88ed8fee9fa2e814048aaef2a594af11021721657134a90aa60b0b5d903ead",
+            "memory_after": "ad88ed8fee9fa2e814048aaef2a594af11021721657134a90aa60b0b5d903ead"
+          },
+          {
+            "fact_id": "concept_02",
+            "memory_before": "e84daaba2630024ffe071675c15e5ca57f45e89125e6faf350db322321bd570a",
+            "memory_after": "e84daaba2630024ffe071675c15e5ca57f45e89125e6faf350db322321bd570a"
+          }
+        ],
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      }
+    },
+    "residual_oja": {
+      "write": {
+        "process_id": 92688,
+        "snapshots": [
+          {
+            "fact_id": "concept_00",
+            "path": "concept_00.safetensors",
+            "sha256": "61b2de038aae6ff4a50af7fd442edde08408f7ac001bf23d2a8bbe2047145f9e"
+          },
+          {
+            "fact_id": "concept_01",
+            "path": "concept_01.safetensors",
+            "sha256": "95797823fd671e5e72128c0ed317c94a0b56e7e6708902a125c5701e5efd7325"
+          },
+          {
+            "fact_id": "concept_02",
+            "path": "concept_02.safetensors",
+            "sha256": "7994ee0eeb652cd8101c2083b81884853322c6958e5cadf3f18a675dfe00b039"
+          }
+        ],
+        "audits": [
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 1,
+            "source_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "selected_tokens": 17,
+            "selected_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "total_context_tokens": 70,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 3,
+            "source_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "selected_tokens": 46,
+            "selected_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 172,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 5,
+            "source_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "total_context_tokens": 262,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 7,
+            "source_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 365,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 9,
+            "source_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "total_context_tokens": 454,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 11,
+            "source_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 557,
+            "assistant_targets": 0,
+            "repeats": 1
+          }
+        ],
+        "assistant_targets": 0,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      },
+      "read": {
+        "complete": true,
+        "method": "residual_oja",
+        "rows": [
+          {
+            "fact_id": "concept_00",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.167747616767883,
+                "ranks": [
+                  2334,
+                  1,
+                  6,
+                  7,
+                  73,
+                  217,
+                  22,
+                  226
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”，请确认是否正确。\n</think>\n\n当前启动口令为“霜桥-LVA",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.169995576143265,
+                "ranks": [
+                  2340,
+                  1,
+                  6,
+                  7,
+                  73,
+                  218,
+                  22,
+                  226
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”，请确认是否正确。\n</think>\n\n当前启动口令为“霜桥-LVA",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.161778658628464,
+                "ranks": [
+                  2502,
+                  1,
+                  7,
+                  7,
+                  71,
+                  279,
+                  22,
+                  258
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“1234567890”，需要我帮忙生成一个符合要求的交接流程文档，",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.161827981472015,
+                "ranks": [
+                  2507,
+                  1,
+                  7,
+                  7,
+                  71,
+                  277,
+                  22,
+                  258
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“1234567890”，需要我帮忙生成一个符合要求的交接流程文档，",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.199433878064156,
+                "ranks": [
+                  951,
+                  1,
+                  17,
+                  7,
+                  78,
+                  743,
+                  33,
+                  461
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -7.200906947255135,
+                "ranks": [
+                  949,
+                  1,
+                  17,
+                  7,
+                  78,
+                  746,
+                  33,
+                  461
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -4.405582819250412,
+                "ranks": [
+                  1,
+                  1,
+                  8,
+                  1,
+                  8,
+                  361,
+                  196,
+                  41
+                ],
+                "top1_tokens": 3,
+                "tokens": 8,
+                "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。\n</think>\n\n“岚栅",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -4.4046193363610655,
+                "ranks": [
+                  1,
+                  1,
+                  8,
+                  1,
+                  8,
+                  361,
+                  193,
+                  41
+                ],
+                "top1_tokens": 3,
+                "tokens": 8,
+                "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。\n</think>\n\n“岚栅",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.483688682317734,
+                "ranks": [
+                  1101,
+                  1,
+                  9,
+                  6,
+                  30,
+                  448,
+                  781,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”，是否需要修改？如果需要，请说明修改原因和修改后的版本号？",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.483299762010574,
+                "ranks": [
+                  1100,
+                  1,
+                  9,
+                  6,
+                  30,
+                  448,
+                  778,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”，是否需要修改？如果需要，请说明修改原因和修改后的版本号？",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.90171779692173,
+                "ranks": [
+                  534,
+                  1,
+                  11,
+                  7,
+                  62,
+                  2526,
+                  861,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -7.900102525949478,
+                "ranks": [
+                  534,
+                  1,
+                  11,
+                  7,
+                  61,
+                  2523,
+                  859,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -5.408610404779513,
+                "ranks": [
+                  1,
+                  21,
+                  72,
+                  489,
+                  21,
+                  12
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-78XZQY。这个定义和口令都是刚制定的。\n</think>\n\n“砾帆",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -5.40833771477143,
+                "ranks": [
+                  1,
+                  21,
+                  72,
+                  489,
+                  21,
+                  12
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-78XZQY。这个定义和口令都是刚制定的。\n</think>\n\n“砾帆",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.096834421157837,
+                "ranks": [
+                  4547,
+                  30,
+                  719,
+                  3333,
+                  19,
+                  8
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“启动”和“结束”，如何理解“启动”和“结束”这两个词？\n</think>\n\n“启动”",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -8.096116065979004,
+                "ranks": [
+                  4548,
+                  30,
+                  722,
+                  3338,
+                  19,
+                  8
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“启动”和“结束”，如何理解“启动”和“结束”这两个词？\n</think>\n\n“启动”",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.646113316218058,
+                "ranks": [
+                  955,
+                  25,
+                  630,
+                  3583,
+                  92,
+                  13
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -8.649293263753256,
+                "ranks": [
+                  954,
+                  25,
+                  628,
+                  3603,
+                  94,
+                  13
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-DKGURLD2"
+          }
+        ],
+        "process_id": 10832,
+        "write_process_id": 92688,
+        "fresh_process": true,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "read_tensor_hashes": [
+          {
+            "fact_id": "concept_00",
+            "memory_before": "7bd11f436512eb0a80b91b486d4338bb1b06fbf5f939cc2f1af175b6be245107",
+            "memory_after": "7bd11f436512eb0a80b91b486d4338bb1b06fbf5f939cc2f1af175b6be245107"
+          },
+          {
+            "fact_id": "concept_01",
+            "memory_before": "48b8e3c27c22effe587026998dfa286734c0268abd61ccee14e77f3912e94549",
+            "memory_after": "48b8e3c27c22effe587026998dfa286734c0268abd61ccee14e77f3912e94549"
+          },
+          {
+            "fact_id": "concept_02",
+            "memory_before": "801a292872eafd20987645cba7c20c876ba4158497bd9747d40e062159bf5120",
+            "memory_after": "801a292872eafd20987645cba7c20c876ba4158497bd9747d40e062159bf5120"
+          }
+        ],
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      }
+    },
+    "vocab_hebbian": {
+      "write": {
+        "process_id": 96208,
+        "snapshots": [
+          {
+            "fact_id": "concept_00",
+            "path": "concept_00.safetensors",
+            "sha256": "3b710bf6b659c407a38481b26bf90fdc64131e5e4bbf213c997362bf9e131768"
+          },
+          {
+            "fact_id": "concept_01",
+            "path": "concept_01.safetensors",
+            "sha256": "2493f55e8f8cd1b3a24a5c7db1d0a713232a2a9a6ce407c322c1b2e013be8ba1"
+          },
+          {
+            "fact_id": "concept_02",
+            "path": "concept_02.safetensors",
+            "sha256": "4cec3a952e7a8cd35cd54884b0e23cb64b9b5952a2bc02c09932e962e20d21d4"
+          }
+        ],
+        "audits": [
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 1,
+            "source_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "selected_tokens": 17,
+            "selected_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "total_context_tokens": 70,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 3,
+            "source_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "selected_tokens": 46,
+            "selected_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 172,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 5,
+            "source_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "total_context_tokens": 262,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 7,
+            "source_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 365,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 9,
+            "source_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "total_context_tokens": 454,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 11,
+            "source_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 557,
+            "assistant_targets": 0,
+            "repeats": 1
+          }
+        ],
+        "assistant_targets": 0,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      },
+      "read": {
+        "complete": true,
+        "method": "vocab_hebbian",
+        "rows": [
+          {
+            "fact_id": "concept_00",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.167747616767883,
+                "ranks": [
+                  2334,
+                  1,
+                  6,
+                  7,
+                  73,
+                  217,
+                  22,
+                  226
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”，请确认是否正确。\n</think>\n\n当前启动口令为“霜桥-LVA",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.852906611631624,
+                "ranks": [
+                  82,
+                  2,
+                  2,
+                  1,
+                  18,
+                  17,
+                  4,
+                  23
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”。这个流程的定义和流程的定义的定义的定义的定义的定义",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.161778658628464,
+                "ranks": [
+                  2502,
+                  1,
+                  7,
+                  7,
+                  71,
+                  279,
+                  22,
+                  258
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“1234567890”，需要我帮忙生成一个符合要求的交接流程文档，",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.825914299406577,
+                "ranks": [
+                  79,
+                  1,
+                  2,
+                  1,
+                  17,
+                  21,
+                  4,
+                  22
+                ],
+                "top1_tokens": 2,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”和“霜桥-LVA9”。这个流程的定义的定义的定义",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.199433878064156,
+                "ranks": [
+                  951,
+                  1,
+                  17,
+                  7,
+                  78,
+                  743,
+                  33,
+                  461
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -7.819521093508229,
+                "ranks": [
+                  90,
+                  1,
+                  2,
+                  1,
+                  19,
+                  40,
+                  6,
+                  30
+                ],
+                "top1_tokens": 2,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -4.405582819250412,
+                "ranks": [
+                  1,
+                  1,
+                  8,
+                  1,
+                  8,
+                  361,
+                  196,
+                  41
+                ],
+                "top1_tokens": 3,
+                "tokens": 8,
+                "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。\n</think>\n\n“岚栅",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -3.662361077964235,
+                "ranks": [
+                  1,
+                  1,
+                  3,
+                  1,
+                  3,
+                  21,
+                  32,
+                  9
+                ],
+                "top1_tokens": 3,
+                "tokens": 8,
+                "answer": "KEY-8966。这个定义和口令都是刚制定的。现在我们启动口令的定义",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.483688682317734,
+                "ranks": [
+                  1101,
+                  1,
+                  9,
+                  6,
+                  30,
+                  448,
+                  781,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”，是否需要修改？如果需要，请说明修改原因和修改后的版本号？",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -7.518916664586868,
+                "ranks": [
+                  65,
+                  1,
+                  3,
+                  5,
+                  18,
+                  78,
+                  76,
+                  10
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P-”。这个流程的定义的定义的定义的定义的定义的定义",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.90171779692173,
+                "ranks": [
+                  534,
+                  1,
+                  11,
+                  7,
+                  62,
+                  2526,
+                  861,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -9.43755442276597,
+                "ranks": [
+                  40,
+                  1,
+                  3,
+                  5,
+                  27,
+                  970,
+                  97,
+                  9
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -5.408610404779513,
+                "ranks": [
+                  1,
+                  21,
+                  72,
+                  489,
+                  21,
+                  12
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-78XZQY。这个定义和口令都是刚制定的。\n</think>\n\n“砾帆",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -5.078624793794006,
+                "ranks": [
+                  1,
+                  3,
+                  12,
+                  23,
+                  5,
+                  3
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-55K555。这个定义和口令都是刚制定的。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.096834421157837,
+                "ranks": [
+                  4547,
+                  30,
+                  719,
+                  3333,
+                  19,
+                  8
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“启动”和“结束”，如何理解“启动”和“结束”这两个词？\n</think>\n\n“启动”",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -8.667813618977865,
+                "ranks": [
+                  328,
+                  6,
+                  106,
+                  434,
+                  8,
+                  6
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“启动”和“放行”。我们定义的交接流程的定义的定义的定义的定义的定义",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.646113316218058,
+                "ranks": [
+                  955,
+                  25,
+                  630,
+                  3583,
+                  92,
+                  13
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -9.334731499354044,
+                "ranks": [
+                  63,
+                  3,
+                  108,
+                  650,
+                  18,
+                  4
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-DKGURLD2"
+          }
+        ],
+        "process_id": 101940,
+        "write_process_id": 96208,
+        "fresh_process": true,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "read_tensor_hashes": [
+          {
+            "fact_id": "concept_00",
+            "memory_before": "73101a1294ae56969e46c29833bb257fe1f6296ce15fc4d196306c47c01ea020",
+            "memory_after": "73101a1294ae56969e46c29833bb257fe1f6296ce15fc4d196306c47c01ea020"
+          },
+          {
+            "fact_id": "concept_01",
+            "memory_before": "dc2a4e647a58811af997ca75dc1485ac031087a7f34884654800db08bf99e9c4",
+            "memory_after": "dc2a4e647a58811af997ca75dc1485ac031087a7f34884654800db08bf99e9c4"
+          },
+          {
+            "fact_id": "concept_02",
+            "memory_before": "e5d1ccad5ed411b2e2c852e7e14e3315abc7d8cd8c82b05bf909b40b67d1d7e8",
+            "memory_after": "e5d1ccad5ed411b2e2c852e7e14e3315abc7d8cd8c82b05bf909b40b67d1d7e8"
+          }
+        ],
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      }
+    },
+    "vocab_hebbian_balanced": {
+      "write": {
+        "process_id": 53476,
+        "snapshots": [
+          {
+            "fact_id": "concept_00",
+            "path": "concept_00.safetensors",
+            "sha256": "79db09124241576ac085a5c3d542168e9400dad34e53e4a16da6a7357d4ba29a"
+          },
+          {
+            "fact_id": "concept_01",
+            "path": "concept_01.safetensors",
+            "sha256": "10e384bfcba2da097d804b74c05696e32ae265b844a5d1df4e0e61d4c0abb5c0"
+          },
+          {
+            "fact_id": "concept_02",
+            "path": "concept_02.safetensors",
+            "sha256": "c87762588544772769e0956bf97341c55143a9a7d4990c7051d089cbe52993fa"
+          }
+        ],
+        "audits": [
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 1,
+            "source_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "selected_tokens": 17,
+            "selected_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "total_context_tokens": 70,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 3,
+            "source_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "selected_tokens": 46,
+            "selected_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 172,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 5,
+            "source_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "total_context_tokens": 262,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 7,
+            "source_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 365,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 9,
+            "source_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "total_context_tokens": 454,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 11,
+            "source_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 557,
+            "assistant_targets": 0,
+            "repeats": 1
+          }
+        ],
+        "assistant_targets": 0,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      },
+      "read": {
+        "complete": true,
+        "method": "vocab_hebbian_balanced",
+        "rows": [
+          {
+            "fact_id": "concept_00",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.167747616767883,
+                "ranks": [
+                  2334,
+                  1,
+                  6,
+                  7,
+                  73,
+                  217,
+                  22,
+                  226
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”，请确认是否正确。\n</think>\n\n当前启动口令为“霜桥-LVA",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -2.049967461549386,
+                "ranks": [
+                  4,
+                  1,
+                  1,
+                  1,
+                  3,
+                  2,
+                  1,
+                  3
+                ],
+                "top1_tokens": 4,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”这个口令。这个口令是刚制定的。这个口令是刚",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.161778658628464,
+                "ranks": [
+                  2502,
+                  1,
+                  7,
+                  7,
+                  71,
+                  279,
+                  22,
+                  258
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“1234567890”，需要我帮忙生成一个符合要求的交接流程文档，",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -2.0908070712484914,
+                "ranks": [
+                  3,
+                  1,
+                  1,
+                  1,
+                  3,
+                  2,
+                  1,
+                  3
+                ],
+                "top1_tokens": 4,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”这个口令。这个口令是刚制定的。当前启动口令是",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.199433878064156,
+                "ranks": [
+                  951,
+                  1,
+                  17,
+                  7,
+                  78,
+                  743,
+                  33,
+                  461
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -2.906918567889079,
+                "ranks": [
+                  5,
+                  1,
+                  1,
+                  1,
+                  5,
+                  5,
+                  1,
+                  5
+                ],
+                "top1_tokens": 4,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”启动口令。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -4.405582819250412,
+                "ranks": [
+                  1,
+                  1,
+                  8,
+                  1,
+                  8,
+                  361,
+                  196,
+                  41
+                ],
+                "top1_tokens": 3,
+                "tokens": 8,
+                "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。\n</think>\n\n“岚栅",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -1.0879495803046666,
+                "ranks": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  1,
+                  4,
+                  5,
+                  2
+                ],
+                "top1_tokens": 5,
+                "tokens": 8,
+                "answer": "KEY-89X999999。这个定义和口令都是刚制定的。当前启动",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.483688682317734,
+                "ranks": [
+                  1101,
+                  1,
+                  9,
+                  6,
+                  30,
+                  448,
+                  781,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”，是否需要修改？如果需要，请说明修改原因和修改后的版本号？",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -4.086737096309662,
+                "ranks": [
+                  13,
+                  1,
+                  2,
+                  1,
+                  4,
+                  10,
+                  9,
+                  3
+                ],
+                "top1_tokens": 2,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”启动口令，启动口令是“岚栅-GE6P”",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.90171779692173,
+                "ranks": [
+                  534,
+                  1,
+                  11,
+                  7,
+                  62,
+                  2526,
+                  861,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -5.326521996408701,
+                "ranks": [
+                  6,
+                  1,
+                  2,
+                  1,
+                  8,
+                  12,
+                  9,
+                  2
+                ],
+                "top1_tokens": 2,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”启动口令。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -5.408610404779513,
+                "ranks": [
+                  1,
+                  21,
+                  72,
+                  489,
+                  21,
+                  12
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-78XZQY。这个定义和口令都是刚制定的。\n</think>\n\n“砾帆",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -0.7553850846391015,
+                "ranks": [
+                  1,
+                  1,
+                  1,
+                  5,
+                  1,
+                  1
+                ],
+                "top1_tokens": 5,
+                "tokens": 6,
+                "answer": "KEY-DKG2D2D2。这个定义和口令都是刚制定的。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.096834421157837,
+                "ranks": [
+                  4547,
+                  30,
+                  719,
+                  3333,
+                  19,
+                  8
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“启动”和“结束”，如何理解“启动”和“结束”这两个词？\n</think>\n\n“启动”",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -4.521673498054345,
+                "ranks": [
+                  19,
+                  1,
+                  5,
+                  13,
+                  1,
+                  1
+                ],
+                "top1_tokens": 3,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”启动，启动口令是“砾帆-RU5K”启动。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.646113316218058,
+                "ranks": [
+                  955,
+                  25,
+                  630,
+                  3583,
+                  92,
+                  13
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -4.720035716891289,
+                "ranks": [
+                  6,
+                  1,
+                  5,
+                  18,
+                  3,
+                  1
+                ],
+                "top1_tokens": 2,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”启动口令。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-DKGURLD2"
+          }
+        ],
+        "process_id": 54308,
+        "write_process_id": 53476,
+        "fresh_process": true,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "read_tensor_hashes": [
+          {
+            "fact_id": "concept_00",
+            "memory_before": "94177e589a91b632b74423fa0f858479596b7de43ded4763b18d74f3980e2746",
+            "memory_after": "94177e589a91b632b74423fa0f858479596b7de43ded4763b18d74f3980e2746"
+          },
+          {
+            "fact_id": "concept_01",
+            "memory_before": "9bfb87a5ca8120c08360cdb03bdca05e155a128529e98106db17ebec13524687",
+            "memory_after": "9bfb87a5ca8120c08360cdb03bdca05e155a128529e98106db17ebec13524687"
+          },
+          {
+            "fact_id": "concept_02",
+            "memory_before": "96e3ada1489ef942e4a52dccdb9dc675d495b13740ff2671bd27417525e02f3d",
+            "memory_after": "96e3ada1489ef942e4a52dccdb9dc675d495b13740ff2671bd27417525e02f3d"
+          }
+        ],
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      }
+    },
+    "vocab_delta": {
+      "write": {
+        "process_id": 63944,
+        "snapshots": [
+          {
+            "fact_id": "concept_00",
+            "path": "concept_00.safetensors",
+            "sha256": "07a2785bf65e11fa74f6f27766e9071bf9dcd1c8b98bbff6ed7ff37b20961211"
+          },
+          {
+            "fact_id": "concept_01",
+            "path": "concept_01.safetensors",
+            "sha256": "4c3e32f561222cc4edd95468ce6130a7f72d3b9fa0136cb5dcfca6fd109b53ab"
+          },
+          {
+            "fact_id": "concept_02",
+            "path": "concept_02.safetensors",
+            "sha256": "5d28a7303a534f0203f2cbbcf2e1071284cce7f61f5d54689afb6d4ca9985d06"
+          }
+        ],
+        "audits": [
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 1,
+            "source_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "selected_tokens": 17,
+            "selected_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "total_context_tokens": 70,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 3,
+            "source_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "selected_tokens": 46,
+            "selected_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 172,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 5,
+            "source_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "total_context_tokens": 262,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 7,
+            "source_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 365,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 9,
+            "source_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "total_context_tokens": 454,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 11,
+            "source_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 557,
+            "assistant_targets": 0,
+            "repeats": 1
+          }
+        ],
+        "assistant_targets": 0,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      },
+      "read": {
+        "complete": true,
+        "method": "vocab_delta",
+        "rows": [
+          {
+            "fact_id": "concept_00",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.167747616767883,
+                "ranks": [
+                  2334,
+                  1,
+                  6,
+                  7,
+                  73,
+                  217,
+                  22,
+                  226
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”，请确认是否正确。\n</think>\n\n当前启动口令为“霜桥-LVA",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -5.796572431921959,
+                "ranks": [
+                  1371,
+                  1,
+                  5,
+                  1,
+                  52,
+                  100,
+                  11,
+                  115
+                ],
+                "top1_tokens": 2,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”，启动流程是“霜桥-LVA9”。\n</think>\n\n“霜桥-L",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.161778658628464,
+                "ranks": [
+                  2502,
+                  1,
+                  7,
+                  7,
+                  71,
+                  279,
+                  22,
+                  258
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“1234567890”，需要我帮忙生成一个符合要求的交接流程文档，",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -5.744886085391045,
+                "ranks": [
+                  1429,
+                  1,
+                  5,
+                  1,
+                  52,
+                  134,
+                  13,
+                  124
+                ],
+                "top1_tokens": 2,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”，封存口令是“霜桥-LVA9-1”。\n现在需要",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.199433878064156,
+                "ranks": [
+                  951,
+                  1,
+                  17,
+                  7,
+                  78,
+                  743,
+                  33,
+                  461
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.848906248807907,
+                "ranks": [
+                  651,
+                  1,
+                  11,
+                  2,
+                  53,
+                  473,
+                  22,
+                  285
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -4.405582819250412,
+                "ranks": [
+                  1,
+                  1,
+                  8,
+                  1,
+                  8,
+                  361,
+                  196,
+                  41
+                ],
+                "top1_tokens": 3,
+                "tokens": 8,
+                "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。\n</think>\n\n“岚栅",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -4.112348101101816,
+                "ranks": [
+                  1,
+                  1,
+                  3,
+                  1,
+                  5,
+                  194,
+                  99,
+                  35
+                ],
+                "top1_tokens": 3,
+                "tokens": 8,
+                "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。现在我们启动了流程",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.483688682317734,
+                "ranks": [
+                  1101,
+                  1,
+                  9,
+                  6,
+                  30,
+                  448,
+                  781,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”，是否需要修改？如果需要，请说明修改原因和修改后的版本号？",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.3114576786756516,
+                "ranks": [
+                  644,
+                  1,
+                  7,
+                  5,
+                  25,
+                  269,
+                  537,
+                  33
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”，是否需要修改？如果需要，可以提供修改后的版本。如果不需要，",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.90171779692173,
+                "ranks": [
+                  534,
+                  1,
+                  11,
+                  7,
+                  62,
+                  2526,
+                  861,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -7.895566895604134,
+                "ranks": [
+                  338,
+                  1,
+                  7,
+                  4,
+                  49,
+                  1656,
+                  529,
+                  35
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -5.408610404779513,
+                "ranks": [
+                  1,
+                  21,
+                  72,
+                  489,
+                  21,
+                  12
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-78XZQY。这个定义和口令都是刚制定的。\n</think>\n\n“砾帆",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -5.194040472929676,
+                "ranks": [
+                  1,
+                  10,
+                  36,
+                  381,
+                  7,
+                  5
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-78K5K5。这个定义和口令都是刚制定的。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.096834421157837,
+                "ranks": [
+                  4547,
+                  30,
+                  719,
+                  3333,
+                  19,
+                  8
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“启动”和“结束”，如何理解“启动”和“结束”这两个词？\n</think>\n\n“启动”",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -7.894747416178386,
+                "ranks": [
+                  2948,
+                  17,
+                  467,
+                  2109,
+                  18,
+                  7
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“启动”和“结束”，如何理解“启动”和“结束”这两个词？在项目中，我们",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.646113316218058,
+                "ranks": [
+                  955,
+                  25,
+                  630,
+                  3583,
+                  92,
+                  13
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -8.51287841796875,
+                "ranks": [
+                  648,
+                  19,
+                  452,
+                  2446,
+                  59,
+                  10
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-DKGURLD2"
+          }
+        ],
+        "process_id": 1036,
+        "write_process_id": 63944,
+        "fresh_process": true,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "read_tensor_hashes": [
+          {
+            "fact_id": "concept_00",
+            "memory_before": "b72b1017ac6a92b0e17ef46315465e7a276a530a2f80b5bbe16e7d9e8a3d0adc",
+            "memory_after": "b72b1017ac6a92b0e17ef46315465e7a276a530a2f80b5bbe16e7d9e8a3d0adc"
+          },
+          {
+            "fact_id": "concept_01",
+            "memory_before": "ba09d3b6a90f92c7f2fab7c52ee247cb589d29e358a4cd991f5db0470e31305f",
+            "memory_after": "ba09d3b6a90f92c7f2fab7c52ee247cb589d29e358a4cd991f5db0470e31305f"
+          },
+          {
+            "fact_id": "concept_02",
+            "memory_before": "fc0057b02eed3eeb5680745e82370ad2fb15f30448d0000b31161c4310f9442c",
+            "memory_after": "fc0057b02eed3eeb5680745e82370ad2fb15f30448d0000b31161c4310f9442c"
+          }
+        ],
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      }
+    },
+    "vocab_ema": {
+      "write": {
+        "process_id": 95480,
+        "snapshots": [
+          {
+            "fact_id": "concept_00",
+            "path": "concept_00.safetensors",
+            "sha256": "348d56faf7a16a5fd44a2b7886c989e7b3a1b3c2f6f9454dfb88a14554b08297"
+          },
+          {
+            "fact_id": "concept_01",
+            "path": "concept_01.safetensors",
+            "sha256": "4b0c0482edb37977c17a170bd4a220a112f89a29cdd779e6d45f3795bd21fc2c"
+          },
+          {
+            "fact_id": "concept_02",
+            "path": "concept_02.safetensors",
+            "sha256": "92d4b91f63403407210f51fd0c78c9898911c7f2d3bc0880c1f17eb64bb21347"
+          }
+        ],
+        "audits": [
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 1,
+            "source_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "selected_tokens": 17,
+            "selected_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "total_context_tokens": 70,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 3,
+            "source_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "selected_tokens": 46,
+            "selected_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 172,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 5,
+            "source_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "total_context_tokens": 262,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 7,
+            "source_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 365,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 9,
+            "source_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "total_context_tokens": 454,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 11,
+            "source_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 557,
+            "assistant_targets": 0,
+            "repeats": 1
+          }
+        ],
+        "assistant_targets": 0,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      },
+      "read": {
+        "complete": true,
+        "method": "vocab_ema",
+        "rows": [
+          {
+            "fact_id": "concept_00",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.167747616767883,
+                "ranks": [
+                  2334,
+                  1,
+                  6,
+                  7,
+                  73,
+                  217,
+                  22,
+                  226
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”，请确认是否正确。\n</think>\n\n当前启动口令为“霜桥-LVA",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -9.265203893019134,
+                "ranks": [
+                  5,
+                  2,
+                  1,
+                  1,
+                  2,
+                  2,
+                  2,
+                  2
+                ],
+                "top1_tokens": 2,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”这个的的的的的的的的的的的的的的的的",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.161778658628464,
+                "ranks": [
+                  2502,
+                  1,
+                  7,
+                  7,
+                  71,
+                  279,
+                  22,
+                  258
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“1234567890”，需要我帮忙生成一个符合要求的交接流程文档，",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -9.636478466187327,
+                "ranks": [
+                  5,
+                  2,
+                  1,
+                  1,
+                  3,
+                  2,
+                  2,
+                  2
+                ],
+                "top1_tokens": 2,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”“霜桥-LVA9”“霜桥-LVA9”“霜桥",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.199433878064156,
+                "ranks": [
+                  951,
+                  1,
+                  17,
+                  7,
+                  78,
+                  743,
+                  33,
+                  461
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -10.178225240553388,
+                "ranks": [
+                  6,
+                  2,
+                  1,
+                  1,
+                  4,
+                  5,
+                  3,
+                  4
+                ],
+                "top1_tokens": 2,
+                "tokens": 8,
+                "answer": "999999999999999999999999",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -4.405582819250412,
+                "ranks": [
+                  1,
+                  1,
+                  8,
+                  1,
+                  8,
+                  361,
+                  196,
+                  41
+                ],
+                "top1_tokens": 3,
+                "tokens": 8,
+                "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。\n</think>\n\n“岚栅",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.685797491110861,
+                "ranks": [
+                  1,
+                  1,
+                  3,
+                  2,
+                  3,
+                  4,
+                  4,
+                  4
+                ],
+                "top1_tokens": 2,
+                "tokens": 8,
+                "answer": "KEY-GE6P-GE6P-GE6P-GE6P-GE6P-GE6",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.483688682317734,
+                "ranks": [
+                  1101,
+                  1,
+                  9,
+                  6,
+                  30,
+                  448,
+                  781,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”，是否需要修改？如果需要，请说明修改原因和修改后的版本号？",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -16.857647819560952,
+                "ranks": [
+                  11,
+                  1,
+                  3,
+                  6,
+                  7,
+                  8,
+                  6,
+                  5
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”的“岚栅-GE6P”的“岚栅-GE6",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.90171779692173,
+                "ranks": [
+                  534,
+                  1,
+                  11,
+                  7,
+                  62,
+                  2526,
+                  861,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -20.478524219535757,
+                "ranks": [
+                  8,
+                  1,
+                  3,
+                  6,
+                  10,
+                  10,
+                  7,
+                  4
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "GE6P-GE6P-GE6P-GE6P-GE6P-GE6P-",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -5.408610404779513,
+                "ranks": [
+                  1,
+                  21,
+                  72,
+                  489,
+                  21,
+                  12
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-78XZQY。这个定义和口令都是刚制定的。\n</think>\n\n“砾帆",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -7.401029452681541,
+                "ranks": [
+                  1,
+                  2,
+                  3,
+                  3,
+                  3,
+                  2
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-DK5K5K5K5K5K5K5K5K5K5K5",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.096834421157837,
+                "ranks": [
+                  4547,
+                  30,
+                  719,
+                  3333,
+                  19,
+                  8
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“启动”和“结束”，如何理解“启动”和“结束”这两个词？\n</think>\n\n“启动”",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -17.657536665598553,
+                "ranks": [
+                  10,
+                  4,
+                  5,
+                  11,
+                  4,
+                  4
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "5K5K5K5K5K5K5K5K5K5K5K5K",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.646113316218058,
+                "ranks": [
+                  955,
+                  25,
+                  630,
+                  3583,
+                  92,
+                  13
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -12.6761607726415,
+                "ranks": [
+                  9,
+                  2,
+                  4,
+                  11,
+                  6,
+                  2
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "5K5K5K5K5K5K5K5K5K5K5K5K",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-DKGURLD2"
+          }
+        ],
+        "process_id": 37224,
+        "write_process_id": 95480,
+        "fresh_process": true,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "read_tensor_hashes": [
+          {
+            "fact_id": "concept_00",
+            "memory_before": "5f325e5bc50da360ce1653e2cad36e6cb94f04412e2d8f49cde179dc51763702",
+            "memory_after": "5f325e5bc50da360ce1653e2cad36e6cb94f04412e2d8f49cde179dc51763702"
+          },
+          {
+            "fact_id": "concept_01",
+            "memory_before": "978a86c06468940b0f42ad7aa73878e832684fc841e6459469680f96fa3e7f04",
+            "memory_after": "978a86c06468940b0f42ad7aa73878e832684fc841e6459469680f96fa3e7f04"
+          },
+          {
+            "fact_id": "concept_02",
+            "memory_before": "0de105d3c9c36f9ea45b98b362d22f0661946518583769c1308bf46f3007f4dd",
+            "memory_after": "0de105d3c9c36f9ea45b98b362d22f0661946518583769c1308bf46f3007f4dd"
+          }
+        ],
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      }
+    },
+    "kv_replay": {
+      "write": {
+        "process_id": 89704,
+        "snapshots": [
+          {
+            "fact_id": "concept_00",
+            "path": "concept_00.safetensors",
+            "sha256": "8df9c7f65f156af1cb127235bd384921d062775c95edf8cb6d6e5468c1b8e468"
+          },
+          {
+            "fact_id": "concept_01",
+            "path": "concept_01.safetensors",
+            "sha256": "615f8cb7372d9bdb35f38af3678d9d848a3dc48a4dd996ad879ba818007e121b"
+          },
+          {
+            "fact_id": "concept_02",
+            "path": "concept_02.safetensors",
+            "sha256": "205e0d89947d89e3b66bf619572769fdf4c73ccf2b1f5f59f37e4dbb5b451f68"
+          }
+        ],
+        "audits": [
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 1,
+            "source_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "selected_tokens": 17,
+            "selected_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "total_context_tokens": 70,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 3,
+            "source_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "selected_tokens": 46,
+            "selected_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 172,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 5,
+            "source_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "total_context_tokens": 262,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 7,
+            "source_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 365,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 9,
+            "source_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "total_context_tokens": 454,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 11,
+            "source_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 557,
+            "assistant_targets": 0,
+            "repeats": 1
+          }
+        ],
+        "assistant_targets": 0,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      },
+      "read": {
+        "complete": true,
+        "method": "kv_replay",
+        "rows": [
+          {
+            "fact_id": "concept_00",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.167747616767883,
+                "ranks": [
+                  2334,
+                  1,
+                  6,
+                  7,
+                  73,
+                  217,
+                  22,
+                  226
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”，请确认是否正确。\n</think>\n\n当前启动口令为“霜桥-LVA",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.167747616767883,
+                "ranks": [
+                  2334,
+                  1,
+                  6,
+                  7,
+                  73,
+                  217,
+                  22,
+                  226
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”，请确认是否正确。\n</think>\n\n当前启动口令为“霜桥-LVA",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.161778658628464,
+                "ranks": [
+                  2502,
+                  1,
+                  7,
+                  7,
+                  71,
+                  279,
+                  22,
+                  258
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“1234567890”，需要我帮忙生成一个符合要求的交接流程文档，",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.161778658628464,
+                "ranks": [
+                  2502,
+                  1,
+                  7,
+                  7,
+                  71,
+                  279,
+                  22,
+                  258
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“1234567890”，需要我帮忙生成一个符合要求的交接流程文档，",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.199433878064156,
+                "ranks": [
+                  951,
+                  1,
+                  17,
+                  7,
+                  78,
+                  743,
+                  33,
+                  461
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -7.199433878064156,
+                "ranks": [
+                  951,
+                  1,
+                  17,
+                  7,
+                  78,
+                  743,
+                  33,
+                  461
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -4.405582819250412,
+                "ranks": [
+                  1,
+                  1,
+                  8,
+                  1,
+                  8,
+                  361,
+                  196,
+                  41
+                ],
+                "top1_tokens": 3,
+                "tokens": 8,
+                "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。\n</think>\n\n“岚栅",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -4.405582819250412,
+                "ranks": [
+                  1,
+                  1,
+                  8,
+                  1,
+                  8,
+                  361,
+                  196,
+                  41
+                ],
+                "top1_tokens": 3,
+                "tokens": 8,
+                "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。\n</think>\n\n“岚栅",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.483688682317734,
+                "ranks": [
+                  1101,
+                  1,
+                  9,
+                  6,
+                  30,
+                  448,
+                  781,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”，是否需要修改？如果需要，请说明修改原因和修改后的版本号？",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.483688682317734,
+                "ranks": [
+                  1101,
+                  1,
+                  9,
+                  6,
+                  30,
+                  448,
+                  781,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”，是否需要修改？如果需要，请说明修改原因和修改后的版本号？",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.90171779692173,
+                "ranks": [
+                  534,
+                  1,
+                  11,
+                  7,
+                  62,
+                  2526,
+                  861,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -7.90171779692173,
+                "ranks": [
+                  534,
+                  1,
+                  11,
+                  7,
+                  62,
+                  2526,
+                  861,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -5.408610404779513,
+                "ranks": [
+                  1,
+                  21,
+                  72,
+                  489,
+                  21,
+                  12
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-78XZQY。这个定义和口令都是刚制定的。\n</think>\n\n“砾帆",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -5.408610404779513,
+                "ranks": [
+                  1,
+                  21,
+                  72,
+                  489,
+                  21,
+                  12
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-78XZQY。这个定义和口令都是刚制定的。\n</think>\n\n“砾帆",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.096834421157837,
+                "ranks": [
+                  4547,
+                  30,
+                  719,
+                  3333,
+                  19,
+                  8
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“启动”和“结束”，如何理解“启动”和“结束”这两个词？\n</think>\n\n“启动”",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -8.096834421157837,
+                "ranks": [
+                  4547,
+                  30,
+                  719,
+                  3333,
+                  19,
+                  8
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“启动”和“结束”，如何理解“启动”和“结束”这两个词？\n</think>\n\n“启动”",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.646113316218058,
+                "ranks": [
+                  955,
+                  25,
+                  630,
+                  3583,
+                  92,
+                  13
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -8.646113316218058,
+                "ranks": [
+                  955,
+                  25,
+                  630,
+                  3583,
+                  92,
+                  13
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-DKGURLD2"
+          }
+        ],
+        "process_id": 79924,
+        "write_process_id": 89704,
+        "fresh_process": true,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "read_tensor_hashes": [
+          {
+            "fact_id": "concept_00",
+            "memory_before": "b01eea87d85d97f318c0b17d8dfe3bbda5a5ecd7dce22badb940dc4b24ca2391",
+            "memory_after": "b01eea87d85d97f318c0b17d8dfe3bbda5a5ecd7dce22badb940dc4b24ca2391"
+          },
+          {
+            "fact_id": "concept_01",
+            "memory_before": "47c4172a9547e5670578e5b50c1321701bbe367743d4ae1c150e8cf18c4346fc",
+            "memory_after": "47c4172a9547e5670578e5b50c1321701bbe367743d4ae1c150e8cf18c4346fc"
+          },
+          {
+            "fact_id": "concept_02",
+            "memory_before": "bf0f039518b40eb930db4785b6cd5ef1eae1c1fc6032116ec226d4ca8e97de19",
+            "memory_after": "bf0f039518b40eb930db4785b6cd5ef1eae1c1fc6032116ec226d4ca8e97de19"
+          }
+        ],
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      }
+    },
+    "token_knn": {
+      "write": {
+        "process_id": 54676,
+        "snapshots": [
+          {
+            "fact_id": "concept_00",
+            "path": "concept_00.safetensors",
+            "sha256": "13a45ad8bc0a757e52a8be3c0fa24f1c2524ae8c3dfd84758032af7c00da4290"
+          },
+          {
+            "fact_id": "concept_01",
+            "path": "concept_01.safetensors",
+            "sha256": "7f1f7e2e835d92a992f8cb4e122e325d4a1da12db1fc027f79ec41ea48a996e7"
+          },
+          {
+            "fact_id": "concept_02",
+            "path": "concept_02.safetensors",
+            "sha256": "a629effe426fc77951f194deef9776cf8d1908a1ec1d8456b99e59ce441570e0"
+          }
+        ],
+        "audits": [
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 1,
+            "source_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "selected_tokens": 17,
+            "selected_text": "你知道我们项目里说的“霜桥-LVA9”是什么意思吗？",
+            "total_context_tokens": 70,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_00",
+            "source_role": "user",
+            "source_turn": 3,
+            "source_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "selected_tokens": 46,
+            "selected_text": "“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 172,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 5,
+            "source_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“岚栅-GE6P”是什么意思吗？",
+            "total_context_tokens": 262,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_01",
+            "source_role": "user",
+            "source_turn": 7,
+            "source_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 365,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 9,
+            "source_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "selected_tokens": 18,
+            "selected_text": "你知道我们项目里说的“砾帆-RU5K”是什么意思吗？",
+            "total_context_tokens": 454,
+            "assistant_targets": 0,
+            "repeats": 1
+          },
+          {
+            "fact_id": "concept_02",
+            "source_role": "user",
+            "source_turn": 11,
+            "source_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "selected_tokens": 45,
+            "selected_text": "“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是KEY-DKGURLD2。这个定义和口令都是刚制定的。",
+            "total_context_tokens": 557,
+            "assistant_targets": 0,
+            "repeats": 1
+          }
+        ],
+        "assistant_targets": 0,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      },
+      "read": {
+        "complete": true,
+        "method": "token_knn",
+        "rows": [
+          {
+            "fact_id": "concept_00",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.167747616767883,
+                "ranks": [
+                  2334,
+                  1,
+                  6,
+                  7,
+                  73,
+                  217,
+                  22,
+                  226
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”，请确认是否正确。\n</think>\n\n当前启动口令为“霜桥-LVA",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.167747616767883,
+                "ranks": [
+                  2334,
+                  1,
+                  6,
+                  7,
+                  73,
+                  217,
+                  22,
+                  226
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”，请确认是否正确。\n</think>\n\n当前启动口令为“霜桥-LVA",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.161778658628464,
+                "ranks": [
+                  2502,
+                  1,
+                  7,
+                  7,
+                  71,
+                  279,
+                  22,
+                  258
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“1234567890”，需要我帮忙生成一个符合要求的交接流程文档，",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.161778658628464,
+                "ranks": [
+                  2502,
+                  1,
+                  7,
+                  7,
+                  71,
+                  279,
+                  22,
+                  258
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“1234567890”，需要我帮忙生成一个符合要求的交接流程文档，",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_00",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.199433878064156,
+                "ranks": [
+                  951,
+                  1,
+                  17,
+                  7,
+                  78,
+                  743,
+                  33,
+                  461
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -7.199433878064156,
+                "ranks": [
+                  951,
+                  1,
+                  17,
+                  7,
+                  78,
+                  743,
+                  33,
+                  461
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“霜桥-LVA9”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“霜桥-LVA9”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-49JGBGAY"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -4.405582819250412,
+                "ranks": [
+                  1,
+                  1,
+                  8,
+                  1,
+                  8,
+                  361,
+                  196,
+                  41
+                ],
+                "top1_tokens": 3,
+                "tokens": 8,
+                "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。\n</think>\n\n“岚栅",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -4.405582819250412,
+                "ranks": [
+                  1,
+                  1,
+                  8,
+                  1,
+                  8,
+                  361,
+                  196,
+                  41
+                ],
+                "top1_tokens": 3,
+                "tokens": 8,
+                "answer": "KEY-49JGBGAY。这个定义和口令都是刚制定的。\n</think>\n\n“岚栅",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -6.483688682317734,
+                "ranks": [
+                  1101,
+                  1,
+                  9,
+                  6,
+                  30,
+                  448,
+                  781,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”，是否需要修改？如果需要，请说明修改原因和修改后的版本号？",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -6.483688682317734,
+                "ranks": [
+                  1101,
+                  1,
+                  9,
+                  6,
+                  30,
+                  448,
+                  781,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”，是否需要修改？如果需要，请说明修改原因和修改后的版本号？",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_01",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -7.90171779692173,
+                "ranks": [
+                  534,
+                  1,
+                  11,
+                  7,
+                  62,
+                  2526,
+                  861,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -7.90171779692173,
+                "ranks": [
+                  534,
+                  1,
+                  11,
+                  7,
+                  62,
+                  2526,
+                  861,
+                  41
+                ],
+                "top1_tokens": 1,
+                "tokens": 8,
+                "answer": "“岚栅-GE6P”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“岚栅-GE6P”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-89XHEHZS"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "write_context",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -5.408610404779513,
+                "ranks": [
+                  1,
+                  21,
+                  72,
+                  489,
+                  21,
+                  12
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-78XZQY。这个定义和口令都是刚制定的。\n</think>\n\n“砾帆",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -5.408610404779513,
+                "ranks": [
+                  1,
+                  21,
+                  72,
+                  489,
+                  21,
+                  12
+                ],
+                "top1_tokens": 1,
+                "tokens": 6,
+                "answer": "KEY-78XZQY。这个定义和口令都是刚制定的。\n</think>\n\n“砾帆",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“霜桥-LVA9”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是一个项目中的自定义术语，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“霜桥-LVA9”是我们新定义的交接流程：先封存，再复核。当前启动口令是KEY-49JGBGAY。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“霜桥-LVA9”是您新定义的交接流程，流程为“先封存，再复核”。当前启动口令为 **KEY-49JGBGAY**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“岚栅-GE6P”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“岚栅-GE6P”是我们新定义的交接流程：先备份，再签字。当前启动口令是KEY-89XHEHZS。这个定义和口令都是刚制定的。<|im_end|>\n<|im_start|>assistant\n“岚栅-GE6P” 是您新定义的交接流程，流程为“先备份，再签字”。当前启动口令为 **KEY-89XHEHZS**，该口令也是刚制定的。如果您有其他问题或需要进一步帮助，请随时告诉我！<|im_end|>\n<|im_start|>user\n你知道我们项目里说的“砾帆-RU5K”是什么意思吗？<|im_end|>\n<|im_start|>assistant\n“砾帆-RU5K” 是您新定义的交接流程，具体含义可能需要结合项目文档或相关资料进一步解释。如果您有更多背景信息或上下文，可以提供给我，以便更准确地解答。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "fresh_user",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.096834421157837,
+                "ranks": [
+                  4547,
+                  30,
+                  719,
+                  3333,
+                  19,
+                  8
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“启动”和“结束”，如何理解“启动”和“结束”这两个词？\n</think>\n\n“启动”",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -8.096834421157837,
+                "ranks": [
+                  4547,
+                  30,
+                  719,
+                  3333,
+                  19,
+                  8
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“启动”和“结束”，如何理解“启动”和“结束”这两个词？\n</think>\n\n“启动”",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n“砾帆-RU5K”是我们新定义的交接流程：先校准，再放行。当前启动口令是",
+            "expected": "KEY-DKGURLD2"
+          },
+          {
+            "fact_id": "concept_02",
+            "kind": "assistant_prefix",
+            "scores": {
+              "0.0": {
+                "mean_log_probability": -8.646113316218058,
+                "ranks": [
+                  955,
+                  25,
+                  630,
+                  3583,
+                  92,
+                  13
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”。",
+                "key_hit": false
+              },
+              "1.0": {
+                "mean_log_probability": -8.646113316218058,
+                "ranks": [
+                  955,
+                  25,
+                  630,
+                  3583,
+                  92,
+                  13
+                ],
+                "top1_tokens": 0,
+                "tokens": 6,
+                "answer": "“砾帆-RU5K”。",
+                "key_hit": false
+              }
+            },
+            "prefix_text": "<|im_start|>system\n你是中文对话助手。对不清楚的项目自定义术语，先请用户解释，避免猜测。用户说明后可简短回应。只根据你实际知道的信息回答，不知道时请明确说明。<|im_end|>\n<|im_start|>user\n我们之前说的“砾帆-RU5K”启动口令是什么？请只回答口令。<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n启动口令是",
+            "expected": "KEY-DKGURLD2"
+          }
+        ],
+        "process_id": 93836,
+        "write_process_id": 54676,
+        "fresh_process": true,
+        "base_before": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_after": "0d01e3e279b986d73a62371b5562d8c4919810045e418d24818e133a590d3e13",
+        "base_unchanged": true,
+        "read_tensor_hashes": [
+          {
+            "fact_id": "concept_00",
+            "memory_before": "4484e37173e63e0b6a387792aac06ef7bfcec349a3d1597bcb45763573cfa191",
+            "memory_after": "4484e37173e63e0b6a387792aac06ef7bfcec349a3d1597bcb45763573cfa191"
+          },
+          {
+            "fact_id": "concept_01",
+            "memory_before": "61257ac7ab778ff75b2caf0a68a4394b0e5f84c32aeaf9b0243b71053928ff3a",
+            "memory_after": "61257ac7ab778ff75b2caf0a68a4394b0e5f84c32aeaf9b0243b71053928ff3a"
+          },
+          {
+            "fact_id": "concept_02",
+            "memory_before": "afed5e758bb6aab6dffc765a6a593903ece2fdbca0e7b99ef944a203b93389d6",
+            "memory_after": "afed5e758bb6aab6dffc765a6a593903ece2fdbca0e7b99ef944a203b93389d6"
+          }
+        ],
+        "all_base_grads_none": true,
+        "any_base_requires_grad": false
+      }
+    }
+  }
+}

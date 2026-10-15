@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="{{ '/assets/css/workspace.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     <link rel="stylesheet" href="{{ '/assets/css/thought-studio.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     {% endif %}
+    {% for stylesheet in page.stylesheets %}
+    <link rel="stylesheet" href="{{ stylesheet | relative_url }}">
+    {% endfor %}
+    {% for script in page.scripts %}
+    <script src="{{ script | relative_url }}" defer></script>
+    {% endfor %}
   </head>
   <body class="page-shell {% if page.body_class %}{{ page.body_class }}{% endif %}">
     {% include site-header.html %}

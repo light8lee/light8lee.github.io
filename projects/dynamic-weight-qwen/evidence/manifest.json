@@ -1,0 +1,102 @@
+[
+  {
+    "run": "retention-scale-30",
+    "file": "evidence/retention-scale-30.json",
+    "sha256": "971f315d4a379620d08a2879e02b57685c118de9deada9fc6911c179d622018d"
+  },
+  {
+    "run": "retention-scale-30-kv-corrected",
+    "file": "evidence/retention-scale-30-kv-corrected.json",
+    "sha256": "a7863afcbc0e904285d52d326e28f0006822695f5dcded7a7c0f2456d567c747"
+  },
+  {
+    "run": "retention-scale-30-qwen3-0.6b-entity-gate",
+    "file": "evidence/retention-scale-30-qwen3-0.6b-entity-gate.json",
+    "sha256": "d63f43bf7521cc3dd4a24b06b568b1805aaf2a297b4e21c692afcb998dc68aac"
+  },
+  {
+    "run": "retention-scale-30-qwen3-1.7b-entity-gate",
+    "file": "evidence/retention-scale-30-qwen3-1.7b-entity-gate.json",
+    "sha256": "63cc5a14f07ab9f3aac96e86bd70119bff55bae5cd2063e240e8a4e7afd3c94a"
+  },
+  {
+    "run": "retention-scale-30-qwen3-4b-fp8-entity-gate",
+    "file": "evidence/retention-scale-30-qwen3-4b-fp8-entity-gate.json",
+    "sha256": "968fdbbcaf1d84ae323a7f6252dcf450469b9b37e4ef8fc474d6a9831c4a0641"
+  },
+  {
+    "run": "open-benchmark-methods/residual_hebbian",
+    "file": "evidence/open-benchmark-methods--residual_hebbian.json",
+    "sha256": "b194232ce8f1432a126c427ed8bf03de3ccf7fddc8c1b1e2173543aad6272992"
+  },
+  {
+    "run": "open-benchmark-methods/residual_oja",
+    "file": "evidence/open-benchmark-methods--residual_oja.json",
+    "sha256": "cd2bde7b33fdf77e77a26adeca9577ce264fa4e248cf518c8f2c1028262170b9"
+  },
+  {
+    "run": "open-benchmark-methods/vocab_hebbian",
+    "file": "evidence/open-benchmark-methods--vocab_hebbian.json",
+    "sha256": "579420e01db43e5aec7916204d7c01884412cc1fe44a066f8bb93a3895fdd15c"
+  },
+  {
+    "run": "open-benchmark-methods/vocab_hebbian_balanced",
+    "file": "evidence/open-benchmark-methods--vocab_hebbian_balanced.json",
+    "sha256": "4187f22c9375ae607b063427c9077ae8bcc601132103c50e1c923af5dab2e85d"
+  },
+  {
+    "run": "open-benchmark-methods/vocab_delta",
+    "file": "evidence/open-benchmark-methods--vocab_delta.json",
+    "sha256": "294e657f6bd1179189665de130a68968de6b57327abe4cdd8338b82d32475636"
+  },
+  {
+    "run": "open-benchmark-methods/vocab_ema",
+    "file": "evidence/open-benchmark-methods--vocab_ema.json",
+    "sha256": "bae7e081d0137b461cc983108edc28fa320babb2f1432bfcd2704f9be1f27ade"
+  },
+  {
+    "run": "open-benchmark-methods/kv_replay",
+    "file": "evidence/open-benchmark-methods--kv_replay.json",
+    "sha256": "a22788869be1262102638a6416b0ca7765edbf853000eb6bdf203c93c177129f"
+  },
+  {
+    "run": "open-benchmark-methods/token_knn",
+    "file": "evidence/open-benchmark-methods--token_knn.json",
+    "sha256": "32a955738a82971781fda2af2531417b3448ae7b4a2c83d82a06e5d956ff9ead"
+  },
+  {
+    "run": "random-stress-3x60-v3",
+    "file": "evidence/random-stress-3x60-v3.json",
+    "sha256": "28fca397a5bb2cd280c2b6f130281e3990e1a45aea695be6efc0c95b02b9e0b0"
+  },
+  {
+    "run": "visual-memory-48",
+    "file": "evidence/visual-memory-48.json",
+    "sha256": "72e011999f90999a7447c5d90feaecbb33eaeddf519e39861bec40b646597987"
+  },
+  {
+    "run": "visual-memory-48-gate-0999",
+    "file": "evidence/visual-memory-48-gate-0999.json",
+    "sha256": "5664c9e7a3e16f2dc5f6f2fa181acda3ac066ed7c4859ada9a44cdbce103d44b"
+  },
+  {
+    "run": "open-benchmark-qwen3-0.6b-entity-gate-v2",
+    "file": "evidence/open-benchmark-qwen3-0.6b-entity-gate-v2.json",
+    "sha256": "dd4aa6b8b57c1b90f5fa794c3d42d388dea7f535a67f24abc5724074d23a1485"
+  },
+  {
+    "run": "open-benchmark-qwen3-1.7b-entity-gate",
+    "file": "evidence/open-benchmark-qwen3-1.7b-entity-gate.json",
+    "sha256": "ba440775767bbe0cad888c2490cd1f736d05e5970f7d9c8c459118c489c7e538"
+  },
+  {
+    "run": "open-benchmark-qwen3-4b-fp8-entity-gate",
+    "file": "evidence/open-benchmark-qwen3-4b-fp8-entity-gate.json",
+    "sha256": "08544b108e873d703cb7f1b8595719f3ac470693d1d191965bae18efdf9c518d"
+  },
+  {
+    "run": "mmstar-before-after",
+    "file": "evidence/mmstar-before-after.json",
+    "sha256": "daa006c67804187606bc1de308cbbeb561c7c11ff4600b570f2fd4542cb99128"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "file": "results.json",
+    "sha256": "8fb7dfe5c1f63a4858d96040a911754581ee56f21ab2850e5908b274367535c9"
+  },
+  {
+    "file": "dialogue.json",
+    "sha256": "503fc9d1defe9a3da72abf20ba8c8cf627eb2dff567b61879dce0629a41c3136"
+  },
+  {
+    "file": "dataset.json",
+    "sha256": "23af129995ce5ca4e90d207d63a07682d22703ef940b249392abe29ea94ca021"
+  },
+  {
+    "file": "events.json",
+    "sha256": "3f080bb344418afd23526d441452c246c433b926b5e4b824ae1fb5af245f590b"
+  },
+  {
+    "file": "corrections.json",
+    "sha256": "c675d1f652239b477ba7f89e326ed520e7d8f081b6efd00550731cf132e747d0"
+  },
+  {
+    "file": "summary.md",
+    "sha256": "d3bc75431b5bc733384a3ae72140654fde08f3cce49be4fac9d8b5533ff335c2"
+  }
+]
